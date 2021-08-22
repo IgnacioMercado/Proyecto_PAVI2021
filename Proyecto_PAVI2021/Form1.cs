@@ -21,5 +21,10 @@ namespace Proyecto_PAVI2021
         {
 
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Todo lo que podía fallar ha fallado");
+        }
     }
 }
