@@ -95,6 +95,7 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             FormAltaUsuarios fas = new FormAltaUsuarios();
             fas.ShowDialog();
+            this.CargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
         }
 
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)

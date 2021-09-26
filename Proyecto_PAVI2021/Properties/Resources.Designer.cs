@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Proyecto_PAVI2021.Properties {
+namespace ProyectoAutopartes.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Proyecto_PAVI2021.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Proyecto_PAVI2021.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProyectoAutopartes.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,7 +65,7 @@ namespace Proyecto_PAVI2021.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _216169_delete_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("_216169_delete_icon__1_", resourceCulture);
+                object obj = ResourceManager.GetObject("216169_delete_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace Proyecto_PAVI2021.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _2561427_edit_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("_2561427_edit_icon__1_", resourceCulture);
+                object obj = ResourceManager.GetObject("2561427_edit_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace Proyecto_PAVI2021.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _326501_add_circle_icon {
             get {
-                object obj = ResourceManager.GetObject("_326501_add_circle_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("326501_add_circle_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace Proyecto_PAVI2021.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _326501_add_circle_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("_326501_add_circle_icon__1_", resourceCulture);
+                object obj = ResourceManager.GetObject("326501_add_circle_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +105,7 @@ namespace Proyecto_PAVI2021.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _326501_add_circle_icon__2_ {
             get {
-                object obj = ResourceManager.GetObject("_326501_add_circle_icon__2_", resourceCulture);
+                object obj = ResourceManager.GetObject("326501_add_circle_icon (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -115,7 +115,207 @@ namespace Proyecto_PAVI2021.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _4801315_glass_magnifier_magnifying_search_searching_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("_4801315_glass_magnifier_magnifying_search_searching_icon__1_", resourceCulture);
+                object obj = ResourceManager.GetObject("4801315_glass_magnifier_magnifying_search_searching_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buscar {
+            get {
+                object obj = ResourceManager.GetObject("buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caja_de_cambio_2 {
+            get {
+                object obj = ResourceManager.GetObject("caja_de_cambio_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminar_usuario {
+            get {
+                object obj = ResourceManager.GetObject("eliminar_usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fiat {
+            get {
+                object obj = ResourceManager.GetObject("fiat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_automático {
+            get {
+                object obj = ResourceManager.GetObject("flash_automático", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_1 {
+            get {
+                object obj = ResourceManager.GetObject("fondo_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap llave_cruz {
+            get {
+                object obj = ResourceManager.GetObject("llave_cruz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mecánico {
+            get {
+                object obj = ResourceManager.GetObject("mecánico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modificar_imagen {
+            get {
+                object obj = ResourceManager.GetObject("modificar_imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nuevo_usuario {
+            get {
+                object obj = ResourceManager.GetObject("nuevo_usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap piston {
+            get {
+                object obj = ResourceManager.GetObject("piston", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reloj_muñeca {
+            get {
+                object obj = ResourceManager.GetObject("reloj_muñeca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rueda {
+            get {
+                object obj = ResourceManager.GetObject("rueda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap signo_de_pregunta {
+            get {
+                object obj = ResourceManager.GetObject("signo_de_pregunta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario_1 {
+            get {
+                object obj = ResourceManager.GetObject("usuario_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario_2 {
+            get {
+                object obj = ResourceManager.GetObject("usuario_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario_3 {
+            get {
+                object obj = ResourceManager.GetObject("usuario_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuarios_imagen {
+            get {
+                object obj = ResourceManager.GetObject("usuarios_imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon usuarios_imagen1 {
+            get {
+                object obj = ResourceManager.GetObject("usuarios_imagen1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap volver_atras {
+            get {
+                object obj = ResourceManager.GetObject("volver_atras", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

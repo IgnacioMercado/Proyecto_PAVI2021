@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Proyecto_PAVI2021.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto_PAVI2021.Presentacion;
 
 namespace Proyecto_PAVI2021
 {
@@ -17,7 +17,8 @@ namespace Proyecto_PAVI2021
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            //Application.Run(new FormClientes());
+            Application.Run(new frmLogin());
         }
     }
 }

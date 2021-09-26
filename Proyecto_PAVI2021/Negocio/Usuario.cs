@@ -61,7 +61,7 @@ namespace Proyecto_PAVI2021.Negocio
         {
             string consulta = "SELECT u.Id_Usuario, u.Nombre_Usuario, u.Fecha_Alta, p.Nombre as Perfil FROM USUARIOS u JOIN PERFILES p on u.Id_Perfil = p.Id_Perfil WHERE u.Borrado = 0";
 
-            consulta += " AND u.Fecha_Alta BETWEEN  CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT (DateTime, '" + hasta + "',103) ";
+            consulta += " AND u.Fecha_Alta BETWEEN  CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT(DateTime, '" + hasta + "', 103) ";
 
             if (!string.IsNullOrEmpty(rol))
                 consulta += " AND u.Id_Perfil = " + rol;
@@ -81,7 +81,7 @@ namespace Proyecto_PAVI2021.Negocio
         public void RegistrarUsuario(string nombre, string contraseña, string fecha_alta, string rol)
         {
             string consulta = "INSERT INTO USUARIOS (Nombre_Usuario, Contraseña_Usuario, Fecha_Alta, Id_Perfil) " +
-                              "VALUES ('" + nombre + "', '" + contraseña + "', '" + fecha_alta + "', " + rol + ")";
+                              "VALUES ('" + nombre + "', '" + contraseña + "', CONVERT(DateTime, '" + fecha_alta + "', 103), " + rol + ")";
             BDHelper oDatos = new BDHelper();
             oDatos.EjecutarConsulta(consulta);
         }

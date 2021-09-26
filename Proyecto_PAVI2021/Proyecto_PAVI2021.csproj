@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{057626F9-B859-4E59-A23C-36D94E21261C}</ProjectGuid>
+    <ProjectGuid>{467F83A2-6E41-406C-9C4E-9DC99006D809}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Proyecto_PAVI2021</RootNamespace>
-    <AssemblyName>Proyecto_PAVI2021</AssemblyName>
+    <RootNamespace>ProyectoAutopartes</RootNamespace>
+    <AssemblyName>ProyectoAutopartes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>llave y destornillador.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,19 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\BDHelper.cs" />
+    <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\Perfil.cs" />
     <Compile Include="Negocio\Usuario.cs" />
-    <Compile Include="Presentacion\FormAltaUsuarios.cs">
+    <Compile Include="Presentacion\PresClientes\FormAltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FormAltaUsuarios.Designer.cs">
-      <DependentUpon>FormAltaUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\FormModificarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\FormModificarUsuario.Designer.cs">
-      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    <Compile Include="Presentacion\PresClientes\FormAltaCliente.Designer.cs">
+      <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -67,34 +65,67 @@
     <Compile Include="Presentacion\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FormUsuarios.cs">
+    <Compile Include="Presentacion\PresClientes\FormModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FormUsuarios.Designer.cs">
+    <Compile Include="Presentacion\PresClientes\FormModificarCliente.Designer.cs">
+      <DependentUpon>FormModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresUsuarios\FormAltaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresUsuarios\FormAltaUsuarios.Designer.cs">
+      <DependentUpon>FormAltaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresUsuarios\FormModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresUsuarios\FormModificarUsuario.Designer.cs">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresClientes\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresClientes\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresUsuarios\FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresUsuarios\FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FormLogin.cs">
+    <Compile Include="Presentacion\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FormLogin.designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="Presentacion\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\FormAltaUsuarios.resx">
-      <DependentUpon>FormAltaUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FormModificarUsuario.resx">
-      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\PresClientes\FormAltaCliente.resx">
+      <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FormUsuarios.resx">
+    <EmbeddedResource Include="Presentacion\PresClientes\FormModificarCliente.resx">
+      <DependentUpon>FormModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresUsuarios\FormAltaUsuarios.resx">
+      <DependentUpon>FormAltaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresUsuarios\FormModificarUsuario.resx">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresClientes\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresUsuarios\FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,7 +151,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\216169_delete_icon %281%29.png" />
+    <None Include="Resources\326501_add_circle_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\326501_add_circle_icon %281%29.png" />
@@ -129,13 +160,49 @@
     <None Include="Resources\326501_add_circle_icon %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\326501_add_circle_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2561427_edit_icon %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\216169_delete_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\4801315_glass_magnifier_magnifying_search_searching_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Imagenes\caja de cambio 2.png" />
+    <Content Include="Imagenes\caja de cambio.png" />
+    <Content Include="Imagenes\fiat.png" />
+    <Content Include="Imagenes\flash automático.png" />
+    <Content Include="Imagenes\llave cruz.ico" />
+    <Content Include="Imagenes\llave cruz.png" />
+    <Content Include="Imagenes\llave y destornillador.ico" />
+    <Content Include="Imagenes\mecánico.png" />
+    <Content Include="Imagenes\piston.png" />
+    <Content Include="Imagenes\reloj muñeca.png" />
+    <Content Include="Imagenes\rueda.png" />
+    <Content Include="Imagenes\signo de pregunta.png" />
+    <Content Include="llave y destornillador.ico" />
+    <None Include="Resources\usuarios imagen.ico" />
+    <None Include="Resources\usuarios imagen.png" />
+    <None Include="Resources\volver atras.png" />
+    <None Include="Resources\eliminar usuario.png" />
+    <None Include="Resources\nuevo usuario.png" />
+    <None Include="Resources\modificar imagen.png" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\usuario 3.png" />
+    <None Include="Resources\usuario 2.png" />
+    <None Include="Resources\usuario 1.png" />
+    <None Include="Resources\signo de pregunta.png" />
+    <None Include="Resources\rueda.png" />
+    <None Include="Resources\reloj muñeca.png" />
+    <None Include="Resources\piston.png" />
+    <None Include="Resources\mecánico.png" />
+    <None Include="Resources\llave cruz.png" />
+    <None Include="Resources\fondo 1.jpg" />
+    <None Include="Resources\flash automático.png" />
+    <None Include="Resources\fiat.png" />
+    <None Include="Resources\caja de cambio 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -67,5 +67,11 @@ namespace Proyecto_PAVI2021.Presentacion
                 MessageBox.Show("Usuario modificado con exito");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 ventana = new Form1("");
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_PAVI2021.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,23 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_PAVI2021.Presentacion
+namespace Proyecto_PAVI2021
 {
-    public partial class FormPrincipal : Form
+    public partial class Form1 : Form
     {
-        public FormPrincipal()
+        public Form1(string nombre)
         {
             InitializeComponent();
-        }
-        private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-            FormLogin fl = new FormLogin();
-            fl.ShowDialog();
-            if (fl.MiUsuario.Id_usuario == 0)
-                this.Close();
-            else
-                this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
-            fl.Dispose();
+            this.Text =("Usuario: "+nombre);
         }
 
         private void informesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,6 +53,22 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             FormUsuarios fus = new FormUsuarios();
             fus.ShowDialog();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormClientes fcs = new FormClientes();
+            fcs.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Application.Exit();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

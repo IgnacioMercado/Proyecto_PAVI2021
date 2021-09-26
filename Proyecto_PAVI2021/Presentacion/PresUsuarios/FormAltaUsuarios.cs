@@ -37,7 +37,7 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             string nombre, contraseña, rol;
 
-            string fechaAlta = DateTime.Now.ToString("yyyy-MM-dd");
+            string fechaAlta = DateTime.Now.ToString("dd/MM/yyyy");
             nombre = txtUsuario.Text.ToString();
             contraseña = txtContraseña.Text.ToString();
             rol = cmbPerfil.SelectedValue.ToString();
@@ -54,9 +54,10 @@ namespace Proyecto_PAVI2021.Presentacion
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form1 ventana = new Form1("");
         }
     }
 }

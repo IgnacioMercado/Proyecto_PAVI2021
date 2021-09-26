@@ -1,7 +1,7 @@
 ﻿
-namespace Proyecto_PAVI2021.Presentacion
+namespace Proyecto_PAVI2021
 {
-    partial class FormPrincipal
+    partial class Form1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,6 +29,7 @@ namespace Proyecto_PAVI2021.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,10 +76,6 @@ namespace Proyecto_PAVI2021.Presentacion
             this.agregarPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.barriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,22 +89,27 @@ namespace Proyecto_PAVI2021.Presentacion
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.BackColor = System.Drawing.Color.LightSalmon;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aToolStripMenuItem,
             this.bToolStripMenuItem,
             this.cToolStripMenuItem,
             this.sdToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(905, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(679, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -117,14 +119,14 @@ namespace Proyecto_PAVI2021.Presentacion
             this.facturaciónToolStripMenuItem,
             this.formasDePagoToolStripMenuItem});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.aToolStripMenuItem.Text = "Ventas";
             this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
             // 
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             // 
             // formasDePagoToolStripMenuItem
@@ -135,31 +137,31 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarFormaDePagoToolStripMenuItem,
             this.consultarFormaDePagoToolStripMenuItem});
             this.formasDePagoToolStripMenuItem.Name = "formasDePagoToolStripMenuItem";
-            this.formasDePagoToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.formasDePagoToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
             this.formasDePagoToolStripMenuItem.Text = "Formas de pago";
             // 
             // agregarFormasDePagoToolStripMenuItem
             // 
             this.agregarFormasDePagoToolStripMenuItem.Name = "agregarFormasDePagoToolStripMenuItem";
-            this.agregarFormasDePagoToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.agregarFormasDePagoToolStripMenuItem.Size = new System.Drawing.Size(248, 24);
             this.agregarFormasDePagoToolStripMenuItem.Text = "Agregar forma de pago";
             // 
             // eliminarFormaDePagoToolStripMenuItem
             // 
             this.eliminarFormaDePagoToolStripMenuItem.Name = "eliminarFormaDePagoToolStripMenuItem";
-            this.eliminarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.eliminarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(248, 24);
             this.eliminarFormaDePagoToolStripMenuItem.Text = "Eliminar forma de pago";
             // 
             // modificarFormaDePagoToolStripMenuItem
             // 
             this.modificarFormaDePagoToolStripMenuItem.Name = "modificarFormaDePagoToolStripMenuItem";
-            this.modificarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.modificarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(248, 24);
             this.modificarFormaDePagoToolStripMenuItem.Text = "Modificar forma de pago";
             // 
             // consultarFormaDePagoToolStripMenuItem
             // 
             this.consultarFormaDePagoToolStripMenuItem.Name = "consultarFormaDePagoToolStripMenuItem";
-            this.consultarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
+            this.consultarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(248, 24);
             this.consultarFormaDePagoToolStripMenuItem.Text = "Consultar forma de pago";
             // 
             // bToolStripMenuItem
@@ -171,7 +173,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.unidadesDeMedidaToolStripMenuItem,
             this.composicionToolStripMenuItem});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(97, 23);
             this.bToolStripMenuItem.Text = "Producción";
             // 
             // produccionToolStripMenuItem
@@ -183,38 +185,38 @@ namespace Proyecto_PAVI2021.Presentacion
             this.consultarLoteToolStripMenuItem,
             this.confirmarLoteToolStripMenuItem});
             this.produccionToolStripMenuItem.Name = "produccionToolStripMenuItem";
-            this.produccionToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
+            this.produccionToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.produccionToolStripMenuItem.Text = "Lotes";
             this.produccionToolStripMenuItem.Click += new System.EventHandler(this.produccionToolStripMenuItem_Click);
             // 
             // agregarLoteToolStripMenuItem
             // 
             this.agregarLoteToolStripMenuItem.Name = "agregarLoteToolStripMenuItem";
-            this.agregarLoteToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.agregarLoteToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.agregarLoteToolStripMenuItem.Text = "Agregar lote";
             // 
             // eliminarLoteToolStripMenuItem
             // 
             this.eliminarLoteToolStripMenuItem.Name = "eliminarLoteToolStripMenuItem";
-            this.eliminarLoteToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.eliminarLoteToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.eliminarLoteToolStripMenuItem.Text = "Eliminar lote";
             // 
             // modificarLoteToolStripMenuItem
             // 
             this.modificarLoteToolStripMenuItem.Name = "modificarLoteToolStripMenuItem";
-            this.modificarLoteToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.modificarLoteToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.modificarLoteToolStripMenuItem.Text = "Modificar lote";
             // 
             // consultarLoteToolStripMenuItem
             // 
             this.consultarLoteToolStripMenuItem.Name = "consultarLoteToolStripMenuItem";
-            this.consultarLoteToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.consultarLoteToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.consultarLoteToolStripMenuItem.Text = "Consultar lote";
             // 
             // confirmarLoteToolStripMenuItem
             // 
             this.confirmarLoteToolStripMenuItem.Name = "confirmarLoteToolStripMenuItem";
-            this.confirmarLoteToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.confirmarLoteToolStripMenuItem.Size = new System.Drawing.Size(176, 24);
             this.confirmarLoteToolStripMenuItem.Text = "Confirmar lote";
             // 
             // materialesToolStripMenuItem
@@ -225,31 +227,31 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarMaterialToolStripMenuItem1,
             this.consultarMaterialToolStripMenuItem});
             this.materialesToolStripMenuItem.Name = "materialesToolStripMenuItem";
-            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
+            this.materialesToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.materialesToolStripMenuItem.Text = "Materiales";
             // 
             // agregarMaterialToolStripMenuItem
             // 
             this.agregarMaterialToolStripMenuItem.Name = "agregarMaterialToolStripMenuItem";
-            this.agregarMaterialToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.agregarMaterialToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.agregarMaterialToolStripMenuItem.Text = "Agregar material";
             // 
             // modificarMaterialToolStripMenuItem
             // 
             this.modificarMaterialToolStripMenuItem.Name = "modificarMaterialToolStripMenuItem";
-            this.modificarMaterialToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.modificarMaterialToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.modificarMaterialToolStripMenuItem.Text = "Eliminar material";
             // 
             // modificarMaterialToolStripMenuItem1
             // 
             this.modificarMaterialToolStripMenuItem1.Name = "modificarMaterialToolStripMenuItem1";
-            this.modificarMaterialToolStripMenuItem1.Size = new System.Drawing.Size(215, 26);
+            this.modificarMaterialToolStripMenuItem1.Size = new System.Drawing.Size(203, 24);
             this.modificarMaterialToolStripMenuItem1.Text = "Modificar material";
             // 
             // consultarMaterialToolStripMenuItem
             // 
             this.consultarMaterialToolStripMenuItem.Name = "consultarMaterialToolStripMenuItem";
-            this.consultarMaterialToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.consultarMaterialToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.consultarMaterialToolStripMenuItem.Text = "Consultar material";
             // 
             // tiposDeMaterialToolStripMenuItem1
@@ -260,31 +262,31 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarTipoDeMaterialToolStripMenuItem,
             this.consultarTipoDeMaterialToolStripMenuItem});
             this.tiposDeMaterialToolStripMenuItem1.Name = "tiposDeMaterialToolStripMenuItem1";
-            this.tiposDeMaterialToolStripMenuItem1.Size = new System.Drawing.Size(230, 26);
+            this.tiposDeMaterialToolStripMenuItem1.Size = new System.Drawing.Size(216, 24);
             this.tiposDeMaterialToolStripMenuItem1.Text = "Tipos de material";
             // 
             // agregarTipoDeMaterialToolStripMenuItem
             // 
             this.agregarTipoDeMaterialToolStripMenuItem.Name = "agregarTipoDeMaterialToolStripMenuItem";
-            this.agregarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.agregarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(255, 24);
             this.agregarTipoDeMaterialToolStripMenuItem.Text = "Agregar tipo de material";
             // 
             // eliminarTipoDeMaterialToolStripMenuItem
             // 
             this.eliminarTipoDeMaterialToolStripMenuItem.Name = "eliminarTipoDeMaterialToolStripMenuItem";
-            this.eliminarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.eliminarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(255, 24);
             this.eliminarTipoDeMaterialToolStripMenuItem.Text = "Eliminar tipo de material";
             // 
             // modificarTipoDeMaterialToolStripMenuItem
             // 
             this.modificarTipoDeMaterialToolStripMenuItem.Name = "modificarTipoDeMaterialToolStripMenuItem";
-            this.modificarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.modificarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(255, 24);
             this.modificarTipoDeMaterialToolStripMenuItem.Text = "Modificar tipo de material";
             // 
             // consultarTipoDeMaterialToolStripMenuItem
             // 
             this.consultarTipoDeMaterialToolStripMenuItem.Name = "consultarTipoDeMaterialToolStripMenuItem";
-            this.consultarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(267, 26);
+            this.consultarTipoDeMaterialToolStripMenuItem.Size = new System.Drawing.Size(255, 24);
             this.consultarTipoDeMaterialToolStripMenuItem.Text = "Consultar tipo de material";
             // 
             // unidadesDeMedidaToolStripMenuItem
@@ -295,31 +297,31 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarUnidadDeMedidaToolStripMenuItem,
             this.consultarUnidadDeMedidaToolStripMenuItem});
             this.unidadesDeMedidaToolStripMenuItem.Name = "unidadesDeMedidaToolStripMenuItem";
-            this.unidadesDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
+            this.unidadesDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.unidadesDeMedidaToolStripMenuItem.Text = "Unidades de medida";
             // 
             // agregarUnidadDeMedidaToolStripMenuItem
             // 
             this.agregarUnidadDeMedidaToolStripMenuItem.Name = "agregarUnidadDeMedidaToolStripMenuItem";
-            this.agregarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.agregarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(269, 24);
             this.agregarUnidadDeMedidaToolStripMenuItem.Text = "Agregar unidad de medida";
             // 
             // eliminarUnidadDeMedidaToolStripMenuItem
             // 
             this.eliminarUnidadDeMedidaToolStripMenuItem.Name = "eliminarUnidadDeMedidaToolStripMenuItem";
-            this.eliminarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.eliminarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(269, 24);
             this.eliminarUnidadDeMedidaToolStripMenuItem.Text = "Eliminar unidad de medida";
             // 
             // modificarUnidadDeMedidaToolStripMenuItem
             // 
             this.modificarUnidadDeMedidaToolStripMenuItem.Name = "modificarUnidadDeMedidaToolStripMenuItem";
-            this.modificarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.modificarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(269, 24);
             this.modificarUnidadDeMedidaToolStripMenuItem.Text = "Modificar unidad de medida";
             // 
             // consultarUnidadDeMedidaToolStripMenuItem
             // 
             this.consultarUnidadDeMedidaToolStripMenuItem.Name = "consultarUnidadDeMedidaToolStripMenuItem";
-            this.consultarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.consultarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(269, 24);
             this.consultarUnidadDeMedidaToolStripMenuItem.Text = "Consultar unidad de medida";
             // 
             // composicionToolStripMenuItem
@@ -330,31 +332,31 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarComposicionToolStripMenuItem,
             this.consultarComposicionToolStripMenuItem});
             this.composicionToolStripMenuItem.Name = "composicionToolStripMenuItem";
-            this.composicionToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
+            this.composicionToolStripMenuItem.Size = new System.Drawing.Size(216, 24);
             this.composicionToolStripMenuItem.Text = "Composicion";
             // 
             // agregarComposicionToolStripMenuItem
             // 
             this.agregarComposicionToolStripMenuItem.Name = "agregarComposicionToolStripMenuItem";
-            this.agregarComposicionToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.agregarComposicionToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
             this.agregarComposicionToolStripMenuItem.Text = "Agregar composicion";
             // 
             // eliminarComposicionToolStripMenuItem
             // 
             this.eliminarComposicionToolStripMenuItem.Name = "eliminarComposicionToolStripMenuItem";
-            this.eliminarComposicionToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.eliminarComposicionToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
             this.eliminarComposicionToolStripMenuItem.Text = "Eliminar composicion";
             // 
             // modificarComposicionToolStripMenuItem
             // 
             this.modificarComposicionToolStripMenuItem.Name = "modificarComposicionToolStripMenuItem";
-            this.modificarComposicionToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.modificarComposicionToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
             this.modificarComposicionToolStripMenuItem.Text = "Modificar composicion";
             // 
             // consultarComposicionToolStripMenuItem
             // 
             this.consultarComposicionToolStripMenuItem.Name = "consultarComposicionToolStripMenuItem";
-            this.consultarComposicionToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
+            this.consultarComposicionToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
             this.consultarComposicionToolStripMenuItem.Text = "Consultar composicion";
             // 
             // cToolStripMenuItem
@@ -364,13 +366,13 @@ namespace Proyecto_PAVI2021.Presentacion
             this.personalToolStripMenuItem,
             this.perfilesToolStripMenuItem});
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(122, 23);
             this.cToolStripMenuItem.Text = "Administración";
             // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.usuarioToolStripMenuItem.Text = "Usuarios";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
@@ -382,32 +384,32 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarEmpleadoToolStripMenuItem,
             this.consultarEmpleadoToolStripMenuItem});
             this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
-            this.personalToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.personalToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.personalToolStripMenuItem.Text = "Personal";
             // 
             // agregarEmpleadoToolStripMenuItem
             // 
             this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
             this.agregarEmpleadoToolStripMenuItem.Text = "Agregar empleado";
             // 
             // eliminarEmpleadoToolStripMenuItem
             // 
             this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
-            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
             this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar empleado";
             this.eliminarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.eliminarEmpleadoToolStripMenuItem_Click);
             // 
             // modificarEmpleadoToolStripMenuItem
             // 
             this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
-            this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
             this.modificarEmpleadoToolStripMenuItem.Text = "Modificar empleado";
             // 
             // consultarEmpleadoToolStripMenuItem
             // 
             this.consultarEmpleadoToolStripMenuItem.Name = "consultarEmpleadoToolStripMenuItem";
-            this.consultarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.consultarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
             this.consultarEmpleadoToolStripMenuItem.Text = "Consultar empleado";
             // 
             // perfilesToolStripMenuItem
@@ -415,13 +417,13 @@ namespace Proyecto_PAVI2021.Presentacion
             this.perfilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarPerfilToolStripMenuItem});
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             // 
             // agregarPerfilToolStripMenuItem
             // 
             this.agregarPerfilToolStripMenuItem.Name = "agregarPerfilToolStripMenuItem";
-            this.agregarPerfilToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.agregarPerfilToolStripMenuItem.Size = new System.Drawing.Size(174, 24);
             this.agregarPerfilToolStripMenuItem.Text = "Agregar perfil";
             // 
             // sdToolStripMenuItem
@@ -431,44 +433,16 @@ namespace Proyecto_PAVI2021.Presentacion
             this.barriosToolStripMenuItem1,
             this.localidadesToolStripMenuItem1});
             this.sdToolStripMenuItem.Name = "sdToolStripMenuItem";
-            this.sdToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
+            this.sdToolStripMenuItem.Size = new System.Drawing.Size(146, 23);
             this.sdToolStripMenuItem.Text = "Gestion de clientes";
             this.sdToolStripMenuItem.Click += new System.EventHandler(this.sdToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarClienteToolStripMenuItem1,
-            this.eliminarClienteToolStripMenuItem1,
-            this.modificarClienteToolStripMenuItem1,
-            this.consultarClienteToolStripMenuItem1});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
-            // 
-            // agregarClienteToolStripMenuItem1
-            // 
-            this.agregarClienteToolStripMenuItem1.Name = "agregarClienteToolStripMenuItem1";
-            this.agregarClienteToolStripMenuItem1.Size = new System.Drawing.Size(204, 26);
-            this.agregarClienteToolStripMenuItem1.Text = "Agregar cliente";
-            // 
-            // eliminarClienteToolStripMenuItem1
-            // 
-            this.eliminarClienteToolStripMenuItem1.Name = "eliminarClienteToolStripMenuItem1";
-            this.eliminarClienteToolStripMenuItem1.Size = new System.Drawing.Size(204, 26);
-            this.eliminarClienteToolStripMenuItem1.Text = "Eliminar cliente";
-            // 
-            // modificarClienteToolStripMenuItem1
-            // 
-            this.modificarClienteToolStripMenuItem1.Name = "modificarClienteToolStripMenuItem1";
-            this.modificarClienteToolStripMenuItem1.Size = new System.Drawing.Size(204, 26);
-            this.modificarClienteToolStripMenuItem1.Text = "Modificar cliente";
-            // 
-            // consultarClienteToolStripMenuItem1
-            // 
-            this.consultarClienteToolStripMenuItem1.Name = "consultarClienteToolStripMenuItem1";
-            this.consultarClienteToolStripMenuItem1.Size = new System.Drawing.Size(204, 26);
-            this.consultarClienteToolStripMenuItem1.Text = "Consultar cliente";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // barriosToolStripMenuItem1
             // 
@@ -478,31 +452,31 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarBarrioToolStripMenuItem,
             this.consultarBarrioToolStripMenuItem});
             this.barriosToolStripMenuItem1.Name = "barriosToolStripMenuItem1";
-            this.barriosToolStripMenuItem1.Size = new System.Drawing.Size(171, 26);
+            this.barriosToolStripMenuItem1.Size = new System.Drawing.Size(157, 24);
             this.barriosToolStripMenuItem1.Text = "Barrios";
             // 
             // agregarBarrioToolStripMenuItem
             // 
             this.agregarBarrioToolStripMenuItem.Name = "agregarBarrioToolStripMenuItem";
-            this.agregarBarrioToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.agregarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.agregarBarrioToolStripMenuItem.Text = "Agregar barrio";
             // 
             // eliminarBarrioToolStripMenuItem
             // 
             this.eliminarBarrioToolStripMenuItem.Name = "eliminarBarrioToolStripMenuItem";
-            this.eliminarBarrioToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.eliminarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.eliminarBarrioToolStripMenuItem.Text = "Eliminar barrio";
             // 
             // modificarBarrioToolStripMenuItem
             // 
             this.modificarBarrioToolStripMenuItem.Name = "modificarBarrioToolStripMenuItem";
-            this.modificarBarrioToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.modificarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.modificarBarrioToolStripMenuItem.Text = "Modificar barrio";
             // 
             // consultarBarrioToolStripMenuItem
             // 
             this.consultarBarrioToolStripMenuItem.Name = "consultarBarrioToolStripMenuItem";
-            this.consultarBarrioToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.consultarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.consultarBarrioToolStripMenuItem.Text = "Consultar barrio";
             // 
             // localidadesToolStripMenuItem1
@@ -513,31 +487,31 @@ namespace Proyecto_PAVI2021.Presentacion
             this.modificarLocalidadToolStripMenuItem,
             this.consultarLocalidadToolStripMenuItem});
             this.localidadesToolStripMenuItem1.Name = "localidadesToolStripMenuItem1";
-            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(171, 26);
+            this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(157, 24);
             this.localidadesToolStripMenuItem1.Text = "Localidades";
             // 
             // agregarLocalidadToolStripMenuItem
             // 
             this.agregarLocalidadToolStripMenuItem.Name = "agregarLocalidadToolStripMenuItem";
-            this.agregarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.agregarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.agregarLocalidadToolStripMenuItem.Text = "Agregar localidad";
             // 
             // eliminarLocalidadToolStripMenuItem
             // 
             this.eliminarLocalidadToolStripMenuItem.Name = "eliminarLocalidadToolStripMenuItem";
-            this.eliminarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.eliminarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.eliminarLocalidadToolStripMenuItem.Text = "Eliminar localidad";
             // 
             // modificarLocalidadToolStripMenuItem
             // 
             this.modificarLocalidadToolStripMenuItem.Name = "modificarLocalidadToolStripMenuItem";
-            this.modificarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.modificarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.modificarLocalidadToolStripMenuItem.Text = "Modificar localidad";
             // 
             // consultarLocalidadToolStripMenuItem
             // 
             this.consultarLocalidadToolStripMenuItem.Name = "consultarLocalidadToolStripMenuItem";
-            this.consultarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(222, 26);
+            this.consultarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
             this.consultarLocalidadToolStripMenuItem.Text = "Consultar localidad";
             // 
             // reportesToolStripMenuItem
@@ -546,50 +520,56 @@ namespace Proyecto_PAVI2021.Presentacion
             this.estadisticasToolStripMenuItem,
             this.informesToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(80, 23);
             this.reportesToolStripMenuItem.Text = "Informes";
             // 
             // estadisticasToolStripMenuItem
             // 
             this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
-            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.estadisticasToolStripMenuItem.Text = "Estadisticas";
             // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.informesToolStripMenuItem.Text = "Reportes";
             this.informesToolStripMenuItem.Click += new System.EventHandler(this.informesToolStripMenuItem_Click);
             // 
-            // label4
+            // salirToolStripMenuItem
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(329, 44);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 31);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "AUTOPARTES";
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(51, 23);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoAutopartes.Properties.Resources.fondo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(679, 406);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(905, 521);
-            this.Controls.Add(this.label4);
+            this.BackColor = System.Drawing.Color.Peru;
+            this.ClientSize = new System.Drawing.Size(679, 423);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Autopartes";
-            this.Load += new System.EventHandler(this.FormPrincipal_Load);
+            this.Text = "Menú Principal";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,10 +595,6 @@ namespace Proyecto_PAVI2021.Presentacion
         private System.Windows.Forms.ToolStripMenuItem produccionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sdToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarClienteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem eliminarClienteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem modificarClienteToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem consultarClienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem barriosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem agregarBarrioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarBarrioToolStripMenuItem;
@@ -660,7 +636,8 @@ namespace Proyecto_PAVI2021.Presentacion
         private System.Windows.Forms.ToolStripMenuItem eliminarComposicionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarComposicionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarComposicionToolStripMenuItem;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 
