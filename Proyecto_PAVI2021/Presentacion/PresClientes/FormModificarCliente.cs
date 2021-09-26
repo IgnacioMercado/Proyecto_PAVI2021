@@ -93,7 +93,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 ventana = new Form1("");
+            FormPrincipal ventana = new FormPrincipal();
         }
     }
 }

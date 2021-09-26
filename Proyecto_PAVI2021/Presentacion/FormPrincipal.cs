@@ -11,42 +11,25 @@ using System.Windows.Forms;
 
 namespace Proyecto_PAVI2021
 {
-    public partial class Form1 : Form
+    public partial class FormPrincipal : Form
     {
-        public Form1(string nombre)
+        public FormPrincipal()
         {
             InitializeComponent();
-            this.Text =("Usuario: "+nombre);
         }
 
-        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            frmLogin fl;
+            fl = new frmLogin();
+            fl.ShowDialog();
 
-        }
+            if (fl.MiUsuario.Id_usuario == 0)
+                this.Close();
+            else
+                this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
 
-        private void eliminarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void aToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void produccionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sdToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void composicionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            fl.Dispose();
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,11 +42,6 @@ namespace Proyecto_PAVI2021
         {
             FormClientes fcs = new FormClientes();
             fcs.ShowDialog();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //Application.Exit();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

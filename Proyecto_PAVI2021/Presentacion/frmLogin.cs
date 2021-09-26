@@ -7,16 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using Proyecto_PAVI2021.Negocio;
 
 namespace Proyecto_PAVI2021
 {
     public partial class frmLogin : Form
     {
-        //private string user = "admin";
-        //private string pass = "1234";
-
         private Usuario miUsuario = new Usuario();
         
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
@@ -28,10 +24,7 @@ namespace Proyecto_PAVI2021
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            //this.Text = "Logeo!!!";
-            //this.BackColor = Color.Green;
             btnIngresar.Enabled = false;
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -41,7 +34,6 @@ namespace Proyecto_PAVI2021
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //if (this.txtUsuario.Text=="")
             if (string.IsNullOrEmpty(this.txtUsuario.Text)) 
             {
                 MessageBox.Show("Debe ingresar un Usuario...");
@@ -60,15 +52,10 @@ namespace Proyecto_PAVI2021
 
             this.miUsuario.Id_usuario = this.miUsuario.validarUsuario(miUsuario.Nombre, miUsuario.Contraseña);
 
-            //if (this.txtUsuario.Text==this.user && this.txtClave.Text==this.pass)
-            if (miUsuario.Id_usuario!=0)
+            if (miUsuario.Id_usuario != 0)
             {
                 //MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                string nombreDeUsuario = txtUsuario.Text;
-                Form1 frm1 = new Form1(nombreDeUsuario);
-                frm1.ShowDialog();
-                
+                this.Close();
             }
             else
             {
@@ -77,7 +64,6 @@ namespace Proyecto_PAVI2021
                 this.txtClave.Text = string.Empty;
                 this.txtUsuario.Focus();
             }
-
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
