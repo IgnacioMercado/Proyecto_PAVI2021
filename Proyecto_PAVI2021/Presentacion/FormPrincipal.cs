@@ -21,16 +21,16 @@ namespace Proyecto_PAVI2021
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            frmLogin fl;
-            fl = new frmLogin();
-            fl.ShowDialog();
+            //frmLogin fl;
+            //fl = new frmLogin();
+            //fl.ShowDialog();
 
-            if (fl.MiUsuario.Id_usuario == 0)
-                this.Close();
-            else
-                this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
+            //if (fl.MiUsuario.Id_usuario == 0)
+            //    this.Close();
+            //else
+            //    this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
 
-            fl.Dispose();
+            //fl.Dispose();
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)

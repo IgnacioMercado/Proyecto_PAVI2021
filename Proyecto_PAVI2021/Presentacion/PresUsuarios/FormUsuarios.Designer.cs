@@ -31,6 +31,10 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbPerfil = new System.Windows.Forms.ComboBox();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
@@ -47,10 +51,6 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,33 @@ namespace Proyecto_PAVI2021.Presentacion
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
+            // 
+            // colIdUsuario
+            // 
+            this.colIdUsuario.HeaderText = "#";
+            this.colIdUsuario.Name = "colIdUsuario";
+            this.colIdUsuario.ReadOnly = true;
+            this.colIdUsuario.Width = 25;
+            // 
+            // colUsuario
+            // 
+            this.colUsuario.HeaderText = "Usuario";
+            this.colUsuario.Name = "colUsuario";
+            this.colUsuario.ReadOnly = true;
+            this.colUsuario.Width = 195;
+            // 
+            // colFechaAlta
+            // 
+            this.colFechaAlta.HeaderText = "Fecha de alta";
+            this.colFechaAlta.Name = "colFechaAlta";
+            this.colFechaAlta.ReadOnly = true;
+            this.colFechaAlta.Width = 195;
+            // 
+            // colPerfil
+            // 
+            this.colPerfil.HeaderText = "Rol";
+            this.colPerfil.Name = "colPerfil";
+            this.colPerfil.ReadOnly = true;
             // 
             // cmbPerfil
             // 
@@ -251,33 +278,6 @@ namespace Proyecto_PAVI2021.Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(749, 405);
             this.panel1.TabIndex = 16;
-            // 
-            // colIdUsuario
-            // 
-            this.colIdUsuario.HeaderText = "#";
-            this.colIdUsuario.Name = "colIdUsuario";
-            this.colIdUsuario.ReadOnly = true;
-            this.colIdUsuario.Width = 25;
-            // 
-            // colUsuario
-            // 
-            this.colUsuario.HeaderText = "Usuario";
-            this.colUsuario.Name = "colUsuario";
-            this.colUsuario.ReadOnly = true;
-            this.colUsuario.Width = 195;
-            // 
-            // colFechaAlta
-            // 
-            this.colFechaAlta.HeaderText = "Fecha de alta";
-            this.colFechaAlta.Name = "colFechaAlta";
-            this.colFechaAlta.ReadOnly = true;
-            this.colFechaAlta.Width = 195;
-            // 
-            // colPerfil
-            // 
-            this.colPerfil.HeaderText = "Rol";
-            this.colPerfil.Name = "colPerfil";
-            this.colPerfil.ReadOnly = true;
             // 
             // FormUsuarios
             // 

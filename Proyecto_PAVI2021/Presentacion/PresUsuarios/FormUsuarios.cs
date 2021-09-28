@@ -24,7 +24,7 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
             this.dtpFechaHasta.Value = DateTime.Today;
-            this.CargarCombo(cmbPerfil, oPerfil.RecuperarTodos());
+            this.CargarCombo(cmbPerfil, oPerfil.RecuperarTodos(),2,0);
             this.CargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
 
         }
@@ -34,6 +34,14 @@ namespace Proyecto_PAVI2021.Presentacion
             combo.DataSource = tabla;
             combo.DisplayMember = tabla.Columns[1].ColumnName;
             combo.ValueMember = tabla.Columns[0].ColumnName;
+            combo.SelectedIndex = -1;
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private void CargarCombo(ComboBox combo, DataTable tabla, int display, int value)
+        {
+            combo.DataSource = tabla;
+            combo.DisplayMember = tabla.Columns[display].ColumnName;
+            combo.ValueMember = tabla.Columns[value].ColumnName;
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -108,5 +116,7 @@ namespace Proyecto_PAVI2021.Presentacion
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
         }
+
+        
     }
 }
