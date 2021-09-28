@@ -50,9 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\BDHelper.cs" />
+    <Compile Include="Negocio\Barrio.cs" />
     <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\Perfil.cs" />
     <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Presentacion\PresBarrios\FormBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresBarrios\FormBarrios.Designer.cs">
+      <DependentUpon>FormBarrios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresClientes\FormAltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +110,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\PresBarrios\FormBarrios.resx">
+      <DependentUpon>FormBarrios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresClientes\FormAltaCliente.resx">
       <DependentUpon>FormAltaCliente.cs</DependentUpon>
     </EmbeddedResource>
