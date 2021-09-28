@@ -113,6 +113,16 @@ namespace ProyectoAutopartes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _326501_add_circle_icon__3_ {
+            get {
+                object obj = ResourceManager.GetObject("_326501_add_circle_icon__3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4801315_glass_magnifier_magnifying_search_searching_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("4801315_glass_magnifier_magnifying_search_searching_icon (1)", resourceCulture);
@@ -146,6 +156,36 @@ namespace ProyectoAutopartes.Properties {
         internal static System.Drawing.Bitmap eliminar_usuario {
             get {
                 object obj = ResourceManager.GetObject("eliminar_usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap equis {
+            get {
+                object obj = ResourceManager.GetObject("equis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap equis_2 {
+            get {
+                object obj = ResourceManager.GetObject("equis_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap equis_3 {
+            get {
+                object obj = ResourceManager.GetObject("equis_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +296,16 @@ namespace ProyectoAutopartes.Properties {
         internal static System.Drawing.Bitmap signo_de_pregunta {
             get {
                 object obj = ResourceManager.GetObject("signo_de_pregunta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick {
+            get {
+                object obj = ResourceManager.GetObject("tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

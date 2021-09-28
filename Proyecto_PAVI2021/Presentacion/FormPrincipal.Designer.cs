@@ -34,10 +34,6 @@ namespace Proyecto_PAVI2021
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formasDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarFormasDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarFormaDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarFormaDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarFormaDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarLoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,43 +122,15 @@ namespace Proyecto_PAVI2021
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             // 
             // formasDePagoToolStripMenuItem
             // 
-            this.formasDePagoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarFormasDePagoToolStripMenuItem,
-            this.eliminarFormaDePagoToolStripMenuItem,
-            this.modificarFormaDePagoToolStripMenuItem,
-            this.consultarFormaDePagoToolStripMenuItem});
             this.formasDePagoToolStripMenuItem.Name = "formasDePagoToolStripMenuItem";
-            this.formasDePagoToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.formasDePagoToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.formasDePagoToolStripMenuItem.Text = "Formas de pago";
-            // 
-            // agregarFormasDePagoToolStripMenuItem
-            // 
-            this.agregarFormasDePagoToolStripMenuItem.Name = "agregarFormasDePagoToolStripMenuItem";
-            this.agregarFormasDePagoToolStripMenuItem.Size = new System.Drawing.Size(297, 28);
-            this.agregarFormasDePagoToolStripMenuItem.Text = "Agregar forma de pago";
-            // 
-            // eliminarFormaDePagoToolStripMenuItem
-            // 
-            this.eliminarFormaDePagoToolStripMenuItem.Name = "eliminarFormaDePagoToolStripMenuItem";
-            this.eliminarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(297, 28);
-            this.eliminarFormaDePagoToolStripMenuItem.Text = "Eliminar forma de pago";
-            // 
-            // modificarFormaDePagoToolStripMenuItem
-            // 
-            this.modificarFormaDePagoToolStripMenuItem.Name = "modificarFormaDePagoToolStripMenuItem";
-            this.modificarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(297, 28);
-            this.modificarFormaDePagoToolStripMenuItem.Text = "Modificar forma de pago";
-            // 
-            // consultarFormaDePagoToolStripMenuItem
-            // 
-            this.consultarFormaDePagoToolStripMenuItem.Name = "consultarFormaDePagoToolStripMenuItem";
-            this.consultarFormaDePagoToolStripMenuItem.Size = new System.Drawing.Size(297, 28);
-            this.consultarFormaDePagoToolStripMenuItem.Text = "Consultar forma de pago";
+            this.formasDePagoToolStripMenuItem.Click += new System.EventHandler(this.formasDePagoToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
@@ -543,7 +511,7 @@ namespace Proyecto_PAVI2021
             // 
             this.pictureBox1.Image = global::ProyectoAutopartes.Properties.Resources.fondo_1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(905, 500);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -560,7 +528,7 @@ namespace Proyecto_PAVI2021
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
@@ -609,10 +577,6 @@ namespace Proyecto_PAVI2021
         private System.Windows.Forms.ToolStripMenuItem tiposDeMaterialToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem unidadesDeMedidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem composicionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarFormasDePagoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarFormaDePagoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarFormaDePagoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarFormaDePagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarLoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarLoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarLoteToolStripMenuItem;

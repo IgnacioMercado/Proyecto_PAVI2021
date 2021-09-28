@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Presentacion;
+using Proyecto_PAVI2021.Presentacion.PresFormasPago;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,12 @@ namespace Proyecto_PAVI2021
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void formasDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFormasPago ffp = new FormFormasPago();
+            ffp.ShowDialog();
         }
     }
 }
