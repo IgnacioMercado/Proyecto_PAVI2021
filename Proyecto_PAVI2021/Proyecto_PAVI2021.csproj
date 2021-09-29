@@ -53,6 +53,7 @@
     <Compile Include="Negocio\Barrio.cs" />
     <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\FormaPago.cs" />
+    <Compile Include="Negocio\Localidad.cs" />
     <Compile Include="Negocio\Perfil.cs" />
     <Compile Include="Negocio\Personal.cs" />
     <Compile Include="Negocio\Usuario.cs" />
@@ -103,6 +104,12 @@
     </Compile>
     <Compile Include="Presentacion\PresPersonal\FormAltaPersonal.Designer.cs">
       <DependentUpon>FormAltaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormModificarPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormModificarPersonal.Designer.cs">
+      <DependentUpon>FormModificarPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresPersonal\FormPersonal.cs">
       <SubType>Form</SubType>
@@ -165,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPersonal\FormAltaPersonal.resx">
       <DependentUpon>FormAltaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresPersonal\FormModificarPersonal.resx">
+      <DependentUpon>FormModificarPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPersonal\FormPersonal.resx">
       <DependentUpon>FormPersonal.cs</DependentUpon>

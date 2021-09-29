@@ -71,9 +71,9 @@ namespace ProyectoAutopartes.Negocio
             if (!string.IsNullOrEmpty(usuario))
                 consulta += " AND u.Nombre_Usuario LIKE '" + usuario + "%'";
             if (!string.IsNullOrEmpty(barrio))
-                consulta += " AND b.Id_Barrio = " + barrio;
+                consulta += " AND p.Id_Barrio = " + barrio;
             if (!string.IsNullOrEmpty(localidad))
-                consulta += " AND u.Id_Localidad = " + localidad;
+                consulta += " AND p.Id_Localidad = " + localidad;
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
@@ -83,14 +83,14 @@ namespace ProyectoAutopartes.Negocio
         {
             string consulta = "INSERT INTO PERSONAL (Tipo_Doc, Nro_Doc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Id_Barrio, Id_Localidad, Id_Usuario) " +
                               "VALUES ('" + tipo_doc + "', '" + nro_doc + "', '" + nombre + "', '" + apellido + "', '" + telefono + "', '" + calle + "', '" + altura 
-                              + ", "+ id_barrio + ", " + id_localidad + ", " + id_usuario + ")";
+                              + "', "+ id_barrio + ", " + id_localidad + ", " + id_usuario + ")";
             BDHelper oDatos = new BDHelper();
             oDatos.EjecutarConsulta(consulta);
         }
 
-        public void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura)
+        public void ModificarPersonalPorLegajo(int legajo, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string barrio, string localidad, string usuario)
         {
-            string consulta = "UPDATE CLIENTES SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "' WHERE Id_Cliente = " + id_cliente;
+            string consulta = "UPDATE PERSONAL SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "', Id_Barrio = " + barrio + ", Id_Localidad = " + localidad + ", Id_Usuario = " + usuario + " WHERE Legajo = " + legajo;
             BDHelper oDatos = new BDHelper();
             oDatos.EjecutarConsulta(consulta);
         }
@@ -103,10 +103,10 @@ namespace ProyectoAutopartes.Negocio
 
         public DataTable RecuperarPersonalPorLegajo(int legajo)
         {
-            string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Nombre_Usuario as Usuario, pf.Nombre as Rol, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad " +
+            string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Id_Usuario as Usuario, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Id_Barrio as Barrio, l.Id_Localidad as Localidad " +
                 "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on p.Id_Localidad = l.Id_Localidad " +
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
-                "WHERE p.Borrado = 0 AND c.Id_Cliente = " + legajo;
+                "WHERE p.Borrado = 0 AND p.Legajo = " + legajo;
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);

@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion.PresClientes;
+using Proyecto_PAVI2021.Presentacion.PresPersonal;
 using ProyectoAutopartes.Negocio;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Proyecto_PAVI2021.Presentacion
         Usuario oUsuario = new Usuario();
         Cliente oCliente = new Cliente();
         Barrio oBarrio = new Barrio();
+        Localidad oLocalidad = new Localidad();
         public FormPersonal()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace Proyecto_PAVI2021.Presentacion
             
             this.CargarGrilla(dgvPersonal, oPersonal.RecuperarTodos());
             this.CargarCombo(cmbBarrios, oBarrio.RecuperarTodos());
+            this.CargarCombo(cmbLocalidades, oLocalidad.RecuperarTodos());
 
         }
 
@@ -76,14 +79,16 @@ namespace Proyecto_PAVI2021.Presentacion
                 usuario = txtUsuario.Text;
             if (txtTelefono.Text != "")
                 telefono = txtTelefono.Text;
-            if (txtTipoDoc.Text != "")
-                tipo_doc = txtTipoDoc.Text;
+            //if (txtTipoDoc.Text != "")
+            //    tipo_doc = txtTipoDoc.Text;
             if (txtNroDoc.Text != "")
                 nro_doc = txtNroDoc.Text;
             if (txtCalle.Text != "")
                 calle = txtCalle.Text;
             if (txtAltura.Text != "")
                 altura = txtAltura.Text;
+            if (cboTipoDoc.SelectedIndex != -1)
+                tipo_doc = cboTipoDoc.Text;
             if (cmbBarrios.SelectedIndex != -1)
                 barrio = cmbBarrios.SelectedValue.ToString();
             if (cmbLocalidades.SelectedIndex != -1)
@@ -119,9 +124,9 @@ namespace Proyecto_PAVI2021.Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            FormModificarCliente fmc = new FormModificarCliente((int)dgvPersonal.CurrentRow.Cells[0].Value);
+            FormModificarPersonal fmp = new FormModificarPersonal((int)dgvPersonal.CurrentRow.Cells[0].Value);
 
-            fmc.ShowDialog();
+            fmp.ShowDialog();
             this.CargarGrilla(dgvPersonal, oPersonal.RecuperarTodos());
         }
 

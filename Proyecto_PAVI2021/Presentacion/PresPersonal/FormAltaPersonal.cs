@@ -19,6 +19,7 @@ namespace Proyecto_PAVI2021.Presentacion
         Barrio oBarrio = new Barrio();
         Usuario oUsuario = new Usuario();
         Personal oPersonal = new Personal();
+        Localidad oLocalidad = new Localidad();
 
         public FormAltaPersonal()
         {
@@ -29,6 +30,7 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             CargarCombo(cmbBarrios, oBarrio.RecuperarTodos());
             CargarCombo(cmbUsuarios, oUsuario.RecuperarTodos());
+            CargarCombo(cmbLocalidades, oLocalidad.RecuperarTodos());
 
         }
 
@@ -43,49 +45,57 @@ namespace Proyecto_PAVI2021.Presentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura, barrio, localidad, usuario;
-            nombre = txtNombre.Text;
-            apellido = txtApellido.Text;
-            telefono = txtTelefono.Text;
-            tipo_doc = txtTipoDoc.Text;
-            nro_doc = txtNroDoc.Text;
-            calle = txtCalle.Text;
-            altura = txtAltura.Text;
-            barrio = cmbBarrios.SelectedValue.ToString();
-            localidad = cmbLocalidades.SelectedValue.ToString();
-            usuario = cmbUsuarios.SelectedValue.ToString();
+            //string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura, barrio, localidad, usuario;
+            //nombre = txtNombre.Text;
+            //apellido = txtApellido.Text;
+            //telefono = txtTelefono.Text;
+            //tipo_doc = txtTipoDoc.Text;
+            //nro_doc = txtNroDoc.Text;
+            //calle = txtCalle.Text;
+            //altura = txtAltura.Text;
+            //barrio = cmbBarrios.SelectedValue.ToString();
+            //localidad = cmbLocalidades.SelectedValue.ToString();
+            //usuario = cmbUsuarios.SelectedValue.ToString();
 
-            if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "" || cmbBarrios.SelectedIndex == -1 || cmbUsuarios.SelectedIndex == -1 || cmbLocalidades.SelectedIndex == -1) 
-            {
-                MessageBox.Show("Por favor, complete todos los campos antes de intentar registrar al cliente");
-            }
-            else
-            {
-                oPersonal.RegistrarPersonal(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
-                MessageBox.Show("Cliente registrado con exito");
-            }
+            //if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "" || cmbBarrios.SelectedIndex == -1 || cmbUsuarios.SelectedIndex == -1 || cmbLocalidades.SelectedIndex == -1) 
+            //{
+            //    MessageBox.Show("Por favor, complete todos los campos antes de intentar registrar al cliente");
+            //}
+            //else
+            //{
+            //    oPersonal.RegistrarPersonal(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
+            //    MessageBox.Show("Cliente registrado con exito");
+            //}
         }
 
         private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
-            string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura;
-            string fechaAlta = DateTime.Now.ToString("dd/MM/yyyy");
+            string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura, barrio, localidad, usuario;
             nombre = txtNombre.Text;
             apellido = txtApellido.Text;
             telefono = txtTelefono.Text;
-            tipo_doc = txtTipoDoc.Text;
+            tipo_doc = cboTipoDoc.Text;
             nro_doc = txtNroDoc.Text;
             calle = txtCalle.Text;
             altura = txtAltura.Text;
+            barrio = string.Empty;
+            localidad = string.Empty;
+            usuario = string.Empty;
+            if (cmbBarrios.SelectedIndex != -1)
+                barrio = cmbBarrios.SelectedValue.ToString();
+            if (cmbLocalidades.SelectedIndex != -1)
+                localidad = cmbLocalidades.SelectedValue.ToString();
+            if (cmbUsuarios.SelectedIndex != -1)
+                usuario = cmbUsuarios.SelectedValue.ToString();
 
-            if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "")
+            if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "" || barrio == "" || usuario == "" || localidad == "")
             {
-                MessageBox.Show("Por favor, complete todos los campos antes de intentar registrar al cliente");
+                MessageBox.Show("Por favor, complete todos los campos antes de intentar registrar al empleado");
             }
             else
             {
-                oCliente.RegistrarCliente(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, fechaAlta);
-                MessageBox.Show("Cliente registrado con exito");
+                oPersonal.RegistrarPersonal(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
+                MessageBox.Show("Empleado registrado");
             }
         }
 
