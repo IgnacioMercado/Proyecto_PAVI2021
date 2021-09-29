@@ -223,6 +223,26 @@ namespace ProyectoAutopartes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bordes_de_limpieza_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bordes-de-limpieza-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_borrar_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-borrar-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap llave_cruz {
             get {
                 object obj = ResourceManager.GetObject("llave_cruz", resourceCulture);

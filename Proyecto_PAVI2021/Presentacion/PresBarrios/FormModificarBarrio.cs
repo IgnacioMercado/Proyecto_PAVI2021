@@ -50,7 +50,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             else
             {
                 oBarrio.ModificarBarrioPorId(id_barrio, descripcion);
-                MessageBox.Show("Barrio modificado con extio");
+                MessageBox.Show("Barrio modificado");
             }
         }
     }

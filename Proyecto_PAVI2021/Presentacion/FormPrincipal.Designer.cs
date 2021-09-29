@@ -64,24 +64,12 @@ namespace Proyecto_PAVI2021
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -340,51 +328,23 @@ namespace Proyecto_PAVI2021
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.usuarioToolStripMenuItem.Text = "Usuarios";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // personalToolStripMenuItem
             // 
-            this.personalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarEmpleadoToolStripMenuItem,
-            this.eliminarEmpleadoToolStripMenuItem,
-            this.modificarEmpleadoToolStripMenuItem,
-            this.consultarEmpleadoToolStripMenuItem});
             this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
-            this.personalToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.personalToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.personalToolStripMenuItem.Text = "Personal";
-            // 
-            // agregarEmpleadoToolStripMenuItem
-            // 
-            this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
-            this.agregarEmpleadoToolStripMenuItem.Text = "Agregar empleado";
-            // 
-            // eliminarEmpleadoToolStripMenuItem
-            // 
-            this.eliminarEmpleadoToolStripMenuItem.Name = "eliminarEmpleadoToolStripMenuItem";
-            this.eliminarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
-            this.eliminarEmpleadoToolStripMenuItem.Text = "Eliminar empleado";
-            // 
-            // modificarEmpleadoToolStripMenuItem
-            // 
-            this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
-            this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
-            this.modificarEmpleadoToolStripMenuItem.Text = "Modificar empleado";
-            // 
-            // consultarEmpleadoToolStripMenuItem
-            // 
-            this.consultarEmpleadoToolStripMenuItem.Name = "consultarEmpleadoToolStripMenuItem";
-            this.consultarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(215, 24);
-            this.consultarEmpleadoToolStripMenuItem.Text = "Consultar empleado";
+            this.personalToolStripMenuItem.Click += new System.EventHandler(this.personalToolStripMenuItem_Click);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarPerfilToolStripMenuItem});
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             // 
             // agregarPerfilToolStripMenuItem
@@ -413,77 +373,17 @@ namespace Proyecto_PAVI2021
             // 
             // barriosToolStripMenuItem1
             // 
-            this.barriosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarBarrioToolStripMenuItem,
-            this.eliminarBarrioToolStripMenuItem,
-            this.modificarBarrioToolStripMenuItem,
-            this.consultarBarrioToolStripMenuItem});
             this.barriosToolStripMenuItem1.Name = "barriosToolStripMenuItem1";
             this.barriosToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.barriosToolStripMenuItem1.Text = "Barrios";
-            // 
-            // agregarBarrioToolStripMenuItem
-            // 
-            this.agregarBarrioToolStripMenuItem.Name = "agregarBarrioToolStripMenuItem";
-            this.agregarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
-            this.agregarBarrioToolStripMenuItem.Text = "Agregar barrio";
-            this.agregarBarrioToolStripMenuItem.Click += new System.EventHandler(this.agregarBarrioToolStripMenuItem_Click);
-            // 
-            // eliminarBarrioToolStripMenuItem
-            // 
-            this.eliminarBarrioToolStripMenuItem.Name = "eliminarBarrioToolStripMenuItem";
-            this.eliminarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
-            this.eliminarBarrioToolStripMenuItem.Text = "Eliminar barrio";
-            this.eliminarBarrioToolStripMenuItem.Click += new System.EventHandler(this.eliminarBarrioToolStripMenuItem_Click);
-            // 
-            // modificarBarrioToolStripMenuItem
-            // 
-            this.modificarBarrioToolStripMenuItem.Name = "modificarBarrioToolStripMenuItem";
-            this.modificarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
-            this.modificarBarrioToolStripMenuItem.Text = "Modificar barrio";
-            this.modificarBarrioToolStripMenuItem.Click += new System.EventHandler(this.modificarBarrioToolStripMenuItem_Click);
-            // 
-            // consultarBarrioToolStripMenuItem
-            // 
-            this.consultarBarrioToolStripMenuItem.Name = "consultarBarrioToolStripMenuItem";
-            this.consultarBarrioToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
-            this.consultarBarrioToolStripMenuItem.Text = "Consultar barrio";
-            this.consultarBarrioToolStripMenuItem.Click += new System.EventHandler(this.consultarBarrioToolStripMenuItem_Click);
+            this.barriosToolStripMenuItem1.Click += new System.EventHandler(this.barriosToolStripMenuItem1_Click);
             // 
             // localidadesToolStripMenuItem1
             // 
-            this.localidadesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarLocalidadToolStripMenuItem,
-            this.eliminarLocalidadToolStripMenuItem,
-            this.modificarLocalidadToolStripMenuItem,
-            this.consultarLocalidadToolStripMenuItem});
             this.localidadesToolStripMenuItem1.Name = "localidadesToolStripMenuItem1";
             this.localidadesToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.localidadesToolStripMenuItem1.Text = "Localidades";
-            // 
-            // agregarLocalidadToolStripMenuItem
-            // 
-            this.agregarLocalidadToolStripMenuItem.Name = "agregarLocalidadToolStripMenuItem";
-            this.agregarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
-            this.agregarLocalidadToolStripMenuItem.Text = "Agregar localidad";
-            // 
-            // eliminarLocalidadToolStripMenuItem
-            // 
-            this.eliminarLocalidadToolStripMenuItem.Name = "eliminarLocalidadToolStripMenuItem";
-            this.eliminarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
-            this.eliminarLocalidadToolStripMenuItem.Text = "Eliminar localidad";
-            // 
-            // modificarLocalidadToolStripMenuItem
-            // 
-            this.modificarLocalidadToolStripMenuItem.Name = "modificarLocalidadToolStripMenuItem";
-            this.modificarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
-            this.modificarLocalidadToolStripMenuItem.Text = "Modificar localidad";
-            // 
-            // consultarLocalidadToolStripMenuItem
-            // 
-            this.consultarLocalidadToolStripMenuItem.Name = "consultarLocalidadToolStripMenuItem";
-            this.consultarLocalidadToolStripMenuItem.Size = new System.Drawing.Size(209, 24);
-            this.consultarLocalidadToolStripMenuItem.Text = "Consultar localidad";
+            this.localidadesToolStripMenuItem1.Click += new System.EventHandler(this.localidadesToolStripMenuItem1_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -557,24 +457,12 @@ namespace Proyecto_PAVI2021
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadisticasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarEmpleadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarPerfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produccionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sdToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barriosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem agregarBarrioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarBarrioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarBarrioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarBarrioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem localidadesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem agregarLocalidadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarLocalidadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarLocalidadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarLocalidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formasDePagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem materialesToolStripMenuItem;

@@ -1,6 +1,7 @@
 ﻿using Proyecto_PAVI2021.Presentacion;
 using Proyecto_PAVI2021.Presentacion.PresFormasPago;
 using ProyectoAutopartes.Presentacion.PresBarrios;
+using ProyectoAutopartes.Presentacion.PresLocalidad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,6 +85,24 @@ namespace Proyecto_PAVI2021
         {
             FormBarrios fba = new FormBarrios();
             fba.ShowDialog();
+        }
+
+        private void barriosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormBarrios fba = new FormBarrios();
+            fba.ShowDialog();
+        }
+
+        private void localidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormLocalidad flc = new FormLocalidad();
+            flc.ShowDialog();
+        }
+
+        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPersonal fps = new FormPersonal();
+            fps.ShowDialog();
         }
     }
 }

@@ -103,7 +103,7 @@ namespace ProyectoAutopartes.Negocio
 
         public DataTable RecuperarPersonalPorLegajo(int legajo)
         {
-            string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Id_Usuario as Usuario, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Id_Barrio as Barrio, l.Id_Localidad as Localidad " +
+            string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Nombre_Usuario as Usuario, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad " +
                 "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on p.Id_Localidad = l.Id_Localidad " +
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
                 "WHERE p.Borrado = 0 AND p.Legajo = " + legajo;

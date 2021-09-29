@@ -147,6 +147,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.Controls.Add(this.panel1);
             this.Name = "FormAltaBarrio";
             this.Text = "Alta de Barrio";
+            this.Load += new System.EventHandler(this.FormAltaBarrio_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

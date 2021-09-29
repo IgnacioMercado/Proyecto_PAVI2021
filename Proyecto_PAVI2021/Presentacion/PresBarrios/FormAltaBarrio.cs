@@ -37,8 +37,13 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             else
             {
                 oBarrio.RegistrarBarrio(descripcion);
-                MessageBox.Show("Barrio registrado con exito");
+                MessageBox.Show("Barrio registrado");
             }
+        }
+
+        private void FormAltaBarrio_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

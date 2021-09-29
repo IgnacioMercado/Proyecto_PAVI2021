@@ -18,7 +18,7 @@ namespace Proyecto_PAVI2021
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPersonal());
+            Application.Run(new FormPrincipal());
 
         }
     }

@@ -64,7 +64,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             txtNroDoc.Text = tabla.Rows[0]["Nro_Doc"].ToString();
             txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
             txtAltura.Text = tabla.Rows[0]["Nro_Calle"].ToString();
-            
+
+
 
 
         }

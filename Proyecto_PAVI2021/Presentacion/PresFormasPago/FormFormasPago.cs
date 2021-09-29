@@ -47,7 +47,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             if (dr == DialogResult.Yes)
             {
                 oFormaPago.EliminarFormaPago((int)dgvFormasPago.CurrentRow.Cells[0].Value);
-                MessageBox.Show("Forma de pago eliminada con exito", "Eliminar forma de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Forma de pago eliminada", "Eliminar forma de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             this.CargarGrilla(dgvFormasPago, oFormaPago.RecuperarTodos());
@@ -83,13 +83,13 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
                 if (nuevo)
                 {
                     oFormaPago.RegistrarFormaPago(this.txtFormaPago.Text);
-                    MessageBox.Show("Forma de Pago registrada con éxito", "Registrar Forma de Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Forma de Pago registrada", "Registrar Forma de Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     nuevo = false;                    
                 }
                 else
                 {
                     oFormaPago.ModificarFormaPago(this.txtFormaPago.Text, (int)this.dgvFormasPago.CurrentRow.Cells[0].Value);
-                    MessageBox.Show("Forma de Pago modificada con éxito", "Modificar Forma de Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+                    MessageBox.Show("Forma de Pago modificada", "Modificar Forma de Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
                 }
                 this.CargarGrilla(dgvFormasPago, oFormaPago.RecuperarTodos());
                 this.habilitar(false);

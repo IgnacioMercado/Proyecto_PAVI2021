@@ -43,7 +43,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             if (dr == DialogResult.Yes)
             {
                 oBarrio.EliminarBarrio((int)dgvBarrios.CurrentRow.Cells[0].Value);
-                MessageBox.Show("Usuario eliminado con exito");
+                MessageBox.Show("Barrio eliminado");
             }
 
             this.CargarGrilla(dgvBarrios, oBarrio.RecuperarTodos());
