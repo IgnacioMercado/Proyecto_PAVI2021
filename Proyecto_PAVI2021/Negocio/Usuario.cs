@@ -38,7 +38,7 @@ namespace Proyecto_PAVI2021.Negocio
 
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT u.Id_Usuario, u.Nombre_Usuario, u.Fecha_Alta, p.Descripcion as Perfil FROM USUARIOS u JOIN PERFILES p on u.Id_Perfil = p.Id_Perfil WHERE u.Borrado = 0";
+            string consulta = "SELECT u.Id_Usuario, u.Nombre_Usuario, u.Fecha_Alta, p.Nombre as Perfil FROM USUARIOS u JOIN PERFILES p on u.Id_Perfil = p.Id_Perfil WHERE u.Borrado = 0";
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
@@ -59,7 +59,7 @@ namespace Proyecto_PAVI2021.Negocio
 
         public DataTable RecuperarFiltrados(string desde, string hasta, string rol)
         {
-            string consulta = "SELECT u.Id_Usuario, u.Nombre_Usuario, u.Fecha_Alta, p.Descripcion as Perfil FROM USUARIOS u JOIN PERFILES p on u.Id_Perfil = p.Id_Perfil WHERE u.Borrado = 0";
+            string consulta = "SELECT u.Id_Usuario, u.Nombre_Usuario, u.Fecha_Alta, p.Nombre as Perfil FROM USUARIOS u JOIN PERFILES p on u.Id_Perfil = p.Id_Perfil WHERE u.Borrado = 0";
 
             consulta += " AND u.Fecha_Alta BETWEEN  CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT(DateTime, '" + hasta + "', 103) ";
 
