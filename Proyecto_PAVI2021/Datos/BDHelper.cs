@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,6 +13,7 @@ namespace Proyecto_PAVI2021.Datos
         private SqlConnection conexion = new SqlConnection();
         private SqlCommand comando = new SqlCommand();
         private string cadenaConexion = @"Data Source=DESKTOP-RJE4TPG\SQLEXPRESS;Initial Catalog=Proyecto_PAVI2021;Integrated Security=True";
+
 
         public DataTable consultar(string consulta)
         {
