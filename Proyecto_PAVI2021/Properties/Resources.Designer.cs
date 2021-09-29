@@ -223,6 +223,16 @@ namespace ProyectoAutopartes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_Borrar {
+            get {
+                object obj = ResourceManager.GetObject("icono Borrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap llave_cruz {
             get {
                 object obj = ResourceManager.GetObject("llave_cruz", resourceCulture);

@@ -53,6 +53,7 @@
     <Compile Include="Negocio\Barrio.cs" />
     <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\FormaPago.cs" />
+    <Compile Include="Negocio\Localidad.cs" />
     <Compile Include="Negocio\Perfil.cs" />
     <Compile Include="Negocio\Usuario.cs" />
     <Compile Include="Presentacion\PresBarrios\FormBarrios.cs">
@@ -84,6 +85,18 @@
     </Compile>
     <Compile Include="Presentacion\PresFormasPago\FormFormasPago.designer.cs">
       <DependentUpon>FormFormasPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresLocalidad\FormAltaLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresLocalidad\FormAltaLocalidad.Designer.cs">
+      <DependentUpon>FormAltaLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresLocalidad\FormLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresLocalidad\FormLocalidad.Designer.cs">
+      <DependentUpon>FormLocalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresUsuarios\FormAltaUsuarios.cs">
       <SubType>Form</SubType>
@@ -131,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresFormasPago\FormFormasPago.resx">
       <DependentUpon>FormFormasPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresLocalidad\FormAltaLocalidad.resx">
+      <DependentUpon>FormAltaLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresLocalidad\FormLocalidad.resx">
+      <DependentUpon>FormLocalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresUsuarios\FormAltaUsuarios.resx">
       <DependentUpon>FormAltaUsuarios.cs</DependentUpon>
@@ -188,7 +207,9 @@
   <ItemGroup>
     <None Include="Resources\4801315_glass_magnifier_magnifying_search_searching_icon %281%29.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Presentacion\PresPerfiles\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Imagenes\caja de cambio 2.png" />
     <Content Include="Imagenes\caja de cambio.png" />
@@ -203,6 +224,7 @@
     <Content Include="Imagenes\rueda.png" />
     <Content Include="Imagenes\signo de pregunta.png" />
     <Content Include="llave y destornillador.ico" />
+    <None Include="Resources\icono Borrar.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\equis.png" />
     <None Include="Resources\equis 3.png" />
