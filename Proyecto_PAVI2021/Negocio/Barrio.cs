@@ -32,7 +32,7 @@ namespace Proyecto_PAVI2021.Negocio
             string consulta = "SELECT b.Id_Barrio, b.Descripcion FROM BARRIOS b WHERE b.Borrado = 0";
 
             if (!string.IsNullOrEmpty(descripcion))
-                consulta += " AND b.Descripcion LIKE '" + descripcion + "%'";
+                consulta += " AND c.Nombre LIKE '" + descripcion + "%'";
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);

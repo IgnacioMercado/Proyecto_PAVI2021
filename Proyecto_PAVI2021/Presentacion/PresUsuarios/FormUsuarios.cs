@@ -24,7 +24,7 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
             this.dtpFechaHasta.Value = DateTime.Today;
-            this.CargarCombo(cmbPerfil, oPerfil.RecuperarTodos());
+            this.CargarCombo(cmbPerfil, oPerfil.RecuperarTodos(),2,0);
             this.CargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
 
         }
@@ -117,9 +117,6 @@ namespace Proyecto_PAVI2021.Presentacion
             btnEliminar.Enabled = true;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

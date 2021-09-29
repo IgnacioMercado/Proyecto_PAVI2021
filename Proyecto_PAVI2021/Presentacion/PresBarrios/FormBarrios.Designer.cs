@@ -34,9 +34,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvBarrios = new System.Windows.Forms.DataGridView();
-            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -47,9 +45,11 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBarrios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,7 +57,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.dgvBarrios);
+            this.panel1.Controls.Add(this.dgvClientes);
             this.panel1.Location = new System.Drawing.Point(12, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 299);
@@ -100,38 +100,24 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.label4.Size = new System.Drawing.Size(87, 25);
             this.label4.TabIndex = 11;
             this.label4.Text = "Barrios";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // dgvBarrios
+            // dgvClientes
             // 
-            this.dgvBarrios.AllowUserToAddRows = false;
-            this.dgvBarrios.AllowUserToDeleteRows = false;
-            this.dgvBarrios.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvBarrios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBarrios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIdUsuario,
             this.colNombre});
-            this.dgvBarrios.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvBarrios.Location = new System.Drawing.Point(13, 115);
-            this.dgvBarrios.Name = "dgvBarrios";
-            this.dgvBarrios.ReadOnly = true;
-            this.dgvBarrios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBarrios.Size = new System.Drawing.Size(574, 162);
-            this.dgvBarrios.TabIndex = 0;
-            this.dgvBarrios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarrios_CellContentClick);
-            // 
-            // colIdUsuario
-            // 
-            this.colIdUsuario.HeaderText = "#";
-            this.colIdUsuario.Name = "colIdUsuario";
-            this.colIdUsuario.ReadOnly = true;
-            this.colIdUsuario.Width = 35;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 500;
+            this.dgvClientes.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgvClientes.Location = new System.Drawing.Point(13, 115);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientes.Size = new System.Drawing.Size(574, 162);
+            this.dgvClientes.TabIndex = 0;
             // 
             // label2
             // 
@@ -153,7 +139,6 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.button1.Size = new System.Drawing.Size(63, 59);
             this.button1.TabIndex = 64;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAgregar
             // 
@@ -165,29 +150,28 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.btnAgregar.Size = new System.Drawing.Size(63, 59);
             this.btnAgregar.TabIndex = 59;
             this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Khaki;
+            this.btnModificar.Enabled = false;
             this.btnModificar.Image = global::ProyectoAutopartes.Properties.Resources.modificar_imagen;
             this.btnModificar.Location = new System.Drawing.Point(137, 362);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(66, 59);
             this.btnModificar.TabIndex = 58;
             this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.DarkSalmon;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Image = global::ProyectoAutopartes.Properties.Resources.eliminar_usuario;
             this.btnEliminar.Location = new System.Drawing.Point(255, 362);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(77, 59);
             this.btnEliminar.TabIndex = 57;
             this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnConsultar
             // 
@@ -198,7 +182,6 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.btnConsultar.Size = new System.Drawing.Size(66, 59);
             this.btnConsultar.TabIndex = 56;
             this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // label1
             // 
@@ -240,6 +223,20 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.label11.TabIndex = 67;
             this.label11.Text = "Eliminar barrio";
             // 
+            // colIdUsuario
+            // 
+            this.colIdUsuario.HeaderText = "#";
+            this.colIdUsuario.Name = "colIdUsuario";
+            this.colIdUsuario.ReadOnly = true;
+            this.colIdUsuario.Width = 35;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 500;
+            // 
             // FormBarrios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,12 +256,11 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.Controls.Add(this.btnAgregar);
             this.Name = "FormBarrios";
             this.Text = "Barrios";
-            this.Load += new System.EventHandler(this.FormBarrios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBarrios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,7 +273,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvBarrios;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAgregar;
