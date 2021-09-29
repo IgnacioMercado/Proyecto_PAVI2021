@@ -54,6 +54,7 @@
     <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\FormaPago.cs" />
     <Compile Include="Negocio\Perfil.cs" />
+    <Compile Include="Negocio\Personal.cs" />
     <Compile Include="Negocio\Usuario.cs" />
     <Compile Include="Presentacion\PresBarrios\FormBarrios.cs">
       <SubType>Form</SubType>
@@ -84,6 +85,18 @@
     </Compile>
     <Compile Include="Presentacion\PresFormasPago\FormFormasPago.designer.cs">
       <DependentUpon>FormFormasPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormAltaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormAltaPersonal.Designer.cs">
+      <DependentUpon>FormAltaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormPersonal.Designer.cs">
+      <DependentUpon>FormPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresUsuarios\FormAltaUsuarios.cs">
       <SubType>Form</SubType>
@@ -131,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresFormasPago\FormFormasPago.resx">
       <DependentUpon>FormFormasPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresPersonal\FormAltaPersonal.resx">
+      <DependentUpon>FormAltaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresPersonal\FormPersonal.resx">
+      <DependentUpon>FormPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresUsuarios\FormAltaUsuarios.resx">
       <DependentUpon>FormAltaUsuarios.cs</DependentUpon>

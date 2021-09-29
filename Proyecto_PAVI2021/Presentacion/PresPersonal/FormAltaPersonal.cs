@@ -1,0 +1,109 @@
+﻿using Proyecto_PAVI2021.Negocio;
+using ProyectoAutopartes.Negocio;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Proyecto_PAVI2021.Presentacion
+{
+    public partial class FormAltaPersonal : Form
+
+    {
+        Cliente oCliente = new Cliente();
+        Barrio oBarrio = new Barrio();
+        Usuario oUsuario = new Usuario();
+        Personal oPersonal = new Personal();
+
+        public FormAltaPersonal()
+        {
+            InitializeComponent();
+        }
+
+        private void FormAltaPersonal_Load(object sender, EventArgs e)
+        {
+            CargarCombo(cmbBarrios, oBarrio.RecuperarTodos());
+            CargarCombo(cmbUsuarios, oUsuario.RecuperarTodos());
+
+        }
+
+        private void CargarCombo(ComboBox combo, DataTable tabla)
+        {
+            combo.DataSource = tabla;
+            combo.DisplayMember = tabla.Columns[1].ColumnName;
+            combo.ValueMember = tabla.Columns[0].ColumnName;
+            combo.SelectedIndex = -1;
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura, barrio, localidad, usuario;
+            nombre = txtNombre.Text;
+            apellido = txtApellido.Text;
+            telefono = txtTelefono.Text;
+            tipo_doc = txtTipoDoc.Text;
+            nro_doc = txtNroDoc.Text;
+            calle = txtCalle.Text;
+            altura = txtAltura.Text;
+            barrio = cmbBarrios.SelectedValue.ToString();
+            localidad = cmbLocalidades.SelectedValue.ToString();
+            usuario = cmbUsuarios.SelectedValue.ToString();
+
+            if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "" || cmbBarrios.SelectedIndex == -1 || cmbUsuarios.SelectedIndex == -1 || cmbLocalidades.SelectedIndex == -1) 
+            {
+                MessageBox.Show("Por favor, complete todos los campos antes de intentar registrar al cliente");
+            }
+            else
+            {
+                oPersonal.RegistrarPersonal(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
+                MessageBox.Show("Cliente registrado con exito");
+            }
+        }
+
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
+        {
+            string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura;
+            string fechaAlta = DateTime.Now.ToString("dd/MM/yyyy");
+            nombre = txtNombre.Text;
+            apellido = txtApellido.Text;
+            telefono = txtTelefono.Text;
+            tipo_doc = txtTipoDoc.Text;
+            nro_doc = txtNroDoc.Text;
+            calle = txtCalle.Text;
+            altura = txtAltura.Text;
+
+            if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "")
+            {
+                MessageBox.Show("Por favor, complete todos los campos antes de intentar registrar al cliente");
+            }
+            else
+            {
+                oCliente.RegistrarCliente(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, fechaAlta);
+                MessageBox.Show("Cliente registrado con exito");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPrincipal ventana = new FormPrincipal();
+            
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
+}
