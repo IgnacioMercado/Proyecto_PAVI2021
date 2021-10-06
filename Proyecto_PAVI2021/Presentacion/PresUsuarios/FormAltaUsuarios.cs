@@ -49,7 +49,7 @@ namespace Proyecto_PAVI2021.Presentacion
             else
             {
                 oUsuario.RegistrarUsuario(nombre, contraseña, fechaAlta, rol);
-                MessageBox.Show("Usuario registrado con exito");
+                MessageBox.Show("Usuario registrado");
                 
             }
         }

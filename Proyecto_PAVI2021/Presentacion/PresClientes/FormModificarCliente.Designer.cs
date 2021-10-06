@@ -277,7 +277,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             this.btnModificar1.Size = new System.Drawing.Size(66, 59);
             this.btnModificar1.TabIndex = 65;
             this.btnModificar1.UseVisualStyleBackColor = false;
-            this.btnModificar1.Click += new System.EventHandler(this.btnModificar1_Click);
+            this.btnModificar1.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label2
             // 

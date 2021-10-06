@@ -64,7 +64,7 @@ namespace Proyecto_PAVI2021.Presentacion
             else
             {
                 oUsuario.ModificarUsuarioPorId(id_usuario, nombre, contraseña, rol);
-                MessageBox.Show("Usuario modificado con exito");
+                MessageBox.Show("Usuario modificado");
             }
         }
 

@@ -79,13 +79,13 @@ namespace Proyecto_PAVI2021.Presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este usuario?.", "Confirmación de baja de usuario", MessageBoxButtons.YesNoCancel,
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este usuario?.", "Confirmación de baja de usuario", MessageBoxButtons.YesNo,
             MessageBoxIcon.Information);
 
             if (dr == DialogResult.Yes)
             {
                 oUsuario.BorrarUsuario((int)dgvUsuarios.CurrentRow.Cells[0].Value);
-                MessageBox.Show("Usuario eliminado con exito");
+                MessageBox.Show("Usuario eliminado");
             }
             
             this.CargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
@@ -115,8 +115,6 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
-        }
-
-        
+        }        
     }
 }

@@ -14,19 +14,15 @@ namespace Proyecto_PAVI2021.Presentacion
 {
     public partial class FormClientes : Form
     {
-        Perfil oPerfil = new Perfil();
         Cliente oCliente = new Cliente();
-        Usuario oUsuario = new Usuario();
         public FormClientes()
         {
             InitializeComponent();
         }
 
-        private void FormUsuarios_Load(object sender, EventArgs e)
+        private void FormClientes_Load(object sender, EventArgs e)
         {
-            
             this.CargarGrilla(dgvClientes, oCliente.RecuperarTodos());
-
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
@@ -74,28 +70,17 @@ namespace Proyecto_PAVI2021.Presentacion
                 altura = txtAltura.Text;
 
             this.CargarGrilla(dgvClientes, oCliente.RecuperarFiltrados(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura));
-
-
-
-            //string rol;
-            //string desde = dtpFechaDesde.Value.ToString("dd/MM/yyyy");
-            //string hasta = dtpFechaHasta.Value.ToString("dd/MM/yyyy");
-            //rol = string.Empty;
-
-            //if (cmbPerfil.SelectedIndex != -1)
-                //rol = cmbPerfil.SelectedValue.ToString();
-            //this.CargarGrilla(dgvClientes, oUsuario.RecuperarFiltrados(desde, hasta, rol));
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este cliente?.", "Confirmación de baja de cliente", MessageBoxButtons.YesNoCancel,
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este cliente?.", "Confirmación de baja de cliente", MessageBoxButtons.YesNo,
             MessageBoxIcon.Information);
 
             if (dr == DialogResult.Yes)
             {
                 oCliente.BorrarCliente((int)dgvClientes.CurrentRow.Cells[0].Value);
-                MessageBox.Show("Usuario eliminado con exito");
+                MessageBox.Show("Cliente eliminado");
             }
             
             this.CargarGrilla(dgvClientes, oCliente.RecuperarTodos());
@@ -116,35 +101,10 @@ namespace Proyecto_PAVI2021.Presentacion
             this.CargarGrilla(dgvClientes, oCliente.RecuperarTodos());
         }
 
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

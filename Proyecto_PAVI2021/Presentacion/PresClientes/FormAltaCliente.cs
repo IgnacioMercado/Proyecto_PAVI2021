@@ -20,36 +20,7 @@ namespace Proyecto_PAVI2021.Presentacion
             InitializeComponent();
         }
 
-        private void FormAltaCliente_Load(object sender, EventArgs e)
-        {
-            
-
-        }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura;
-            string fechaAlta = DateTime.Now.ToString("dd/MM/yyyy");
-            nombre = txtNombre.Text;
-            apellido = txtApellido.Text;
-            telefono = txtTelefono.Text;
-            tipo_doc = txtTipoDoc.Text;
-            nro_doc = txtNroDoc.Text;
-            calle = txtCalle.Text;
-            altura = txtAltura.Text;
-
-            if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "") 
-            {
-                MessageBox.Show("Por favor, complete todos los campos antes de intentar registrar al cliente");
-            }
-            else
-            {
-                oCliente.RegistrarCliente(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, fechaAlta);
-                MessageBox.Show("Cliente registrado con exito");
-            }
-        }
-
-        private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
             string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura;
             string fechaAlta = DateTime.Now.ToString("dd/MM/yyyy");
@@ -68,20 +39,14 @@ namespace Proyecto_PAVI2021.Presentacion
             else
             {
                 oCliente.RegistrarCliente(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, fechaAlta);
-                MessageBox.Show("Cliente registrado con exito");
+                MessageBox.Show("Cliente registrado");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormPrincipal ventana = new FormPrincipal();
-            
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+            FormPrincipal ventana = new FormPrincipal();            
         }
     }
 }

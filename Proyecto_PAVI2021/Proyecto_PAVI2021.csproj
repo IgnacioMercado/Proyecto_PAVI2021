@@ -55,12 +55,25 @@
     <Compile Include="Negocio\FormaPago.cs" />
     <Compile Include="Negocio\Localidad.cs" />
     <Compile Include="Negocio\Perfil.cs" />
+    <Compile Include="Negocio\Personal.cs" />
     <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Presentacion\PresBarrios\FormAltaBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresBarrios\FormAltaBarrio.designer.cs">
+      <DependentUpon>FormAltaBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresBarrios\FormBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\PresBarrios\FormBarrios.Designer.cs">
+    <Compile Include="Presentacion\PresBarrios\FormBarrios.designer.cs">
       <DependentUpon>FormBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresBarrios\FormModificarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresBarrios\FormModificarBarrio.designer.cs">
+      <DependentUpon>FormModificarBarrio.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresClientes\FormAltaCliente.cs">
       <SubType>Form</SubType>
@@ -86,17 +99,29 @@
     <Compile Include="Presentacion\PresFormasPago\FormFormasPago.designer.cs">
       <DependentUpon>FormFormasPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\PresLocalidad\FormAltaLocalidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\PresLocalidad\FormAltaLocalidad.Designer.cs">
-      <DependentUpon>FormAltaLocalidad.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\PresLocalidad\FormLocalidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\PresLocalidad\FormLocalidad.Designer.cs">
+    <Compile Include="Presentacion\PresLocalidad\FormLocalidad.designer.cs">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormAltaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormAltaPersonal.designer.cs">
+      <DependentUpon>FormAltaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormModificarPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormModificarPersonal.designer.cs">
+      <DependentUpon>FormModificarPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresPersonal\FormPersonal.designer.cs">
+      <DependentUpon>FormPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresUsuarios\FormAltaUsuarios.cs">
       <SubType>Form</SubType>
@@ -130,8 +155,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\PresBarrios\FormAltaBarrio.resx">
+      <DependentUpon>FormAltaBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresBarrios\FormBarrios.resx">
       <DependentUpon>FormBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresBarrios\FormModificarBarrio.resx">
+      <DependentUpon>FormModificarBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresClientes\FormAltaCliente.resx">
       <DependentUpon>FormAltaCliente.cs</DependentUpon>
@@ -145,11 +176,17 @@
     <EmbeddedResource Include="Presentacion\PresFormasPago\FormFormasPago.resx">
       <DependentUpon>FormFormasPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\PresLocalidad\FormAltaLocalidad.resx">
-      <DependentUpon>FormAltaLocalidad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresLocalidad\FormLocalidad.resx">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresPersonal\FormAltaPersonal.resx">
+      <DependentUpon>FormAltaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresPersonal\FormModificarPersonal.resx">
+      <DependentUpon>FormModificarPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresPersonal\FormPersonal.resx">
+      <DependentUpon>FormPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresUsuarios\FormAltaUsuarios.resx">
       <DependentUpon>FormAltaUsuarios.cs</DependentUpon>
@@ -207,9 +244,7 @@
   <ItemGroup>
     <None Include="Resources\4801315_glass_magnifier_magnifying_search_searching_icon %281%29.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentacion\PresPerfiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Imagenes\caja de cambio 2.png" />
     <Content Include="Imagenes\caja de cambio.png" />
@@ -224,6 +259,7 @@
     <Content Include="Imagenes\rueda.png" />
     <Content Include="Imagenes\signo de pregunta.png" />
     <Content Include="llave y destornillador.ico" />
+    <None Include="Resources\icons8-borrar-50.png" />
     <None Include="Resources\icono Borrar.png" />
     <None Include="Resources\tick.png" />
     <None Include="Resources\equis.png" />

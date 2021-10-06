@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoAutopartes.Negocio
+namespace Proyecto_PAVI2021.Negocio
 {
     class Localidad
     {
@@ -20,7 +20,7 @@ namespace ProyectoAutopartes.Negocio
         public void RegistrarLocalidad(string nombre)
         {
             string consulta = "INSERT INTO LOCALIDADES (Descripcion, Borrado) " +
-                              "VALUES ('" + nombre + "', '" + 0 +"')";
+                              "VALUES ('" + nombre + "', '" + 0 + "')";
             BDHelper oDatos = new BDHelper();
             oDatos.EjecutarConsulta(consulta);
         }
@@ -36,8 +36,7 @@ namespace ProyectoAutopartes.Negocio
             string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
 
             if (!string.IsNullOrEmpty(id))
-                consulta += " AND l.id_Localidad LIKE '" + id + "%'";
-            
+                consulta += " AND l.id_Localidad = '" + id;
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
@@ -47,26 +46,16 @@ namespace ProyectoAutopartes.Negocio
             string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
 
             if (!string.IsNullOrEmpty(nombre))
-                consulta += " AND l.Descripcion LIKE '" + nombre + "%'";
+                consulta += " AND l.Descripcion LIKE '%" + nombre + "%'";
 
+            consulta += "ORDER BY Descripcion";
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
         }
-        //public void ObtenerLocalidad(int id_localidad)
-        //{
-        //    string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
-
-        //    if (!string.IsNullOrEmpty(id))
-        //        consulta += " AND l.id_Localidad LIKE '" + id + "%'";
-
-
-        //    BDHelper oDatos = new BDHelper();
-        //    return oDatos.consultar(consulta);
-        //}
+        
         public void ModificarLocalidadPorId(string id, string descripcion)
         {
-
             string consulta = "UPDATE LOCALIDADES SET Descripcion = '" + descripcion + "' WHERE Id_Localidad = " + id;
             BDHelper oDatos = new BDHelper();
             oDatos.EjecutarConsulta(consulta);

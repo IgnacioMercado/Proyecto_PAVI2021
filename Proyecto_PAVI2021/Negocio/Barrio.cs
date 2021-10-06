@@ -18,7 +18,7 @@ namespace Proyecto_PAVI2021.Negocio
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public bool Borrado { get => borrado; set => borrado = value; }
 
-        public DataTable RecuperarTodos() 
+        public DataTable RecuperarTodos()
         {
             string consulta = "SELECT b.Id_Barrio, b.Descripcion FROM BARRIOS b WHERE b.Borrado = 0";
 
@@ -28,11 +28,11 @@ namespace Proyecto_PAVI2021.Negocio
 
 
         public DataTable RecuperarFiltrados(string descripcion)
-        { 
+        {
             string consulta = "SELECT b.Id_Barrio, b.Descripcion FROM BARRIOS b WHERE b.Borrado = 0";
 
             if (!string.IsNullOrEmpty(descripcion))
-                consulta += " AND c.Nombre LIKE '" + descripcion + "%'";
+                consulta += " AND b.Descripcion LIKE '%" + descripcion + "%'";
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
@@ -46,7 +46,7 @@ namespace Proyecto_PAVI2021.Negocio
             oDatos.EjecutarConsulta(consulta);
         }
 
-        public void ModificarBarrioPorId(int id_barrio, string descripcion) 
+        public void ModificarBarrioPorId(int id_barrio, string descripcion)
         {
             string consulta = "UPDATE BARRIOS SET Descripcion  = '" + descripcion + "' WHERE Id_Barrio = " + id_barrio;
 

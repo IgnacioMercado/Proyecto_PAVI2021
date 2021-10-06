@@ -1,6 +1,7 @@
 ﻿using Proyecto_PAVI2021.Presentacion;
 using Proyecto_PAVI2021.Presentacion.PresFormasPago;
-using ProyectoAutopartes.Presentacion.PresLocalidad;
+using Proyecto_PAVI2021.Presentacion.PresLocalidad;
+using ProyectoAutopartes.Presentacion.PresBarrios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace Proyecto_PAVI2021
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            /*
             frmLogin fl;
             fl = new frmLogin();
             fl.ShowDialog();
@@ -32,6 +34,7 @@ namespace Proyecto_PAVI2021
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
 
             fl.Dispose();
+            */
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,20 +60,22 @@ namespace Proyecto_PAVI2021
             ffp.ShowDialog();
         }
 
-        private void localidadesToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void eliminarLocalidadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void localidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormLocalidad frm = new FormLocalidad();
             frm.ShowDialog();
+        }
+
+        private void barriosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormBarrios fb = new FormBarrios();
+            fb.ShowDialog();
+        }
+
+        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPersonal fps = new FormPersonal();
+            fps.ShowDialog();
         }
     }
 }

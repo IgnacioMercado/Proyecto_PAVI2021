@@ -26,7 +26,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             this.id_cliente = id_cliente;
         }
 
-
         private void FormModificarCliente_Load(object sender, EventArgs e)
         {
             LlenarCampos();
@@ -44,7 +43,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             txtNroDoc.Text = tabla.Rows[0]["Nro_Doc"].ToString();
             txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
             txtAltura.Text = tabla.Rows[0]["Nro_Calle"].ToString();
-
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -64,29 +62,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             else
             {
                 oCliente.ModificarClientePorId(id_cliente, nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura);
-                MessageBox.Show("Cliente modificado con exito");
-            }
-
-        }
-
-        private void btnModificar1_Click(object sender, EventArgs e)
-        {
-            string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura;
-            nombre = txtNombre.Text;
-            apellido = txtApellido.Text;
-            telefono = txtTelefono.Text;
-            tipo_doc = txtTipoDoc.Text;
-            nro_doc = txtNroDoc.Text;
-            calle = txtCalle.Text;
-            altura = txtAltura.Text;
-            if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "")
-            {
-                MessageBox.Show("Por favor, complete todos los campos antes de intentar modificar al cliente");
-            }
-            else
-            {
-                oCliente.ModificarClientePorId(id_cliente, nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura);
-                MessageBox.Show("Cliente modificado con exito");
+                MessageBox.Show("Cliente modificado");
             }
         }
 

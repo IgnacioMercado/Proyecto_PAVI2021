@@ -1,4 +1,4 @@
-﻿using ProyectoAutopartes.Negocio;
+﻿using Proyecto_PAVI2021.Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoAutopartes.Presentacion.PresLocalidad
+namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
 {
     public partial class FormLocalidad : Form
     {
@@ -105,26 +105,22 @@ namespace ProyectoAutopartes.Presentacion.PresLocalidad
 
                 this.CargarGrilla(dgvLocalidad, oLocal.RecuperarTodos());
 
-                MessageBox.Show("La localidad se modificó correctamente.");
+                MessageBox.Show("Localidad modificada");
                 btnModificar.Enabled = false;
                 LimpiarCampos();
             }
             catch (Exception)
             {
-
                 throw;
             }
-            //txtLocalidadActual.Text = dgvLocalidad.CurrentRow.Cells[0].ToString();
-            
-
-
+            //txtLocalidadActual.Text = dgvLocalidad.CurrentRow.Cells[0].ToString();            
         }
         private void CargarCampos(Localidad oLocal,string id, string nombre)
         {
             txtLocalidadActual.Text = nombre.ToString();
             txtId.Text = id.ToString();
-
         }
+
         private void LimpiarCampos()
         {
             txtId.Text = string.Empty;
@@ -156,11 +152,9 @@ namespace ProyectoAutopartes.Presentacion.PresLocalidad
                     MessageBox.Show(ex.ToString());
                     throw;
                 }
-                MessageBox.Show("Se Registró la nueva localidad");
+                MessageBox.Show("Localidad registrada");
                 LimpiarCampos();
-            }
-            
-
+            }           
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

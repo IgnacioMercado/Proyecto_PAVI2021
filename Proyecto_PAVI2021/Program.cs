@@ -1,5 +1,4 @@
 ﻿using Proyecto_PAVI2021.Presentacion;
-using ProyectoAutopartes.Presentacion.PresLocalidad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +18,6 @@ namespace Proyecto_PAVI2021
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormPrincipal());
-            //Application.Run(new FormLocalidad());
         }
     }
 }
