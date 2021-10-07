@@ -21,16 +21,17 @@ namespace Proyecto_PAVI2021.Negocio
         {
             string consulta = "INSERT INTO LOCALIDADES (Descripcion, Borrado) " +
                               "VALUES ('" + nombre + "', '" + 0 + "')";
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
+
         public DataTable RecuperarTodos()
         {
             string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0 ORDER BY Descripcion";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
+
         public DataTable RecuperarFiltrados(string id)
         {
             string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
@@ -38,9 +39,9 @@ namespace Proyecto_PAVI2021.Negocio
             if (!string.IsNullOrEmpty(id))
                 consulta += " AND l.id_Localidad = '" + id;
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
+
         public DataTable RecuperarPorDescripcion(string nombre)
         {
             string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
@@ -50,15 +51,14 @@ namespace Proyecto_PAVI2021.Negocio
 
             consulta += "ORDER BY Descripcion";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
         
         public void ModificarLocalidadPorId(string id, string descripcion)
         {
             string consulta = "UPDATE LOCALIDADES SET Descripcion = '" + descripcion + "' WHERE Id_Localidad = " + id;
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
     }
 }

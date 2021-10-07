@@ -51,7 +51,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -282,18 +282,18 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label9.TabIndex = 53;
             this.label9.Text = "Volver Atrás";
             // 
-            // button1
+            // btnAtras
             // 
-            this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
-            this.button1.Location = new System.Drawing.Point(1075, 400);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 73);
-            this.button1.TabIndex = 52;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAtras.ForeColor = System.Drawing.Color.Black;
+            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Location = new System.Drawing.Point(1075, 400);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(84, 73);
+            this.btnAtras.TabIndex = 52;
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnRegistrar
             // 
@@ -315,13 +315,14 @@ namespace Proyecto_PAVI2021.Presentacion
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1205, 539);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRegistrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAltaCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alta de Cliente";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -358,6 +359,6 @@ namespace Proyecto_PAVI2021.Presentacion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

@@ -25,8 +25,7 @@ namespace Proyecto_PAVI2021.Negocio
         {
             string consulta = "SELECT * FROM PERFILES WHERE Borrado = 0 ORDER BY Id_Perfil";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }
 }

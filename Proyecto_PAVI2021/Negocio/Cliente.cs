@@ -36,8 +36,7 @@ namespace Proyecto_PAVI2021.Negocio
         {
             string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle FROM CLIENTES c WHERE c.Borrado = 0";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura)
@@ -59,37 +58,36 @@ namespace Proyecto_PAVI2021.Negocio
             if (!string.IsNullOrEmpty(altura))
                 consulta += " AND c.Nro_Calle LIKE '" + altura + "%'";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public void RegistrarCliente(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string fecha_alta)
         {
             string consulta = "INSERT INTO CLIENTES (Tipo_Doc, Nro_Doc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Fecha_Alta) " +
                               "VALUES ('" + tipo_doc + "', '" + nro_doc + "', '" + nombre + "', '" + apellido + "', '" + telefono + "', '" + calle + "', '" + altura + "', CONVERT(DateTime, '" + fecha_alta + "', 103))";
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
         public void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura)
         {
             string consulta = "UPDATE CLIENTES SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "' WHERE Id_Cliente = "+ id_cliente ;
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
+
         public void BorrarCliente(int idCliente)
         {
             string consulta = "UPDATE CLIENTES SET Borrado = 1 WHERE Id_Cliente = " + idCliente;
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
         public DataTable RecuperarClientePorId(int id_cliente)
         {
             string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle FROM CLIENTES c WHERE c.Borrado = 0 AND c.Id_Cliente = " + id_cliente;
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
     }

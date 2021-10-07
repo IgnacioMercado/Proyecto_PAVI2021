@@ -106,11 +106,6 @@ namespace Proyecto_PAVI2021.Presentacion
             this.CargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
         }
 
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnModificar.Enabled = true;

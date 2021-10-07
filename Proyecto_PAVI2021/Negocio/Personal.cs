@@ -43,8 +43,7 @@ namespace Proyecto_PAVI2021.Negocio
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
                 "WHERE p.Borrado = 0";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string usuario, string barrio, string localidad)
@@ -75,8 +74,7 @@ namespace Proyecto_PAVI2021.Negocio
             if (!string.IsNullOrEmpty(localidad))
                 consulta += " AND p.Id_Localidad = " + localidad;
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public void RegistrarPersonal(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string id_barrio, string id_localidad, string id_usuario)
@@ -84,21 +82,22 @@ namespace Proyecto_PAVI2021.Negocio
             string consulta = "INSERT INTO PERSONAL (Tipo_Doc, Nro_Doc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Id_Barrio, Id_Localidad, Id_Usuario) " +
                               "VALUES ('" + tipo_doc + "', '" + nro_doc + "', '" + nombre + "', '" + apellido + "', '" + telefono + "', '" + calle + "', '" + altura 
                               + "', "+ id_barrio + ", " + id_localidad + ", " + id_usuario + ")";
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
         public void ModificarPersonalPorLegajo(int legajo, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string barrio, string localidad, string usuario)
         {
             string consulta = "UPDATE PERSONAL SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "', Id_Barrio = " + barrio + ", Id_Localidad = " + localidad + ", Id_Usuario = " + usuario + " WHERE Legajo = " + legajo;
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
+
         public void BorrarPersonal(int Legajo)
         {
             string consulta = "UPDATE PERSONAL SET Borrado = 1 WHERE Legajo = " + Legajo;
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
         public DataTable RecuperarPersonalPorLegajo(int legajo)
@@ -108,8 +107,7 @@ namespace Proyecto_PAVI2021.Negocio
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
                 "WHERE p.Borrado = 0 AND p.Legajo = " + legajo;
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
     }

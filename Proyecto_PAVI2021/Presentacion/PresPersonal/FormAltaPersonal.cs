@@ -69,14 +69,13 @@ namespace Proyecto_PAVI2021.Presentacion
             {
                 oPersonal.RegistrarPersonal(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
                 MessageBox.Show("Empleado registrado");
+                this.Close();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormPrincipal ventana = new FormPrincipal();
-            
+            this.Close();
         }
     }
 }

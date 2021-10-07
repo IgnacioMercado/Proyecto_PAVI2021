@@ -65,13 +65,13 @@ namespace Proyecto_PAVI2021.Presentacion
             {
                 oUsuario.ModificarUsuarioPorId(id_usuario, nombre, contraseña, rol);
                 MessageBox.Show("Usuario modificado");
+                this.Close();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormPrincipal ventana = new FormPrincipal();
+            this.Close();
         }
     }
 }

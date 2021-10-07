@@ -107,10 +107,9 @@ namespace Proyecto_PAVI2021.Presentacion
             btnEliminar.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormPrincipal ventana = new FormPrincipal();
+            this.Close();
         }
     }
 }

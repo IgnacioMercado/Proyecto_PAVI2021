@@ -41,7 +41,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,15 +112,15 @@ namespace Proyecto_PAVI2021.Presentacion
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 
-            // button1
+            // btnAtras
             // 
-            this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAtras.ForeColor = System.Drawing.Color.Black;
+            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            resources.ApplyResources(this.btnAtras, "btnAtras");
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // FormModificarUsuario
             // 
@@ -128,7 +128,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -154,6 +154,6 @@ namespace Proyecto_PAVI2021.Presentacion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

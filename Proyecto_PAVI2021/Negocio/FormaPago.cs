@@ -22,29 +22,29 @@ namespace Proyecto_PAVI2021.Negocio
         {
             string consulta = "SELECT * FROM FORMAS_PAGO WHERE Borrado = 0 ORDER BY Id_Forma_Pago";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public void RegistrarFormaPago(string descripcion)
         {
             string consulta = "INSERT INTO FORMAS_PAGO (Descripcion) " +
                               "VALUES ('" + descripcion + "')";
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
         public void ModificarFormaPago(string descripcion, int id)
         {
             string consulta = "UPDATE FORMAS_PAGO SET Descripcion = '" + descripcion + "' WHERE Id_Forma_Pago = " + id;
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
+
         public void EliminarFormaPago(int id)
         {
             string consulta = "UPDATE FORMAS_PAGO SET Borrado = 1 WHERE Id_Forma_Pago = " + id;
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
     }
 }

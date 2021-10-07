@@ -73,7 +73,6 @@ namespace Proyecto_PAVI2021.Presentacion
             this.dgvUsuarios.Size = new System.Drawing.Size(559, 168);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
-            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
             // 
             // colIdUsuario
             // 

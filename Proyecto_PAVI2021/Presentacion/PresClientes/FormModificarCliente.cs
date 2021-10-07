@@ -63,13 +63,13 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             {
                 oCliente.ModificarClientePorId(id_cliente, nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura);
                 MessageBox.Show("Cliente modificado");
+                this.Close();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormPrincipal ventana = new FormPrincipal();
+            this.Close();
         }
     }
 }

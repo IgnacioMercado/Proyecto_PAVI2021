@@ -21,9 +21,8 @@ namespace Proyecto_PAVI2021.Negocio
         public DataTable RecuperarTodos()
         {
             string consulta = "SELECT b.Id_Barrio, b.Descripcion FROM BARRIOS b WHERE b.Borrado = 0";
-
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
 
@@ -34,32 +33,28 @@ namespace Proyecto_PAVI2021.Negocio
             if (!string.IsNullOrEmpty(descripcion))
                 consulta += " AND b.Descripcion LIKE '%" + descripcion + "%'";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public void RegistrarBarrio(string descripcion)
         {
             string consulta = "INSERT INTO BARRIOS (Descripcion) " + "VALUES ('" + descripcion + "')";
 
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
         public void ModificarBarrioPorId(int id_barrio, string descripcion)
         {
             string consulta = "UPDATE BARRIOS SET Descripcion  = '" + descripcion + "' WHERE Id_Barrio = " + id_barrio;
 
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
         public void EliminarBarrio(int id_barrio)
         {
             string consulta = "UPDATE BARRIOS SET Borrado = 1 WHERE Id_Barrio = " + id_barrio;
 
-            BDHelper oDatos = new BDHelper();
-            oDatos.EjecutarConsulta(consulta);
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
     }
 }

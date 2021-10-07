@@ -10,12 +10,27 @@ namespace Proyecto_PAVI2021.Datos
 {
     class BDHelper
     {
-        private SqlConnection conexion = new SqlConnection();
-        private SqlCommand comando = new SqlCommand();
-        private string cadenaConexion = @"Data Source=localhost;Initial Catalog=Proyecto_PAVI2021;Integrated Security=True";
+        private static BDHelper instancia;
+        private SqlConnection conexion;
+        private SqlCommand comando;
+        string cadenaConexion;
+
+        private BDHelper()
+        {
+            conexion = new SqlConnection(); // establece la conexion con SQL
+            comando = new SqlCommand(); // permite manipular la BD
+            cadenaConexion = @"Data Source=localhost;Initial Catalog=Proyecto_PAVI2021;Integrated Security=True";
+        }
+
+        public static BDHelper obtenerInstancia()
+        {
+            if (instancia == null)
+                instancia = new BDHelper();
+            return instancia;
+        }
 
         public DataTable consultar(string consulta)
-        {
+        {            
             DataTable tabla = new DataTable();
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
@@ -23,21 +38,21 @@ namespace Proyecto_PAVI2021.Datos
             comando.CommandType = CommandType.Text;
             comando.CommandText = consulta;
             tabla.Load(comando.ExecuteReader());
-
             conexion.Close();
-            return tabla;
 
+            return tabla;
         }
 
         public void EjecutarConsulta(string consulta)
-        {
+        {            
+            DataTable tabla = new DataTable();
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
             comando.CommandText = consulta;
-            comando.ExecuteReader();
+            comando.ExecuteNonQuery();
+            conexion.Close();
         }
-
     }
 }

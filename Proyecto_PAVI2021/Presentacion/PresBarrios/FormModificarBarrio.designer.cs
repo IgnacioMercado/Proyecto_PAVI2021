@@ -37,7 +37,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,9 +46,10 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // 
             this.btnModificar1.BackColor = System.Drawing.Color.Khaki;
             this.btnModificar1.Image = global::ProyectoAutopartes.Properties.Resources.modificar_imagen;
-            this.btnModificar1.Location = new System.Drawing.Point(23, 173);
+            this.btnModificar1.Location = new System.Drawing.Point(31, 213);
+            this.btnModificar1.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar1.Name = "btnModificar1";
-            this.btnModificar1.Size = new System.Drawing.Size(66, 59);
+            this.btnModificar1.Size = new System.Drawing.Size(88, 73);
             this.btnModificar1.TabIndex = 66;
             this.btnModificar1.UseVisualStyleBackColor = false;
             this.btnModificar1.Click += new System.EventHandler(this.btnModificar1_Click);
@@ -57,9 +58,10 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
-            this.label10.Location = new System.Drawing.Point(9, 158);
+            this.label10.Location = new System.Drawing.Point(12, 194);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 12);
+            this.label10.Size = new System.Drawing.Size(117, 16);
             this.label10.TabIndex = 69;
             this.label10.Text = "Modificar barrio";
             // 
@@ -68,9 +70,10 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(317, 131);
+            this.panel1.Size = new System.Drawing.Size(423, 161);
             this.panel1.TabIndex = 70;
             // 
             // panel2
@@ -78,26 +81,29 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.panel2.BackColor = System.Drawing.Color.PeachPuff;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtNombre);
-            this.panel2.Location = new System.Drawing.Point(13, 55);
+            this.panel2.Location = new System.Drawing.Point(17, 68);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(208, 54);
+            this.panel2.Size = new System.Drawing.Size(277, 66);
             this.panel2.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 7);
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.Size = new System.Drawing.Size(132, 20);
             this.label3.TabIndex = 23;
             this.label3.Text = "Nuevo Nombre";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(12, 26);
+            this.txtNombre.Location = new System.Drawing.Point(16, 32);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(168, 20);
+            this.txtNombre.Size = new System.Drawing.Size(223, 22);
             this.txtNombre.TabIndex = 16;
             // 
             // label4
@@ -105,9 +111,10 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 12);
+            this.label4.Location = new System.Drawing.Point(11, 15);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 24);
+            this.label4.Size = new System.Drawing.Size(195, 29);
             this.label4.TabIndex = 11;
             this.label4.Text = "Datos de Barrio";
             // 
@@ -115,37 +122,41 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
-            this.label2.Location = new System.Drawing.Point(228, 158);
+            this.label2.Location = new System.Drawing.Point(304, 194);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 12);
+            this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 72;
             this.label2.Text = "Volver atras";
             // 
-            // button1
+            // btnAtras
             // 
-            this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
-            this.button1.Location = new System.Drawing.Point(230, 173);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 59);
-            this.button1.TabIndex = 71;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
+            this.btnAtras.ForeColor = System.Drawing.Color.Black;
+            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Location = new System.Drawing.Point(307, 213);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(84, 73);
+            this.btnAtras.TabIndex = 71;
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // FormModificarBarrio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(341, 242);
+            this.ClientSize = new System.Drawing.Size(455, 298);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnModificar1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormModificarBarrio";
-            this.Text = "Modificar Barrio";            
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Modificar Barrio";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -165,6 +176,6 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

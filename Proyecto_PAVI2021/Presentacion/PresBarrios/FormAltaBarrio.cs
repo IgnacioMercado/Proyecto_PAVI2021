@@ -19,10 +19,9 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormBarrios ventana = new FormBarrios();
+            this.Close();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -38,6 +37,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             {
                 oBarrio.RegistrarBarrio(descripcion);
                 MessageBox.Show("Barrio registrado");
+                this.Close();
             }
         }        
     }

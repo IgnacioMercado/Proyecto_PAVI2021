@@ -27,10 +27,9 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             this.id_barrio = id_barrio;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormBarrios ventana = new FormBarrios();
+            this.Close();
         }
 
         private void btnModificar1_Click(object sender, EventArgs e)
@@ -45,6 +44,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             {
                 oBarrio.ModificarBarrioPorId(id_barrio, descripcion);
                 MessageBox.Show("Barrio modificado");
+                this.Close();
             }
         }
     }
