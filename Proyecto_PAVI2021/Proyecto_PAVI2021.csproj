@@ -93,6 +93,12 @@
     <Compile Include="Presentacion\PresClientes\FormModificarCliente.Designer.cs">
       <DependentUpon>FormModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresFactura\FormAltaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresFactura\FormAltaFactura.Designer.cs">
+      <DependentUpon>FormAltaFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresFormasPago\FormFormasPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresClientes\FormModificarCliente.resx">
       <DependentUpon>FormModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresFactura\FormAltaFactura.resx">
+      <DependentUpon>FormAltaFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresFormasPago\FormFormasPago.resx">
       <DependentUpon>FormFormasPago.cs</DependentUpon>
@@ -259,6 +268,14 @@
     <Content Include="Imagenes\rueda.png" />
     <Content Include="Imagenes\signo de pregunta.png" />
     <Content Include="llave y destornillador.ico" />
+    <None Include="Resources\guardar.png" />
+    <None Include="Resources\grabar1.png" />
+    <None Include="Resources\agregar 2.png" />
+    <None Include="Resources\agregar 1.png" />
+    <None Include="Resources\equis 4.png" />
+    <None Include="Resources\agregar.png" />
+    <None Include="Resources\326501_add_circle_icon %284%29.png" />
+    <None Include="Resources\tick 2.png" />
     <None Include="Resources\icons8-borrar-50.png" />
     <None Include="Resources\icono Borrar.png" />
     <None Include="Resources\tick.png" />

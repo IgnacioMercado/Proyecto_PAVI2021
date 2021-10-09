@@ -2,6 +2,7 @@
 using Proyecto_PAVI2021.Presentacion.PresFormasPago;
 using Proyecto_PAVI2021.Presentacion.PresLocalidad;
 using ProyectoAutopartes.Presentacion.PresBarrios;
+using ProyectoAutopartes.Presentacion.PresFactura;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,7 +46,7 @@ namespace Proyecto_PAVI2021
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormClientes fcs = new FormClientes();
+            FormClientes fcs = new FormClientes("consultar");
             fcs.ShowDialog();
         }
 
@@ -76,6 +77,12 @@ namespace Proyecto_PAVI2021
         {
             FormPersonal fps = new FormPersonal();
             fps.ShowDialog();
+        }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAltaFactura faf = new FormAltaFactura();
+            faf.ShowDialog();
         }
     }
 }

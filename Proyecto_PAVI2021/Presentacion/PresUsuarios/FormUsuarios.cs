@@ -37,6 +37,7 @@ namespace Proyecto_PAVI2021.Presentacion
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
         private void CargarCombo(ComboBox combo, DataTable tabla, int display, int value)
         {
             combo.DataSource = tabla;

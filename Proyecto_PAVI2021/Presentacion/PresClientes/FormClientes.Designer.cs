@@ -40,9 +40,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.colCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblEliminar = new System.Windows.Forms.Label();
+            this.lblModificar = new System.Windows.Forms.Label();
+            this.lblAgregar = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -69,6 +69,8 @@ namespace Proyecto_PAVI2021.Presentacion
             this.btnConsultar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.lblSeleccionar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,7 +94,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.colAltura});
             this.dgvClientes.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvClientes.Location = new System.Drawing.Point(17, 293);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.RowHeadersWidth = 51;
@@ -177,44 +179,44 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label4.TabIndex = 11;
             this.label4.Text = "Datos de Cliente";
             // 
-            // label5
+            // lblEliminar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(368, 622);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 18);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Eliminar";
+            this.lblEliminar.AutoSize = true;
+            this.lblEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminar.Location = new System.Drawing.Point(373, 622);
+            this.lblEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEliminar.Name = "lblEliminar";
+            this.lblEliminar.Size = new System.Drawing.Size(61, 18);
+            this.lblEliminar.TabIndex = 12;
+            this.lblEliminar.Text = "Eliminar";
             // 
-            // label6
+            // lblModificar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(191, 622);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 18);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Modificar";
+            this.lblModificar.AutoSize = true;
+            this.lblModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificar.Location = new System.Drawing.Point(203, 622);
+            this.lblModificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModificar.Name = "lblModificar";
+            this.lblModificar.Size = new System.Drawing.Size(69, 18);
+            this.lblModificar.TabIndex = 13;
+            this.lblModificar.Text = "Modificar";
             // 
-            // label7
+            // lblAgregar
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(33, 622);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 18);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Agregar";
+            this.lblAgregar.AutoSize = true;
+            this.lblAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregar.Location = new System.Drawing.Point(48, 622);
+            this.lblAgregar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAgregar.Name = "lblAgregar";
+            this.lblAgregar.Size = new System.Drawing.Size(59, 18);
+            this.lblAgregar.TabIndex = 14;
+            this.lblAgregar.Text = "Agregar";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(668, 622);
+            this.label8.Location = new System.Drawing.Point(437, 251);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 18);
@@ -224,7 +226,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(16, 32);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(136, 22);
             this.txtNombre.TabIndex = 16;
@@ -232,7 +234,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(207, 32);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(128, 22);
             this.txtApellido.TabIndex = 17;
@@ -240,7 +242,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // txtCalle
             // 
             this.txtCalle.Location = new System.Drawing.Point(15, 34);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(144, 22);
             this.txtCalle.TabIndex = 18;
@@ -248,7 +250,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(372, 32);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(159, 22);
             this.txtTelefono.TabIndex = 19;
@@ -256,7 +258,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // txtAltura
             // 
             this.txtAltura.Location = new System.Drawing.Point(205, 34);
-            this.txtAltura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(101, 22);
             this.txtAltura.TabIndex = 20;
@@ -264,7 +266,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // txtNroDoc
             // 
             this.txtNroDoc.Location = new System.Drawing.Point(764, 32);
-            this.txtNroDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNroDoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtNroDoc.Name = "txtNroDoc";
             this.txtNroDoc.Size = new System.Drawing.Size(167, 22);
             this.txtNroDoc.TabIndex = 21;
@@ -272,7 +274,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // txtTipoDoc
             // 
             this.txtTipoDoc.Location = new System.Drawing.Point(571, 32);
-            this.txtTipoDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTipoDoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoDoc.Name = "txtTipoDoc";
             this.txtTipoDoc.Size = new System.Drawing.Size(151, 22);
             this.txtTipoDoc.TabIndex = 22;
@@ -359,7 +361,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 162);
+            this.label1.Location = new System.Drawing.Point(11, 153);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 31);
@@ -374,9 +376,11 @@ namespace Proyecto_PAVI2021.Presentacion
             this.panel1.Controls.Add(this.cboTipoDoc);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.dgvClientes);
+            this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Location = new System.Drawing.Point(19, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1111, 523);
             this.panel1.TabIndex = 31;
@@ -388,8 +392,8 @@ namespace Proyecto_PAVI2021.Presentacion
             this.panel3.Controls.Add(this.txtAltura);
             this.panel3.Controls.Add(this.txtCalle);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Location = new System.Drawing.Point(17, 197);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(17, 188);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(359, 71);
             this.panel3.TabIndex = 33;
@@ -408,7 +412,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.panel2.Controls.Add(this.txtTelefono);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Location = new System.Drawing.Point(17, 68);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(991, 66);
             this.panel2.TabIndex = 32;
@@ -422,7 +426,7 @@ namespace Proyecto_PAVI2021.Presentacion
             "Pasaporte",
             "Libreta Universitaria"});
             this.cboTipoDoc.Location = new System.Drawing.Point(588, 162);
-            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(151, 24);
             this.cboTipoDoc.TabIndex = 31;
@@ -434,7 +438,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Image = global::ProyectoAutopartes.Properties.Resources.nuevo_usuario;
             this.btnAgregar.Location = new System.Drawing.Point(36, 545);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(84, 73);
             this.btnAgregar.TabIndex = 10;
@@ -447,7 +451,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.btnModificar.Enabled = false;
             this.btnModificar.Image = global::ProyectoAutopartes.Properties.Resources.modificar_imagen;
             this.btnModificar.Location = new System.Drawing.Point(193, 545);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(88, 73);
             this.btnModificar.TabIndex = 9;
@@ -460,7 +464,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.btnEliminar.Enabled = false;
             this.btnEliminar.Image = global::ProyectoAutopartes.Properties.Resources.eliminar_usuario;
             this.btnEliminar.Location = new System.Drawing.Point(352, 545);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(103, 73);
             this.btnEliminar.TabIndex = 8;
@@ -469,10 +473,10 @@ namespace Proyecto_PAVI2021.Presentacion
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnConsultar.BackColor = System.Drawing.Color.PeachPuff;
             this.btnConsultar.Image = global::ProyectoAutopartes.Properties.Resources.buscar;
-            this.btnConsultar.Location = new System.Drawing.Point(671, 545);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultar.Location = new System.Drawing.Point(430, 174);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(88, 73);
             this.btnConsultar.TabIndex = 7;
@@ -483,7 +487,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1012, 622);
+            this.label2.Location = new System.Drawing.Point(1024, 622);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 18);
@@ -496,12 +500,37 @@ namespace Proyecto_PAVI2021.Presentacion
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
             this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
             this.btnAtras.Location = new System.Drawing.Point(1027, 545);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(84, 73);
             this.btnAtras.TabIndex = 54;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnSeleccionar.Image = global::ProyectoAutopartes.Properties.Resources.tick_2;
+            this.btnSeleccionar.Location = new System.Drawing.Point(879, 546);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(88, 73);
+            this.btnSeleccionar.TabIndex = 56;
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Visible = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // lblSeleccionar
+            // 
+            this.lblSeleccionar.AutoSize = true;
+            this.lblSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccionar.Location = new System.Drawing.Point(861, 623);
+            this.lblSeleccionar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSeleccionar.Name = "lblSeleccionar";
+            this.lblSeleccionar.Size = new System.Drawing.Size(135, 18);
+            this.lblSeleccionar.TabIndex = 57;
+            this.lblSeleccionar.Text = "Seleccionar Cliente";
+            this.lblSeleccionar.Visible = false;
             // 
             // FormClientes
             // 
@@ -509,19 +538,19 @@ namespace Proyecto_PAVI2021.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1145, 672);
+            this.Controls.Add(this.lblSeleccionar);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblAgregar);
+            this.Controls.Add(this.lblModificar);
+            this.Controls.Add(this.lblEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnConsultar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
@@ -546,9 +575,9 @@ namespace Proyecto_PAVI2021.Presentacion
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblEliminar;
+        private System.Windows.Forms.Label lblModificar;
+        private System.Windows.Forms.Label lblAgregar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
@@ -579,5 +608,7 @@ namespace Proyecto_PAVI2021.Presentacion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Label lblSeleccionar;
     }
 }

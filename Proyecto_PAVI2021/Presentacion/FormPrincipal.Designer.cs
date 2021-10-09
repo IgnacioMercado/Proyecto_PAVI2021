@@ -110,13 +110,14 @@ namespace Proyecto_PAVI2021
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
+            this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
             // formasDePagoToolStripMenuItem
             // 
             this.formasDePagoToolStripMenuItem.Name = "formasDePagoToolStripMenuItem";
-            this.formasDePagoToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.formasDePagoToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.formasDePagoToolStripMenuItem.Text = "Formas de pago";
             this.formasDePagoToolStripMenuItem.Click += new System.EventHandler(this.formasDePagoToolStripMenuItem_Click);
             // 
@@ -327,14 +328,14 @@ namespace Proyecto_PAVI2021
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
             this.usuarioToolStripMenuItem.Text = "Usuarios";
             this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // personalToolStripMenuItem
             // 
             this.personalToolStripMenuItem.Name = "personalToolStripMenuItem";
-            this.personalToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.personalToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
             this.personalToolStripMenuItem.Text = "Personal";
             this.personalToolStripMenuItem.Click += new System.EventHandler(this.personalToolStripMenuItem_Click);
             // 
@@ -343,7 +344,7 @@ namespace Proyecto_PAVI2021
             this.perfilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarPerfilToolStripMenuItem});
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             // 
             // agregarPerfilToolStripMenuItem
@@ -365,21 +366,21 @@ namespace Proyecto_PAVI2021
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(187, 28);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // barriosToolStripMenuItem1
             // 
             this.barriosToolStripMenuItem1.Name = "barriosToolStripMenuItem1";
-            this.barriosToolStripMenuItem1.Size = new System.Drawing.Size(224, 28);
+            this.barriosToolStripMenuItem1.Size = new System.Drawing.Size(187, 28);
             this.barriosToolStripMenuItem1.Text = "Barrios";
             this.barriosToolStripMenuItem1.Click += new System.EventHandler(this.barriosToolStripMenuItem1_Click);
             // 
             // localidadesToolStripMenuItem
             // 
             this.localidadesToolStripMenuItem.Name = "localidadesToolStripMenuItem";
-            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.localidadesToolStripMenuItem.Size = new System.Drawing.Size(187, 28);
             this.localidadesToolStripMenuItem.Text = "Localidades";
             this.localidadesToolStripMenuItem.Click += new System.EventHandler(this.localidadesToolStripMenuItem_Click);
             // 

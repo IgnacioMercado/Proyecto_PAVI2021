@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion.PresClientes;
+using ProyectoAutopartes.Presentacion.PresFactura;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,18 +12,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_PAVI2021.Presentacion
-{
+{    
     public partial class FormClientes : Form
     {
+        public int Id_Cliente_Seleccionado = -1;
+        private string modo;       
         Cliente oCliente = new Cliente();
-        public FormClientes()
+
+        public FormClientes(string modo)
         {
             InitializeComponent();
+            this.modo = modo;
         }
 
         private void FormClientes_Load(object sender, EventArgs e)
         {
             this.CargarGrilla(dgvClientes, oCliente.RecuperarTodos());
+
+            if (this.modo == "seleccionar")
+            {
+                this.Text = "Seleccionar Cliente";
+                this.btnSeleccionar.Show();
+                this.lblSeleccionar.Show();
+            }
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
@@ -110,6 +122,12 @@ namespace Proyecto_PAVI2021.Presentacion
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            Id_Cliente_Seleccionado = (int)dgvClientes.CurrentRow.Cells[0].Value;
+            this.Close();            
         }
     }
 }

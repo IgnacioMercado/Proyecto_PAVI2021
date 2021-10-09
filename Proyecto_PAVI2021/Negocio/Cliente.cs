@@ -44,19 +44,19 @@ namespace Proyecto_PAVI2021.Negocio
             string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle FROM CLIENTES c WHERE c.Borrado = 0";
 
             if (!string.IsNullOrEmpty(nombre))
-                consulta += " AND c.Nombre LIKE '" + nombre + "%'";
+                consulta += " AND c.Nombre LIKE '%" + nombre + "%'";
             if (!string.IsNullOrEmpty(apellido))
-                consulta += " AND c.Apellido LIKE '" + apellido + "%'";
+                consulta += " AND c.Apellido LIKE '%" + apellido + "%'";
             if (!string.IsNullOrEmpty(telefono))
-                consulta += " AND c.Telefono LIKE '" + telefono + "%'";
+                consulta += " AND c.Telefono LIKE '%" + telefono + "%'";
             if (!string.IsNullOrEmpty(tipo_doc))
-                consulta += " AND c.Tipo_Doc LIKE '" + tipo_doc + "%'";
+                consulta += " AND c.Tipo_Doc LIKE '%" + tipo_doc + "%'";
             if (!string.IsNullOrEmpty(nro_doc))
-                consulta += " AND c.Nro_Doc LIKE '" + nro_doc + "%'";
+                consulta += " AND c.Nro_Doc LIKE '%" + nro_doc + "%'";
             if (!string.IsNullOrEmpty(calle))
-                consulta += " AND c.Calle LIKE '" + calle + "%'";
+                consulta += " AND c.Calle LIKE '%" + calle + "%'";
             if (!string.IsNullOrEmpty(altura))
-                consulta += " AND c.Nro_Calle LIKE '" + altura + "%'";
+                consulta += " AND c.Nro_Calle LIKE '%" + altura + "%'";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
@@ -89,7 +89,5 @@ namespace Proyecto_PAVI2021.Negocio
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
-
     }
-
 }
