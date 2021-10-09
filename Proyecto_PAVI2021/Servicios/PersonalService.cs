@@ -20,7 +20,7 @@ namespace ProyectoAutopartes.Servicios
 
         public DataTable RecuperarTodos()
         {
-            return dao.RecuperarTodos()
+            return dao.RecuperarTodos();
         }
 
         public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string usuario, string barrio, string localidad)

@@ -20,7 +20,7 @@ namespace ProyectoAutopartes.Interfaces
 
         void BorrarUsuario(int idUsuario);
         void RegistrarUsuario(string nombre, string contraseña, string fecha_alta, string rol);
-        void ModificarUsuarioPorId(int id_usuario, string nombre, string contraseña, string rol)
+        void ModificarUsuarioPorId(int id_usuario, string nombre, string contraseña, string rol);
 
 
     }

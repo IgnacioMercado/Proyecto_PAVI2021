@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion;
+using ProyectoAutopartes.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +18,12 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
         public int Id_Cliente_Seleccionado;
         private List<string> TiposFactura = new List<string> { "A", "B", "C" };
         Cliente oClienteSeleccionado = new Cliente();
+        private readonly MaterialService materialService;
 
         public FormAltaFactura()
         {
             InitializeComponent();
+            materialService = new MaterialService();
         }
 
         private void FormAltaFactura_Load(object sender, EventArgs e)
@@ -28,6 +31,15 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");            
             cboTipoFactura.DataSource = TiposFactura;            
             cboTipoFactura.SelectedIndex = -1;
+            this.CargarCombo(cmbArticulo, materialService.RecuperarTodos());
+        }
+        private void CargarCombo(ComboBox combo, DataTable tabla)
+        {
+            combo.DataSource = tabla;
+            combo.DisplayMember = tabla.Columns[1].ColumnName;
+            combo.ValueMember = tabla.Columns[0].ColumnName;
+            combo.SelectedIndex = -1;
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnSeleccionarCliente_Click(object sender, EventArgs e)
