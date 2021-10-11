@@ -52,6 +52,7 @@
     <Compile Include="Datos\BDHelper.cs" />
     <Compile Include="Datos\Daos\BarrioDao.cs" />
     <Compile Include="Datos\Daos\ClienteDao.cs" />
+    <Compile Include="Datos\Daos\FacturaVentaDao.cs" />
     <Compile Include="Datos\Daos\FormaDePagoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
     <Compile Include="Datos\Daos\MaterialDao.cs" />
@@ -67,7 +68,9 @@
     <Compile Include="Interfaces\IPersonal.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Negocio\Barrio.cs" />
+    <Compile Include="Negocio\DetalleFactura.cs" />
     <Compile Include="Negocio\Cliente.cs" />
+    <Compile Include="Negocio\FacturaVenta.cs" />
     <Compile Include="Negocio\FormaPago.cs" />
     <Compile Include="Negocio\Localidad.cs" />
     <Compile Include="Negocio\Material.cs" />

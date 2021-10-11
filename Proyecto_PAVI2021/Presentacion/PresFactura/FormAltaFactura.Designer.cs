@@ -49,6 +49,10 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.MaskedTextBox();
+            this.lblArticulo = new System.Windows.Forms.Label();
+            this.cmbArticulo = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
@@ -65,8 +69,6 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.btnAtras = new System.Windows.Forms.Button();
             this.lblGrabar = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cmbArticulo = new System.Windows.Forms.ComboBox();
-            this.lblArticulo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -90,7 +92,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.cboTipoFactura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoFactura.FormattingEnabled = true;
             this.cboTipoFactura.Location = new System.Drawing.Point(97, 17);
-            this.cboTipoFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTipoFactura.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoFactura.Name = "cboTipoFactura";
             this.cboTipoFactura.Size = new System.Drawing.Size(92, 21);
             this.cboTipoFactura.TabIndex = 1;
@@ -109,7 +111,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(62, 20);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(92, 20);
             this.txtNombre.TabIndex = 3;
@@ -117,7 +119,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // btnSeleccionarCliente
             // 
             this.btnSeleccionarCliente.Location = new System.Drawing.Point(720, 15);
-            this.btnSeleccionarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeleccionarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionarCliente.Name = "btnSeleccionarCliente";
             this.btnSeleccionarCliente.Size = new System.Drawing.Size(113, 26);
             this.btnSeleccionarCliente.TabIndex = 4;
@@ -129,7 +131,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.txtTipoDoc.Enabled = false;
             this.txtTipoDoc.Location = new System.Drawing.Point(416, 20);
-            this.txtTipoDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTipoDoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtTipoDoc.Name = "txtTipoDoc";
             this.txtTipoDoc.Size = new System.Drawing.Size(92, 20);
             this.txtTipoDoc.TabIndex = 5;
@@ -158,7 +160,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.txtNroDoc.Enabled = false;
             this.txtNroDoc.Location = new System.Drawing.Point(592, 20);
-            this.txtNroDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNroDoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtNroDoc.Name = "txtNroDoc";
             this.txtNroDoc.Size = new System.Drawing.Size(92, 20);
             this.txtNroDoc.TabIndex = 7;
@@ -177,7 +179,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.txtCalle.Enabled = false;
             this.txtCalle.Location = new System.Drawing.Point(62, 56);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCalle.Margin = new System.Windows.Forms.Padding(2);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(92, 20);
             this.txtCalle.TabIndex = 9;
@@ -196,7 +198,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.txtAltura.Enabled = false;
             this.txtAltura.Location = new System.Drawing.Point(238, 56);
-            this.txtAltura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAltura.Margin = new System.Windows.Forms.Padding(2);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(92, 20);
             this.txtAltura.TabIndex = 11;
@@ -205,7 +207,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.txtApellido.Enabled = false;
             this.txtApellido.Location = new System.Drawing.Point(238, 20);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(92, 20);
             this.txtApellido.TabIndex = 14;
@@ -236,9 +238,9 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.groupBox1.Controls.Add(this.txtNroDoc);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(8, 60);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(845, 89);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -252,9 +254,9 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.groupBox2.Controls.Add(this.cboTipoFactura);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(8, 4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(845, 51);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
@@ -264,7 +266,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.txtFecha.Enabled = false;
             this.txtFecha.Location = new System.Drawing.Point(279, 17);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(92, 20);
             this.txtFecha.TabIndex = 19;
@@ -281,19 +283,59 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.txtCantidad);
             this.groupBox3.Controls.Add(this.lblArticulo);
             this.groupBox3.Controls.Add(this.cmbArticulo);
             this.groupBox3.Controls.Add(this.btnEliminar);
             this.groupBox3.Controls.Add(this.btnAgregar);
             this.groupBox3.Controls.Add(this.dgvDetalle);
             this.groupBox3.Location = new System.Drawing.Point(8, 3);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(845, 321);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(239, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Cantidad";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(295, 26);
+            this.txtCantidad.Mask = "99999";
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(35, 20);
+            this.txtCantidad.TabIndex = 5;
+            this.txtCantidad.ValidatingType = typeof(int);
+            // 
+            // lblArticulo
+            // 
+            this.lblArticulo.AutoSize = true;
+            this.lblArticulo.Location = new System.Drawing.Point(16, 26);
+            this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblArticulo.Name = "lblArticulo";
+            this.lblArticulo.Size = new System.Drawing.Size(42, 13);
+            this.lblArticulo.TabIndex = 4;
+            this.lblArticulo.Text = "Articulo";
+            // 
+            // cmbArticulo
+            // 
+            this.cmbArticulo.FormattingEnabled = true;
+            this.cmbArticulo.Location = new System.Drawing.Point(68, 23);
+            this.cmbArticulo.Name = "cmbArticulo";
+            this.cmbArticulo.Size = new System.Drawing.Size(121, 21);
+            this.cmbArticulo.TabIndex = 3;
             // 
             // btnEliminar
             // 
@@ -301,23 +343,25 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(806, 118);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(30, 32);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.agregar_2;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(806, 81);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(363, 19);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(30, 32);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvDetalle
             // 
@@ -334,7 +378,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.importe});
             this.dgvDetalle.GridColor = System.Drawing.Color.PeachPuff;
             this.dgvDetalle.Location = new System.Drawing.Point(13, 81);
-            this.dgvDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.RowHeadersVisible = false;
             this.dgvDetalle.RowHeadersWidth = 51;
@@ -416,7 +460,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.btnGrabar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.guardar;
             this.btnGrabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnGrabar.Location = new System.Drawing.Point(734, 515);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(45, 49);
             this.btnGrabar.TabIndex = 67;
@@ -427,7 +471,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.btnAtras.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.volver_atras;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.Location = new System.Drawing.Point(817, 515);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(45, 49);
             this.btnAtras.TabIndex = 68;
@@ -453,24 +497,6 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.label9.TabIndex = 69;
             this.label9.Text = "Volver Atrás";
             // 
-            // cmbArticulo
-            // 
-            this.cmbArticulo.FormattingEnabled = true;
-            this.cmbArticulo.Location = new System.Drawing.Point(68, 23);
-            this.cmbArticulo.Name = "cmbArticulo";
-            this.cmbArticulo.Size = new System.Drawing.Size(121, 21);
-            this.cmbArticulo.TabIndex = 3;
-            // 
-            // lblArticulo
-            // 
-            this.lblArticulo.AutoSize = true;
-            this.lblArticulo.Location = new System.Drawing.Point(16, 26);
-            this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(42, 13);
-            this.lblArticulo.TabIndex = 4;
-            this.lblArticulo.Text = "Articulo";
-            // 
             // FormAltaFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,7 +509,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAltaFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta Factura";
@@ -542,5 +568,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblArticulo;
         private System.Windows.Forms.ComboBox cmbArticulo;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox txtCantidad;
     }
 }

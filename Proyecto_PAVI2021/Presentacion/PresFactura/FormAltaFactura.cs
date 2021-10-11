@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion;
+using ProyectoAutopartes.Negocio;
 using ProyectoAutopartes.Servicios;
 using System;
 using System.Collections.Generic;
@@ -19,11 +20,15 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
         private List<string> TiposFactura = new List<string> { "A", "B", "C" };
         Cliente oClienteSeleccionado = new Cliente();
         private readonly MaterialService materialService;
+        private readonly ClienteService clienteService;
+        private readonly BindingList<DetalleFactura> listaDetalleFactura;
 
         public FormAltaFactura()
         {
             InitializeComponent();
             materialService = new MaterialService();
+            clienteService = new ClienteService();
+            listaDetalleFactura = new BindingList<DetalleFactura>();
         }
 
         private void FormAltaFactura_Load(object sender, EventArgs e)
@@ -32,6 +37,8 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             cboTipoFactura.DataSource = TiposFactura;            
             cboTipoFactura.SelectedIndex = -1;
             this.CargarCombo(cmbArticulo, materialService.RecuperarTodos());
+            dgvDetalle.DataSource = listaDetalleFactura;
+
         }
         private void CargarCombo(ComboBox combo, DataTable tabla)
         {
@@ -63,6 +70,39 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.txtNroDoc.Text = tabla.Rows[0]["Nro_Doc"].ToString();
             this.txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
             this.txtAltura.Text = tabla.Rows[0]["Nro_Calle"].ToString();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            int cantidad = 0;
+            int.TryParse(txtCantidad.Text, out cantidad);
+
+            var material = (Material)cmbArticulo.SelectedItem;
+            listaDetalleFactura.Add(new DetalleFactura()
+            {
+                Material = material,
+                Cantidad = cantidad,
+            });
+
+            CalcularTotales();
+
+            InicializarDetalle();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+                if (dgvDetalle.CurrentRow != null)
+                {
+                    var detalleSeleccionado = (DetalleFactura)dgvDetalle.CurrentRow.DataBoundItem;
+                    listaDetalleFactura.Remove(detalleSeleccionado);
+                }
+
         }
     }
 }
