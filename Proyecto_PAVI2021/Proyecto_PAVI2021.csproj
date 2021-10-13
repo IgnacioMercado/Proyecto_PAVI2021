@@ -55,6 +55,7 @@
     <Compile Include="Datos\Daos\FacturaVentaDao.cs" />
     <Compile Include="Datos\Daos\FormaDePagoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
+    <Compile Include="Datos\Daos\LoteDao.cs" />
     <Compile Include="Datos\Daos\MaterialDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
     <Compile Include="Datos\Daos\PersonalDao.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Interfaces\ICliente.cs" />
     <Compile Include="Interfaces\IFormaDePago.cs" />
     <Compile Include="Interfaces\ILocalidad.cs" />
+    <Compile Include="Interfaces\ILote.cs" />
     <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IPerfil.cs" />
     <Compile Include="Interfaces\IPersonal.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Negocio\FacturaVenta.cs" />
     <Compile Include="Negocio\FormaPago.cs" />
     <Compile Include="Negocio\Localidad.cs" />
+    <Compile Include="Negocio\Lote.cs" />
     <Compile Include="Negocio\Material.cs" />
     <Compile Include="Negocio\Perfil.cs" />
     <Compile Include="Negocio\Personal.cs" />
@@ -183,8 +186,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\BarrioService.cs" />
     <Compile Include="Servicios\ClienteService.cs" />
+    <Compile Include="Servicios\FacturaService.cs" />
     <Compile Include="Servicios\FormaDePagoService.cs" />
     <Compile Include="Servicios\LocalidadService.cs" />
+    <Compile Include="Servicios\LoteService.cs" />
     <Compile Include="Servicios\MaterialService.cs" />
     <Compile Include="Servicios\PerfilService.cs" />
     <Compile Include="Servicios\PersonalService.cs" />

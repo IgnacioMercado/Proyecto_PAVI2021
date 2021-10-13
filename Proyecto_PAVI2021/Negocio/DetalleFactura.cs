@@ -12,6 +12,7 @@ namespace ProyectoAutopartes.Negocio
         private int id_factura;
         private Material material;
         private int cantidad;
+        private int id_lote;
 
         public int Id_detalle_factura { get => id_detalle_factura; set => id_detalle_factura = value; }
         public int Id_factura { get => id_factura; set => id_factura = value; }
@@ -33,13 +34,22 @@ namespace ProyectoAutopartes.Negocio
                 return Material.Nombre;
             }
         }
+        public Double PrecioUnitario
+        {
+            get
+            {
+                return Material.Precio;
+            }
+        }
 
         public Double Importe
         {
             get
             {
-                return Cantidad * Material.Precio;
+                return Cantidad * PrecioUnitario;
             }
         }
+
+        public int Id_lote { get => id_lote; set => id_lote = value; }
     }
 }

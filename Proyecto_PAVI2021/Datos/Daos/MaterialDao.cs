@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Datos;
 using ProyectoAutopartes.Interfaces;
+using ProyectoAutopartes.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,11 +12,33 @@ namespace ProyectoAutopartes.Datos.Daos
 {
     class MaterialDao : IMaterial
     {
-        public DataTable RecuperarTodos()
+        public IList<Material> GetAll()
         {
-            string consulta = "SELECT m.Id_Material, m.Nombre FROM MATERIALES m WHERE m.Borrado = 0";
+            List<Material> listadoMateriales = new List<Material>();
 
-            return BDHelper.obtenerInstancia().consultar(consulta);
+            var strSql = "SELECT Id_Material, Nombre, Precio, Stock FROM MATERIALES WHERE Borrado = 0";
+
+            var resultadoConsulta = BDHelper.obtenerInstancia().ConsultaSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                listadoMateriales.Add(MappingMaterial(row));
+            }
+
+            return listadoMateriales;
+        }
+
+        private Material MappingMaterial(DataRow row)
+        {
+            Material oMaterial = new Material
+            {
+                Id_material = Convert.ToInt32(row["Id_Material"].ToString()),
+                Nombre = row["Nombre"].ToString(),
+                Precio = Convert.ToDouble(row["Precio"].ToString()),
+                Stock = Convert.ToInt32(row["Stock"].ToString())
+            };
+
+            return oMaterial;
         }
     }
 }

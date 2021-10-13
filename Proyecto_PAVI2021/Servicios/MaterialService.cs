@@ -1,5 +1,6 @@
 ﻿using ProyectoAutopartes.Datos.Daos;
 using ProyectoAutopartes.Interfaces;
+using ProyectoAutopartes.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,9 +19,9 @@ namespace ProyectoAutopartes.Servicios
             dao = new MaterialDao();
         }
 
-        public DataTable RecuperarTodos()
+        public IList<Material> GetAll()
         {
-            return dao.RecuperarTodos();
+            return dao.GetAll();
         }
     }
 }

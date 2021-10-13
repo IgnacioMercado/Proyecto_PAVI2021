@@ -20,13 +20,15 @@ namespace Proyecto_PAVI2021.Datos
         {
             conexion = new SqlConnection(); // establece la conexion con SQL
             comando = new SqlCommand(); // permite manipular la BD
-            cadenaConexion = @"Data Source=DESKTOP-RJE4TPG\SQLEXPRESS;Initial Catalog=Proyecto_PAVI2021;Integrated Security=True";
+            cadenaConexion = @"Data Source=DESKTOP-RJE4TPG\SQLEXPRESS;Initial Catalog=Proyecto_PAVI2021_2daVersion;Integrated Security=True";
+            conexion.ConnectionString = cadenaConexion;
         }
 
         public static BDHelper obtenerInstancia()
         {
             if (instancia == null)
                 instancia = new BDHelper();
+
             return instancia;
         }
 
@@ -92,6 +94,8 @@ namespace Proyecto_PAVI2021.Datos
 
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
+            
+            conexion.Open();
             try
             {
                 cmd.Connection = conexion;
@@ -106,6 +110,10 @@ namespace Proyecto_PAVI2021.Datos
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 

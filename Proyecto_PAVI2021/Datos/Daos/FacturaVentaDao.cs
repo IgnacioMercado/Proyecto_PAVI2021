@@ -19,15 +19,13 @@ namespace ProyectoAutopartes.Datos.Daos
                 bd.BeginTransaction();
 
                 string sql = string.Concat("INSERT INTO [dbo].[FACTURA_VENTA] ",
-                                            "           ([Nro_factura]   ",
-                                            "           ,[Tipo_Factura]   ",
+                                            "           ([Tipo_Factura]   ",
                                             "           ,[Id_Cliente]       ",
                                             "           ,[Fecha_Factura]         ",
                                             "           ,[Legajo_Empleado]         ",
                                             "           ,[Borrado])      ",
-                                            "     VALUES                 ",
-                                            "           (@nro_factura   ",                                                      
-                                            "           ,@tipoFactura    ",
+                                            "     VALUES                 ",                                                    
+                                            "           (@tipoFactura    ",
                                             "           ,@cliente        ",
                                             "           ,@fecha          ",
                                             "           ,@legajo_empleado         ",
@@ -35,7 +33,7 @@ namespace ProyectoAutopartes.Datos.Daos
 
 
                 var parametros = new Dictionary<string, object>();
-                parametros.Add("nro_factura", factura.NroFactura);
+
                 parametros.Add("fecha", factura.Fecha);
                 parametros.Add("cliente", factura.Id_Cliente);
                 parametros.Add("tipoFactura", factura.TipoFactura);
@@ -54,22 +52,33 @@ namespace ProyectoAutopartes.Datos.Daos
                                                         "           ,[Id_Material]          ",
                                                         "           ,[Cantidad_Vendida]      ",
                                                         "           ,[Precio_Venta]             ",
+                                                        "           ,[Id_Lote]             ",
                                                         "           ,[Borrado])             ",
                                                         "     VALUES                        ",
                                                         "           (@id_factura            ",
                                                         "           ,@id_material           ",
                                                         "           ,@cantidad       ",
                                                         "           ,@precio              ",
+                                                        "           ,@id_lote              ",
                                                         "           ,@borrado)               ");
 
                     var paramDetalle = new Dictionary<string, object>();
                     paramDetalle.Add("id_factura", factura.IdFactura);
-                    paramDetalle.Add("id_producto", itemFactura.Material.Id_material);
+                    paramDetalle.Add("id_material", itemFactura.Material.Id_material);
                     paramDetalle.Add("precio", itemFactura.Material.Precio);
                     paramDetalle.Add("cantidad", itemFactura.Cantidad);
+                    paramDetalle.Add("id_lote", itemFactura.Id_lote);
                     paramDetalle.Add("borrado", false);
 
+
                     bd.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
+
+                    string sqlStock = "UPDATE MATERIALES SET Stock = Stock - " + itemFactura.Cantidad + " WHERE Id_Material = " + itemFactura.id_material;
+                    bd.EjecutarSQL(sqlStock);
+
+                    string sqlLoteStock = "UPDATE LOTE SET Stock_Lote = Stock_Lote - " + itemFactura.Cantidad + " WHERE Id_Lote = " + itemFactura.Id_lote;
+                    bd.EjecutarSQL(sqlLoteStock);
+                    
                 }
 
 

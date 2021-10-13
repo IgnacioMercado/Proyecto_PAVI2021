@@ -17,9 +17,17 @@ namespace Proyecto_PAVI2021.Presentacion
         Personal oPersonal = new Personal();
         Barrio oBarrio = new Barrio();
         Localidad oLocalidad = new Localidad();
+        public int Legajo_Empleado_Seleccionado = -1;
+        private string modo;
         public FormPersonal()
         {
             InitializeComponent();
+        }
+
+        public FormPersonal(string modo)
+        {
+            InitializeComponent();
+            this.modo = modo;
         }
 
         private void FormUsuarios_Load(object sender, EventArgs e)
@@ -27,6 +35,12 @@ namespace Proyecto_PAVI2021.Presentacion
             this.CargarGrilla(dgvPersonal, oPersonal.RecuperarTodos());
             this.CargarCombo(cmbBarrios, oBarrio.RecuperarTodos());
             this.CargarCombo(cmbLocalidades, oLocalidad.RecuperarTodos());
+            if (this.modo == "seleccionar")
+            {
+                this.Text = "Seleccionar Empleado";
+                this.btnSeleccionar.Show();
+                this.lblSeleccionar.Show();
+            }
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
@@ -138,6 +152,20 @@ namespace Proyecto_PAVI2021.Presentacion
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            Legajo_Empleado_Seleccionado = (int)dgvPersonal.CurrentRow.Cells[0].Value;
+            if (Legajo_Empleado_Seleccionado == -1)
+            {
+                MessageBox.Show("Debe seleccionar un empleado");
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
     }
 }
