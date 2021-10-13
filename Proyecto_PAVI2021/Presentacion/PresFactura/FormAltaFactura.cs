@@ -245,5 +245,10 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             cmbLote.SelectedIndex = -1;
             txtCantidad.Text = "";
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            InicializarFormulario();
+        }
     }
 }

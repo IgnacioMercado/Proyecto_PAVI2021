@@ -82,6 +82,8 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -653,12 +655,33 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label17.Location = new System.Drawing.Point(11, 607);
+            this.label17.Location = new System.Drawing.Point(14, 235);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(301, 17);
             this.label17.TabIndex = 11;
             this.label17.Text = "Aclaración: Todos los campos son obligatorios";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Image = global::ProyectoAutopartes.Properties.Resources._216169_delete_icon__1_;
+            this.btnLimpiar.Location = new System.Drawing.Point(36, 607);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(45, 49);
+            this.btnLimpiar.TabIndex = 71;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(14, 658);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(98, 15);
+            this.label18.TabIndex = 72;
+            this.label18.Text = "Limpiar Campos";
             // 
             // FormAltaFactura
             // 
@@ -666,6 +689,8 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(884, 680);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.lblGrabar);
             this.Controls.Add(this.label9);
@@ -749,5 +774,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
         private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLote;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label18;
     }
 }
