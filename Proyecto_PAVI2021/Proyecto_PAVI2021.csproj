@@ -59,6 +59,7 @@
     <Compile Include="Datos\Daos\MaterialDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
     <Compile Include="Datos\Daos\PersonalDao.cs" />
+    <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\UsuarioDao.cs" />
     <Compile Include="Interfaces\IBarrio.cs" />
     <Compile Include="Interfaces\ICliente.cs" />
@@ -68,10 +69,12 @@
     <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IPerfil.cs" />
     <Compile Include="Interfaces\IPersonal.cs" />
+    <Compile Include="Interfaces\IProveedor.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
     <Compile Include="Negocio\Barrio.cs" />
     <Compile Include="Negocio\DetalleFactura.cs" />
     <Compile Include="Negocio\Cliente.cs" />
+    <Compile Include="Negocio\FacturaCompra.cs" />
     <Compile Include="Negocio\FacturaVenta.cs" />
     <Compile Include="Negocio\FormaPago.cs" />
     <Compile Include="Negocio\Localidad.cs" />
@@ -79,6 +82,7 @@
     <Compile Include="Negocio\Material.cs" />
     <Compile Include="Negocio\Perfil.cs" />
     <Compile Include="Negocio\Personal.cs" />
+    <Compile Include="Negocio\Proveedor.cs" />
     <Compile Include="Negocio\Usuario.cs" />
     <Compile Include="Presentacion\PresBarrios\FormAltaBarrio.cs">
       <SubType>Form</SubType>
@@ -116,6 +120,12 @@
     <Compile Include="Presentacion\PresClientes\FormModificarCliente.Designer.cs">
       <DependentUpon>FormModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresCompras\FormCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresCompras\FormCompras.Designer.cs">
+      <DependentUpon>FormCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresFactura\FormAltaFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +161,12 @@
     </Compile>
     <Compile Include="Presentacion\PresPersonal\FormPersonal.designer.cs">
       <DependentUpon>FormPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresProveedores\FormProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresProveedores\FormProveedores.Designer.cs">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresUsuarios\FormAltaUsuarios.cs">
       <SubType>Form</SubType>
@@ -193,6 +209,7 @@
     <Compile Include="Servicios\MaterialService.cs" />
     <Compile Include="Servicios\PerfilService.cs" />
     <Compile Include="Servicios\PersonalService.cs" />
+    <Compile Include="Servicios\ProveedorService.cs" />
     <Compile Include="Servicios\UsuarioService.cs" />
     <EmbeddedResource Include="Presentacion\PresBarrios\FormAltaBarrio.resx">
       <DependentUpon>FormAltaBarrio.cs</DependentUpon>
@@ -212,6 +229,9 @@
     <EmbeddedResource Include="Presentacion\PresClientes\FormModificarCliente.resx">
       <DependentUpon>FormModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresCompras\FormCompras.resx">
+      <DependentUpon>FormCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresFactura\FormAltaFactura.resx">
       <DependentUpon>FormAltaFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPersonal\FormPersonal.resx">
       <DependentUpon>FormPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresProveedores\FormProveedores.resx">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresUsuarios\FormAltaUsuarios.resx">
       <DependentUpon>FormAltaUsuarios.cs</DependentUpon>

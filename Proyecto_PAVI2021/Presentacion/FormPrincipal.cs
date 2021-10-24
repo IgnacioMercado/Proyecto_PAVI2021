@@ -2,6 +2,7 @@
 using Proyecto_PAVI2021.Presentacion.PresFormasPago;
 using Proyecto_PAVI2021.Presentacion.PresLocalidad;
 using ProyectoAutopartes.Presentacion.PresBarrios;
+using ProyectoAutopartes.Presentacion.PresCompras;
 using ProyectoAutopartes.Presentacion.PresFactura;
 using System;
 using System.Collections.Generic;
@@ -84,5 +85,22 @@ namespace Proyecto_PAVI2021
             FormAltaFactura faf = new FormAltaFactura();
             faf.ShowDialog();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCompras fcompras = new FormCompras();
+            fcompras.ShowDialog();
+        }
+
     }
 }
