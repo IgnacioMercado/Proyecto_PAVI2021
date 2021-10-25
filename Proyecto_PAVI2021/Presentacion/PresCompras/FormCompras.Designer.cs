@@ -47,15 +47,13 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             this.cboLocalidad = new System.Windows.Forms.ComboBox();
             this.cboBarrio = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNroFactura = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.cmbLote = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.MaskedTextBox();
             this.lblArticulo = new System.Windows.Forms.Label();
@@ -86,8 +84,11 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             this.label17 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNroFactura2 = new System.Windows.Forms.TextBox();
+            this.cmbLote = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.txtNroFactura.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.panel1.SuspendLayout();
@@ -283,22 +284,24 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             this.label19.TabIndex = 16;
             this.label19.Text = "Localidad";
             // 
-            // groupBox2
+            // txtNroFactura
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.DarkSalmon;
-            this.groupBox2.Controls.Add(this.dtpFecha);
-            this.groupBox2.Controls.Add(this.txtFecha);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.cboTipoFactura);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(8, 4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(845, 51);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Factura";
+            this.txtNroFactura.BackColor = System.Drawing.Color.DarkSalmon;
+            this.txtNroFactura.Controls.Add(this.txtNroFactura2);
+            this.txtNroFactura.Controls.Add(this.label11);
+            this.txtNroFactura.Controls.Add(this.dtpFecha);
+            this.txtNroFactura.Controls.Add(this.txtFecha);
+            this.txtNroFactura.Controls.Add(this.label8);
+            this.txtNroFactura.Controls.Add(this.cboTipoFactura);
+            this.txtNroFactura.Controls.Add(this.label1);
+            this.txtNroFactura.Location = new System.Drawing.Point(8, 5);
+            this.txtNroFactura.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNroFactura.Name = "txtNroFactura";
+            this.txtNroFactura.Padding = new System.Windows.Forms.Padding(2);
+            this.txtNroFactura.Size = new System.Drawing.Size(845, 51);
+            this.txtNroFactura.TabIndex = 16;
+            this.txtNroFactura.TabStop = false;
+            this.txtNroFactura.Text = "Factura";
             // 
             // dtpFecha
             // 
@@ -312,7 +315,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // txtFecha
             // 
             this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(525, 18);
+            this.txtFecha.Location = new System.Drawing.Point(741, 20);
             this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(92, 20);
@@ -333,8 +336,6 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // 
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.cmbLote);
-            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.txtCantidad);
             this.groupBox3.Controls.Add(this.lblArticulo);
@@ -371,23 +372,6 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             this.label14.Size = new System.Drawing.Size(81, 13);
             this.label14.TabIndex = 9;
             this.label14.Text = "Agregar articulo";
-            // 
-            // cmbLote
-            // 
-            this.cmbLote.FormattingEnabled = true;
-            this.cmbLote.Location = new System.Drawing.Point(241, 22);
-            this.cmbLote.Name = "cmbLote";
-            this.cmbLote.Size = new System.Drawing.Size(121, 21);
-            this.cmbLote.TabIndex = 8;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(206, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(28, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Lote";
             // 
             // label10
             // 
@@ -527,7 +511,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
             this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.txtNroFactura);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(9, 11);
             this.panel1.Name = "panel1";
@@ -604,7 +588,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // txtLegajoEmpleado
             // 
             this.txtLegajoEmpleado.Enabled = false;
-            this.txtLegajoEmpleado.Location = new System.Drawing.Point(416, 20);
+            this.txtLegajoEmpleado.Location = new System.Drawing.Point(384, 21);
             this.txtLegajoEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtLegajoEmpleado.Name = "txtLegajoEmpleado";
             this.txtLegajoEmpleado.Size = new System.Drawing.Size(92, 20);
@@ -704,12 +688,40 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             this.label18.TabIndex = 72;
             this.label18.Text = "Limpiar Campos";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(405, 20);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Nro Factura:";
+            // 
+            // txtNroFactura2
+            // 
+            this.txtNroFactura2.Location = new System.Drawing.Point(475, 17);
+            this.txtNroFactura2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNroFactura2.Name = "txtNroFactura2";
+            this.txtNroFactura2.Size = new System.Drawing.Size(92, 20);
+            this.txtNroFactura2.TabIndex = 22;
+            // 
+            // cmbLote
+            // 
+            this.cmbLote.FormattingEnabled = true;
+            this.cmbLote.Location = new System.Drawing.Point(344, 608);
+            this.cmbLote.Name = "cmbLote";
+            this.cmbLote.Size = new System.Drawing.Size(121, 21);
+            this.cmbLote.TabIndex = 11;
+            this.cmbLote.Visible = false;
+            // 
             // FormCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(884, 680);
+            this.Controls.Add(this.cmbLote);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label17);
@@ -726,8 +738,8 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             this.Load += new System.EventHandler(this.FormCompras_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.txtNroFactura.ResumeLayout(false);
+            this.txtNroFactura.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
@@ -757,7 +769,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox txtNroFactura;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label8;
@@ -775,8 +787,6 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox txtCantidad;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.ComboBox cmbLote;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtApellidoEmpleado;
         private System.Windows.Forms.Label label12;
@@ -799,5 +809,8 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
         private System.Windows.Forms.ComboBox cboLocalidad;
         private System.Windows.Forms.ComboBox cboBarrio;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtNroFactura2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmbLote;
     }
 }

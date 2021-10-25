@@ -64,5 +64,28 @@ namespace ProyectoAutopartes.Negocio
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
+        public void RegistrarProveedor(string nombre, string telefono, string cuit, string calle, string altura, int id_barrio, int id_localidad)
+        {
+            string consulta = "INSERT INTO PROVEEDORESS (Nombre, Telefono, CUIT, Calle, Nro_Calle, Id_Barrio, Id_Localidad, Borrado) " +
+                              "VALUES ('" + nombre + "', '" + telefono + "', '" + cuit + "', '" + calle + "', '" + altura + "'," 
+                              + id_barrio + ","+id_localidad + ",'0')";
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
+        }
+
+        public void BorrarProveedor(int id)
+        {
+            string consulta = "UPDATE PROVEEDORESS SET Borrado = 1 WHERE Id_Proveedor = " + id;
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
+        }
+        public void ModificarProveedorPorId(int id, string nombre, string telefono, string cuit, string calle, string altura, int id_barrio, int id_localidad)
+        {
+            string consulta = "UPDATE PROVEEDORESS SET Nombre = '" + nombre + "', Telefono = '" + telefono + "',CUIT = '" + cuit + "', Calle = '"
+                + calle + "', Nro_Calle = '" + altura + "', Id_Barrio = " +id_barrio+ 
+                ", Id_Localidad = "+id_localidad + " WHERE Id_Proveedor = " + id;
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
+        }
     }
 }

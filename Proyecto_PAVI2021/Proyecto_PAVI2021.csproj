@@ -52,6 +52,7 @@
     <Compile Include="Datos\BDHelper.cs" />
     <Compile Include="Datos\Daos\BarrioDao.cs" />
     <Compile Include="Datos\Daos\ClienteDao.cs" />
+    <Compile Include="Datos\Daos\FacturaCompraDao.cs" />
     <Compile Include="Datos\Daos\FacturaVentaDao.cs" />
     <Compile Include="Datos\Daos\FormaDePagoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
@@ -162,6 +163,18 @@
     <Compile Include="Presentacion\PresPersonal\FormPersonal.designer.cs">
       <DependentUpon>FormPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresProveedores\FormAltaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresProveedores\FormAltaProveedor.Designer.cs">
+      <DependentUpon>FormAltaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresProveedores\FormModificarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresProveedores\FormModificarProveedor.Designer.cs">
+      <DependentUpon>FormModificarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresProveedores\FormProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +262,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPersonal\FormPersonal.resx">
       <DependentUpon>FormPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresProveedores\FormAltaProveedor.resx">
+      <DependentUpon>FormAltaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresProveedores\FormModificarProveedor.resx">
+      <DependentUpon>FormModificarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresProveedores\FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>

@@ -11,7 +11,7 @@ namespace ProyectoAutopartes.Negocio
         public int IdFactura { get; set; }
         public int NroFactura { get; set; }
         public DateTime Fecha { get; set; }
-        public int Id_Proveedores { get; set; }
+        public int Id_Proveedor { get; set; }
         public string TipoFactura { get; set; }
         public IList<DetalleFactura> DetalleFactura { get; set; }
 

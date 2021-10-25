@@ -20,6 +20,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
         public int Id_Cliente_Seleccionado;
         public int Id_Proveedor_Seleccionado;
         public int Legajo_Empleado_Seleccionado;
+        public int Nro_Factura;
         
         private List<string> TiposFactura = new List<string> { "A", "B", "C" };
         Cliente oClienteSeleccionado = new Cliente();
@@ -107,6 +108,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            
             int cantidad = 0;
             int.TryParse(txtCantidad.Text, out cantidad);
 
@@ -116,24 +118,31 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             }
             else
             {
+                Nro_Factura = int.Parse(txtNroFactura2.Text);
                 var material = (Material)cmbArticulo.SelectedItem;
-                var oLote = (Lote)cmbLote.SelectedItem;
-                if (cantidad > oLote.Stock_lote)
-                {
-                    MessageBox.Show("No hay suficiente stock de ese material en este lote \nEl stock actual en el lote " + oLote.Id_lote + " es de " + oLote.Stock_lote + " unidades\nEl stock de " + material.Nombre + " sumando todos sus lotes es de " + material.Stock + " unidades", "Problema de stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                //var oLote = (Lote)cmbLote.SelectedItem;
+                string nroFactura = txtNroFactura.Text;
+                string legajo = txtLegajoEmpleado.Text;
+                Lote oLote = new Lote();
+                oLote.crearLote(DateTime.Today.ToString(), 0, legajo, true, cantidad.ToString(), material.Id_material);
+                DataTable tablaConIdUltimo = new DataTable();
+                tablaConIdUltimo = oLote.ultimoId();
+                oLote.Id_lote = int.Parse(tablaConIdUltimo.Rows[0]["Id_Lote"].ToString());
+                //if (cantidad > oLote.Stock_lote)
+                //{
+                //    MessageBox.Show("No hay suficiente stock de ese material en este lote \nEl stock actual en el lote " + oLote.Id_lote + " es de " + oLote.Stock_lote + " unidades\nEl stock de " + material.Nombre + " sumando todos sus lotes es de " + material.Stock + " unidades", "Problema de stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
 
-                else
-                {
-                    listaDetalleFactura.Add(new DetalleFactura()
-                    {
-                        Material = material,
-                        Cantidad = cantidad,
-                        Id_lote = oLote.Id_lote
-                    });
 
-                    InicializarDetalle();
-                }
+                listaDetalleFactura.Add(new DetalleFactura()
+                {
+                    Material = material,
+                    Cantidad = cantidad,
+                    Id_lote = oLote.Id_lote
+                });
+
+                InicializarDetalle();
+                
                 
             }
             
@@ -158,17 +167,20 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
         {
             try
             {
-                if (cboTipoFactura.SelectedIndex == -1 || txtNombre.Text == "" || txtNombreEmpleado.Text == "")
+                if (cboTipoFactura.SelectedIndex == -1 || txtNombre.Text == "" || txtNombreEmpleado.Text == "" || txtNroFactura.Text =="")
                 {
                     MessageBox.Show("Por favor, ingrese los datos necesarios. \nRecuerde que todos los campos son obligatorios", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 else
                 {
-                    var factura = new FacturaVenta
+                    var facturaCompra = new FacturaCompra
                     {
                         Fecha = dtpFecha.Value,
-                        Id_Cliente = Id_Cliente_Seleccionado,
+                        //FALTA EL NUMERO DE FACTURA
+                        //NroFactura = int.Parse(txtNroFactura.Text),
+                        NroFactura = int.Parse(txtNroFactura2.Text),
+                        Id_Proveedor = Id_Proveedor_Seleccionado,
                         TipoFactura = cboTipoFactura.SelectedItem.ToString(),
                         DetalleFactura = listaDetalleFactura,
                         Legajo_Empleado = Legajo_Empleado_Seleccionado
@@ -177,11 +189,11 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
 
 
 
-                    if (facturaService.ValidarDatos(factura))
+                    if (facturaService.ValidarDatos(facturaCompra))
                     {
-                        facturaService.Crear(factura);
+                        facturaService.Crear(facturaCompra);
 
-                        MessageBox.Show(string.Concat("La factura nro: ", factura.IdFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(string.Concat("La factura nro: ", facturaCompra.IdFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         InicializarFormulario();
 

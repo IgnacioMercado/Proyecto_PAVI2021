@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion.PresClientes;
+using Proyecto_PAVI2021.Presentacion.PresProveedores;
 using ProyectoAutopartes.Negocio;
 using ProyectoAutopartes.Presentacion.PresFactura;
 using System;
@@ -21,6 +22,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         private string modo;       
         Cliente oCliente = new Cliente();
         Proveedor oProveedor = new Proveedor();
+        Barrio oBarrio = new Barrio();
+        Localidad oLocalidad = new Localidad();
         public FormProveedores(string modo)
         {
             InitializeComponent();
@@ -30,6 +33,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         private void FormProveedores_Load(object sender, EventArgs e)
         {
             this.CargarGrilla(dgvProveedores, oProveedor.RecuperarTodos());
+            this.CargarCombo(cboBarrio, oBarrio.RecuperarTodos());
+            this.CargarCombo(cboLocalidad, oLocalidad.RecuperarTodos());
 
             if (this.modo == "seleccionar")
             {
@@ -86,13 +91,13 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este cliente?.", "Confirmación de baja de cliente", MessageBoxButtons.YesNo,
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar este Proveedor?.", "Confirmación de baja de Proveedor", MessageBoxButtons.YesNo,
             MessageBoxIcon.Information);
 
             if (dr == DialogResult.Yes)
             {
-                oCliente.BorrarCliente((int)dgvProveedores.CurrentRow.Cells[0].Value);
-                MessageBox.Show("Cliente eliminado");
+                oProveedor.BorrarProveedor((int)dgvProveedores.CurrentRow.Cells[0].Value);
+                MessageBox.Show("Proveedor eliminado");
             }
             
             this.CargarGrilla(dgvProveedores, oProveedor.RecuperarTodos());
@@ -100,9 +105,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            FormModificarCliente fmc = new FormModificarCliente((int)dgvProveedores.CurrentRow.Cells[0].Value);
-
-            fmc.ShowDialog();
+            //FormModificarCliente fmc = new FormModificarCliente((int)dgvProveedores.CurrentRow.Cells[0].Value);
+            FormModificarProveedor fmp = new FormModificarProveedor((int)dgvProveedores.CurrentRow.Cells[0].Value);
+            fmp.ShowDialog();
             this.CargarGrilla(dgvProveedores, oProveedor.RecuperarTodos());
         }
 
@@ -111,6 +116,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             //FormAltaCliente fac = new FormAltaCliente();
             //fac.ShowDialog();
             this.CargarGrilla(dgvProveedores, oProveedor.RecuperarTodos());
+            FormAltaProveedor fap = new FormAltaProveedor();
+            fap.ShowDialog();
         }
 
         private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -318,5 +318,29 @@ namespace Proyecto_PAVI2021.Datos
                 throw (ex);
             }
         }
+        public object obtenerUltimoId(string tabla)
+        {
+            string consulta = "IDENT_CURRENT('"+ tabla+"')";
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cmd.Connection = conexion;
+                cmd.Transaction = transaccion;
+                cmd.CommandType = CommandType.Text;
+                // Establece la instrucción a ejecutar
+                cmd.CommandText = consulta;
+                return cmd.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                throw (ex);
+            }
+            //int id = BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
+            //return id;
+            //int Id = BDHelper.ConsultaSQLScalar("IDENT_CURRENT('" + tabla + "')");
+            //return Id;
+        }
+        
+
     }
 }

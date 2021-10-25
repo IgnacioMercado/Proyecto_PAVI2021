@@ -23,7 +23,6 @@ namespace ProyectoAutopartes.Interfaces
 
         void BorrarProveedor(int id);
 
-
         DataTable RecuperarProveedorPorId(int id);
     }
 }
