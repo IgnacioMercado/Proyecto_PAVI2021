@@ -1,6 +1,8 @@
-﻿using Proyecto_PAVI2021.Negocio;
+﻿using Proyecto_PAVI2021.Datos;
+using Proyecto_PAVI2021.Negocio;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +19,18 @@ namespace ProyectoAutopartes.Negocio
         public IList<DetalleFactura> DetalleFactura { get; set; }
         
         public int Legajo_Empleado { get; set; }
+
+        public static DataTable RecuperarFacturasV()
+        {
+            DataTable tabla = new DataTable();
+
+            string consulta = "SELECT * FROM FACTURA_VENTA";
+
+            tabla = BDHelper.obtenerInstancia().consultar(consulta);
+
+            return tabla; 
+        }
+
+
     }
 }
