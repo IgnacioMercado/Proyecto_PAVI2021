@@ -279,15 +279,17 @@ namespace ProyectoAutopartes.DataSets {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class FACTURA_VENTADataTable : global::System.Data.TypedTableBase<FACTURA_VENTARow> {
             
-            private global::System.Data.DataColumn columnTipo_Factura;
+            private global::System.Data.DataColumn columnDataColumn1;
             
-            private global::System.Data.DataColumn columnId_Cliente;
+            private global::System.Data.DataColumn columnTipo;
             
-            private global::System.Data.DataColumn columnFecha_Factura;
+            private global::System.Data.DataColumn columnCiente;
             
-            private global::System.Data.DataColumn columnLegajo_Empleado;
+            private global::System.Data.DataColumn columnFecha;
             
-            private global::System.Data.DataColumn columnId_Factura;
+            private global::System.Data.DataColumn columnLegajo_E;
+            
+            private global::System.Data.DataColumn columnId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -324,41 +326,49 @@ namespace ProyectoAutopartes.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Tipo_FacturaColumn {
+            public global::System.Data.DataColumn DataColumn1Column {
                 get {
-                    return this.columnTipo_Factura;
+                    return this.columnDataColumn1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Id_ClienteColumn {
+            public global::System.Data.DataColumn TipoColumn {
                 get {
-                    return this.columnId_Cliente;
+                    return this.columnTipo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Fecha_FacturaColumn {
+            public global::System.Data.DataColumn CienteColumn {
                 get {
-                    return this.columnFecha_Factura;
+                    return this.columnCiente;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Legajo_EmpleadoColumn {
+            public global::System.Data.DataColumn FechaColumn {
                 get {
-                    return this.columnLegajo_Empleado;
+                    return this.columnFecha;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Id_FacturaColumn {
+            public global::System.Data.DataColumn Legajo_EColumn {
                 get {
-                    return this.columnId_Factura;
+                    return this.columnLegajo_E;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
                 }
             }
             
@@ -399,13 +409,14 @@ namespace ProyectoAutopartes.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FACTURA_VENTARow AddFACTURA_VENTARow(string Tipo_Factura, int Id_Cliente, System.DateTime Fecha_Factura, int Legajo_Empleado) {
+            public FACTURA_VENTARow AddFACTURA_VENTARow(string DataColumn1, string Tipo, int Ciente, System.DateTime Fecha, int Legajo_E) {
                 FACTURA_VENTARow rowFACTURA_VENTARow = ((FACTURA_VENTARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Tipo_Factura,
-                        Id_Cliente,
-                        Fecha_Factura,
-                        Legajo_Empleado,
+                        DataColumn1,
+                        Tipo,
+                        Ciente,
+                        Fecha,
+                        Legajo_E,
                         null};
                 rowFACTURA_VENTARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFACTURA_VENTARow);
@@ -414,9 +425,9 @@ namespace ProyectoAutopartes.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FACTURA_VENTARow FindById_Factura(int Id_Factura) {
+            public FACTURA_VENTARow FindById(int Id) {
                 return ((FACTURA_VENTARow)(this.Rows.Find(new object[] {
-                            Id_Factura})));
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -436,35 +447,39 @@ namespace ProyectoAutopartes.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnTipo_Factura = base.Columns["Tipo_Factura"];
-                this.columnId_Cliente = base.Columns["Id_Cliente"];
-                this.columnFecha_Factura = base.Columns["Fecha_Factura"];
-                this.columnLegajo_Empleado = base.Columns["Legajo_Empleado"];
-                this.columnId_Factura = base.Columns["Id_Factura"];
+                this.columnDataColumn1 = base.Columns["DataColumn1"];
+                this.columnTipo = base.Columns["Tipo"];
+                this.columnCiente = base.Columns["Ciente"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnLegajo_E = base.Columns["Legajo E"];
+                this.columnId = base.Columns["Id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnTipo_Factura = new global::System.Data.DataColumn("Tipo_Factura", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipo_Factura);
-                this.columnId_Cliente = new global::System.Data.DataColumn("Id_Cliente", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_Cliente);
-                this.columnFecha_Factura = new global::System.Data.DataColumn("Fecha_Factura", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha_Factura);
-                this.columnLegajo_Empleado = new global::System.Data.DataColumn("Legajo_Empleado", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLegajo_Empleado);
-                this.columnId_Factura = new global::System.Data.DataColumn("Id_Factura", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId_Factura);
+                this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDataColumn1);
+                this.columnTipo = new global::System.Data.DataColumn("Tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo);
+                this.columnCiente = new global::System.Data.DataColumn("Ciente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCiente);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnLegajo_E = new global::System.Data.DataColumn("Legajo E", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLegajo_E);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId_Factura}, true));
-                this.columnTipo_Factura.MaxLength = 50;
-                this.columnId_Factura.AutoIncrement = true;
-                this.columnId_Factura.AutoIncrementSeed = -1;
-                this.columnId_Factura.AutoIncrementStep = -1;
-                this.columnId_Factura.AllowDBNull = false;
-                this.columnId_Factura.ReadOnly = true;
-                this.columnId_Factura.Unique = true;
+                                this.columnId}, true));
+                this.columnTipo.MaxLength = 50;
+                this.columnLegajo_E.Caption = "Legajo E.";
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -607,125 +622,153 @@ namespace ProyectoAutopartes.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Tipo_Factura {
+            public string DataColumn1 {
                 get {
                     try {
-                        return ((string)(this[this.tableFACTURA_VENTA.Tipo_FacturaColumn]));
+                        return ((string)(this[this.tableFACTURA_VENTA.DataColumn1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo_Factura\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DataColumn1\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFACTURA_VENTA.Tipo_FacturaColumn] = value;
+                    this[this.tableFACTURA_VENTA.DataColumn1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id_Cliente {
+            public string Tipo {
                 get {
                     try {
-                        return ((int)(this[this.tableFACTURA_VENTA.Id_ClienteColumn]));
+                        return ((string)(this[this.tableFACTURA_VENTA.TipoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Id_Cliente\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tipo\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFACTURA_VENTA.Id_ClienteColumn] = value;
+                    this[this.tableFACTURA_VENTA.TipoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Fecha_Factura {
+            public int Ciente {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableFACTURA_VENTA.Fecha_FacturaColumn]));
+                        return ((int)(this[this.tableFACTURA_VENTA.CienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha_Factura\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ciente\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFACTURA_VENTA.Fecha_FacturaColumn] = value;
+                    this[this.tableFACTURA_VENTA.CienteColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Legajo_Empleado {
+            public System.DateTime Fecha {
                 get {
                     try {
-                        return ((int)(this[this.tableFACTURA_VENTA.Legajo_EmpleadoColumn]));
+                        return ((global::System.DateTime)(this[this.tableFACTURA_VENTA.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Legajo_Empleado\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFACTURA_VENTA.Legajo_EmpleadoColumn] = value;
+                    this[this.tableFACTURA_VENTA.FechaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id_Factura {
+            public int Legajo_E {
                 get {
-                    return ((int)(this[this.tableFACTURA_VENTA.Id_FacturaColumn]));
+                    try {
+                        return ((int)(this[this.tableFACTURA_VENTA.Legajo_EColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Legajo E\' de la tabla \'FACTURA_VENTA\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableFACTURA_VENTA.Id_FacturaColumn] = value;
+                    this[this.tableFACTURA_VENTA.Legajo_EColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTipo_FacturaNull() {
-                return this.IsNull(this.tableFACTURA_VENTA.Tipo_FacturaColumn);
+            public int Id {
+                get {
+                    return ((int)(this[this.tableFACTURA_VENTA.IdColumn]));
+                }
+                set {
+                    this[this.tableFACTURA_VENTA.IdColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTipo_FacturaNull() {
-                this[this.tableFACTURA_VENTA.Tipo_FacturaColumn] = global::System.Convert.DBNull;
+            public bool IsDataColumn1Null() {
+                return this.IsNull(this.tableFACTURA_VENTA.DataColumn1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsId_ClienteNull() {
-                return this.IsNull(this.tableFACTURA_VENTA.Id_ClienteColumn);
+            public void SetDataColumn1Null() {
+                this[this.tableFACTURA_VENTA.DataColumn1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetId_ClienteNull() {
-                this[this.tableFACTURA_VENTA.Id_ClienteColumn] = global::System.Convert.DBNull;
+            public bool IsTipoNull() {
+                return this.IsNull(this.tableFACTURA_VENTA.TipoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFecha_FacturaNull() {
-                return this.IsNull(this.tableFACTURA_VENTA.Fecha_FacturaColumn);
+            public void SetTipoNull() {
+                this[this.tableFACTURA_VENTA.TipoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFecha_FacturaNull() {
-                this[this.tableFACTURA_VENTA.Fecha_FacturaColumn] = global::System.Convert.DBNull;
+            public bool IsCienteNull() {
+                return this.IsNull(this.tableFACTURA_VENTA.CienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsLegajo_EmpleadoNull() {
-                return this.IsNull(this.tableFACTURA_VENTA.Legajo_EmpleadoColumn);
+            public void SetCienteNull() {
+                this[this.tableFACTURA_VENTA.CienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetLegajo_EmpleadoNull() {
-                this[this.tableFACTURA_VENTA.Legajo_EmpleadoColumn] = global::System.Convert.DBNull;
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableFACTURA_VENTA.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tableFACTURA_VENTA.FechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLegajo_ENull() {
+                return this.IsNull(this.tableFACTURA_VENTA.Legajo_EColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLegajo_ENull() {
+                this[this.tableFACTURA_VENTA.Legajo_EColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -888,53 +931,53 @@ namespace ProyectoAutopartes.DataSets.DataSet_VentasTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FACTURA_VENTA";
-            tableMapping.ColumnMappings.Add("Tipo_Factura", "Tipo_Factura");
-            tableMapping.ColumnMappings.Add("Id_Cliente", "Id_Cliente");
-            tableMapping.ColumnMappings.Add("Fecha_Factura", "Fecha_Factura");
-            tableMapping.ColumnMappings.Add("Legajo_Empleado", "Legajo_Empleado");
-            tableMapping.ColumnMappings.Add("Id_Factura", "Id_Factura");
+            tableMapping.ColumnMappings.Add("Tipo", "Tipo");
+            tableMapping.ColumnMappings.Add("Ciente", "Ciente");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("Legajo E.", "Legajo E");
+            tableMapping.ColumnMappings.Add("Id", "Id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [FACTURA_VENTA] WHERE (((@IsNull_Tipo_Factura = 1 AND [Tipo_Factura] IS NULL) OR ([Tipo_Factura] = @Original_Tipo_Factura)) AND ((@IsNull_Id_Cliente = 1 AND [Id_Cliente] IS NULL) OR ([Id_Cliente] = @Original_Id_Cliente)) AND ((@IsNull_Fecha_Factura = 1 AND [Fecha_Factura] IS NULL) OR ([Fecha_Factura] = @Original_Fecha_Factura)) AND ((@IsNull_Legajo_Empleado = 1 AND [Legajo_Empleado] IS NULL) OR ([Legajo_Empleado] = @Original_Legajo_Empleado)) AND ([Id_Factura] = @Original_Id_Factura))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [FACTURA_VENTA] WHERE (((@IsNull_Tipo = 1 AND [Tipo_Factura] IS NULL) OR ([Tipo_Factura] = @Original_Tipo)) AND ((@IsNull_Ciente = 1 AND [Id_Cliente] IS NULL) OR ([Id_Cliente] = @Original_Ciente)) AND ((@IsNull_Fecha = 1 AND [Fecha_Factura] IS NULL) OR ([Fecha_Factura] = @Original_Fecha)) AND ((@p3 = 1 AND [Legajo_Empleado] IS NULL) OR ([Legajo_Empleado] = @p2)) AND ([Id_Factura] = @Original_Id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo_Factura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Factura", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo_Factura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Factura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Id_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Factura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Factura", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha_Factura", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Factura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Legajo_Empleado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo_Empleado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Legajo_Empleado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo_Empleado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Factura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Factura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ciente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo E.", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo E.", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [FACTURA_VENTA] ([Tipo_Factura], [Id_Cliente], [Fecha_Factura], [Legajo_Empleado]) VALUES (@Tipo_Factura, @Id_Cliente, @Fecha_Factura, @Legajo_Empleado);
-SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM FACTURA_VENTA WHERE (Id_Factura = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [FACTURA_VENTA] ([Tipo_Factura], [Id_Cliente], [Fecha_Factura], [Legajo_Empleado]) VALUES (@Tipo, @Ciente, @Fecha, @p1);
+SELECT Tipo_Factura AS Tipo, Id_Cliente AS Ciente, Fecha_Factura AS Fecha, Legajo_Empleado AS [Legajo E.], Id_Factura AS Id FROM FACTURA_VENTA WHERE (Id_Factura = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_Factura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Factura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Factura", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Factura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Legajo_Empleado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo_Empleado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo E.", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [FACTURA_VENTA] SET [Tipo_Factura] = @Tipo_Factura, [Id_Cliente] = @Id_Cliente, [Fecha_Factura] = @Fecha_Factura, [Legajo_Empleado] = @Legajo_Empleado WHERE (((@IsNull_Tipo_Factura = 1 AND [Tipo_Factura] IS NULL) OR ([Tipo_Factura] = @Original_Tipo_Factura)) AND ((@IsNull_Id_Cliente = 1 AND [Id_Cliente] IS NULL) OR ([Id_Cliente] = @Original_Id_Cliente)) AND ((@IsNull_Fecha_Factura = 1 AND [Fecha_Factura] IS NULL) OR ([Fecha_Factura] = @Original_Fecha_Factura)) AND ((@IsNull_Legajo_Empleado = 1 AND [Legajo_Empleado] IS NULL) OR ([Legajo_Empleado] = @Original_Legajo_Empleado)) AND ([Id_Factura] = @Original_Id_Factura));
-SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM FACTURA_VENTA WHERE (Id_Factura = @Id_Factura)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [FACTURA_VENTA] SET [Tipo_Factura] = @Tipo, [Id_Cliente] = @Ciente, [Fecha_Factura] = @Fecha, [Legajo_Empleado] = @p1 WHERE (((@IsNull_Tipo = 1 AND [Tipo_Factura] IS NULL) OR ([Tipo_Factura] = @Original_Tipo)) AND ((@IsNull_Ciente = 1 AND [Id_Cliente] IS NULL) OR ([Id_Cliente] = @Original_Ciente)) AND ((@IsNull_Fecha = 1 AND [Fecha_Factura] IS NULL) OR ([Fecha_Factura] = @Original_Fecha)) AND ((@p3 = 1 AND [Legajo_Empleado] IS NULL) OR ([Legajo_Empleado] = @p2)) AND ([Id_Factura] = @Original_Id));
+SELECT Tipo_Factura AS Tipo, Id_Cliente AS Ciente, Fecha_Factura AS Fecha, Legajo_Empleado AS [Legajo E.], Id_Factura AS Id FROM FACTURA_VENTA WHERE (Id_Factura = @Id_Factura)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_Factura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Factura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Factura", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Factura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Legajo_Empleado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo_Empleado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo_Factura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Factura", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo_Factura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_Factura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Id_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Factura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Factura", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha_Factura", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha_Factura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Legajo_Empleado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo_Empleado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Legajo_Empleado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo_Empleado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id_Factura", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Factura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Factura", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Factura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo E.", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tipo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ciente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo E.", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Legajo E.", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Factura", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -950,8 +993,9 @@ SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM " +
-                "FACTURA_VENTA";
+            this._commandCollection[0].CommandText = "SELECT        Tipo_Factura AS Tipo, Id_Cliente AS Ciente, Fecha_Factura AS Fecha," +
+                " Legajo_Empleado AS [Legajo E.], Id_Factura AS Id\r\nFROM            FACTURA_VENTA" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1012,40 +1056,21 @@ SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Tipo_Factura, global::System.Nullable<int> Original_Id_Cliente, global::System.Nullable<global::System.DateTime> Original_Fecha_Factura, global::System.Nullable<int> Original_Legajo_Empleado, int Original_Id_Factura) {
-            if ((Original_Tipo_Factura == null)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+        public virtual int Delete(string Original_Tipo, int Original_Ciente, System.DateTime Original_Fecha, int p2, int Original_Id) {
+            if ((Original_Tipo == null)) {
+                throw new global::System.ArgumentNullException("Original_Tipo");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Tipo_Factura));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Tipo));
             }
-            if ((Original_Id_Cliente.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Id_Cliente.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Fecha_Factura.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_Fecha_Factura.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Legajo_Empleado.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_Legajo_Empleado.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Id_Factura));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Ciente));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_Fecha));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(p2));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1066,31 +1091,16 @@ SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Tipo_Factura, global::System.Nullable<int> Id_Cliente, global::System.Nullable<global::System.DateTime> Fecha_Factura, global::System.Nullable<int> Legajo_Empleado) {
-            if ((Tipo_Factura == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(string Tipo, int Ciente, System.DateTime Fecha, int p1) {
+            if ((Tipo == null)) {
+                throw new global::System.ArgumentNullException("Tipo");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Tipo_Factura));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Tipo));
             }
-            if ((Id_Cliente.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Id_Cliente.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Fecha_Factura.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Fecha_Factura.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Legajo_Empleado.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Legajo_Empleado.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Ciente));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Fecha));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(p1));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1111,64 +1121,30 @@ SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Tipo_Factura, global::System.Nullable<int> Id_Cliente, global::System.Nullable<global::System.DateTime> Fecha_Factura, global::System.Nullable<int> Legajo_Empleado, string Original_Tipo_Factura, global::System.Nullable<int> Original_Id_Cliente, global::System.Nullable<global::System.DateTime> Original_Fecha_Factura, global::System.Nullable<int> Original_Legajo_Empleado, int Original_Id_Factura, int Id_Factura) {
-            if ((Tipo_Factura == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Update(string Tipo, int Ciente, System.DateTime Fecha, int p1, string Original_Tipo, int Original_Ciente, System.DateTime Original_Fecha, int p2, int Original_Id, int Id_Factura) {
+            if ((Tipo == null)) {
+                throw new global::System.ArgumentNullException("Tipo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Tipo_Factura));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Tipo));
             }
-            if ((Id_Cliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Id_Cliente.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Fecha_Factura.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Fecha_Factura.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Legajo_Empleado.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Legajo_Empleado.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Tipo_Factura == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Ciente));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Fecha));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(p1));
+            if ((Original_Tipo == null)) {
+                throw new global::System.ArgumentNullException("Original_Tipo");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Tipo_Factura));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Tipo));
             }
-            if ((Original_Id_Cliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id_Cliente.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Fecha_Factura.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Fecha_Factura.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Legajo_Empleado.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Legajo_Empleado.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Id_Factura));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Ciente));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Fecha));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(p2));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Id));
             this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id_Factura));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1190,8 +1166,8 @@ SELECT Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Id_Factura FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Tipo_Factura, global::System.Nullable<int> Id_Cliente, global::System.Nullable<global::System.DateTime> Fecha_Factura, global::System.Nullable<int> Legajo_Empleado, string Original_Tipo_Factura, global::System.Nullable<int> Original_Id_Cliente, global::System.Nullable<global::System.DateTime> Original_Fecha_Factura, global::System.Nullable<int> Original_Legajo_Empleado, int Original_Id_Factura) {
-            return this.Update(Tipo_Factura, Id_Cliente, Fecha_Factura, Legajo_Empleado, Original_Tipo_Factura, Original_Id_Cliente, Original_Fecha_Factura, Original_Legajo_Empleado, Original_Id_Factura, Original_Id_Factura);
+        public virtual int Update(string Tipo, int Ciente, System.DateTime Fecha, int p1, string Original_Tipo, int Original_Ciente, System.DateTime Original_Fecha, int p2, int Original_Id) {
+            return this.Update(Tipo, Ciente, Fecha, p1, Original_Tipo, Original_Ciente, Original_Fecha, p2, Original_Id, Original_Id);
         }
     }
     
