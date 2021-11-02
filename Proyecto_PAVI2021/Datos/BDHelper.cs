@@ -20,7 +20,7 @@ namespace Proyecto_PAVI2021.Datos
         {
             conexion = new SqlConnection(); // establece la conexion con SQL
             comando = new SqlCommand(); // permite manipular la BD
-            cadenaConexion = @"Data Source=LAPTOP-8NE9T5CM\SQLEXPRESS;Initial Catalog=Proyecto_PAVI2021_2daVersion;Integrated Security=True";
+            cadenaConexion = @"Data Source=localhost;Initial Catalog=Proyecto_PAVI2021_2daVersion;Integrated Security=True";
             conexion.ConnectionString = cadenaConexion;
         }
 

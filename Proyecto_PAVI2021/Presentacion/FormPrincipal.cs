@@ -101,6 +101,5 @@ namespace Proyecto_PAVI2021
             FormCompras fcompras = new FormCompras();
             fcompras.ShowDialog();
         }
-
     }
 }
