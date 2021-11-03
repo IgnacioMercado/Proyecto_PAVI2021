@@ -988,7 +988,7 @@
                     <ColumnSeparatorColor>Black</ColumnSeparatorColor>
                   </ChartLegend>
                 </ChartLegends>
-                <Palette>Pacific</Palette>
+                <Palette>PacificSemiTransparent</Palette>
                 <ChartBorderSkin>
                   <Style>
                     <BackgroundColor>Gray</BackgroundColor>
