@@ -4,6 +4,7 @@ using Proyecto_PAVI2021.Presentacion.PresLocalidad;
 using ProyectoAutopartes.Presentacion.PresBarrios;
 using ProyectoAutopartes.Presentacion.PresCompras;
 using ProyectoAutopartes.Presentacion.PresFactura;
+using ProyectoAutopartes.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -100,6 +101,18 @@ namespace Proyecto_PAVI2021
         {
             FormCompras fcompras = new FormCompras();
             fcompras.ShowDialog();
+        }
+
+        private void comprasPorProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReporteComprasXProveedor frcxp = new FormReporteComprasXProveedor();
+            frcxp.ShowDialog();
+        }
+
+        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReporteVentasXCliente frvxc = new FormReporteVentasXCliente();
+            frvxc.ShowDialog();
         }
     }
 }

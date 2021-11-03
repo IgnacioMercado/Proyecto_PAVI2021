@@ -3,6 +3,7 @@ using ProyectoAutopartes.Interfaces;
 using ProyectoAutopartes.Negocio;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -96,6 +97,26 @@ namespace ProyectoAutopartes.Datos.Daos
                 bd.Close();
             }
             return true;
+
+        }
+
+        public DataTable RecuperarComprasXProveedor(string desde, string hasta, string nombre, string localidad)
+        {
+            string consulta = "SELECT p.Id_Proveedor, p.Nombre, l.Descripcion as Localidad, COUNT(DISTINCT FC.Id_Factura) as Cantidad, SUM(DFC.Cantidad_Comprada*DFC.Precio_Compra) as MontoTotal " +
+                              "FROM PROVEEDORESS p JOIN LOCALIDADES l on p.Id_Localidad = l.Id_Localidad " +
+                              "JOIN FACTURA_COMPRA FC ON p.Id_Proveedor = FC.Id_Proveedor " +
+                              "JOIN DETALLE_FACTURA_COMPRAS DFC ON FC.Id_Factura = DFC.Id_Factura " +
+                              "WHERE p.Borrado = 0 AND FC.Borrado = 0 AND DFC.Borrado = 0 " +
+                              "AND FC.Fecha_Factura BETWEEN CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT(DateTime, '" + hasta + "', 103)";
+
+
+            if (!string.IsNullOrEmpty(nombre))
+                consulta += " AND p.Nombre LIKE '%" + nombre + "%'";
+            if (!string.IsNullOrEmpty(localidad))
+                consulta += " AND l.Descripcion LIKE '%" + localidad + "%'";
+
+            consulta += " GROUP BY p.Id_Proveedor, p.Nombre, l.Descripcion ";
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }
 }

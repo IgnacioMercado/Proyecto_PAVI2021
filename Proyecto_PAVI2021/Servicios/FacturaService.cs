@@ -56,5 +56,10 @@ namespace ProyectoAutopartes.Servicios
 
             return true;
         }
+
+        internal DataTable RecuperarComprasXProveedor(string desde, string hasta, string nombre, string localidad)
+        {
+            return oFacturaCompraDao.RecuperarComprasXProveedor(desde, hasta, nombre, localidad);
+        }
     }
 }
