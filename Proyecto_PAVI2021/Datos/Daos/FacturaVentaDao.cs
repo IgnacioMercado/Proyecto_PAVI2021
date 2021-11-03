@@ -1,16 +1,18 @@
 ﻿using Proyecto_PAVI2021.Datos;
+using ProyectoAutopartes.Interfaces;
 using ProyectoAutopartes.Negocio;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProyectoAutopartes.Datos.Daos
 {
-    class FacturaVentaDao
+    class FacturaVentaDao : IFacturaVenta
     {
-        internal bool Create(FacturaVenta factura)
+        public bool Create(FacturaVenta factura)
         {
             BDHelper bd = new BDHelper();
             try
@@ -24,7 +26,7 @@ namespace ProyectoAutopartes.Datos.Daos
                                             "           ,[Fecha_Factura]         ",
                                             "           ,[Legajo_Empleado]         ",
                                             "           ,[Borrado])      ",
-                                            "     VALUES                 ",                                                    
+                                            "     VALUES                 ",
                                             "           (@tipoFactura    ",
                                             "           ,@cliente        ",
                                             "           ,@fecha          ",
@@ -78,7 +80,7 @@ namespace ProyectoAutopartes.Datos.Daos
 
                     string sqlLoteStock = "UPDATE LOTE SET Stock_Lote = Stock_Lote - " + itemFactura.Cantidad + " WHERE Id_Lote = " + itemFactura.Id_lote;
                     bd.EjecutarSQL(sqlLoteStock);
-                    
+
                 }
 
 
@@ -99,5 +101,23 @@ namespace ProyectoAutopartes.Datos.Daos
             return true;
         }
 
+        public DataTable RecuperarVentasXCliente(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
+        {
+            string consulta = "SELECT C.Id_Cliente, C.Apellido, C.Nombre, C.Fecha_Alta, COUNT(DISTINCT FV.Id_Factura) as Total_Ventas, SUM(DFV.Cantidad_Vendida*DFV.Precio_Venta) as Total_Vendido " +
+                              "FROM CLIENTES C " +
+                              "JOIN FACTURA_VENTA FV ON(C.Id_Cliente = FV.Id_Cliente) " +
+                              "JOIN DETALLE_FACTURA_VENTAS DFV ON(FV.Id_Factura= DFV.Id_Factura) " +
+                              "WHERE C.Borrado = 0 AND FV.Borrado = 0 AND DFV.Borrado = 0 " +
+                              "AND C.Fecha_Alta BETWEEN CONVERT(DateTime, '" + alta_desde + "', 103)  AND CONVERT(DateTime, '" + alta_hasta + "', 103) " +
+                              "AND FV.Fecha_Factura BETWEEN CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT(DateTime, '" + hasta + "', 103)";
+
+            if (!string.IsNullOrEmpty(nombre))
+                consulta += " AND C.Nombre LIKE '%" + nombre + "%'";
+            if (!string.IsNullOrEmpty(apellido))
+                consulta += " AND C.Apellido LIKE '%" + apellido + "%'";
+
+            consulta += " GROUP BY C.Id_Cliente, C.Apellido, C.Nombre, C.Fecha_Alta";
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
     }
 }

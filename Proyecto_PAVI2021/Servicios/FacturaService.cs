@@ -2,6 +2,7 @@
 using ProyectoAutopartes.Negocio;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,11 @@ namespace ProyectoAutopartes.Servicios
             }
 
             return true;
+        }
+
+        internal DataTable RecuperarVentasXCliente(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
+        {
+            return oFacturaDao.RecuperarVentasXCliente(desde, hasta, nombre, apellido, alta_desde, alta_hasta);
         }
 
         //------------------------------FACTURA COMPRA ------------------------//

@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Datos;
+using ProyectoAutopartes.Interfaces;
 using ProyectoAutopartes.Negocio;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ProyectoAutopartes.Datos.Daos
 {
-    class FacturaCompraDao
+    class FacturaCompraDao : IFacturaCompra
     {
-        internal bool Create(FacturaCompra factura)
+        public bool Create(FacturaCompra factura)
         {
             BDHelper bd = new BDHelper();
             try

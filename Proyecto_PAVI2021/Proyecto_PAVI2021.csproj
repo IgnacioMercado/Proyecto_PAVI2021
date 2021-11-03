@@ -69,9 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSets\DataSet_Ventas.cs">
-      <DependentUpon>DataSet_Ventas.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Datos\BDHelper.cs" />
     <Compile Include="Datos\Daos\BarrioDao.cs" />
     <Compile Include="Datos\Daos\ClienteDao.cs" />
@@ -85,13 +82,10 @@
     <Compile Include="Datos\Daos\PersonalDao.cs" />
     <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\UsuarioDao.cs" />
-    <Compile Include="DataSets\DataSet_Ventas.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet_Ventas.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces\IBarrio.cs" />
     <Compile Include="Interfaces\ICliente.cs" />
+    <Compile Include="Interfaces\IFacturaCompra.cs" />
+    <Compile Include="Interfaces\IFacturaVenta.cs" />
     <Compile Include="Interfaces\IFormaDePago.cs" />
     <Compile Include="Interfaces\ILocalidad.cs" />
     <Compile Include="Interfaces\ILote.cs" />
@@ -337,18 +331,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\FormReporteVentasXCliente.resx">
+      <DependentUpon>FormReporteVentasXCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteVentasXCliente.rdlc" />
-    <None Include="DataSets\DataSet_Ventas.xsc">
-      <DependentUpon>DataSet_Ventas.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\DataSet_Ventas.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet_Ventas.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSets\DataSet_Ventas.xss">
-      <DependentUpon>DataSet_Ventas.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
