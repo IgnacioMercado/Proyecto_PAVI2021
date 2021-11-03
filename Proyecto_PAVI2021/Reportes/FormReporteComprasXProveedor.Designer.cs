@@ -30,7 +30,7 @@ namespace ProyectoAutopartes.Reportes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtComprasXProveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSetGeneral = new ProyectoAutopartes.Reportes.DataSetGeneral();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -64,9 +64,9 @@ namespace ProyectoAutopartes.Reportes
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "DataSetComprasXProveedor";
-            reportDataSource2.Value = this.dtComprasXProveedorBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSetComprasXProveedor";
+            reportDataSource1.Value = this.dtComprasXProveedorBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoAutopartes.Reportes.ReporteComprasXProveedor.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 120);
             this.reportViewer1.Name = "reportViewer1";
@@ -92,6 +92,7 @@ namespace ProyectoAutopartes.Reportes
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dtpFechaHasta
             // 

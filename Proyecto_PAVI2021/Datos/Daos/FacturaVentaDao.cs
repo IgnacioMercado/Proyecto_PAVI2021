@@ -121,7 +121,7 @@ namespace ProyectoAutopartes.Datos.Daos
         }
         public DataTable RecuperarVentasXEmpleado(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
         {
-            string consulta = "SELECT P.Legajo, P.Nombre, P.Apellido, COUNT(DISTINCT FV.Id_Factura) as Total_Ventas, SUM(DFV.Cantidad_Vendida*DFV.Precio_Venta) as Monto, DFV.Cantidad_Vendida as Cantidad " +
+            string consulta = "SELECT P.Legajo, P.Nombre, P.Apellido, COUNT(DISTINCT FV.Id_Factura) as Total_Ventas, SUM(DFV.Cantidad_Vendida*DFV.Precio_Venta) as Monto " +
                               "FROM PERSONAL P " +
                               "JOIN FACTURA_VENTA FV ON(P.Legajo = FV.Legajo_Empleado) " +
                               "JOIN DETALLE_FACTURA_VENTAS DFV ON(FV.Id_Factura= DFV.Id_Factura) " +
@@ -134,7 +134,7 @@ namespace ProyectoAutopartes.Datos.Daos
             if (!string.IsNullOrEmpty(apellido))
                 consulta += " AND P.Apellido LIKE '%" + apellido + "%'";
 
-            consulta += " GROUP BY P.Legajo, P.Apellido, P.Nombre, DFV.Cantidad_Vendida";
+            consulta += " GROUP BY P.Legajo, P.Apellido, P.Nombre";
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }

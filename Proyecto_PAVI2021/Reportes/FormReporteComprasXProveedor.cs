@@ -25,7 +25,7 @@ namespace ProyectoAutopartes.Reportes
 
             this.reportViewer1.RefreshReport();
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-2);
-            this.dtpFechaHasta.Value = DateTime.Today;
+            this.dtpFechaHasta.Value = DateTime.Today.AddDays(1);
             LlenarComboConLista(cmbLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
             
             
@@ -65,6 +65,11 @@ namespace ProyectoAutopartes.Reportes
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

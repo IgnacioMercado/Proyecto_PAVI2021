@@ -118,6 +118,7 @@ namespace ProyectoAutopartes.Reportes
             this.label6.Size = new System.Drawing.Size(16, 16);
             this.label6.TabIndex = 40;
             this.label6.Text = "y";
+            this.label6.Visible = false;
             // 
             // dtpFechaAltaHasta
             // 
@@ -127,6 +128,7 @@ namespace ProyectoAutopartes.Reportes
             this.dtpFechaAltaHasta.Name = "dtpFechaAltaHasta";
             this.dtpFechaAltaHasta.Size = new System.Drawing.Size(103, 20);
             this.dtpFechaAltaHasta.TabIndex = 39;
+            this.dtpFechaAltaHasta.Visible = false;
             // 
             // dtpFechaAltaDesde
             // 
@@ -136,6 +138,7 @@ namespace ProyectoAutopartes.Reportes
             this.dtpFechaAltaDesde.Name = "dtpFechaAltaDesde";
             this.dtpFechaAltaDesde.Size = new System.Drawing.Size(103, 20);
             this.dtpFechaAltaDesde.TabIndex = 38;
+            this.dtpFechaAltaDesde.Visible = false;
             // 
             // label1
             // 
@@ -173,6 +176,7 @@ namespace ProyectoAutopartes.Reportes
             this.label4.Size = new System.Drawing.Size(144, 16);
             this.label4.TabIndex = 31;
             this.label4.Text = "Fecha de Alta Entre";
+            this.label4.Visible = false;
             // 
             // txtApellido
             // 

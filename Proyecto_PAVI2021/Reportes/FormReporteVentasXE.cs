@@ -22,9 +22,9 @@ namespace ProyectoAutopartes.Reportes
         private void FormReporteVentasXE_Load(object sender, EventArgs e)
         {
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-2);
-            this.dtpFechaHasta.Value = DateTime.Today;
+            this.dtpFechaHasta.Value = DateTime.Today.AddDays(1);
             this.dtpFechaAltaDesde.Value = DateTime.Today.AddYears(-2);
-            this.dtpFechaAltaHasta.Value = DateTime.Today;
+            this.dtpFechaAltaHasta.Value = DateTime.Today.AddDays(1);
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
