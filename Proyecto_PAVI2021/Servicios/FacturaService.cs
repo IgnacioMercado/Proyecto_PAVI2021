@@ -40,6 +40,10 @@ namespace ProyectoAutopartes.Servicios
         {
             return oFacturaDao.RecuperarVentasXCliente(desde, hasta, nombre, apellido, alta_desde, alta_hasta);
         }
+        internal DataTable RecuperarVentasXEmpleado(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
+        {
+            return oFacturaDao.RecuperarVentasXEmpleado(desde, hasta, nombre, apellido, alta_desde, alta_hasta);
+        }
 
         //------------------------------FACTURA COMPRA ------------------------//
         internal bool Crear(FacturaCompra factura)

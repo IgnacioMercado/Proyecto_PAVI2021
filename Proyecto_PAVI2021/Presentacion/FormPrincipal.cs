@@ -114,5 +114,11 @@ namespace Proyecto_PAVI2021
             FormReporteVentasXCliente frvxc = new FormReporteVentasXCliente();
             frvxc.ShowDialog();
         }
+
+        private void ventasPorEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReporteVentasXE frvxe = new FormReporteVentasXE();
+            frvxe.ShowDialog();
+        }
     }
 }

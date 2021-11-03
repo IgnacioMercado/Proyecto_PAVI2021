@@ -73,11 +73,12 @@ namespace Proyecto_PAVI2021
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasPorProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comprasPorProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasPorEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -396,7 +397,8 @@ namespace Proyecto_PAVI2021
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estadisticasToolStripMenuItem,
             this.informesToolStripMenuItem,
-            this.comprasPorProveedorToolStripMenuItem});
+            this.comprasPorProveedorToolStripMenuItem,
+            this.ventasPorEmpleadoToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(81, 23);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -413,6 +415,13 @@ namespace Proyecto_PAVI2021
             this.informesToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.informesToolStripMenuItem.Text = "Ventas por cliente";
             this.informesToolStripMenuItem.Click += new System.EventHandler(this.informesToolStripMenuItem_Click);
+            // 
+            // comprasPorProveedorToolStripMenuItem
+            // 
+            this.comprasPorProveedorToolStripMenuItem.Name = "comprasPorProveedorToolStripMenuItem";
+            this.comprasPorProveedorToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.comprasPorProveedorToolStripMenuItem.Text = "Compras por proveedor";
+            this.comprasPorProveedorToolStripMenuItem.Click += new System.EventHandler(this.comprasPorProveedorToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -444,12 +453,12 @@ namespace Proyecto_PAVI2021
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // comprasPorProveedorToolStripMenuItem
+            // ventasPorEmpleadoToolStripMenuItem
             // 
-            this.comprasPorProveedorToolStripMenuItem.Name = "comprasPorProveedorToolStripMenuItem";
-            this.comprasPorProveedorToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
-            this.comprasPorProveedorToolStripMenuItem.Text = "Compras por proveedor";
-            this.comprasPorProveedorToolStripMenuItem.Click += new System.EventHandler(this.comprasPorProveedorToolStripMenuItem_Click);
+            this.ventasPorEmpleadoToolStripMenuItem.Name = "ventasPorEmpleadoToolStripMenuItem";
+            this.ventasPorEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
+            this.ventasPorEmpleadoToolStripMenuItem.Text = "Ventas por Empleado";
+            this.ventasPorEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.ventasPorEmpleadoToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -523,6 +532,7 @@ namespace Proyecto_PAVI2021
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasPorProveedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventasPorEmpleadoToolStripMenuItem;
     }
 }
 

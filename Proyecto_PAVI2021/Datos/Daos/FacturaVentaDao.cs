@@ -119,5 +119,23 @@ namespace ProyectoAutopartes.Datos.Daos
             consulta += " GROUP BY C.Id_Cliente, C.Apellido, C.Nombre, C.Fecha_Alta";
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
+        public DataTable RecuperarVentasXEmpleado(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
+        {
+            string consulta = "SELECT P.Legajo, P.Nombre, P.Apellido, COUNT(DISTINCT FV.Id_Factura) as Total_Ventas, SUM(DFV.Cantidad_Vendida*DFV.Precio_Venta) as Monto, DFV.Cantidad_Vendida as Cantidad " +
+                              "FROM PERSONAL P " +
+                              "JOIN FACTURA_VENTA FV ON(P.Legajo = FV.Legajo_Empleado) " +
+                              "JOIN DETALLE_FACTURA_VENTAS DFV ON(FV.Id_Factura= DFV.Id_Factura) " +
+                              "WHERE P.Borrado = 0 AND FV.Borrado = 0 AND DFV.Borrado = 0 " +
+                             // "AND C.Fecha_Alta BETWEEN CONVERT(DateTime, '" + alta_desde + "', 103)  AND CONVERT(DateTime, '" + alta_hasta + "', 103) " +
+                              "AND FV.Fecha_Factura BETWEEN CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT(DateTime, '" + hasta + "', 103)";
+
+            if (!string.IsNullOrEmpty(nombre))
+                consulta += " AND P.Nombre LIKE '%" + nombre + "%'";
+            if (!string.IsNullOrEmpty(apellido))
+                consulta += " AND P.Apellido LIKE '%" + apellido + "%'";
+
+            consulta += " GROUP BY P.Legajo, P.Apellido, P.Nombre, DFV.Cantidad_Vendida";
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
     }
 }
