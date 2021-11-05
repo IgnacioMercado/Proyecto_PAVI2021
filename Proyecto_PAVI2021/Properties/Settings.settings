@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ProyectoAutopartes.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Proyecto_PAVI2021.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="Proyecto_PAVI2021_2daVersionConnectionString" Type="(Connection string)" Scope="Application">

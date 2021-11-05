@@ -1,10 +1,10 @@
 ﻿using Proyecto_PAVI2021.Presentacion;
 using Proyecto_PAVI2021.Presentacion.PresFormasPago;
 using Proyecto_PAVI2021.Presentacion.PresLocalidad;
-using ProyectoAutopartes.Presentacion.PresBarrios;
-using ProyectoAutopartes.Presentacion.PresCompras;
-using ProyectoAutopartes.Presentacion.PresFactura;
-using ProyectoAutopartes.Reportes;
+using Proyecto_PAVI2021.Presentacion.PresBarrios;
+using Proyecto_PAVI2021.Presentacion.PresCompras;
+using Proyecto_PAVI2021.Presentacion.PresFactura;
+using Proyecto_PAVI2021.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

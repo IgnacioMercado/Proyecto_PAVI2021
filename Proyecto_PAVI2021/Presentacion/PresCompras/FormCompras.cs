@@ -1,8 +1,7 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion;
 using Proyecto_PAVI2021.Presentacion.PresProveedores;
-using ProyectoAutopartes.Negocio;
-using ProyectoAutopartes.Servicios;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoAutopartes.Presentacion.PresCompras
+namespace Proyecto_PAVI2021.Presentacion.PresCompras
 {
     public partial class FormCompras : Form
     {

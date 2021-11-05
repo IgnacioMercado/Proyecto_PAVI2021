@@ -259,7 +259,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.btnModificar1.BackColor = System.Drawing.Color.Khaki;
             this.btnModificar1.Enabled = false;
-            this.btnModificar1.Image = global::ProyectoAutopartes.Properties.Resources.modificar_imagen;
+            this.btnModificar1.Image = global::Proyecto_PAVI2021.Properties.Resources.modificar_imagen;
             this.btnModificar1.Location = new System.Drawing.Point(34, 306);
             this.btnModificar1.Name = "btnModificar1";
             this.btnModificar1.Size = new System.Drawing.Size(66, 59);
@@ -281,7 +281,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.Location = new System.Drawing.Point(844, 306);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(63, 59);

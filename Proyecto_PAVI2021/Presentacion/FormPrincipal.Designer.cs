@@ -434,7 +434,7 @@ namespace Proyecto_PAVI2021
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoAutopartes.Properties.Resources.fondo_1;
+            this.pictureBox1.Image = global::Proyecto_PAVI2021.Properties.Resources.fondo_1;
             this.pictureBox1.Location = new System.Drawing.Point(-71, -41);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";

@@ -26,7 +26,6 @@ namespace Proyecto_PAVI2021.Presentacion
             this.dtpFechaHasta.Value = DateTime.Today;
             this.CargarCombo(cmbPerfil, oPerfil.RecuperarTodos(),2,0);
             this.CargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
-
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla, int display, int value)

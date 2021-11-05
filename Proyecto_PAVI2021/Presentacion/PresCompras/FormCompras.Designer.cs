@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoAutopartes.Presentacion.PresCompras
+namespace Proyecto_PAVI2021.Presentacion.PresCompras
 {
     partial class FormCompras
     {
@@ -413,7 +413,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.equis_3;
+            this.btnEliminar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.equis_3;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(654, 16);
@@ -426,7 +426,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.agregar_2;
+            this.btnAgregar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.agregar_2;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(528, 15);
@@ -615,7 +615,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // 
             // btnGrabar
             // 
-            this.btnGrabar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.guardar;
+            this.btnGrabar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.guardar;
             this.btnGrabar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnGrabar.Location = new System.Drawing.Point(734, 607);
             this.btnGrabar.Margin = new System.Windows.Forms.Padding(2);
@@ -627,7 +627,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // 
             // btnAtras
             // 
-            this.btnAtras.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.Location = new System.Drawing.Point(808, 607);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
@@ -669,7 +669,7 @@ namespace ProyectoAutopartes.Presentacion.PresCompras
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Image = global::ProyectoAutopartes.Properties.Resources._216169_delete_icon__1_;
+            this.btnLimpiar.Image = global::Proyecto_PAVI2021.Properties.Resources._216169_delete_icon__1_;
             this.btnLimpiar.Location = new System.Drawing.Point(36, 607);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";

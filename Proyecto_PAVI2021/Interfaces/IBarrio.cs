@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoAutopartes.Interfaces
+namespace Proyecto_PAVI2021.Interfaces
 {
     interface IBarrio
     {

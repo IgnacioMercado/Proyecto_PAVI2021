@@ -1,4 +1,4 @@
-﻿namespace ProyectoAutopartes.Reportes
+﻿namespace Proyecto_PAVI2021.Reportes
 {
 
 

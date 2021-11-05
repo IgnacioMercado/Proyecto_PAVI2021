@@ -171,7 +171,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.DarkKhaki;
-            this.btnAgregar.Image = global::ProyectoAutopartes.Properties.Resources.nuevo_usuario;
+            this.btnAgregar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
             this.btnAgregar.Location = new System.Drawing.Point(38, 323);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(66, 59);
@@ -183,7 +183,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Khaki;
             this.btnModificar.Enabled = false;
-            this.btnModificar.Image = global::ProyectoAutopartes.Properties.Resources.modificar_imagen;
+            this.btnModificar.Image = global::Proyecto_PAVI2021.Properties.Resources.modificar_imagen;
             this.btnModificar.Location = new System.Drawing.Point(171, 323);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(66, 59);
@@ -195,7 +195,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.PeachPuff;
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Image = global::ProyectoAutopartes.Properties.Resources.eliminar_usuario;
+            this.btnEliminar.Image = global::Proyecto_PAVI2021.Properties.Resources.eliminar_usuario;
             this.btnEliminar.Location = new System.Drawing.Point(285, 323);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(66, 59);
@@ -206,7 +206,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnConsultar.Image = global::ProyectoAutopartes.Properties.Resources.buscar;
+            this.btnConsultar.Image = global::Proyecto_PAVI2021.Properties.Resources.buscar;
             this.btnConsultar.Location = new System.Drawing.Point(657, 323);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(66, 59);

@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoAutopartes.Presentacion.PresPagosFactura
+namespace Proyecto_PAVI2021.Presentacion.PresPagosFactura
 {
     partial class FormPagosFactura
     {
@@ -30,9 +30,13 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIngresado = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtRestante = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -44,14 +48,10 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.colIdFormaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtIngresado = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblConfirmar = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.btnContinuar = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormasPago)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +65,7 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnQuitar);
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.txtRestante);
             this.panel1.Controls.Add(this.label19);
@@ -79,6 +79,42 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(805, 264);
             this.panel1.TabIndex = 32;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(666, 154);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(121, 22);
+            this.txtTotal.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(562, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Total a pagar";
+            // 
+            // txtIngresado
+            // 
+            this.txtIngresado.Enabled = false;
+            this.txtIngresado.Location = new System.Drawing.Point(666, 189);
+            this.txtIngresado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIngresado.Name = "txtIngresado";
+            this.txtIngresado.Size = new System.Drawing.Size(121, 22);
+            this.txtIngresado.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(548, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 17);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Total Ingresado";
             // 
             // label16
             // 
@@ -98,21 +134,22 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.label14.TabIndex = 20;
             this.label14.Text = "Agregar";
             // 
-            // btnEliminar
+            // btnQuitar
             // 
-            this.btnEliminar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.equis_3;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(694, 11);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(40, 39);
-            this.btnEliminar.TabIndex = 19;
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnQuitar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.equis_3;
+            this.btnQuitar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnQuitar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnQuitar.Location = new System.Drawing.Point(694, 11);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(40, 39);
+            this.btnQuitar.TabIndex = 19;
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.agregar_2;
+            this.btnAgregar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.agregar_2;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(565, 11);
@@ -121,6 +158,7 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.btnAgregar.Size = new System.Drawing.Size(40, 39);
             this.btnAgregar.TabIndex = 18;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtRestante
             // 
@@ -225,42 +263,6 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.lblTitulo.TabIndex = 11;
             this.lblTitulo.Text = "Seleccione las formas de pago";
             // 
-            // txtIngresado
-            // 
-            this.txtIngresado.Enabled = false;
-            this.txtIngresado.Location = new System.Drawing.Point(666, 189);
-            this.txtIngresado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIngresado.Name = "txtIngresado";
-            this.txtIngresado.Size = new System.Drawing.Size(121, 22);
-            this.txtIngresado.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(548, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 17);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Total Ingresado";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(666, 154);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(121, 22);
-            this.txtTotal.TabIndex = 25;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(562, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Total a pagar";
-            // 
             // lblConfirmar
             // 
             this.lblConfirmar.AutoSize = true;
@@ -285,7 +287,7 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             // 
             // btnAtras
             // 
-            this.btnAtras.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.Location = new System.Drawing.Point(661, 323);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -295,16 +297,17 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // btnContinuar
+            // btnConfirmar
             // 
-            this.btnContinuar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.tick_2;
-            this.btnContinuar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnContinuar.Location = new System.Drawing.Point(756, 323);
-            this.btnContinuar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(60, 60);
-            this.btnContinuar.TabIndex = 71;
-            this.btnContinuar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.tick_2;
+            this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnConfirmar.Location = new System.Drawing.Point(756, 323);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(60, 60);
+            this.btnConfirmar.TabIndex = 71;
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // FormPagosFactura
             // 
@@ -315,7 +318,7 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
             this.Controls.Add(this.lblConfirmar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.btnContinuar);
+            this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "FormPagosFactura";
@@ -345,7 +348,7 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label3;
@@ -354,6 +357,6 @@ namespace ProyectoAutopartes.Presentacion.PresPagosFactura
         private System.Windows.Forms.Label lblConfirmar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }

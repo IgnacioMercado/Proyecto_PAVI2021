@@ -166,7 +166,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Khaki;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Image = global::ProyectoAutopartes.Properties.Resources.equis_3;
+            this.btnCancelar.Image = global::Proyecto_PAVI2021.Properties.Resources.equis_3;
             this.btnCancelar.Location = new System.Drawing.Point(261, 27);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
@@ -189,7 +189,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.btnConfirmar.BackColor = System.Drawing.Color.Khaki;
             this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
-            this.btnConfirmar.Image = global::ProyectoAutopartes.Properties.Resources.tick;
+            this.btnConfirmar.Image = global::Proyecto_PAVI2021.Properties.Resources.tick;
             this.btnConfirmar.Location = new System.Drawing.Point(307, 27);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
@@ -201,7 +201,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnModificar.Image = global::ProyectoAutopartes.Properties.Resources._2561427_edit_icon__1_;
+            this.btnModificar.Image = global::Proyecto_PAVI2021.Properties.Resources._2561427_edit_icon__1_;
             this.btnModificar.Location = new System.Drawing.Point(103, 453);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
@@ -213,7 +213,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnEliminar.Image = global::ProyectoAutopartes.Properties.Resources.equis_2;
+            this.btnEliminar.Image = global::Proyecto_PAVI2021.Properties.Resources.equis_2;
             this.btnEliminar.Location = new System.Drawing.Point(187, 453);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
@@ -237,7 +237,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.btnAtras.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.Location = new System.Drawing.Point(338, 453);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
@@ -250,7 +250,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Image = global::ProyectoAutopartes.Properties.Resources._326501_add_circle_icon__2_;
+            this.btnAgregar.Image = global::Proyecto_PAVI2021.Properties.Resources._326501_add_circle_icon__2_;
             this.btnAgregar.Location = new System.Drawing.Point(19, 453);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";

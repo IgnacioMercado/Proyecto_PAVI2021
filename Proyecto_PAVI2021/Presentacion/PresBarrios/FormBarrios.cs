@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoAutopartes.Presentacion.PresBarrios
+namespace Proyecto_PAVI2021.Presentacion.PresBarrios
 {
     public partial class FormBarrios : Form
     {

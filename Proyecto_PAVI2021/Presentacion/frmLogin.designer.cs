@@ -122,7 +122,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyectoAutopartes.Properties.Resources.usuario_3;
+            this.pictureBox1.Image = global::Proyecto_PAVI2021.Properties.Resources.usuario_3;
             this.pictureBox1.Location = new System.Drawing.Point(354, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 113);

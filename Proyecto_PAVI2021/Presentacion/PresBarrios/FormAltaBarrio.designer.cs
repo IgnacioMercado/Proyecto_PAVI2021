@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoAutopartes.Presentacion.PresBarrios
+namespace Proyecto_PAVI2021.Presentacion.PresBarrios
 {
     partial class FormAltaBarrio
     {
@@ -99,7 +99,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Image = global::ProyectoAutopartes.Properties.Resources.nuevo_usuario;
+            this.btnRegistrar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
             this.btnRegistrar.Location = new System.Drawing.Point(33, 231);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
@@ -123,7 +123,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // 
             this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.Location = new System.Drawing.Point(357, 231);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";

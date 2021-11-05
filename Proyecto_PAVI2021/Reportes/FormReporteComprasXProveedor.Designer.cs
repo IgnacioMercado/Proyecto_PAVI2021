@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoAutopartes.Reportes
+namespace Proyecto_PAVI2021.Reportes
 {
     partial class FormReporteComprasXProveedor
     {
@@ -32,7 +32,7 @@ namespace ProyectoAutopartes.Reportes
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtComprasXProveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetGeneral = new ProyectoAutopartes.Reportes.DataSetGeneral();
+            this.DataSetGeneral = new Proyecto_PAVI2021.Reportes.DataSetGeneral();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
@@ -67,7 +67,7 @@ namespace ProyectoAutopartes.Reportes
             reportDataSource1.Name = "DataSetComprasXProveedor";
             reportDataSource1.Value = this.dtComprasXProveedorBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoAutopartes.Reportes.ReporteComprasXProveedor.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Proyecto_PAVI2021.Reportes.ReporteComprasXProveedor.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 120);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -202,7 +202,7 @@ namespace ProyectoAutopartes.Reportes
             // 
             this.btnAtras.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.Location = new System.Drawing.Point(721, 546);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(52, 57);

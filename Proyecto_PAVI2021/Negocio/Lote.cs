@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoAutopartes.Negocio
+namespace Proyecto_PAVI2021.Negocio
 {
     class Lote
     {

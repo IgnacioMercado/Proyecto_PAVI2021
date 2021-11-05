@@ -269,7 +269,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.Location = new System.Drawing.Point(806, 325);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(63, 59);
@@ -281,7 +281,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Image = global::ProyectoAutopartes.Properties.Resources.nuevo_usuario;
+            this.btnRegistrar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
             this.btnRegistrar.Location = new System.Drawing.Point(12, 325);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(63, 59);

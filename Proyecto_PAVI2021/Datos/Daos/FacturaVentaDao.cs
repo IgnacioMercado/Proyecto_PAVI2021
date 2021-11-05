@@ -1,6 +1,5 @@
-﻿using Proyecto_PAVI2021.Datos;
-using ProyectoAutopartes.Interfaces;
-using ProyectoAutopartes.Negocio;
+﻿using Proyecto_PAVI2021.Interfaces;
+using Proyecto_PAVI2021.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoAutopartes.Datos.Daos
+namespace Proyecto_PAVI2021.Datos.Daos
 {
     class FacturaVentaDao : IFacturaVenta
     {
@@ -79,11 +78,31 @@ namespace ProyectoAutopartes.Datos.Daos
                     bd.EjecutarSQL(sqlStock);
 
                     string sqlLoteStock = "UPDATE LOTE SET Stock_Lote = Stock_Lote - " + itemFactura.Cantidad + " WHERE Id_Lote = " + itemFactura.Id_lote;
-                    bd.EjecutarSQL(sqlLoteStock);
-
+                    bd.EjecutarSQL(sqlLoteStock);                    
                 }
 
+                //insercion de los pagos por factura
+                foreach (var pago in factura.PagosPorFactura)
+                {
+                    string sqlPagos = string.Concat(" INSERT INTO [dbo].[PAGOS_X_FACTURA] ",
+                                                        "           ([Id_Factura]           ",
+                                                        "           ,[Id_Forma_Pago]        ",
+                                                        "           ,[Monto]                ",
+                                                        "           ,[Borrado])             ",
+                                                        "     VALUES                        ",
+                                                        "           (@id_factura            ",
+                                                        "           ,@id_forma_pago           ",
+                                                        "           ,@monto               ",
+                                                        "           ,@borrado)               ");
 
+                    var paramPago = new Dictionary<string, object>();
+                    paramPago.Add("id_factura", factura.IdFactura);
+                    paramPago.Add("id_forma_pago", pago.Id_forma_pago);
+                    paramPago.Add("monto", pago.Monto);
+                    paramPago.Add("borrado", false);
+
+                    bd.EjecutarSQLCONPARAMETROS(sqlPagos, paramPago);
+                }
 
                 bd.Commit();
 
@@ -119,6 +138,7 @@ namespace ProyectoAutopartes.Datos.Daos
             consulta += " GROUP BY C.Id_Cliente, C.Apellido, C.Nombre, C.Fecha_Alta";
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
+
         public DataTable RecuperarVentasXEmpleado(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
         {
             string consulta = "SELECT P.Legajo, P.Nombre, P.Apellido, COUNT(DISTINCT FV.Id_Factura) as Total_Ventas, SUM(DFV.Cantidad_Vendida*DFV.Precio_Venta) as Monto " +

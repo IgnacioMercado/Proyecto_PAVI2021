@@ -1,8 +1,7 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion;
-using ProyectoAutopartes.Negocio;
-using ProyectoAutopartes.Presentacion.PresPagosFactura;
-using ProyectoAutopartes.Servicios;
+using Proyecto_PAVI2021.Presentacion.PresPagosFactura;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +12,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoAutopartes.Presentacion.PresFactura
+namespace Proyecto_PAVI2021.Presentacion.PresFactura
 {
     public partial class FormAltaFactura : Form
     {
         public int Id_Cliente_Seleccionado;
         public int Legajo_Empleado_Seleccionado;
-        public double Total = 0;
-        private List<string> TiposFactura = new List<string> { "A", "B", "C" };
+        public double Total;
         Cliente oClienteSeleccionado = new Cliente();
+        private BindingList<PagoPorFactura> listaPagosPorFactura;
+        private List<string> TiposFactura = new List<string> { "A", "B", "C" };        
         private readonly MaterialService materialService;
         private readonly ClienteService clienteService;
         private readonly BindingList<DetalleFactura> listaDetalleFactura;
@@ -48,8 +48,8 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             cboTipoFactura.DataSource = TiposFactura;            
             cboTipoFactura.SelectedIndex = -1;
             nudCantidad.Value = 1;            
-            this.LlenarComboConLista(cmbArticulo, materialService.GetAll(), "Nombre", "Id_material");
-            this.cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);            
+            LlenarComboConLista(cmbArticulo, materialService.GetAll(), "Nombre", "Id_material");
+            cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);            
             dgvDetalle.DataSource = listaDetalleFactura;
             dgvDetalle.Columns[4].DefaultCellStyle.Format = "C2";
             dgvDetalle.Columns[5].DefaultCellStyle.Format = "C2";            
@@ -103,7 +103,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
                 }
                 else
                 {
-                    if (cantidad == 0)
+                    if (cantidad <= 0)
                     {
                         MessageBox.Show("Ingrese una cantidad mayor a 0");
                     }
@@ -153,36 +153,28 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.txtTotal.Text = Total.ToString("C2");
         }
 
-        private void Grabar(object sender, EventArgs e)
-        {
+        private void GrabarFactura()
+        {            
             try
             {
-                if (cboTipoFactura.SelectedIndex == -1 || txtNombre.Text == "" || txtNombreEmpleado.Text == "")
+                var factura = new FacturaVenta
                 {
-                    MessageBox.Show("Por favor, ingrese los datos necesarios. \nRecuerde que todos los campos son obligatorios", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                    Fecha = dtpFecha.Value,
+                    Id_Cliente = Id_Cliente_Seleccionado,
+                    TipoFactura = cboTipoFactura.SelectedItem.ToString(),
+                    DetalleFactura = listaDetalleFactura,
+                    PagosPorFactura = listaPagosPorFactura,
+                    Legajo_Empleado = Legajo_Empleado_Seleccionado
+                };
 
-                else
+                if (facturaService.ValidarDatos(factura))
                 {
-                    var factura = new FacturaVenta
-                    {
-                        Fecha = dtpFecha.Value,
-                        Id_Cliente = Id_Cliente_Seleccionado,
-                        TipoFactura = cboTipoFactura.SelectedItem.ToString(),
-                        DetalleFactura = listaDetalleFactura,
-                        Legajo_Empleado = Legajo_Empleado_Seleccionado
-                    };
+                    facturaService.Crear(factura);
 
-                    if (facturaService.ValidarDatos(factura))
-                    {
-                        facturaService.Crear(factura);
+                    MessageBox.Show(string.Concat("La factura nro: ", factura.IdFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        MessageBox.Show(string.Concat("La factura nro: ", factura.IdFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        InicializarFormulario();
-                    }
-                }
-                
+                    InicializarFormulario();
+                }                
             }
             catch (Exception ex)
             {
@@ -227,7 +219,8 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.txtNombreEmpleado.Text = "";
             this.txtLegajoEmpleado.Text = "";
             this.txtApellidoEmpleado.Text = "";
-            cboTipoFactura.SelectedIndex = -1;
+            this.cboTipoFactura.SelectedIndex = -1;
+            this.dgvDetalle.Rows.Clear();
             InicializarDetalle();            
         }
 
@@ -243,15 +236,35 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             InicializarFormulario();
         }
 
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            if (cboTipoFactura.SelectedIndex == -1 || txtNombre.Text == "" || txtNombreEmpleado.Text == "")
+            {
+                MessageBox.Show("Por favor, ingrese los datos necesarios. \nRecuerde que todos los campos son obligatorios", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (dgvDetalle.Rows.Count == 0)
+                {
+                    MessageBox.Show("Debe ingresar al menos un detalle");
+                }
+                else
+                {
+                    FormPagosFactura fpf = new FormPagosFactura(Total);
+                    fpf.ShowDialog();
+                    this.listaPagosPorFactura = fpf.listaPagosPorFactura;
+
+                    if (this.listaPagosPorFactura.Count != 0)
+                    {
+                        this.GrabarFactura();
+                    }
+                }
+            }                      
+        }
+
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnContinuar_Click(object sender, EventArgs e)
-        {
-            FormPagosFactura fpf = new FormPagosFactura();
-            fpf.ShowDialog();
         }
     }
 }

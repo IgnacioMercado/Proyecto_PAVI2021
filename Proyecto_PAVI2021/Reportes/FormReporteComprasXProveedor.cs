@@ -1,4 +1,4 @@
-﻿using ProyectoAutopartes.Servicios;
+﻿using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoAutopartes.Reportes
+namespace Proyecto_PAVI2021.Reportes
 {
     public partial class FormReporteComprasXProveedor : Form
     {

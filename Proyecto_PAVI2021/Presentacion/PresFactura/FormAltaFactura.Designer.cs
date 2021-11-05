@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoAutopartes.Presentacion.PresFactura
+namespace Proyecto_PAVI2021.Presentacion.PresFactura
 {
     partial class FormAltaFactura
     {
@@ -412,7 +412,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.equis_3;
+            this.btnEliminar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.equis_3;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(872, 20);
@@ -425,7 +425,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.agregar_2;
+            this.btnAgregar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.agregar_2;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(704, 18);
@@ -623,7 +623,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             // btnContinuar
             // 
-            this.btnContinuar.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.flecha_1;
+            this.btnContinuar.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.flecha_1;
             this.btnContinuar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnContinuar.Location = new System.Drawing.Point(1090, 747);
             this.btnContinuar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -635,7 +635,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             // btnAtras
             // 
-            this.btnAtras.BackgroundImage = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.BackgroundImage = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.Location = new System.Drawing.Point(995, 747);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -679,7 +679,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Image = global::ProyectoAutopartes.Properties.Resources._216169_delete_icon__1_;
+            this.btnLimpiar.Image = global::Proyecto_PAVI2021.Properties.Resources._216169_delete_icon__1_;
             this.btnLimpiar.Location = new System.Drawing.Point(48, 747);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";

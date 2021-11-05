@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoAutopartes.Reportes
+namespace Proyecto_PAVI2021.Reportes
 {
     partial class FormReporteVentasXE
     {
@@ -32,7 +32,7 @@ namespace ProyectoAutopartes.Reportes
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtVentasXEmpleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetGeneral = new ProyectoAutopartes.Reportes.DataSetGeneral();
+            this.DataSetGeneral = new Proyecto_PAVI2021.Reportes.DataSetGeneral();
             this.dtVentasXClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rvVentasXE = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -80,7 +80,7 @@ namespace ProyectoAutopartes.Reportes
             reportDataSource1.Name = "DataSetVentasXEmpleado";
             reportDataSource1.Value = this.dtVentasXEmpleadoBindingSource;
             this.rvVentasXE.LocalReport.DataSources.Add(reportDataSource1);
-            this.rvVentasXE.LocalReport.ReportEmbeddedResource = "ProyectoAutopartes.Reportes.ReporteVentaXEmpleado.rdlc";
+            this.rvVentasXE.LocalReport.ReportEmbeddedResource = "Proyecto_PAVI2021.Reportes.ReporteVentaXEmpleado.rdlc";
             this.rvVentasXE.Location = new System.Drawing.Point(9, 141);
             this.rvVentasXE.Margin = new System.Windows.Forms.Padding(2);
             this.rvVentasXE.Name = "rvVentasXE";
@@ -277,7 +277,7 @@ namespace ProyectoAutopartes.Reportes
             // 
             this.btnAtras.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.btnAtras.Location = new System.Drawing.Point(686, 555);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(52, 57);

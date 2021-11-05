@@ -1,5 +1,5 @@
 ﻿
-namespace ProyectoAutopartes.Presentacion.PresBarrios
+namespace Proyecto_PAVI2021.Presentacion.PresBarrios
 {
     partial class FormBarrios
     {
@@ -157,7 +157,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // 
             this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.button1.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             this.button1.Location = new System.Drawing.Point(732, 446);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
@@ -170,7 +170,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Image = global::ProyectoAutopartes.Properties.Resources.nuevo_usuario;
+            this.btnAgregar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
             this.btnAgregar.Location = new System.Drawing.Point(16, 446);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
@@ -182,7 +182,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Khaki;
-            this.btnModificar.Image = global::ProyectoAutopartes.Properties.Resources.modificar_imagen;
+            this.btnModificar.Image = global::Proyecto_PAVI2021.Properties.Resources.modificar_imagen;
             this.btnModificar.Location = new System.Drawing.Point(183, 446);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
@@ -194,7 +194,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnEliminar.Image = global::ProyectoAutopartes.Properties.Resources.eliminar_usuario;
+            this.btnEliminar.Image = global::Proyecto_PAVI2021.Properties.Resources.eliminar_usuario;
             this.btnEliminar.Location = new System.Drawing.Point(340, 446);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
@@ -206,7 +206,7 @@ namespace ProyectoAutopartes.Presentacion.PresBarrios
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnConsultar.Image = global::ProyectoAutopartes.Properties.Resources.buscar;
+            this.btnConsultar.Image = global::Proyecto_PAVI2021.Properties.Resources.buscar;
             this.btnConsultar.Location = new System.Drawing.Point(519, 446);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";

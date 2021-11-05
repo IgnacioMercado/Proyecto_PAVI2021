@@ -48,7 +48,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // bntGuardarCambios
             // 
             this.bntGuardarCambios.BackColor = System.Drawing.Color.SandyBrown;
-            this.bntGuardarCambios.Image = global::ProyectoAutopartes.Properties.Resources.modificar_imagen;
+            this.bntGuardarCambios.Image = global::Proyecto_PAVI2021.Properties.Resources.modificar_imagen;
             resources.ApplyResources(this.bntGuardarCambios, "bntGuardarCambios");
             this.bntGuardarCambios.Name = "bntGuardarCambios";
             this.bntGuardarCambios.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@ namespace Proyecto_PAVI2021.Presentacion
             // 
             this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
-            this.btnAtras.Image = global::ProyectoAutopartes.Properties.Resources.volver_atras;
+            this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
             resources.ApplyResources(this.btnAtras, "btnAtras");
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.UseVisualStyleBackColor = false;

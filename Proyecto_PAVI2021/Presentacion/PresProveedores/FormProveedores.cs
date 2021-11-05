@@ -1,8 +1,7 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion.PresClientes;
 using Proyecto_PAVI2021.Presentacion.PresProveedores;
-using ProyectoAutopartes.Negocio;
-using ProyectoAutopartes.Presentacion.PresFactura;
+using Proyecto_PAVI2021.Presentacion.PresFactura;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

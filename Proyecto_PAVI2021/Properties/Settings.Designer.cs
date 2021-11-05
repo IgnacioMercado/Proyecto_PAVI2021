@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoAutopartes.Properties {
+namespace Proyecto_PAVI2021.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

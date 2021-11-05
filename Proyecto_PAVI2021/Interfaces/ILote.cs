@@ -1,11 +1,11 @@
-﻿using ProyectoAutopartes.Negocio;
+﻿using Proyecto_PAVI2021.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoAutopartes.Interfaces
+namespace Proyecto_PAVI2021.Interfaces
 {
     interface ILote
     {
