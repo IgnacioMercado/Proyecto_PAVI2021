@@ -16,7 +16,7 @@ namespace ProyectoAutopartes.Datos.Daos
         {
             List<Lote> listadoLotes = new List<Lote>();
 
-            var strSql = "SELECT Id_Lote, Fecha_Lote, Cantidad_Fabricada, Legajo_Empleado, Stock_Lote, Id_Material  FROM LOTE WHERE Borrado = 0 AND Confirmacion_Lote = 1";
+            var strSql = "SELECT Id_Lote, Fecha_Lote, Cantidad_Fabricada, Legajo_Empleado, Stock_Lote, Id_Material FROM LOTE WHERE Borrado = 0 AND Confirmacion_Lote = 1";
 
             var resultadoConsulta = BDHelper.obtenerInstancia().ConsultaSQL(strSql);
 

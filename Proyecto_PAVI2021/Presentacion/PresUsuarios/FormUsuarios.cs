@@ -29,15 +29,6 @@ namespace Proyecto_PAVI2021.Presentacion
 
         }
 
-        private void CargarCombo(ComboBox combo, DataTable tabla)
-        {
-            combo.DataSource = tabla;
-            combo.DisplayMember = tabla.Columns[1].ColumnName;
-            combo.ValueMember = tabla.Columns[0].ColumnName;
-            combo.SelectedIndex = -1;
-            combo.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
-
         private void CargarCombo(ComboBox combo, DataTable tabla, int display, int value)
         {
             combo.DataSource = tabla;

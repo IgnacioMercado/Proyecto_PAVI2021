@@ -20,7 +20,7 @@ namespace Proyecto_PAVI2021.Datos
         {
             conexion = new SqlConnection(); // establece la conexion con SQL
             comando = new SqlCommand(); // permite manipular la BD
-            cadenaConexion = @"Data Source=DESKTOP-RJE4TPG\SQLEXPRESS;Initial Catalog=Proyecto_PAVI2021_2daVersion;Integrated Security=True";
+            cadenaConexion = @"Data Source=localhost;Initial Catalog=Proyecto_PAVI2021_2daVersion;Integrated Security=True";
             conexion.ConnectionString = cadenaConexion;
         }
 
@@ -90,8 +90,6 @@ namespace Proyecto_PAVI2021.Datos
 
         public DataTable ConsultaSQL(string strSql)
         {
-
-
             SqlCommand cmd = new SqlCommand();
             DataTable tabla = new DataTable();
             

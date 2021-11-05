@@ -17,7 +17,6 @@ namespace ProyectoAutopartes.Negocio
         public int Id_detalle_factura { get => id_detalle_factura; set => id_detalle_factura = value; }
         public int Id_factura { get => id_factura; set => id_factura = value; }
         internal Material Material { get => material; set => material = value; }
-
         public int Cantidad { get => cantidad; set => cantidad = value; }
 
         public int id_material

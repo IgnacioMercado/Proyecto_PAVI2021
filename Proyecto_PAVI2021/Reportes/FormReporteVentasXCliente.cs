@@ -13,7 +13,7 @@ namespace ProyectoAutopartes.Reportes
 {
     public partial class FormReporteVentasXCliente : Form
     {
-        FacturaService oFactura = new FacturaService();
+        FacturaService oFacturaService = new FacturaService();
         public FormReporteVentasXCliente()
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace ProyectoAutopartes.Reportes
             if (txtApellido.Text != "")
                 apellido = txtApellido.Text;
 
-            this.dtVentasXClienteBindingSource.DataSource = oFactura.RecuperarVentasXCliente(desde, hasta, nombre, apellido, alta_desde, alta_hasta);
+            this.dtVentasXClienteBindingSource.DataSource = oFacturaService.RecuperarVentasXCliente(desde, hasta, nombre, apellido, alta_desde, alta_hasta);
             this.reportViewer1.RefreshReport();
         }
 

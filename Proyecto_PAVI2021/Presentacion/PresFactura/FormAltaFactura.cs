@@ -1,6 +1,7 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion;
 using ProyectoAutopartes.Negocio;
+using ProyectoAutopartes.Presentacion.PresPagosFactura;
 using ProyectoAutopartes.Servicios;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
     {
         public int Id_Cliente_Seleccionado;
         public int Legajo_Empleado_Seleccionado;
+        public double Total = 0;
         private List<string> TiposFactura = new List<string> { "A", "B", "C" };
         Cliente oClienteSeleccionado = new Cliente();
         private readonly MaterialService materialService;
@@ -42,22 +44,15 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
         private void FormAltaFactura_Load(object sender, EventArgs e)
         {
             InicializarFormulario();
-
-            this.txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");            
+            
             cboTipoFactura.DataSource = TiposFactura;            
             cboTipoFactura.SelectedIndex = -1;
+            nudCantidad.Value = 1;            
             this.LlenarComboConLista(cmbArticulo, materialService.GetAll(), "Nombre", "Id_material");
-            this.cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);
+            this.cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);            
             dgvDetalle.DataSource = listaDetalleFactura;
-
-        }
-        private void CargarCombo(ComboBox combo, DataTable tabla)
-        {
-            combo.DataSource = tabla;
-            combo.DisplayMember = tabla.Columns[1].ColumnName;
-            combo.ValueMember = tabla.Columns[0].ColumnName;
-            combo.SelectedIndex = -1;
-            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+            dgvDetalle.Columns[4].DefaultCellStyle.Format = "C2";
+            dgvDetalle.Columns[5].DefaultCellStyle.Format = "C2";            
         }
 
         private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
@@ -78,9 +73,6 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
                 this.CargarCliente();
         }
 
-
-
-
         private void CargarCliente()
         {
             DataTable tabla = new DataTable();
@@ -94,61 +86,74 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.txtAltura.Text = tabla.Rows[0]["Nro_Calle"].ToString();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             int cantidad = 0;
-            int.TryParse(txtCantidad.Text, out cantidad);
+            int.TryParse(nudCantidad.Text, out cantidad);
 
-            if (cantidad == 0)
+            if (this.cmbArticulo.SelectedIndex == -1)
             {
-                MessageBox.Show("Ingrese una cantidad mayor a 0");
+                MessageBox.Show("Seleccione un articulo");
             }
             else
             {
-                var material = (Material)cmbArticulo.SelectedItem;
-                var oLote = (Lote)cmbLote.SelectedItem;
-                if (cantidad > oLote.Stock_lote)
+                if (this.cmbLote.SelectedIndex == -1)
                 {
-                    MessageBox.Show("No hay suficiente stock de ese material en este lote \nEl stock actual en el lote " + oLote.Id_lote + " es de " + oLote.Stock_lote + " unidades\nEl stock de " + material.Nombre + " sumando todos sus lotes es de " + material.Stock + " unidades", "Problema de stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Seleccione un lote");
                 }
-
                 else
                 {
-                    listaDetalleFactura.Add(new DetalleFactura()
+                    if (cantidad == 0)
                     {
-                        Material = material,
-                        Cantidad = cantidad,
-                        Id_lote = oLote.Id_lote
-                    });
+                        MessageBox.Show("Ingrese una cantidad mayor a 0");
+                    }
+                    else
+                    {
+                        var material = (Material)cmbArticulo.SelectedItem;
+                        var oLote = (Lote)cmbLote.SelectedItem;
 
-                    InicializarDetalle();
+                        if (cantidad > oLote.Stock_lote)
+                        {
+                            MessageBox.Show("No hay suficiente stock de ese material en este lote \nEl stock actual en el lote " + oLote.Id_lote + " es de " + oLote.Stock_lote + " unidades\nEl stock de " + material.Nombre + " sumando todos sus lotes es de " + material.Stock + " unidades", "Problema de stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            listaDetalleFactura.Add(new DetalleFactura()
+                            {
+                                Material = material,
+                                Id_lote = oLote.Id_lote,
+                                Cantidad = cantidad
+                            }
+                            );
+                            InicializarDetalle();
+                        }
+                    }
                 }
-                
-            }
-            
-
-            //CalcularTotales();
-
-            //InicializarDetalle();
+            }            
+            this.CalcularTotal();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
-                if (dgvDetalle.CurrentRow != null)
-                {
-                    var detalleSeleccionado = (DetalleFactura)dgvDetalle.CurrentRow.DataBoundItem;
-                    listaDetalleFactura.Remove(detalleSeleccionado);
-                }
-
+            if (dgvDetalle.CurrentRow != null)
+            {
+                var detalleSeleccionado = (DetalleFactura)dgvDetalle.CurrentRow.DataBoundItem;
+                listaDetalleFactura.Remove(detalleSeleccionado);
+            }
+            this.CalcularTotal();
         }
 
-        private void btnGrabar_Click(object sender, EventArgs e)
+        private void CalcularTotal()
+        {
+            Total = 0;
+            for (int i = 0; i < listaDetalleFactura.Count; i++)
+            {                
+                Total += listaDetalleFactura[i].Importe;                
+            }
+            this.txtTotal.Text = Total.ToString("C2");
+        }
+
+        private void Grabar(object sender, EventArgs e)
         {
             try
             {
@@ -166,10 +171,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
                         TipoFactura = cboTipoFactura.SelectedItem.ToString(),
                         DetalleFactura = listaDetalleFactura,
                         Legajo_Empleado = Legajo_Empleado_Seleccionado
-
                     };
-
-
 
                     if (facturaService.ValidarDatos(factura))
                     {
@@ -178,17 +180,14 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
                         MessageBox.Show(string.Concat("La factura nro: ", factura.IdFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         InicializarFormulario();
-
                     }
                 }
                 
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar la factura! " + ex.Message + ex.StackTrace, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
         private void cmbArticulo_SelectedIndexChanged(object sender, EventArgs e)
@@ -196,13 +195,7 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             if(cmbArticulo.SelectedItem != null )
             {
                 this.LlenarComboConLista(cmbLote, loteService.GetConfirmedFilteredByMaterial(Convert.ToInt32(cmbArticulo.SelectedValue.ToString())), "Id_lote", "Id_lote");
-            }
-            
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
+            }            
         }
 
         private void btnSeleccionarEmpleado_Click(object sender, EventArgs e)
@@ -235,20 +228,30 @@ namespace ProyectoAutopartes.Presentacion.PresFactura
             this.txtLegajoEmpleado.Text = "";
             this.txtApellidoEmpleado.Text = "";
             cboTipoFactura.SelectedIndex = -1;
-            InicializarDetalle();
-
+            InicializarDetalle();            
         }
 
         private void InicializarDetalle()
         {
             cmbArticulo.SelectedIndex = -1;
             cmbLote.SelectedIndex = -1;
-            txtCantidad.Text = "";
+            nudCantidad.Value = 1;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             InicializarFormulario();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            FormPagosFactura fpf = new FormPagosFactura();
+            fpf.ShowDialog();
         }
     }
 }

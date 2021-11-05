@@ -168,6 +168,12 @@
     <Compile Include="Presentacion\PresLocalidad\FormLocalidad.designer.cs">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresPagosFactura\FormPagosFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresPagosFactura\FormPagosFactura.Designer.cs">
+      <DependentUpon>FormPagosFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresPersonal\FormAltaPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     <EmbeddedResource Include="Presentacion\PresLocalidad\FormLocalidad.resx">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresPagosFactura\FormPagosFactura.resx">
+      <DependentUpon>FormPagosFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPersonal\FormAltaPersonal.resx">
       <DependentUpon>FormAltaPersonal.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +426,11 @@
     <Content Include="Imagenes\rueda.png" />
     <Content Include="Imagenes\signo de pregunta.png" />
     <Content Include="llave y destornillador.ico" />
+    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\flecha %281%29.png" />
+    <None Include="Resources\flecha.png" />
+    <None Include="Resources\flecha 2.png" />
+    <None Include="Resources\flecha 1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
