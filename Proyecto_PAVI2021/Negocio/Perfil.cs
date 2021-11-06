@@ -21,11 +21,5 @@ namespace Proyecto_PAVI2021.Negocio
         public bool Borrado { get => borrado; set => borrado = value; }
 
 
-        public DataTable RecuperarTodos()
-        {
-            string consulta = "SELECT * FROM PERFILES WHERE Borrado = 0 ORDER BY Id_Perfil";
-
-            return BDHelper.obtenerInstancia().consultar(consulta);
-        }
     }
 }

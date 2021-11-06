@@ -1,6 +1,7 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion.PresClientes;
 using Proyecto_PAVI2021.Presentacion.PresFactura;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,8 @@ namespace Proyecto_PAVI2021.Presentacion
     public partial class FormClientes : Form
     {
         public int Id_Cliente_Seleccionado = -1;
-        private string modo;       
-        Cliente oCliente = new Cliente();
+        private string modo;
+        ClienteService oCliente = new ClienteService();
 
         public FormClientes(string modo)
         {

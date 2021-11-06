@@ -48,6 +48,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.cboBarrio = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtNroFactura = new System.Windows.Forms.GroupBox();
+            this.txtNroFactura2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,12 +63,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
-            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtApellidoEmpleado = new System.Windows.Forms.TextBox();
@@ -84,9 +80,12 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.label17 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtNroFactura2 = new System.Windows.Forms.TextBox();
             this.cmbLote = new System.Windows.Forms.ComboBox();
+            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.txtNroFactura.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -303,6 +302,24 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.txtNroFactura.TabStop = false;
             this.txtNroFactura.Text = "Factura";
             // 
+            // txtNroFactura2
+            // 
+            this.txtNroFactura2.Location = new System.Drawing.Point(475, 17);
+            this.txtNroFactura2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNroFactura2.Name = "txtNroFactura2";
+            this.txtNroFactura2.Size = new System.Drawing.Size(92, 20);
+            this.txtNroFactura2.TabIndex = 22;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(405, 20);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Nro Factura:";
+            // 
             // dtpFecha
             // 
             this.dtpFecha.Enabled = false;
@@ -449,8 +466,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.colNombre,
             this.colPrecio,
             this.colCantidad,
-            this.colImporte,
-            this.colLote});
+            this.colImporte});
             this.dgvDetalle.GridColor = System.Drawing.Color.PeachPuff;
             this.dgvDetalle.Location = new System.Drawing.Point(28, 67);
             this.dgvDetalle.Margin = new System.Windows.Forms.Padding(2);
@@ -462,50 +478,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.dgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalle.Size = new System.Drawing.Size(783, 224);
             this.dgvDetalle.TabIndex = 0;
-            // 
-            // colIdMaterial
-            // 
-            this.colIdMaterial.DataPropertyName = "Id_material";
-            this.colIdMaterial.HeaderText = "#Material";
-            this.colIdMaterial.Name = "colIdMaterial";
-            this.colIdMaterial.ReadOnly = true;
-            this.colIdMaterial.Width = 60;
-            // 
-            // colNombre
-            // 
-            this.colNombre.DataPropertyName = "MaterialDescripcion";
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 320;
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.DataPropertyName = "PrecioUnitario";
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.DataPropertyName = "Cantidad";
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            // 
-            // colImporte
-            // 
-            this.colImporte.DataPropertyName = "Importe";
-            this.colImporte.HeaderText = "Importe";
-            this.colImporte.Name = "colImporte";
-            this.colImporte.ReadOnly = true;
-            // 
-            // colLote
-            // 
-            this.colLote.DataPropertyName = "Id_lote";
-            this.colLote.HeaderText = "Lote";
-            this.colLote.Name = "colLote";
-            this.colLote.ReadOnly = true;
             // 
             // panel1
             // 
@@ -688,24 +660,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.label18.TabIndex = 72;
             this.label18.Text = "Limpiar Campos";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(405, 20);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Nro Factura:";
-            // 
-            // txtNroFactura2
-            // 
-            this.txtNroFactura2.Location = new System.Drawing.Point(475, 17);
-            this.txtNroFactura2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNroFactura2.Name = "txtNroFactura2";
-            this.txtNroFactura2.Size = new System.Drawing.Size(92, 20);
-            this.txtNroFactura2.TabIndex = 22;
-            // 
             // cmbLote
             // 
             this.cmbLote.FormattingEnabled = true;
@@ -714,6 +668,43 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.cmbLote.Size = new System.Drawing.Size(121, 21);
             this.cmbLote.TabIndex = 11;
             this.cmbLote.Visible = false;
+            // 
+            // colIdMaterial
+            // 
+            this.colIdMaterial.DataPropertyName = "Id_material";
+            this.colIdMaterial.HeaderText = "#Material";
+            this.colIdMaterial.Name = "colIdMaterial";
+            this.colIdMaterial.ReadOnly = true;
+            this.colIdMaterial.Width = 60;
+            // 
+            // colNombre
+            // 
+            this.colNombre.DataPropertyName = "MaterialDescripcion";
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 320;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.DataPropertyName = "PrecioUnitario";
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.DataPropertyName = "Cantidad";
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            // 
+            // colImporte
+            // 
+            this.colImporte.DataPropertyName = "Importe";
+            this.colImporte.HeaderText = "Importe";
+            this.colImporte.Name = "colImporte";
+            this.colImporte.ReadOnly = true;
             // 
             // FormCompras
             // 
@@ -797,12 +788,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIdMaterial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colLote;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label18;
@@ -812,5 +797,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         private System.Windows.Forms.TextBox txtNroFactura2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbLote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdMaterial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
     }
 }

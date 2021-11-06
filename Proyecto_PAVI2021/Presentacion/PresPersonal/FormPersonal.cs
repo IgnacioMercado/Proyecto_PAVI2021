@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion.PresPersonal;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,9 @@ namespace Proyecto_PAVI2021.Presentacion
 {
     public partial class FormPersonal : Form
     {
-        Personal oPersonal = new Personal();
-        Barrio oBarrio = new Barrio();
-        Localidad oLocalidad = new Localidad();
+        PersonalService oPersonal = new PersonalService();
+        BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
         public int Legajo_Empleado_Seleccionado = -1;
         private string modo;
         public FormPersonal()

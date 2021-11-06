@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,8 @@ namespace Proyecto_PAVI2021.Presentacion
 {
     public partial class FormAltaUsuarios : Form
     {
-        Usuario oUsuario = new Usuario();
-        Perfil oPerfil = new Perfil();
+        UsuarioService oUsuario = new UsuarioService();
+        PerfilService oPerfil = new PerfilService();
         public FormAltaUsuarios()
         {
             InitializeComponent();

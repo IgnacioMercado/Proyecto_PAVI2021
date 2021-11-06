@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto_PAVI2021.Servicios;
 
 namespace Proyecto_PAVI2021.Presentacion.PresProveedores
 {    
@@ -20,9 +21,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         public int Id_Proveedor_Seleccionado = -1;
         private string modo;       
         Cliente oCliente = new Cliente();
-        Proveedor oProveedor = new Proveedor();
-        Barrio oBarrio = new Barrio();
-        Localidad oLocalidad = new Localidad();
+        ProveedorService oProveedor = new ProveedorService();
+        BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
         public FormProveedores(string modo)
         {
             InitializeComponent();
@@ -32,15 +33,22 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         private void FormProveedores_Load(object sender, EventArgs e)
         {
             this.CargarGrilla(dgvProveedores, oProveedor.RecuperarTodos());
-            this.CargarCombo(cboBarrio, oBarrio.RecuperarTodos());
-            this.CargarCombo(cboLocalidad, oLocalidad.RecuperarTodos());
+            this.LlenarComboConLista(cboLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
 
             if (this.modo == "seleccionar")
             {
-                this.Text = "Seleccionar Cliente";
+                this.Text = "Seleccionar Proveedor";
                 this.btnSeleccionar.Show();
                 this.lblSeleccionar.Show();
             }
+        }
+
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
@@ -63,29 +71,35 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
                     tabla.Rows[i]["CUIT"],
                     tabla.Rows[i]["Calle"],
                     tabla.Rows[i]["Nro_Calle"],
-                    tabla.Rows[i]["Id_Barrio"],
-                    tabla.Rows[i]["Id_Localidad"]);
+                    tabla.Rows[i]["DescripcionB"],
+                    tabla.Rows[i]["DescripcionL"]);
             }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            string nombre, apellido, telefono, nro_doc, tipo_doc, calle, altura;
-            nombre = apellido = telefono = nro_doc = tipo_doc = calle = altura = string.Empty;
+            string nombre, apellido, telefono, cuit, calle, altura, id_barrio, id_localidad;
+            nombre = telefono = cuit = calle = altura = id_barrio = id_localidad = string.Empty;
             if (txtNombre.Text != "")
                 nombre = txtNombre.Text;
             
             if (txtTelefono.Text != "")
                 telefono = txtTelefono.Text;
             if (txtCuit.Text != "")
-                tipo_doc = txtCuit.Text;
+                cuit = txtCuit.Text;
             
             if (txtCalle.Text != "")
                 calle = txtCalle.Text;
             if (txtAltura.Text != "")
                 altura = txtAltura.Text;
+            if (cboLocalidad.SelectedIndex != -1)
+                id_localidad = cboLocalidad.SelectedValue.ToString();
+            if (cboBarrio.SelectedIndex != -1)
+                id_barrio = cboBarrio.SelectedValue.ToString();
 
-            this.CargarGrilla(dgvProveedores, oCliente.RecuperarFiltrados(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura));
+            
+
+            this.CargarGrilla(dgvProveedores, oProveedor.RecuperarFiltrados(nombre, telefono, cuit, calle, altura, id_barrio, id_localidad));
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -134,6 +148,11 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         {
             Id_Proveedor_Seleccionado = (int)dgvProveedores.CurrentRow.Cells[0].Value;
             this.Close();            
+        }
+
+        private void cboLocalidad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            this.LlenarComboConLista(cboBarrio, oBarrio.RecuperarPorLocalidad((int)cboLocalidad.SelectedValue), "Descripcion", "Id_Barrio");
         }
     }
 }

@@ -13,14 +13,14 @@ namespace Proyecto_PAVI2021.Datos.Daos
     {
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT p.Id_Proveedor, p.Nombre, p.Telefono, p.CUIT, p.Calle, p.Nro_Calle, p.Id_Barrio, p.Id_Localidad FROM PROVEEDORESS p WHERE p.Borrado = 0";
+            string consulta = "SELECT p.Id_Proveedor, p.Nombre, p.Telefono, p.CUIT, p.Calle, p.Nro_Calle, b.Descripcion as DescripcionB, l.Descripcion as DescripcionL FROM PROVEEDORESS p JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on l.Id_Localidad = p.Id_Localidad WHERE p.Borrado = 0";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarFiltrados(string nombre, string telefono, string cuit, string calle, string altura, string id_barrio, string id_localidad)
         {
-            string consulta = "SELECT p.Id_Proveedor, p.Nombre, p.Telefono, p.CUIT, p.Calle, p.Nro_Calle, p.Id_Barrio, p.Id_Localidad FROM PROVEEDORESS p WHERE p.Borrado = 0";
+            string consulta = "SELECT p.Id_Proveedor, p.Nombre, p.Telefono, p.CUIT, p.Calle, p.Nro_Calle, b.Descripcion as DescripcionB, l.Descripcion as DescripcionL FROM PROVEEDORESS p JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on l.Id_Localidad = p.Id_Localidad WHERE p.Borrado = 0";
 
             if (!string.IsNullOrEmpty(nombre))
                 consulta += " AND p.Nombre LIKE '%" + nombre + "%'";
@@ -63,9 +63,9 @@ namespace Proyecto_PAVI2021.Datos.Daos
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
-        public DataTable RecuperarProveedorPorId(int id)
+        public DataTable RecuperarProveedorPorId(int id_proveedor)
         {
-            string consulta = "SELECT p.Id_Proveedor, p.Nombre, p.Telefono, p.CUIT, p.Calle, p.Nro_Calle, p.Id_Barrio, p.Id_Localidad FROM PROVEEDORESS p WHERE p.Borrado = 0 AND p.Id_Proveedor = " + id;
+            string consulta = "SELECT p.Id_Proveedor, p.Nombre, p.Telefono, p.CUIT, p.Calle, p.Nro_Calle, b.Descripcion as DescripcionB, l.Descripcion as DescripcionL FROM PROVEEDORESS p JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on l.Id_Localidad = p.Id_LocalidadWHERE p.Borrado = 0 AND p.Id_Proveedor = " + id_proveedor;
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }

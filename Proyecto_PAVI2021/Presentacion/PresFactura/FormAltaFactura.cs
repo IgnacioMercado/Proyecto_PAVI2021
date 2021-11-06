@@ -19,7 +19,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
         public int Id_Cliente_Seleccionado;
         public int Legajo_Empleado_Seleccionado;
         public double Total;
-        Cliente oClienteSeleccionado = new Cliente();
+        ClienteService oClienteSeleccionado = new ClienteService();
         private BindingList<PagoPorFactura> listaPagosPorFactura;
         private List<string> TiposFactura = new List<string> { "A", "B", "C" };        
         private readonly MaterialService materialService;
@@ -76,7 +76,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
         private void CargarCliente()
         {
             DataTable tabla = new DataTable();
-            Cliente oClienteSeleccionado = new Cliente();
             tabla = oClienteSeleccionado.RecuperarClientePorId(Id_Cliente_Seleccionado);
             this.txtNombre.Text = tabla.Rows[0]["Nombre"].ToString();
             this.txtApellido.Text = tabla.Rows[0]["Apellido"].ToString();
@@ -118,13 +117,34 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
                         }
                         else
                         {
-                            listaDetalleFactura.Add(new DetalleFactura()
+                            if (listaDetalleFactura.Count == 0)
                             {
-                                Material = material,
-                                Id_lote = oLote.Id_lote,
-                                Cantidad = cantidad
+                                listaDetalleFactura.Add(new DetalleFactura()
+                                {
+                                    Material = material,
+                                    Cantidad = cantidad,
+                                    Id_lote = oLote.Id_lote
+                                }) ;
                             }
-                            );
+                            else
+                            {
+                                int index = listaDetalleFactura.IndexOf(listaDetalleFactura.Where(df => df.id_material == material.Id_material).FirstOrDefault());
+                                if (index != -1)
+                                {
+                                    listaDetalleFactura[index].Cantidad += cantidad;
+                                    dgvDetalle.Refresh();
+
+                                }
+                                else
+                                {
+                                    listaDetalleFactura.Add(new DetalleFactura()
+                                    {
+                                        Material = material,
+                                        Cantidad = cantidad,
+                                        Id_lote = oLote.Id_lote
+                                    });
+                                }
+                            }
                             InicializarDetalle();
                         }
                     }

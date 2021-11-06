@@ -28,20 +28,6 @@ namespace Proyecto_PAVI2021.Negocio
         public int Stock_lote { get => stock_lote; set => stock_lote = value; }
         public int Id_material { get => id_material; set => id_material = value; }
 
-        public void crearLote(string fecha, int cantidad, string legajo, bool confirmacion, string stock, int id_material)
-        {
-            string consulta = "INSERT INTO LOTE (Fecha_Lote, Cantidad_Fabricada, Legajo_Empleado, Confirmacion_Lote, Stock_Lote, Id_Material) " +
-                              "VALUES (CONVERT(DateTime, '" + fecha + "', 103), " + cantidad + ", '" + legajo + "', '" + confirmacion + "', '" + stock + "', " + id_material + ")";
-
-            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
-        }
-        public DataTable ultimoId()
-        {
-            DataTable tabla = new DataTable();
-            //string consulta = "IDENT_CURRENT('" + tabla + "')";
-            string consulta = "SELECT top(1) * FROM LOTE ORDER BY Id_Lote DESC";
-            tabla = BDHelper.obtenerInstancia().consultar(consulta);
-            return tabla;
-        }
+        
     }
 }

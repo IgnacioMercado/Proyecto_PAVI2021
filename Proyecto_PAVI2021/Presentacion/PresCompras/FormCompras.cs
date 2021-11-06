@@ -22,10 +22,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         public int Nro_Factura;
         
         private List<string> TiposFactura = new List<string> { "A", "B", "C" };
-        Cliente oClienteSeleccionado = new Cliente();
-        Proveedor oProveedorSeleccionado = new Proveedor();
-        Localidad oLocalidad = new Localidad();
-        Barrio oBarrio = new Barrio();
+        ClienteService oClienteSeleccionado = new ClienteService();
+        ProveedorService oProveedorSeleccionado = new ProveedorService();
+        LocalidadService oLocalidad = new LocalidadService();
+        BarrioService oBarrio = new BarrioService();
         private readonly MaterialService materialService;
         private readonly ClienteService clienteService;
         private readonly BindingList<DetalleFactura> listaDetalleFactura;
@@ -89,7 +89,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         {
             DataTable tabla = new DataTable();
             
-            Proveedor oProveedorSeleccionado = new Proveedor();
+            
             tabla = oProveedorSeleccionado.RecuperarProveedorPorId(Id_Proveedor_Seleccionado);
             this.txtNombre.Text =    tabla.Rows[0]["Nombre"].ToString();
             this.txtTelefono.Text =  tabla.Rows[0]["Telefono"].ToString();
@@ -110,6 +110,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             
             int cantidad = 0;
             int.TryParse(txtCantidad.Text, out cantidad);
+            bool resultado = int.TryParse(txtNroFactura2.Text, out int nroF);
 
             if (cantidad == 0)
             {
@@ -117,28 +118,53 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             }
             else
             {
-                Nro_Factura = int.Parse(txtNroFactura2.Text);
-                var material = (Material)cmbArticulo.SelectedItem;
-                //var oLote = (Lote)cmbLote.SelectedItem;
-                string nroFactura = txtNroFactura.Text;
-                string legajo = txtLegajoEmpleado.Text;
-                Lote oLote = new Lote();
-                oLote.crearLote(DateTime.Today.ToString(), 0, legajo, true, cantidad.ToString(), material.Id_material);
-                DataTable tablaConIdUltimo = new DataTable();
-                tablaConIdUltimo = oLote.ultimoId();
-                oLote.Id_lote = int.Parse(tablaConIdUltimo.Rows[0]["Id_Lote"].ToString());
-                //if (cantidad > oLote.Stock_lote)
-                //{
-                //    MessageBox.Show("No hay suficiente stock de ese material en este lote \nEl stock actual en el lote " + oLote.Id_lote + " es de " + oLote.Stock_lote + " unidades\nEl stock de " + material.Nombre + " sumando todos sus lotes es de " + material.Stock + " unidades", "Problema de stock", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-
-
-                listaDetalleFactura.Add(new DetalleFactura()
+                if(resultado == true)
                 {
-                    Material = material,
-                    Cantidad = cantidad,
-                    Id_lote = oLote.Id_lote
-                });
+                    Nro_Factura = int.Parse(txtNroFactura2.Text);
+                    var material = (Material)cmbArticulo.SelectedItem;
+                    string nroFactura = txtNroFactura.Text;
+                    string legajo = txtLegajoEmpleado.Text;
+
+
+                    if (listaDetalleFactura.Count == 0)
+                    {
+
+                        listaDetalleFactura.Add(new DetalleFactura()
+                        {
+                            Material = material,
+                            Cantidad = cantidad
+                        });
+                    }
+                    else
+                    {
+                        int index = listaDetalleFactura.IndexOf(listaDetalleFactura.Where(df => df.id_material == material.Id_material).FirstOrDefault());
+                        if (index != -1)
+                        {
+                            listaDetalleFactura[index].Cantidad += cantidad;
+                            dgvDetalle.Refresh();
+
+                        }
+                        else
+                        {
+                            listaDetalleFactura.Add(new DetalleFactura()
+                            {
+                                Material = material,
+                                Cantidad = cantidad
+                            });
+                        }
+                    }
+
+                
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un numero de factura valido", "Error numero de factura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+
+
+
+
+
 
                 InicializarDetalle();
                 
@@ -166,7 +192,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         {
             try
             {
-                if (cboTipoFactura.SelectedIndex == -1 || txtNombre.Text == "" || txtNombreEmpleado.Text == "" || txtNroFactura.Text =="")
+                if (cboTipoFactura.SelectedIndex == -1 || txtNombre.Text == "" || txtNombreEmpleado.Text == "" || txtNroFactura.Text =="" || txtNroFactura2.Text == "")
                 {
                     MessageBox.Show("Por favor, ingrese los datos necesarios. \nRecuerde que todos los campos son obligatorios", "Ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

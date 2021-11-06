@@ -18,6 +18,12 @@ namespace Proyecto_PAVI2021.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
+        public DataTable RecuperarPorLocalidad(int id_localidad)
+        {
+            string consulta = "SELECT b.Id_Barrio, b.Descripcion FROM BARRIOS b where b.Borrado = 0 AND b.Id_Localidad = " + id_localidad;
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+
 
         public DataTable RecuperarFiltrados(string descripcion)
         {

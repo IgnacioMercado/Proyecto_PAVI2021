@@ -14,5 +14,6 @@ namespace Proyecto_PAVI2021.Interfaces
         void RegistrarBarrio(string descripcion);
         void ModificarBarrioPorId(int id_barrio, string descripcion);
         void EliminarBarrio(int id_barrio);
+        DataTable RecuperarPorLocalidad(int id_localidad);
     }
 }

@@ -18,34 +18,7 @@ namespace Proyecto_PAVI2021.Negocio
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public bool Borrado { get => borrado; set => borrado = value; }
 
-        public DataTable RecuperarTodos()
-        {
-            string consulta = "SELECT * FROM FORMAS_PAGO WHERE Borrado = 0 ORDER BY Id_Forma_Pago";
-
-            return BDHelper.obtenerInstancia().consultar(consulta);
-        }
-
-        public void RegistrarFormaPago(string descripcion)
-        {
-            string consulta = "INSERT INTO FORMAS_PAGO (Descripcion) " +
-                              "VALUES ('" + descripcion + "')";
-
-            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
-        }
-
-        public void ModificarFormaPago(string descripcion, int id)
-        {
-            string consulta = "UPDATE FORMAS_PAGO SET Descripcion = '" + descripcion + "' WHERE Id_Forma_Pago = " + id;
-
-            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
-        }
-
-        public void EliminarFormaPago(int id)
-        {
-            string consulta = "UPDATE FORMAS_PAGO SET Borrado = 1 WHERE Id_Forma_Pago = " + id;
-
-            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
-        }
+       
     }
 }
 

@@ -29,7 +29,7 @@ namespace Proyecto_PAVI2021.Servicios
             return dao.RecuperarFiltrados(nombre, telefono, cuit, calle, altura, id_barrio, id_localidad);
         }
 
-        public void RegistrarCliente(string nombre, string telefono, string cuit, string calle, string altura, int id_barrio, int id_localidad)
+        public void RegistrarProveedor(string nombre, string telefono, string cuit, string calle, string altura, int id_barrio, int id_localidad)
         {
             dao.RegistrarProveedor(nombre, telefono, cuit, calle, altura, id_barrio, id_localidad);
         }
@@ -43,12 +43,12 @@ namespace Proyecto_PAVI2021.Servicios
         {
             dao.BorrarProveedor(id);
         }
-
-        public DataTable RecuperarProveedorPorId(int id_proveedor)
+        
+        public DataTable RecuperarProveedorPorId(int id)
         {
-            string consulta = "SELECT p.Id_Proveedor, p.Nombre, p.Telefono, p.CUIT, p.Calle, p.Nro_Calle, p.Id_Barrio, p.Id_Localidad FROM PROVEEDORESS p WHERE p.Borrado = 0 AND p.Id_Proveedor = " + id_proveedor;
-
-            return BDHelper.obtenerInstancia().consultar(consulta);
+            return dao.RecuperarProveedorPorId(id);
         }
+
+
     }
 }

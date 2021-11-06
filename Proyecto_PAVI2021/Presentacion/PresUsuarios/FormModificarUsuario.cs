@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,8 +15,8 @@ namespace Proyecto_PAVI2021.Presentacion
     public partial class FormModificarUsuario : Form
     {
         private int id_usuario;
-        Perfil oPerfil = new Perfil();
-        Usuario oUsuario = new Usuario();
+        PerfilService oPerfil = new PerfilService();
+        UsuarioService oUsuario = new UsuarioService();
         public FormModificarUsuario()
         {
             InitializeComponent();
@@ -44,8 +45,8 @@ namespace Proyecto_PAVI2021.Presentacion
         private void LlenarCampos()
         {
             DataTable tabla = new DataTable();
-            Usuario oUsuarioSeleccionado = new Usuario();
-            tabla = oUsuarioSeleccionado.RecuperarPorIdUsuario(id_usuario);
+            
+            tabla = oUsuario.RecuperarPorIdUsuario(id_usuario);
             txtUsuario.Text = tabla.Rows[0]["Nombre_Usuario"].ToString();
             txtContraseña.Text = tabla.Rows[0]["Contraseña_Usuario"].ToString();
             cmbPerfil.SelectedIndex = ((int) tabla.Rows[0]["Id_Perfil"] - 1);

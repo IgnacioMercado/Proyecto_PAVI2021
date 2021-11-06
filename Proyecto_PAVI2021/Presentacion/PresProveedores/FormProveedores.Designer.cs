@@ -31,6 +31,14 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProveedores));
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
+            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.lblEliminar = new System.Windows.Forms.Label();
             this.lblModificar = new System.Windows.Forms.Label();
@@ -48,7 +56,12 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtIdProveedor = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboLocalidad = new System.Windows.Forms.ComboBox();
+            this.cboBarrio = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -58,19 +71,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.lblSeleccionar = new System.Windows.Forms.Label();
-            this.cboLocalidad = new System.Windows.Forms.ComboBox();
-            this.cboBarrio = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAltura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtIdProveedor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -93,14 +93,70 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.Barrio,
             this.Localidad});
             this.dgvProveedores.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvProveedores.Location = new System.Drawing.Point(13, 238);
+            this.dgvProveedores.Location = new System.Drawing.Point(3, 238);
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
             this.dgvProveedores.RowHeadersWidth = 51;
             this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProveedores.Size = new System.Drawing.Size(793, 174);
+            this.dgvProveedores.Size = new System.Drawing.Size(863, 174);
             this.dgvProveedores.TabIndex = 0;
             this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
+            // 
+            // colIdUsuario
+            // 
+            this.colIdUsuario.HeaderText = "#";
+            this.colIdUsuario.MinimumWidth = 6;
+            this.colIdUsuario.Name = "colIdUsuario";
+            this.colIdUsuario.ReadOnly = true;
+            this.colIdUsuario.Width = 35;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 125;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // CUIT
+            // 
+            this.CUIT.HeaderText = "CUIT";
+            this.CUIT.Name = "CUIT";
+            this.CUIT.ReadOnly = true;
+            // 
+            // colCalle
+            // 
+            this.colCalle.HeaderText = "Calle";
+            this.colCalle.MinimumWidth = 6;
+            this.colCalle.Name = "colCalle";
+            this.colCalle.ReadOnly = true;
+            this.colCalle.Width = 125;
+            // 
+            // colAltura
+            // 
+            this.colAltura.HeaderText = "Altura";
+            this.colAltura.MinimumWidth = 6;
+            this.colAltura.Name = "colAltura";
+            this.colAltura.ReadOnly = true;
+            this.colAltura.Width = 125;
+            // 
+            // Barrio
+            // 
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
+            // 
+            // Localidad
+            // 
+            this.Localidad.HeaderText = "Localidad";
+            this.Localidad.Name = "Localidad";
+            this.Localidad.ReadOnly = true;
             // 
             // label4
             // 
@@ -147,7 +203,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(746, 205);
+            this.label8.Location = new System.Drawing.Point(791, 205);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 15);
             this.label8.TabIndex = 15;
@@ -183,7 +239,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             // txtCuit
             // 
-            this.txtCuit.Location = new System.Drawing.Point(428, 26);
+            this.txtCuit.Location = new System.Drawing.Point(476, 26);
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.Size = new System.Drawing.Size(114, 20);
             this.txtCuit.TabIndex = 22;
@@ -212,7 +268,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(425, 7);
+            this.label12.Location = new System.Drawing.Point(473, 7);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(34, 16);
             this.label12.TabIndex = 27;
@@ -262,8 +318,16 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.panel1.Controls.Add(this.btnConsultar);
             this.panel1.Location = new System.Drawing.Point(14, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 425);
+            this.panel1.Size = new System.Drawing.Size(877, 425);
             this.panel1.TabIndex = 31;
+            // 
+            // txtIdProveedor
+            // 
+            this.txtIdProveedor.Location = new System.Drawing.Point(176, 12);
+            this.txtIdProveedor.Name = "txtIdProveedor";
+            this.txtIdProveedor.Size = new System.Drawing.Size(103, 20);
+            this.txtIdProveedor.TabIndex = 28;
+            this.txtIdProveedor.Visible = false;
             // 
             // panel3
             // 
@@ -278,8 +342,45 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(13, 153);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(698, 58);
+            this.panel3.Size = new System.Drawing.Size(743, 58);
             this.panel3.TabIndex = 33;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(275, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 16);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Localidad";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(474, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 16);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Barrio";
+            // 
+            // cboLocalidad
+            // 
+            this.cboLocalidad.FormattingEnabled = true;
+            this.cboLocalidad.Location = new System.Drawing.Point(278, 27);
+            this.cboLocalidad.Name = "cboLocalidad";
+            this.cboLocalidad.Size = new System.Drawing.Size(121, 21);
+            this.cboLocalidad.TabIndex = 33;
+            this.cboLocalidad.SelectionChangeCommitted += new System.EventHandler(this.cboLocalidad_SelectionChangeCommitted);
+            // 
+            // cboBarrio
+            // 
+            this.cboBarrio.FormattingEnabled = true;
+            this.cboBarrio.Location = new System.Drawing.Point(476, 27);
+            this.cboBarrio.Name = "cboBarrio";
+            this.cboBarrio.Size = new System.Drawing.Size(121, 21);
+            this.cboBarrio.TabIndex = 32;
             // 
             // panel2
             // 
@@ -299,7 +400,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.PeachPuff;
             this.btnConsultar.Image = global::Proyecto_PAVI2021.Properties.Resources.buscar;
-            this.btnConsultar.Location = new System.Drawing.Point(740, 142);
+            this.btnConsultar.Location = new System.Drawing.Point(784, 143);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(66, 59);
             this.btnConsultar.TabIndex = 7;
@@ -387,112 +488,12 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.lblSeleccionar.Text = "Seleccionar ";
             this.lblSeleccionar.Visible = false;
             // 
-            // cboLocalidad
-            // 
-            this.cboLocalidad.FormattingEnabled = true;
-            this.cboLocalidad.Location = new System.Drawing.Point(446, 27);
-            this.cboLocalidad.Name = "cboLocalidad";
-            this.cboLocalidad.Size = new System.Drawing.Size(121, 21);
-            this.cboLocalidad.TabIndex = 33;
-            // 
-            // cboBarrio
-            // 
-            this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(278, 27);
-            this.cboBarrio.Name = "cboBarrio";
-            this.cboBarrio.Size = new System.Drawing.Size(121, 21);
-            this.cboBarrio.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(276, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 16);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Barrio";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(443, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 16);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Localidad";
-            // 
-            // colIdUsuario
-            // 
-            this.colIdUsuario.HeaderText = "#";
-            this.colIdUsuario.MinimumWidth = 6;
-            this.colIdUsuario.Name = "colIdUsuario";
-            this.colIdUsuario.ReadOnly = true;
-            this.colIdUsuario.Width = 35;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.MinimumWidth = 6;
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 125;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // CUIT
-            // 
-            this.CUIT.HeaderText = "CUIT";
-            this.CUIT.Name = "CUIT";
-            this.CUIT.ReadOnly = true;
-            // 
-            // colCalle
-            // 
-            this.colCalle.HeaderText = "Calle";
-            this.colCalle.MinimumWidth = 6;
-            this.colCalle.Name = "colCalle";
-            this.colCalle.ReadOnly = true;
-            this.colCalle.Width = 125;
-            // 
-            // colAltura
-            // 
-            this.colAltura.HeaderText = "Altura";
-            this.colAltura.MinimumWidth = 6;
-            this.colAltura.Name = "colAltura";
-            this.colAltura.ReadOnly = true;
-            this.colAltura.Width = 125;
-            // 
-            // Barrio
-            // 
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            this.Barrio.ReadOnly = true;
-            // 
-            // Localidad
-            // 
-            this.Localidad.HeaderText = "Localidad";
-            this.Localidad.Name = "Localidad";
-            this.Localidad.ReadOnly = true;
-            // 
-            // txtIdProveedor
-            // 
-            this.txtIdProveedor.Location = new System.Drawing.Point(176, 12);
-            this.txtIdProveedor.Name = "txtIdProveedor";
-            this.txtIdProveedor.Size = new System.Drawing.Size(103, 20);
-            this.txtIdProveedor.TabIndex = 28;
-            this.txtIdProveedor.Visible = false;
-            // 
             // FormProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(859, 546);
+            this.ClientSize = new System.Drawing.Size(912, 546);
             this.Controls.Add(this.lblSeleccionar);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.label2);

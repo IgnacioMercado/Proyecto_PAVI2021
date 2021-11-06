@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,10 @@ namespace Proyecto_PAVI2021.Presentacion
     public partial class FormAltaPersonal : Form
 
     {
-        Barrio oBarrio = new Barrio();
-        Usuario oUsuario = new Usuario();
-        Personal oPersonal = new Personal();
-        Localidad oLocalidad = new Localidad();
+        BarrioService oBarrio = new BarrioService();
+        UsuarioService oUsuario = new UsuarioService();
+        PersonalService oPersonal = new PersonalService();
+        LocalidadService oLocalidad = new LocalidadService();
 
         public FormAltaPersonal()
         {

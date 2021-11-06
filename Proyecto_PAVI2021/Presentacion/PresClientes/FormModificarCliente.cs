@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
     public partial class FormModificarCliente : Form
     {
         private int id_cliente;
-        Cliente oCliente = new Cliente();
+        ClienteService oCliente = new ClienteService();
 
         public FormModificarCliente()
         {
@@ -34,8 +35,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
         private void LlenarCampos()
         {
             DataTable tabla = new DataTable();
-            Cliente oClienteSeleccionado = new Cliente();
-            tabla = oClienteSeleccionado.RecuperarClientePorId(id_cliente);
+            tabla = oCliente.RecuperarClientePorId(id_cliente);
             txtNombre.Text = tabla.Rows[0]["Nombre"].ToString();
             txtApellido.Text = tabla.Rows[0]["Apellido"].ToString();
             txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();

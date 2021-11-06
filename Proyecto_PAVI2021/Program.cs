@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Presentacion;
+using Proyecto_PAVI2021.Presentacion.PresCompras;
 using Proyecto_PAVI2021.Presentacion.PresFactura;
 using Proyecto_PAVI2021.Reportes;
 using System;
@@ -19,7 +20,7 @@ namespace Proyecto_PAVI2021
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAltaFactura());
+            Application.Run(new FormPrincipal());
             //Application.Run(new FormReporteVentasXE());
         }
     }

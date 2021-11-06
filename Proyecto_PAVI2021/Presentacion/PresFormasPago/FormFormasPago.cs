@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion.PresClientes;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
 {
     public partial class FormFormasPago : Form
     {
-        FormaPago oFormaPago = new FormaPago();
+        FormaDePagoService oFormaPago = new FormaDePagoService();
         bool nuevo = false;
         public FormFormasPago()
         {

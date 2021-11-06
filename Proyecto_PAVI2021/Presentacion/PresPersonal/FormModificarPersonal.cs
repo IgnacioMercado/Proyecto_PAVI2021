@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +16,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
     {
         private int legajo;
 
-        Personal oPersonal = new Personal();
-        Barrio oBarrio = new Barrio();
-        Localidad oLocalidad = new Localidad();
-        Usuario oUsuario = new Usuario();
+        PersonalService oPersonal = new PersonalService();
+        BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
+        UsuarioService oUsuario = new UsuarioService();
 
         public FormModificarPersonal()
         {
@@ -51,8 +52,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
         private void LlenarCampos()
         {
             DataTable tabla = new DataTable();
-            Personal oPersonalSeleccionado = new Personal();
-            tabla = oPersonalSeleccionado.RecuperarPersonalPorLegajo(legajo);
+            
+            tabla = oPersonal.RecuperarPersonalPorLegajo(legajo);
             txtNombre.Text = tabla.Rows[0]["Nombre"].ToString();
             txtApellido.Text = tabla.Rows[0]["Apellido"].ToString();
             txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();

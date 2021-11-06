@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
     public partial class FormAltaProveedor : Form
 
     {
-        Barrio oBarrio = new Barrio();
-        Localidad oLocalidad = new Localidad();
-        Cliente oCliente = new Cliente();
-        Proveedor oProv = new Proveedor();
+        BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
+        ProveedorService oProv = new ProveedorService();
 
         public FormAltaProveedor()
         {
@@ -35,8 +35,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             cuit = txtCuit.Text;
             calle = txtCalle.Text;
             altura = txtAltura.Text;
-            id_barrio = (int)cboBarrio.SelectedValue;
-            id_localidad = (int)cboLocalidad.SelectedValue;
+            id_barrio = (int)cmbBarrio.SelectedValue;
+            id_localidad = (int)cmbLocalidad.SelectedValue;
 
             if (nombre == "" || telefono == "" || cuit == "" || calle == "" || altura == "" || id_barrio == -1 || id_localidad == -1)
             {
@@ -63,19 +63,36 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
 
         private void FormAltaProveedor_Load(object sender, EventArgs e)
         {
-            this.CargarCombo(cboBarrio, oBarrio.RecuperarTodos());
-            this.CargarCombo(cboLocalidad, oLocalidad.RecuperarTodos());
+            this.LlenarComboConLista(cmbLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
 
         }
-        private void CargarCombo(ComboBox combo, DataTable tabla)
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
         {
-            combo.DataSource = tabla;
-            combo.DisplayMember = tabla.Columns[1].ColumnName;
-            combo.ValueMember = tabla.Columns[0].ColumnName;
-            combo.SelectedIndex = -1;
-            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
 
-        
+        private void cboBarrio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboBarrio_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboLocalidad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbLocalidad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
+            this.LlenarComboConLista(cmbBarrio, oBarrio.RecuperarPorLocalidad(Convert.ToInt32(cmbLocalidad.SelectedValue)), "Descripcion", "Id_Barrio");
+        }
     }
 }

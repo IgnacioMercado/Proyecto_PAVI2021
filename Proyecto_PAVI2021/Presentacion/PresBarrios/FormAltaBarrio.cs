@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
 {
     public partial class FormAltaBarrio : Form
     {
-        Barrio oBarrio = new Barrio();
+        BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
         public FormAltaBarrio()
         {
             InitializeComponent();
@@ -39,6 +41,19 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
                 MessageBox.Show("Barrio registrado");
                 this.Close();
             }
-        }        
+        }
+
+        private void FormAltaBarrio_Load(object sender, EventArgs e)
+        {
+            this.CargarCombo(cmbLocalidad, oLocalidad.RecuperarTodos());
+        }
+        private void CargarCombo(ComboBox combo, DataTable tabla)
+        {
+            combo.DataSource = tabla;
+            combo.DisplayMember = tabla.Columns[1].ColumnName;
+            combo.ValueMember = tabla.Columns[0].ColumnName;
+            combo.SelectedIndex = -1;
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
     }
 }

@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 
 namespace Proyecto_PAVI2021
 {
     public partial class frmLogin : Form
     {
         private Usuario miUsuario = new Usuario();
+        private UsuarioService oUsuario = new UsuarioService();
         
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
 
@@ -50,7 +52,7 @@ namespace Proyecto_PAVI2021
             this.miUsuario.Nombre = this.txtUsuario.Text;
             this.miUsuario.Contraseña = this.txtClave.Text;
 
-            this.miUsuario.Id_usuario = this.miUsuario.validarUsuario(miUsuario.Nombre, miUsuario.Contraseña);
+            this.miUsuario.Id_usuario = this.oUsuario.validarUsuario(miUsuario.Nombre, miUsuario.Contraseña);
 
             if (miUsuario.Id_usuario != 0)
             {

@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
 {
     public partial class FormLocalidad : Form
     {
-        Localidad oLocal = new Localidad();
+        LocalidadService oLocal = new LocalidadService();
         public FormLocalidad()
         {
             InitializeComponent(); 
@@ -84,7 +85,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
                     string id_localidad = filaSeleccionada.Cells[0].Value.ToString();
                     string nombre_Localidad = filaSeleccionada.Cells[1].Value.ToString();
                     DataTable tabla = oLocal.RecuperarFiltrados(id_localidad);
-                    CargarCampos(oLocal, id_localidad, nombre_Localidad);
+                    CargarCampos(id_localidad, nombre_Localidad);
                     
                 }
                 catch (Exception)
@@ -115,7 +116,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             }
             //txtLocalidadActual.Text = dgvLocalidad.CurrentRow.Cells[0].ToString();            
         }
-        private void CargarCampos(Localidad oLocal,string id, string nombre)
+        private void CargarCampos(string id, string nombre)
         {
             txtLocalidadActual.Text = nombre.ToString();
             txtId.Text = id.ToString();
@@ -141,7 +142,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             }
             else
             {
-                Localidad oLocal = new Localidad();
                 string nuevaLoc = txtNuevaLocalidad.Text;
                 try
                 {

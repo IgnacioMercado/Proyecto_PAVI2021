@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace Proyecto_PAVI2021.Presentacion
     public partial class FormAltaCliente : Form
 
     {
-        Cliente oCliente = new Cliente();
+        ClienteService oCliente = new ClienteService();
         public FormAltaCliente()
         {
             InitializeComponent();

@@ -1,4 +1,5 @@
 ﻿using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
     public partial class FormModificarBarrio : Form
     {
         private int id_barrio;
-        Barrio oBarrio = new Barrio();
+        BarrioService oBarrio = new BarrioService();
 
         public FormModificarBarrio()
         {

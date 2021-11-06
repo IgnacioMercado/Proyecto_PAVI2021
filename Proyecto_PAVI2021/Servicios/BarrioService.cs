@@ -43,5 +43,10 @@ namespace Proyecto_PAVI2021.Servicios
         {
             dao.EliminarBarrio(id_barrio);
         }
+
+        public DataTable RecuperarPorLocalidad(int id_localidad)
+        {
+            return dao.RecuperarPorLocalidad(id_localidad);
+        }
     }
 }

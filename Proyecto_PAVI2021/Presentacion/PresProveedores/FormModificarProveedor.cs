@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_PAVI2021.Presentacion.PresProveedores;
+using Proyecto_PAVI2021.Servicios;
 
 namespace Proyecto_PAVI2021.Presentacion.PresProveedores
 {
@@ -16,9 +17,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
     {
         private int id;
         //Cliente oCliente = new Cliente();
-        Proveedor oProv = new Proveedor();
-        Barrio oBarrio = new Barrio();
-        Localidad oLocalidad = new Localidad();
+        ProveedorService oProv = new ProveedorService();
+        BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
 
         public FormModificarProveedor()
         {
@@ -45,7 +46,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         private void LlenarCampos()
         {
             DataTable tabla = new DataTable();
-            Proveedor oProv = new Proveedor();
+
             tabla = oProv.RecuperarProveedorPorId(id);
 
             this.txtNombre.Text = tabla.Rows[0]["Nombre"].ToString();
