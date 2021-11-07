@@ -27,11 +27,12 @@ namespace Proyecto_PAVI2021.Presentacion
 
         private void FormAltaPersonal_Load(object sender, EventArgs e)
         {
-            CargarCombo(cmbBarrios, oBarrio.RecuperarTodos());
+            this.LlenarComboConLista(cmbLocalidades, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
             CargarCombo(cmbUsuarios, oUsuario.RecuperarTodos());
-            CargarCombo(cmbLocalidades, oLocalidad.RecuperarTodos());
+            
 
         }
+
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
         {
@@ -40,6 +41,13 @@ namespace Proyecto_PAVI2021.Presentacion
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -77,6 +85,12 @@ namespace Proyecto_PAVI2021.Presentacion
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbLocalidades_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cmbBarrios.SelectedIndex = -1;
+            this.LlenarComboConLista(cmbBarrios, oBarrio.RecuperarPorLocalidad((int)cmbLocalidades.SelectedValue), "Descripcion", "Id_Barrio");
         }
     }
 }

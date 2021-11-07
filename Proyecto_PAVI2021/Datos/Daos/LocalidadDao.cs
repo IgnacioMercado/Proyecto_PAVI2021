@@ -21,24 +21,24 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0 ORDER BY Descripcion";
+            string consulta = "SELECT l.Id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0 ORDER BY Descripcion";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarFiltrados(string id)
         {
-            string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
+            string consulta = "SELECT l.Id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
 
             if (!string.IsNullOrEmpty(id))
-                consulta += " AND l.id_Localidad = '" + id;
+                consulta += " AND l.Id_Localidad = " + id;
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarPorDescripcion(string nombre)
         {
-            string consulta = "SELECT l.id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
+            string consulta = "SELECT l.Id_Localidad, l.Descripcion, l.Borrado FROM LOCALIDADES l WHERE l.Borrado = 0";
 
             if (!string.IsNullOrEmpty(nombre))
                 consulta += " AND l.Descripcion LIKE '%" + nombre + "%'";

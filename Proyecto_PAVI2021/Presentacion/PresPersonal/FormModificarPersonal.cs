@@ -93,5 +93,25 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
         {
             this.Close();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbLocalidades_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbBarrios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

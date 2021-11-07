@@ -32,6 +32,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         private readonly FacturaService facturaService;
         private readonly LoteService loteService;
         private readonly PersonalService personalService;
+        private readonly MarcaService marcaService;
 
         public FormCompras()
         {
@@ -42,6 +43,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             facturaService = new FacturaService();
             loteService = new LoteService();
             personalService = new PersonalService();
+            marcaService = new MarcaService();
             dgvDetalle.AutoGenerateColumns = false;
         }
 
@@ -52,7 +54,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");            
             cboTipoFactura.DataSource = TiposFactura;            
             cboTipoFactura.SelectedIndex = -1;
-            this.LlenarComboConLista(cmbArticulo, materialService.GetAll(), "Nombre", "Id_material");
+            LlenarComboConLista(cmbMarca, marcaService.RecuperarTodos(), "Descripcion", "Id_Marca");
             this.cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);
             dgvDetalle.DataSource = listaDetalleFactura;
             CargarCombo(cboLocalidad, oLocalidad.RecuperarTodos());
@@ -292,6 +294,12 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             InicializarFormulario();
+        }
+
+        private void cmbMarca_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cmbArticulo.SelectedIndex = -1;
+            this.LlenarComboConLista(cmbArticulo, materialService.GetAllByMarcaId((int)cmbMarca.SelectedValue), "Nombre", "Id_material");
         }
     }
 }

@@ -23,5 +23,14 @@ namespace Proyecto_PAVI2021.Servicios
         {
             return dao.GetAll();
         }
+
+        public DataTable RecuperarMaterialYMarcaPorId(int id_material)
+        {
+            return dao.RecuperarMaterialYMarcaPorId(id_material);
+        }
+        public IList<Material> GetAllByMarcaId(int id_marca)
+        {
+            return dao.GetAllByMarcaId(id_marca);
+        }
     }
 }

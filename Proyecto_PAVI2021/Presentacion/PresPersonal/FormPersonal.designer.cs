@@ -423,14 +423,14 @@ namespace Proyecto_PAVI2021.Presentacion
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(16, 159);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(723, 58);
+            this.panel3.Size = new System.Drawing.Size(705, 58);
             this.panel3.TabIndex = 33;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(455, 8);
+            this.label17.Location = new System.Drawing.Point(276, 9);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 16);
             this.label17.TabIndex = 33;
@@ -440,27 +440,30 @@ namespace Proyecto_PAVI2021.Presentacion
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(276, 9);
+            this.label16.Location = new System.Drawing.Point(447, 8);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(50, 16);
             this.label16.TabIndex = 32;
             this.label16.Text = "Barrio";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // cmbLocalidades
             // 
             this.cmbLocalidades.FormattingEnabled = true;
-            this.cmbLocalidades.Location = new System.Drawing.Point(458, 27);
+            this.cmbLocalidades.Location = new System.Drawing.Point(279, 28);
             this.cmbLocalidades.Name = "cmbLocalidades";
             this.cmbLocalidades.Size = new System.Drawing.Size(121, 21);
             this.cmbLocalidades.TabIndex = 31;
+            this.cmbLocalidades.SelectionChangeCommitted += new System.EventHandler(this.cmbLocalidades_SelectionChangeCommitted);
             // 
             // cmbBarrios
             // 
             this.cmbBarrios.FormattingEnabled = true;
-            this.cmbBarrios.Location = new System.Drawing.Point(279, 28);
+            this.cmbBarrios.Location = new System.Drawing.Point(450, 27);
             this.cmbBarrios.Name = "cmbBarrios";
             this.cmbBarrios.Size = new System.Drawing.Size(121, 21);
             this.cmbBarrios.TabIndex = 30;
+            this.cmbBarrios.SelectedIndexChanged += new System.EventHandler(this.cmbBarrios_SelectedIndexChanged);
             // 
             // panel2
             // 

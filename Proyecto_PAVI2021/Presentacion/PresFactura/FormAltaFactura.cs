@@ -1,5 +1,6 @@
 ﻿using Proyecto_PAVI2021.Negocio;
 using Proyecto_PAVI2021.Presentacion;
+using Proyecto_PAVI2021.Presentacion.PresLotes;
 using Proyecto_PAVI2021.Presentacion.PresPagosFactura;
 using Proyecto_PAVI2021.Servicios;
 using System;
@@ -28,6 +29,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
         private readonly FacturaService facturaService;
         private readonly LoteService loteService;
         private readonly PersonalService personalService;
+        private readonly MarcaService marcaService;
 
         public FormAltaFactura()
         {
@@ -38,6 +40,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
             facturaService = new FacturaService();
             loteService = new LoteService();
             personalService = new PersonalService();
+            marcaService = new MarcaService();
             dgvDetalle.AutoGenerateColumns = false;
         }
 
@@ -47,8 +50,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
             
             cboTipoFactura.DataSource = TiposFactura;            
             cboTipoFactura.SelectedIndex = -1;
-            nudCantidad.Value = 1;            
-            LlenarComboConLista(cmbArticulo, materialService.GetAll(), "Nombre", "Id_material");
+            nudCantidad.Value = 1;
+            LlenarComboConLista(cmbMarca, marcaService.RecuperarTodos(), "Descripcion", "Id_Marca");
             cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);            
             dgvDetalle.DataSource = listaDetalleFactura;
             dgvDetalle.Columns[4].DefaultCellStyle.Format = "C2";
@@ -285,6 +288,26 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (cmbArticulo.SelectedIndex != -1)
+            {
+                FormLotesInfoStock flis = new FormLotesInfoStock((int)cmbArticulo.SelectedValue);
+                flis.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un articulo antes de consultar su lote correspondiente", "Ingrese articulo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void cmbMarca_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cmbArticulo.SelectedIndex = -1;
+            this.LlenarComboConLista(cmbArticulo, materialService.GetAllByMarcaId((int)cmbMarca.SelectedValue), "Nombre", "Id_material");
         }
     }
 }

@@ -36,11 +36,18 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
 
         private void FormModificarProveedor_Load(object sender, EventArgs e)
         {
-            this.CargarCombo(cboBarrio, oBarrio.RecuperarTodos());
-            this.CargarCombo(cboLocalidad, oLocalidad.RecuperarTodos());
+            this.LlenarComboConLista(cboLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
             LlenarCampos();
 
             
+        }
+
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
 
         private void LlenarCampos()
@@ -96,6 +103,12 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void cboLocalidad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cboBarrio.SelectedIndex = -1;
+            this.LlenarComboConLista(cboBarrio, oBarrio.RecuperarPorLocalidad((int)cboLocalidad.SelectedValue), "Descripcion", "Id_Barrio");
         }
     }
 }

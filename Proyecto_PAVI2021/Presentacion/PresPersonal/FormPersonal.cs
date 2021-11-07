@@ -34,8 +34,7 @@ namespace Proyecto_PAVI2021.Presentacion
         private void FormUsuarios_Load(object sender, EventArgs e)
         {            
             this.CargarGrilla(dgvPersonal, oPersonal.RecuperarTodos());
-            this.CargarCombo(cmbBarrios, oBarrio.RecuperarTodos());
-            this.CargarCombo(cmbLocalidades, oLocalidad.RecuperarTodos());
+            this.LlenarComboConLista(cmbLocalidades, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
             if (this.modo == "seleccionar")
             {
                 this.Text = "Seleccionar Empleado";
@@ -51,6 +50,14 @@ namespace Proyecto_PAVI2021.Presentacion
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
 
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
@@ -167,6 +174,22 @@ namespace Proyecto_PAVI2021.Presentacion
                 this.Close();
             }
             
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbBarrios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbLocalidades_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cmbBarrios.SelectedIndex = -1;
+            this.LlenarComboConLista(cmbBarrios, oBarrio.RecuperarPorLocalidad((int)cmbLocalidades.SelectedValue), "Descripcion", "Id_Barrio");
         }
     }
 }

@@ -78,6 +78,7 @@
     <Compile Include="Datos\Daos\FormaDePagoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
     <Compile Include="Datos\Daos\LoteDao.cs" />
+    <Compile Include="Datos\Daos\MarcaDao.cs" />
     <Compile Include="Datos\Daos\MaterialDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
     <Compile Include="Datos\Daos\PersonalDao.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Interfaces\IFormaDePago.cs" />
     <Compile Include="Interfaces\ILocalidad.cs" />
     <Compile Include="Interfaces\ILote.cs" />
+    <Compile Include="Interfaces\IMarca.cs" />
     <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IPerfil.cs" />
     <Compile Include="Interfaces\IPersonal.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="Negocio\FormaPago.cs" />
     <Compile Include="Negocio\Localidad.cs" />
     <Compile Include="Negocio\Lote.cs" />
+    <Compile Include="Negocio\Marca.cs" />
     <Compile Include="Negocio\Material.cs" />
     <Compile Include="Negocio\PagoPorFactura.cs" />
     <Compile Include="Negocio\Perfil.cs" />
@@ -168,6 +171,12 @@
     </Compile>
     <Compile Include="Presentacion\PresLocalidad\FormLocalidad.designer.cs">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresLotes\FormLotesInfoStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresLotes\FormLotesInfoStock.Designer.cs">
+      <DependentUpon>FormLotesInfoStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresPagosFactura\FormPagosFactura.cs">
       <SubType>Form</SubType>
@@ -275,6 +284,7 @@
     <Compile Include="Servicios\FormaDePagoService.cs" />
     <Compile Include="Servicios\LocalidadService.cs" />
     <Compile Include="Servicios\LoteService.cs" />
+    <Compile Include="Servicios\MarcaService.cs" />
     <Compile Include="Servicios\MaterialService.cs" />
     <Compile Include="Servicios\PerfilService.cs" />
     <Compile Include="Servicios\PersonalService.cs" />
@@ -310,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresLocalidad\FormLocalidad.resx">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresLotes\FormLotesInfoStock.resx">
+      <DependentUpon>FormLotesInfoStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPagosFactura\FormPagosFactura.resx">
       <DependentUpon>FormPagosFactura.cs</DependentUpon>

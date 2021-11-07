@@ -11,5 +11,7 @@ namespace Proyecto_PAVI2021.Interfaces
     interface IMaterial
     {
         IList<Material> GetAll();
+        DataTable RecuperarMaterialYMarcaPorId(int id_material);
+        IList<Material> GetAllByMarcaId(int id_marca);
     }
 }

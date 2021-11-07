@@ -31,6 +31,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModificarProveedor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtId_Proveedor = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.btnModificar1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.txtId_Proveedor = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,15 +72,23 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.panel1.Size = new System.Drawing.Size(898, 267);
             this.panel1.TabIndex = 64;
             // 
+            // txtId_Proveedor
+            // 
+            this.txtId_Proveedor.Location = new System.Drawing.Point(755, 12);
+            this.txtId_Proveedor.Name = "txtId_Proveedor";
+            this.txtId_Proveedor.Size = new System.Drawing.Size(120, 20);
+            this.txtId_Proveedor.TabIndex = 30;
+            this.txtId_Proveedor.Visible = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PeachPuff;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.cboLocalidad);
-            this.panel3.Controls.Add(this.cboBarrio);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.txtAltura);
+            this.panel3.Controls.Add(this.cboBarrio);
             this.panel3.Controls.Add(this.txtCalle);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(13, 179);
@@ -92,7 +100,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(440, 8);
+            this.label5.Location = new System.Drawing.Point(275, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 39;
@@ -102,7 +110,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(273, 8);
+            this.label7.Location = new System.Drawing.Point(426, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 16);
             this.label7.TabIndex = 38;
@@ -111,15 +119,16 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             // cboLocalidad
             // 
             this.cboLocalidad.FormattingEnabled = true;
-            this.cboLocalidad.Location = new System.Drawing.Point(443, 27);
+            this.cboLocalidad.Location = new System.Drawing.Point(278, 28);
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.Size = new System.Drawing.Size(121, 21);
             this.cboLocalidad.TabIndex = 37;
+            this.cboLocalidad.SelectionChangeCommitted += new System.EventHandler(this.cboLocalidad_SelectionChangeCommitted);
             // 
             // cboBarrio
             // 
             this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(275, 27);
+            this.cboBarrio.Location = new System.Drawing.Point(428, 28);
             this.cboBarrio.Name = "cboBarrio";
             this.cboBarrio.Size = new System.Drawing.Size(121, 21);
             this.cboBarrio.TabIndex = 36;
@@ -288,14 +297,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.btnAtras.TabIndex = 67;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // txtId_Proveedor
-            // 
-            this.txtId_Proveedor.Location = new System.Drawing.Point(755, 12);
-            this.txtId_Proveedor.Name = "txtId_Proveedor";
-            this.txtId_Proveedor.Size = new System.Drawing.Size(120, 20);
-            this.txtId_Proveedor.TabIndex = 30;
-            this.txtId_Proveedor.Visible = false;
             // 
             // FormModificarProveedor
             // 

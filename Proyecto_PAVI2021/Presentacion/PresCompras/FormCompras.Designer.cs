@@ -63,6 +63,11 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
+            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtApellidoEmpleado = new System.Windows.Forms.TextBox();
@@ -81,11 +86,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.cmbLote = new System.Windows.Forms.ComboBox();
-            this.colIdMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.txtNroFactura.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -351,6 +353,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.cmbMarca);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label10);
@@ -412,7 +416,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             // lblArticulo
             // 
             this.lblArticulo.AutoSize = true;
-            this.lblArticulo.Location = new System.Drawing.Point(16, 26);
+            this.lblArticulo.Location = new System.Drawing.Point(186, 26);
             this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArticulo.Name = "lblArticulo";
             this.lblArticulo.Size = new System.Drawing.Size(42, 13);
@@ -422,7 +426,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             // cmbArticulo
             // 
             this.cmbArticulo.FormattingEnabled = true;
-            this.cmbArticulo.Location = new System.Drawing.Point(68, 23);
+            this.cmbArticulo.Location = new System.Drawing.Point(238, 23);
             this.cmbArticulo.Name = "cmbArticulo";
             this.cmbArticulo.Size = new System.Drawing.Size(121, 21);
             this.cmbArticulo.TabIndex = 3;
@@ -478,6 +482,43 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.dgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalle.Size = new System.Drawing.Size(783, 224);
             this.dgvDetalle.TabIndex = 0;
+            // 
+            // colIdMaterial
+            // 
+            this.colIdMaterial.DataPropertyName = "Id_material";
+            this.colIdMaterial.HeaderText = "#Material";
+            this.colIdMaterial.Name = "colIdMaterial";
+            this.colIdMaterial.ReadOnly = true;
+            this.colIdMaterial.Width = 60;
+            // 
+            // colNombre
+            // 
+            this.colNombre.DataPropertyName = "MaterialDescripcion";
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 320;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.DataPropertyName = "PrecioUnitario";
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.DataPropertyName = "Cantidad";
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            // 
+            // colImporte
+            // 
+            this.colImporte.DataPropertyName = "Importe";
+            this.colImporte.HeaderText = "Importe";
+            this.colImporte.Name = "colImporte";
+            this.colImporte.ReadOnly = true;
             // 
             // panel1
             // 
@@ -669,42 +710,25 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.cmbLote.TabIndex = 11;
             this.cmbLote.Visible = false;
             // 
-            // colIdMaterial
+            // label20
             // 
-            this.colIdMaterial.DataPropertyName = "Id_material";
-            this.colIdMaterial.HeaderText = "#Material";
-            this.colIdMaterial.Name = "colIdMaterial";
-            this.colIdMaterial.ReadOnly = true;
-            this.colIdMaterial.Width = 60;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(22, 28);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 13);
+            this.label20.TabIndex = 22;
+            this.label20.Text = "Marca";
             // 
-            // colNombre
+            // cmbMarca
             // 
-            this.colNombre.DataPropertyName = "MaterialDescripcion";
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 320;
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.DataPropertyName = "PrecioUnitario";
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.DataPropertyName = "Cantidad";
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            // 
-            // colImporte
-            // 
-            this.colImporte.DataPropertyName = "Importe";
-            this.colImporte.HeaderText = "Importe";
-            this.colImporte.Name = "colImporte";
-            this.colImporte.ReadOnly = true;
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(69, 23);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(85, 21);
+            this.cmbMarca.TabIndex = 21;
+            this.cmbMarca.SelectionChangeCommitted += new System.EventHandler(this.cmbMarca_SelectionChangeCommitted);
             // 
             // FormCompras
             // 
@@ -802,5 +826,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cmbMarca;
     }
 }
