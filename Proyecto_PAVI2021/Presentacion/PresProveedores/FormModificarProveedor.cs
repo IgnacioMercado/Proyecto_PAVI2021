@@ -36,7 +36,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
 
         private void FormModificarProveedor_Load(object sender, EventArgs e)
         {
-            this.LlenarComboConLista(cboLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
+            
             LlenarCampos();
 
             
@@ -61,6 +61,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
             this.txtCuit.Text = tabla.Rows[0]["CUIT"].ToString();
             this.txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
             this.txtAltura.Text = tabla.Rows[0]["Nro_Calle"].ToString();
+            this.LlenarComboConLista(cboLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
+            this.LlenarComboConLista(cboBarrio, oBarrio.RecuperarPorLocalidad(Convert.ToInt32(tabla.Rows[0]["Id_Barrio"].ToString())), "Descripcion", "Id_Barrio");
             this.cboBarrio.SelectedValue = tabla.Rows[0]["Id_Barrio"].ToString();
             this.cboLocalidad.SelectedValue = tabla.Rows[0]["Id_Localidad"].ToString();
         }
@@ -109,6 +111,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresProveedores
         {
             cboBarrio.SelectedIndex = -1;
             this.LlenarComboConLista(cboBarrio, oBarrio.RecuperarPorLocalidad((int)cboLocalidad.SelectedValue), "Descripcion", "Id_Barrio");
+
         }
     }
 }

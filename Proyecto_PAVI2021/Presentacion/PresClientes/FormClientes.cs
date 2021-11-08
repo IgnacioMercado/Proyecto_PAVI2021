@@ -19,6 +19,8 @@ namespace Proyecto_PAVI2021.Presentacion
         public int Id_Cliente_Seleccionado = -1;
         private string modo;
         ClienteService oCliente = new ClienteService();
+        BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
 
         public FormClientes(string modo)
         {
@@ -29,6 +31,8 @@ namespace Proyecto_PAVI2021.Presentacion
         private void FormClientes_Load(object sender, EventArgs e)
         {
             this.CargarGrilla(dgvClientes, oCliente.RecuperarTodos());
+            this.LlenarComboConLista(cmbLocalidades, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
+            
 
             if (this.modo == "seleccionar")
             {
@@ -46,6 +50,13 @@ namespace Proyecto_PAVI2021.Presentacion
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
+        }
 
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
         {
@@ -59,30 +70,38 @@ namespace Proyecto_PAVI2021.Presentacion
                     tabla.Rows[i]["Tipo_Doc"],
                     tabla.Rows[i]["Nro_Doc"],
                     tabla.Rows[i]["Calle"],
-                    tabla.Rows[i]["Nro_Calle"]);
+                    tabla.Rows[i]["Nro_Calle"],
+                    tabla.Rows[i]["Barrio"],
+                    tabla.Rows[i]["Localidad"]);
+
             }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            string nombre, apellido, telefono, nro_doc, tipo_doc, calle, altura;
-            nombre = apellido = telefono = nro_doc = tipo_doc = calle = altura = string.Empty;
+            string nombre, apellido, telefono, nro_doc, tipo_doc, calle, altura, barrio, localidad;
+            nombre = apellido = telefono = nro_doc = tipo_doc = calle = altura = barrio = localidad = string.Empty;
             if (txtNombre.Text != "")
                 nombre = txtNombre.Text;
             if (txtApellido.Text != "")
                 apellido = txtApellido.Text;
             if (txtTelefono.Text != "")
                 telefono = txtTelefono.Text;
-            if (txtTipoDoc.Text != "")
-                tipo_doc = txtTipoDoc.Text;
             if (txtNroDoc.Text != "")
                 nro_doc = txtNroDoc.Text;
             if (txtCalle.Text != "")
                 calle = txtCalle.Text;
             if (txtAltura.Text != "")
                 altura = txtAltura.Text;
+            if (cboTipoDoc.SelectedIndex != -1)
+                tipo_doc = cboTipoDoc.Text;
+            if (cmbBarrios.SelectedIndex != -1)
+                barrio = cmbBarrios.SelectedValue.ToString();
+            if (cmbLocalidades.SelectedIndex != -1)
+                localidad = cmbLocalidades.SelectedValue.ToString();
 
-            this.CargarGrilla(dgvClientes, oCliente.RecuperarFiltrados(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura));
+
+            this.CargarGrilla(dgvClientes, oCliente.RecuperarFiltrados(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad));
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -112,6 +131,7 @@ namespace Proyecto_PAVI2021.Presentacion
             FormAltaCliente fac = new FormAltaCliente();
             fac.ShowDialog();
             this.CargarGrilla(dgvClientes, oCliente.RecuperarTodos());
+            dgvClientes.Refresh();
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -129,6 +149,12 @@ namespace Proyecto_PAVI2021.Presentacion
         {
             Id_Cliente_Seleccionado = (int)dgvClientes.CurrentRow.Cells[0].Value;
             this.Close();            
+        }
+
+        private void cmbLocalidades_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cmbBarrios.SelectedIndex = -1;
+            this.LlenarComboConLista(cmbBarrios, oBarrio.RecuperarPorLocalidad((int)cmbLocalidades.SelectedValue), "Descripcion", "Id_Barrio");
         }
     }
 }

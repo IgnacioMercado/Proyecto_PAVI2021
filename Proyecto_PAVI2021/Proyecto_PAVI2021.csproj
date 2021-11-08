@@ -379,6 +379,7 @@
     <EmbeddedResource Include="Reportes\FormReporteVentasXCliente.resx">
       <DependentUpon>FormReporteVentasXCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteArtMasVendido.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteComprasXProveedor.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVentasXCliente.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteVentaXEmpleado.rdlc" />

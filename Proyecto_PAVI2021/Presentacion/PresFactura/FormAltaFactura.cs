@@ -131,7 +131,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
                             }
                             else
                             {
-                                int index = listaDetalleFactura.IndexOf(listaDetalleFactura.Where(df => df.id_material == material.Id_material).FirstOrDefault());
+                                int index = listaDetalleFactura.IndexOf(listaDetalleFactura.Where(df => df.id_material == material.Id_material && oLote.Id_lote == df.Id_lote).FirstOrDefault());
                                 if (index != -1)
                                 {
                                     listaDetalleFactura[index].Cantidad += cantidad;
@@ -223,12 +223,18 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
 
         private void CargarEmpleado()
         {
-            DataTable tabla = new DataTable();
-            Personal oEmpleadoSeleccionado = new Personal();
-            tabla = personalService.RecuperarPersonalPorLegajo(Legajo_Empleado_Seleccionado);
-            this.txtNombreEmpleado.Text = tabla.Rows[0]["Nombre"].ToString();
-            this.txtApellidoEmpleado.Text = tabla.Rows[0]["Apellido"].ToString();
-            this.txtLegajoEmpleado.Text = tabla.Rows[0]["Legajo"].ToString();
+            if (Legajo_Empleado_Seleccionado != -1)
+            { 
+                DataTable tabla = new DataTable();
+                Personal oEmpleadoSeleccionado = new Personal();
+                tabla = personalService.RecuperarPersonalPorLegajo(Legajo_Empleado_Seleccionado);
+                this.txtNombreEmpleado.Text = tabla.Rows[0]["Nombre"].ToString();
+                this.txtApellidoEmpleado.Text = tabla.Rows[0]["Apellido"].ToString();
+                this.txtLegajoEmpleado.Text = tabla.Rows[0]["Legajo"].ToString();
+            }
+
+
+                
         }
 
         private void InicializarFormulario()

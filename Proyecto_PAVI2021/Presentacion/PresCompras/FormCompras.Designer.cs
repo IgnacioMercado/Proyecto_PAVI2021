@@ -54,6 +54,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -86,8 +88,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.cmbLote = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.txtNroFactura.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -145,7 +145,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.btnSeleccionarProveedor.TabIndex = 4;
             this.btnSeleccionarProveedor.Text = "Seleccionar Proveedor";
             this.btnSeleccionarProveedor.UseVisualStyleBackColor = true;
-            this.btnSeleccionarProveedor.Click += new System.EventHandler(this.btnSeleccionarCliente_Click);
+            this.btnSeleccionarProveedor.Click += new System.EventHandler(this.btnSeleccionarProveedor_Click);
             // 
             // txtCUIT
             // 
@@ -373,6 +373,26 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(22, 28);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(37, 13);
+            this.label20.TabIndex = 22;
+            this.label20.Text = "Marca";
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(69, 23);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(85, 21);
+            this.cmbMarca.TabIndex = 21;
+            this.cmbMarca.SelectionChangeCommitted += new System.EventHandler(this.cmbMarca_SelectionChangeCommitted);
             // 
             // label16
             // 
@@ -709,26 +729,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.cmbLote.Size = new System.Drawing.Size(121, 21);
             this.cmbLote.TabIndex = 11;
             this.cmbLote.Visible = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(22, 28);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(37, 13);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "Marca";
-            // 
-            // cmbMarca
-            // 
-            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(69, 23);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(85, 21);
-            this.cmbMarca.TabIndex = 21;
-            this.cmbMarca.SelectionChangeCommitted += new System.EventHandler(this.cmbMarca_SelectionChangeCommitted);
             // 
             // FormCompras
             // 

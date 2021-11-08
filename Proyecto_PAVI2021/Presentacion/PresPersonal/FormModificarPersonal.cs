@@ -15,6 +15,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
     public partial class FormModificarPersonal : Form
     {
         private int legajo;
+        private string id_barrio;
+        private string id_localidad;
+        private string id_usuario;
 
         PersonalService oPersonal = new PersonalService();
         BarrioService oBarrio = new BarrioService();
@@ -30,14 +33,20 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
         {
             InitializeComponent();
             this.legajo = legajo;
+
         }
 
         private void FormModificarPersonal_Load(object sender, EventArgs e)
         {
             LlenarCampos();
-            CargarCombo(cmbBarrios, oBarrio.RecuperarTodos());
-            CargarCombo(cmbLocalidades, oLocalidad.RecuperarTodos());
-            CargarCombo(cmbUsuarios, oUsuario.RecuperarTodos());
+            
+        }
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
@@ -61,21 +70,33 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             txtNroDoc.Text = tabla.Rows[0]["Nro_Doc"].ToString();
             txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
             txtAltura.Text = tabla.Rows[0]["Nro_Calle"].ToString();
+            this.LlenarComboConLista(cmbLocalidades, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
+            this.LlenarComboConLista(cmbBarrios, oBarrio.RecuperarPorLocalidad(Convert.ToInt32(tabla.Rows[0]["Id_Barrio"].ToString())), "Descripcion", "Id_Barrio");
+            this.LlenarComboConLista(cmbUsuarios, oUsuario.RecuperarTodos(), "Nombre_Usuario", "Id_Usuario");
+            this.cmbUsuarios.SelectedValue = tabla.Rows[0]["Id_Usuario"].ToString();
+            this.cmbBarrios.SelectedValue = tabla.Rows[0]["Id_Barrio"].ToString();
+            this.cmbLocalidades.SelectedValue = tabla.Rows[0]["Id_Localidad"].ToString();
+
         }        
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             string nombre, apellido, nro_doc, tipo_doc, telefono, calle, altura, barrio, localidad, usuario;
+            nombre = apellido = nro_doc = tipo_doc = telefono = calle = altura = barrio = localidad = usuario = string.Empty;
             nombre = txtNombre.Text;
             apellido = txtApellido.Text;
             telefono = txtTelefono.Text;
-            tipo_doc = cboTipoDoc.Text;
+            if(cboTipoDoc.SelectedIndex != -1)
+                tipo_doc = cboTipoDoc.Text;
             nro_doc = txtNroDoc.Text;
             calle = txtCalle.Text;
             altura = txtAltura.Text;
-            barrio = cmbBarrios.SelectedValue.ToString();
-            localidad = cmbLocalidades.SelectedValue.ToString();
-            usuario = cmbUsuarios.SelectedValue.ToString();
+            if(cmbBarrios.SelectedIndex != -1)
+                barrio = cmbBarrios.SelectedValue.ToString(); ;
+            if(cmbLocalidades.SelectedIndex != -1)    
+                localidad = cmbLocalidades.SelectedValue.ToString();
+            if(cmbUsuarios.SelectedIndex != -1)
+                usuario = cmbUsuarios.SelectedValue.ToString();
 
             if (nombre == "" || apellido == "" || telefono == "" || nro_doc == "" || tipo_doc == "" || calle == "" || altura == "" || cmbBarrios.SelectedIndex == -1 || cmbUsuarios.SelectedIndex == -1 || cmbLocalidades.SelectedIndex == -1)
             {
@@ -101,7 +122,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
 
         private void cmbLocalidades_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
+            cmbBarrios.SelectedIndex = -1;
+            this.LlenarComboConLista(cmbBarrios, oBarrio.RecuperarPorLocalidad((int)cmbLocalidades.SelectedValue), "Descripcion", "Id_Barrio");
         }
 
         private void label3_Click(object sender, EventArgs e)

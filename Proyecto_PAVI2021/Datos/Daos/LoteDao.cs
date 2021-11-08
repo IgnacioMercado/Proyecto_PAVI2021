@@ -44,6 +44,13 @@ namespace Proyecto_PAVI2021.Datos.Daos
             return listadoLotes;
         }
 
+        public void confirmarLote(Lote oLote)
+        {
+            string consultaLote = "UPDATE LOTES SET Confirmacion_Lote = 1 WHERE Id_Lote = " + oLote.Id_lote;
+            string consultaMaterial = "UPDATE MATERIAL SET Stock = Stock + " + oLote.Cantidad_fabricada;
+
+        }
+
 
         private Lote MappingLote(DataRow row)
         {

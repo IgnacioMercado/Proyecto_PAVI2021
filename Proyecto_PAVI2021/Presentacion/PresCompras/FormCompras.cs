@@ -78,28 +78,22 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             cbo.SelectedIndex = -1;
         }
 
-        private void btnSeleccionarCliente_Click(object sender, EventArgs e)
-        {
-            FormProveedores fProveedores = new FormProveedores("seleccionar");
-            fProveedores.ShowDialog();
-            this.Id_Proveedor_Seleccionado = fProveedores.Id_Proveedor_Seleccionado;
-            if (this.Id_Proveedor_Seleccionado != -1)
-                this.CargarProveedor();
-        }
-
         private void CargarProveedor()
         {
-            DataTable tabla = new DataTable();
-            
-            
-            tabla = oProveedorSeleccionado.RecuperarProveedorPorId(Id_Proveedor_Seleccionado);
-            this.txtNombre.Text =    tabla.Rows[0]["Nombre"].ToString();
-            this.txtTelefono.Text =  tabla.Rows[0]["Telefono"].ToString();
-            this.txtCUIT.Text =      tabla.Rows[0]["CUIT"].ToString();
-            this.txtCalle.Text =     tabla.Rows[0]["Calle"].ToString();
-            this.txtNro_Calle.Text = tabla.Rows[0]["Nro_Calle"].ToString();
-            this.cboBarrio.SelectedValue = tabla.Rows[0]["Id_Barrio"].ToString();
-            this.cboLocalidad.SelectedValue = tabla.Rows[0]["Id_Localidad"].ToString();
+            if(Id_Proveedor_Seleccionado != -1)
+            {
+                DataTable tabla = new DataTable();
+
+
+                tabla = oProveedorSeleccionado.RecuperarProveedorPorId(Id_Proveedor_Seleccionado);
+                this.txtNombre.Text = tabla.Rows[0]["Nombre"].ToString();
+                this.txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
+                this.txtCUIT.Text = tabla.Rows[0]["CUIT"].ToString();
+                this.txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
+                this.txtNro_Calle.Text = tabla.Rows[0]["Nro_Calle"].ToString();
+                this.cboBarrio.SelectedValue = tabla.Rows[0]["Id_Barrio"].ToString();
+                this.cboLocalidad.SelectedValue = tabla.Rows[0]["Id_Localidad"].ToString();
+            }
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -220,7 +214,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
                     {
                         facturaService.Crear(facturaCompra);
 
-                        MessageBox.Show(string.Concat("La factura nro: ", facturaCompra.IdFactura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(string.Concat("La factura nro: ", facturaCompra.IdFactura, " se registró correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         InicializarFormulario();
 
@@ -260,12 +254,16 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
 
         private void CargarEmpleado()
         {
-            DataTable tabla = new DataTable();
-            Personal oEmpleadoSeleccionado = new Personal();
-            tabla = personalService.RecuperarPersonalPorLegajo(Legajo_Empleado_Seleccionado);
-            this.txtNombreEmpleado.Text = tabla.Rows[0]["Nombre"].ToString();
-            this.txtApellidoEmpleado.Text = tabla.Rows[0]["Apellido"].ToString();
-            this.txtLegajoEmpleado.Text = tabla.Rows[0]["Legajo"].ToString();
+            if(Legajo_Empleado_Seleccionado != -1)
+            {
+                DataTable tabla = new DataTable();
+                Personal oEmpleadoSeleccionado = new Personal();
+                tabla = personalService.RecuperarPersonalPorLegajo(Legajo_Empleado_Seleccionado);
+                this.txtNombreEmpleado.Text = tabla.Rows[0]["Nombre"].ToString();
+                this.txtApellidoEmpleado.Text = tabla.Rows[0]["Apellido"].ToString();
+                this.txtLegajoEmpleado.Text = tabla.Rows[0]["Legajo"].ToString();
+            }
+
         }
 
         private void InicializarFormulario()
@@ -300,6 +298,14 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         {
             cmbArticulo.SelectedIndex = -1;
             this.LlenarComboConLista(cmbArticulo, materialService.GetAllByMarcaId((int)cmbMarca.SelectedValue), "Nombre", "Id_material");
+        }
+
+        private void btnSeleccionarProveedor_Click(object sender, EventArgs e)
+        {
+            FormProveedores fpv = new FormProveedores("seleccionar");
+            fpv.ShowDialog();
+            this.Id_Proveedor_Seleccionado = fpv.Id_Proveedor_Seleccionado;
+            CargarProveedor();
         }
     }
 }

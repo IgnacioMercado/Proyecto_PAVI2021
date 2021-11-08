@@ -15,6 +15,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
     public partial class FormModificarCliente : Form
     {
         private int id_cliente;
+
         ClienteService oCliente = new ClienteService();
 
         public FormModificarCliente()
@@ -25,6 +26,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
         {
             InitializeComponent();
             this.id_cliente = id_cliente;
+
+
         }
 
         private void FormModificarCliente_Load(object sender, EventArgs e)

@@ -12,14 +12,14 @@ namespace Proyecto_PAVI2021.Datos.Daos
     {
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle FROM CLIENTES c WHERE c.Borrado = 0";
+            string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad FROM CLIENTES c JOIN BARRIOS b on c.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on b.Id_Localidad = l.Id_Localidad WHERE c.Borrado = 0";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura)
+        public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string barrio, string localidad)
         {
-            string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle FROM CLIENTES c WHERE c.Borrado = 0";
+            string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad FROM CLIENTES c JOIN BARRIOS b on c.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on b.Id_Localidad = l.Id_Localidad WHERE c.Borrado = 0";
 
             if (!string.IsNullOrEmpty(nombre))
                 consulta += " AND c.Nombre LIKE '%" + nombre + "%'";
@@ -35,14 +35,18 @@ namespace Proyecto_PAVI2021.Datos.Daos
                 consulta += " AND c.Calle LIKE '%" + calle + "%'";
             if (!string.IsNullOrEmpty(altura))
                 consulta += " AND c.Nro_Calle LIKE '%" + altura + "%'";
+            if (!string.IsNullOrEmpty(barrio))
+                consulta += " AND c.Id_Barrio = " + barrio;
+            if (!string.IsNullOrEmpty(localidad))
+                consulta += " AND b.Id_Localidad = " + localidad;
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        public void RegistrarCliente(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string fecha_alta)
+        public void RegistrarCliente(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string fecha_alta, string barrio)
         {
-            string consulta = "INSERT INTO CLIENTES (Tipo_Doc, Nro_Doc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Fecha_Alta) " +
-                              "VALUES ('" + tipo_doc + "', '" + nro_doc + "', '" + nombre + "', '" + apellido + "', '" + telefono + "', '" + calle + "', '" + altura + "', CONVERT(DateTime, '" + fecha_alta + "', 103))";
+            string consulta = "INSERT INTO CLIENTES (Tipo_Doc, Nro_Doc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Fecha_Alta, Id_Barrio, Borrado) " +
+                              "VALUES ('" + tipo_doc + "', '" + nro_doc + "', '" + nombre + "', '" + apellido + "', '" + telefono + "', '" + calle + "', '" + altura + "', CONVERT(DateTime, '" + fecha_alta + "', 103), " + barrio + ", 0)";
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }

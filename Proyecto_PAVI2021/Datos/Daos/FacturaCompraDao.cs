@@ -107,7 +107,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
         public DataTable RecuperarComprasXProveedor(string desde, string hasta, string nombre, string localidad)
         {
             string consulta = "SELECT p.Id_Proveedor, p.Nombre, l.Descripcion as Localidad, COUNT(DISTINCT FC.Id_Factura) as Cantidad, SUM(DFC.Cantidad_Comprada*DFC.Precio_Compra) as MontoTotal " +
-                              "FROM PROVEEDORESS p JOIN LOCALIDADES l on p.Id_Localidad = l.Id_Localidad " +
+                              "FROM PROVEEDORESS p JOIN BARRIOS b on b.Id_Barrio = p.Id_Barrio JOIN LOCALIDADES l on b.Id_Localidad = l.Id_Localidad " +
                               "JOIN FACTURA_COMPRA FC ON p.Id_Proveedor = FC.Id_Proveedor " +
                               "JOIN DETALLE_FACTURA_COMPRAS DFC ON FC.Id_Factura = DFC.Id_Factura " +
                               "WHERE p.Borrado = 0 AND FC.Borrado = 0 AND DFC.Borrado = 0 " +
@@ -122,5 +122,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
             consulta += " GROUP BY p.Id_Proveedor, p.Nombre, l.Descripcion ";
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
+
+        
     }
 }

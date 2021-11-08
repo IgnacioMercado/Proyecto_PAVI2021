@@ -14,7 +14,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
         public DataTable RecuperarTodos()
         {
             string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Nombre_Usuario as Usuario, pf.Nombre as Rol, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad " +
-                "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on p.Id_Localidad = l.Id_Localidad " +
+                "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on b.Id_Localidad = l.Id_Localidad " +
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
                 "WHERE p.Borrado = 0";
 
@@ -24,7 +24,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
         public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string usuario, string barrio, string localidad)
         {
             string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Nombre_Usuario as Usuario, pf.Nombre as Rol, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad " +
-                "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on p.Id_Localidad = l.Id_Localidad " +
+                "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on b.Id_Localidad = l.Id_Localidad " +
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
                 "WHERE p.Borrado = 0";
 
@@ -47,7 +47,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
             if (!string.IsNullOrEmpty(barrio))
                 consulta += " AND p.Id_Barrio = " + barrio;
             if (!string.IsNullOrEmpty(localidad))
-                consulta += " AND p.Id_Localidad = " + localidad;
+                consulta += " AND b.Id_Localidad = " + localidad;
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
@@ -63,7 +63,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public void ModificarPersonalPorLegajo(int legajo, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string barrio, string localidad, string usuario)
         {
-            string consulta = "UPDATE PERSONAL SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "', Id_Barrio = " + barrio + ", Id_Localidad = " + localidad + ", Id_Usuario = " + usuario + " WHERE Legajo = " + legajo;
+            string consulta = "UPDATE PERSONAL SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "', Id_Barrio = " + barrio + ", Id_Usuario = " + usuario + " WHERE Legajo = " + legajo;
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
@@ -77,8 +77,8 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public DataTable RecuperarPersonalPorLegajo(int legajo)
         {
-            string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Nombre_Usuario as Usuario, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad " +
-                "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on p.Id_Localidad = l.Id_Localidad " +
+            string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Nombre_Usuario as Usuario, u.Id_Usuario, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad, b.Id_Barrio, l.Id_Localidad " +
+                "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on b.Id_Localidad = l.Id_Localidad " +
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
                 "WHERE p.Borrado = 0 AND p.Legajo = " + legajo;
 

@@ -4,6 +4,10 @@
 
     partial class DataSetGeneral
     {
+        partial class dtArtMasVendidoDataTable
+        {
+        }
+
         partial class dtVentasXEmpleadoDataTable
         {
         }
