@@ -157,5 +157,22 @@ namespace Proyecto_PAVI2021.Datos.Daos
             consulta += " GROUP BY P.Legajo, P.Apellido, P.Nombre";
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
+
+        public DataTable RecuperarArtMasVendido(string desde, string hasta, string nombre, string marca)
+        {
+            string consulta = "SELECT TOP 10 m.Id_Material, m.Nombre, ms.Descripcion as Marca, SUM(dfv.Cantidad_Vendida) as Cantidad, SUM(dfv.Precio_Venta * dfv.Cantidad_Vendida) as TotalVentas " +
+                "FROM MATERIALES m JOIN MARCAS ms on m.Id_Marca = ms.Id_Marca JOIN DETALLE_FACTURA_VENTAS dfv on m.Id_Material = dfv.Id_Material " +
+                "JOIN FACTURA_VENTA fv on fv.Id_Factura = dfv.Id_Factura " +
+                "WHERE m.Borrado = 0 AND dfv.Borrado = 0 " +
+                "AND fv.Fecha_Factura BETWEEN CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT(DateTime, '" + hasta + "', 103)";
+
+            if (!string.IsNullOrEmpty(nombre))
+                consulta += " AND m.Nombre LIKE '%" + nombre + "%'";
+            if (!string.IsNullOrEmpty(marca))
+                consulta += " AND ms.Descripcion LIKE '" + marca + "'";
+            consulta += " GROUP BY m.Id_Material, m.Nombre, ms.Descripcion ";
+            return BDHelper.obtenerInstancia().consultar(consulta);
+
+        }
     }
 }

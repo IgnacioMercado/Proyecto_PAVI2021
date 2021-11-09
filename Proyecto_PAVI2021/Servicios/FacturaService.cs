@@ -45,6 +45,11 @@ namespace Proyecto_PAVI2021.Servicios
             return oFacturaDao.RecuperarVentasXEmpleado(desde, hasta, nombre, apellido, alta_desde, alta_hasta);
         }
 
+        internal DataTable RecuperarArtMasVendido(string desde, string hasta, string nombre, string marca)
+        {
+            return oFacturaDao.RecuperarArtMasVendido(desde, hasta, nombre, marca);
+        }
+
         //------------------------------FACTURA COMPRA ------------------------//
         internal bool Crear(FacturaCompra factura)
         {

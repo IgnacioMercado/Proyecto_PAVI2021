@@ -24,19 +24,19 @@ namespace Proyecto_PAVI2021.Servicios
         }
 
 
-        public DataTable RecuperarFiltrados(string descripcion)
+        public DataTable RecuperarFiltrados(string descripcion, string id_localidad)
         {
-            return dao.RecuperarFiltrados(descripcion);
+            return dao.RecuperarFiltrados(descripcion, id_localidad);
         }
 
-        public void RegistrarBarrio(string descripcion)
+        public void RegistrarBarrio(string descripcion, string id_localidad)
         {
-            dao.RegistrarBarrio(descripcion);
+            dao.RegistrarBarrio(descripcion, id_localidad);
         }
 
-        public void ModificarBarrioPorId(int id_barrio, string descripcion)
+        public void ModificarBarrioPorId(int id_barrio, string descripcion, string id_localidad)
         {
-            dao.ModificarBarrioPorId(id_barrio, descripcion);
+            dao.ModificarBarrioPorId(id_barrio, descripcion, id_localidad);
         }
 
         public void EliminarBarrio(int id_barrio)
@@ -47,6 +47,11 @@ namespace Proyecto_PAVI2021.Servicios
         public DataTable RecuperarPorLocalidad(int id_localidad)
         {
             return dao.RecuperarPorLocalidad(id_localidad);
+        }
+        
+        public DataTable RecuperarBarrioPorId(int id_barrio)
+        {
+            return dao.RecuperarBarrioPorId(id_barrio);
         }
     }
 }

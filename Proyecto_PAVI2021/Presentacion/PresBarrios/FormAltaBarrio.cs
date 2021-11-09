@@ -29,15 +29,17 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             string descripcion;
+            descripcion = string.Empty;
+            
             descripcion = txtNombre.Text;
 
-            if (descripcion == "")
+            if (descripcion == "" || cmbLocalidad.SelectedIndex == -1)
             {
                 MessageBox.Show("Por favor, complete todos los campos antes registrar el barrio");
             }
             else
             {
-                oBarrio.RegistrarBarrio(descripcion);
+                oBarrio.RegistrarBarrio(descripcion, cmbLocalidad.SelectedValue.ToString()); ;
                 MessageBox.Show("Barrio registrado");
                 this.Close();
             }
@@ -45,15 +47,14 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
 
         private void FormAltaBarrio_Load(object sender, EventArgs e)
         {
-            this.CargarCombo(cmbLocalidad, oLocalidad.RecuperarTodos());
+            this.LlenarComboConLista(cmbLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
         }
-        private void CargarCombo(ComboBox combo, DataTable tabla)
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
         {
-            combo.DataSource = tabla;
-            combo.DisplayMember = tabla.Columns[1].ColumnName;
-            combo.ValueMember = tabla.Columns[0].ColumnName;
-            combo.SelectedIndex = -1;
-            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
     }
 }

@@ -51,9 +51,9 @@ namespace Proyecto_PAVI2021.Datos.Daos
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
 
-        public void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura)
+        public void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string id_barrio)
         {
-            string consulta = "UPDATE CLIENTES SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "' WHERE Id_Cliente = " + id_cliente;
+            string consulta = "UPDATE CLIENTES SET Nombre = '" + nombre + "', Apellido = '" + apellido + "', Telefono = '" + telefono + "', Tipo_Doc = '" + tipo_doc + "', Nro_Doc = '" + nro_doc + "', Calle = '" + calle + "', Nro_Calle = '" + altura + "', Id_Barrio = " + id_barrio + "' WHERE Id_Cliente = " + id_cliente;
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }

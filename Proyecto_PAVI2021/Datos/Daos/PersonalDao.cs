@@ -54,9 +54,9 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public void RegistrarPersonal(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string id_barrio, string id_localidad, string id_usuario)
         {
-            string consulta = "INSERT INTO PERSONAL (Tipo_Doc, Nro_Doc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Id_Barrio, Id_Localidad, Id_Usuario) " +
+            string consulta = "INSERT INTO PERSONAL (Tipo_Doc, Nro_Doc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Id_Barrio, Id_Usuario, Borrado) " +
                               "VALUES ('" + tipo_doc + "', '" + nro_doc + "', '" + nombre + "', '" + apellido + "', '" + telefono + "', '" + calle + "', '" + altura
-                              + "', " + id_barrio + ", " + id_localidad + ", " + id_usuario + ")";
+                              + "', " + id_barrio + ", " + id_usuario + ", 0)";
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
@@ -82,6 +82,12 @@ namespace Proyecto_PAVI2021.Datos.Daos
                 "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
                 "WHERE p.Borrado = 0 AND p.Legajo = " + legajo;
 
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+
+        public DataTable validarUnicoUsuario(int id_usuario)
+        {
+            string consulta = "SELECT * FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario WHERE p.Borrado = 0 AND p.Id_Usuario = " + id_usuario;
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }

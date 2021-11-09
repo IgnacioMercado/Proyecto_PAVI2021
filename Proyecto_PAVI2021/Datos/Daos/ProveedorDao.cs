@@ -42,8 +42,8 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public void RegistrarProveedor(string nombre, string telefono, string cuit, string calle, string altura, int id_barrio, int id_localidad)
         {
-            string consulta = "INSERT INTO PROVEEDORESS (Nombre, Apellido, Telefono, Calle, Nro_Calle,Id_Barrio,Id_Localidad) " +
-                              "VALUES ('" + nombre + "', '" + telefono + "', '" + calle + "', '" + altura + "', " + id_barrio + ", " +id_localidad+")";
+            string consulta = "INSERT INTO PROVEEDORESS (Nombre, Apellido, Telefono, Calle, Nro_Calle,Id_Barrio) " +
+                              "VALUES ('" + nombre + "', '" + telefono + "', '" + calle + "', '" + altura + "', " + id_barrio + ")";
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }
@@ -51,7 +51,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
         public void ModificarProveedorPorId(int id, string nombre, string telefono, string cuit, string calle, string altura, int id_barrio, int id_localidad)
         {
             string consulta = "UPDATE CLIENTES SET Nombre = '" + nombre + "', Telefono = '" + telefono + "', CUIT = '" + cuit + "', Calle = '" + calle + "', Nro_Calle = '" 
-                                + altura +"', Id_Barrio = " + id_barrio+ ", Id_Localidad = " + id_localidad + " WHERE Id_Proveedor = " + id;
+                                + altura +"', Id_Barrio = " + id_barrio + " WHERE Id_Proveedor = " + id;
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }

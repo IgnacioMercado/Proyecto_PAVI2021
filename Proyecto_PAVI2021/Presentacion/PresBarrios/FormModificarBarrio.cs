@@ -16,6 +16,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
     {
         private int id_barrio;
         BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
 
         public FormModificarBarrio()
         {
@@ -37,16 +38,39 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
         {
             string descripcion;
             descripcion = txtNombre.Text.ToString();
-            if (descripcion == "")
+            if (descripcion == "" || cmbLocalidad.SelectedIndex == -1)
             {
                 MessageBox.Show("Por favor, complete el campo antes de intentar modificar el barrio");
             }
             else
             {
-                oBarrio.ModificarBarrioPorId(id_barrio, descripcion);
+                oBarrio.ModificarBarrioPorId(id_barrio, descripcion, cmbLocalidad.SelectedValue.ToString());
                 MessageBox.Show("Barrio modificado");
                 this.Close();
             }
+        }
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void CargarComboDatosPrevios()
+        {
+            DataTable tabla = oBarrio.RecuperarBarrioPorId(id_barrio);
+            cmbLocalidad.SelectedValue = tabla.Rows[0]["Id_Localidad"].ToString();
+        }
+
+        private void FormModificarBarrio_Load(object sender, EventArgs e)
+        {
+            this.LlenarComboConLista(cmbLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
+            this.CargarComboDatosPrevios();
         }
     }
 }

@@ -15,9 +15,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
     public partial class FormModificarPersonal : Form
     {
         private int legajo;
-        private string id_barrio;
-        private string id_localidad;
-        private string id_usuario;
+        private string usuario_previo;
+
 
         PersonalService oPersonal = new PersonalService();
         BarrioService oBarrio = new BarrioService();
@@ -74,6 +73,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.LlenarComboConLista(cmbBarrios, oBarrio.RecuperarPorLocalidad(Convert.ToInt32(tabla.Rows[0]["Id_Barrio"].ToString())), "Descripcion", "Id_Barrio");
             this.LlenarComboConLista(cmbUsuarios, oUsuario.RecuperarTodos(), "Nombre_Usuario", "Id_Usuario");
             this.cmbUsuarios.SelectedValue = tabla.Rows[0]["Id_Usuario"].ToString();
+            this.usuario_previo = cmbUsuarios.Text;
             this.cmbBarrios.SelectedValue = tabla.Rows[0]["Id_Barrio"].ToString();
             this.cmbLocalidades.SelectedValue = tabla.Rows[0]["Id_Localidad"].ToString();
 
@@ -104,9 +104,18 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             }
             else
             {
-                oPersonal.ModificarPersonalPorLegajo(legajo, nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
-                MessageBox.Show("Empleado modificado");
-                this.Close();
+                if (oPersonal.validarUnicoUsuario((int)cmbUsuarios.SelectedValue).Rows.Count == 0 || cmbUsuarios.Text == usuario_previo)
+                {
+                    oPersonal.ModificarPersonalPorLegajo(legajo, nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
+                    MessageBox.Show("Empleado modificado");
+                    this.Close();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("El usuario elegido ya se encuentra en uso", "Error eleccion usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
         }
     
@@ -132,6 +141,11 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
         }
 
         private void cmbBarrios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

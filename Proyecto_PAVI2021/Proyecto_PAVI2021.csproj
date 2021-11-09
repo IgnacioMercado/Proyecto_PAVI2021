@@ -260,6 +260,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetGeneral.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FormReporteArtMasVendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteArtMasVendido.Designer.cs">
+      <DependentUpon>FormReporteArtMasVendido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\FormReporteComprasXProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +376,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\FormReporteArtMasVendido.resx">
+      <DependentUpon>FormReporteArtMasVendido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FormReporteComprasXProveedor.resx">
       <DependentUpon>FormReporteComprasXProveedor.cs</DependentUpon>
     </EmbeddedResource>

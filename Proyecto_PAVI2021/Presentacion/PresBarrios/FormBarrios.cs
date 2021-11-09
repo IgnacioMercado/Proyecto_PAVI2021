@@ -16,6 +16,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
     public partial class FormBarrios : Form
     {
         BarrioService oBarrio = new BarrioService();
+        LocalidadService oLocalidad = new LocalidadService();
         public FormBarrios()
         {
             InitializeComponent();
@@ -27,13 +28,22 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 grilla.Rows.Add(tabla.Rows[i]["Id_Barrio"],
-                    tabla.Rows[i]["Descripcion"]);
+                    tabla.Rows[i]["Descripcion"],
+                    tabla.Rows[i]["Localidad"]);
             }    
         }
 
         private void FormBarrios_Load(object sender, EventArgs e)
         {
+            this.LlenarComboConLista(cmbLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
             this.CargarGrilla(dgvBarrios, oBarrio.RecuperarTodos());
+        }
+        private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.ValueMember = value;
+            cbo.DisplayMember = display;
+            cbo.SelectedIndex = -1;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -57,7 +67,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             if (txtNombre.Text != "")
                 descripcion = txtNombre.Text;
 
-            this.CargarGrilla(dgvBarrios, oBarrio.RecuperarFiltrados(descripcion));
+            this.CargarGrilla(dgvBarrios, oBarrio.RecuperarFiltrados(descripcion, cmbLocalidad.SelectedValue.ToString()));
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -85,5 +95,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.Hide();
             FormPrincipal ventana = new FormPrincipal();
         }
+
     }
 }

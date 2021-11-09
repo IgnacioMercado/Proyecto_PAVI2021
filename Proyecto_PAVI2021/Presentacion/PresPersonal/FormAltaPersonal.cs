@@ -76,9 +76,17 @@ namespace Proyecto_PAVI2021.Presentacion
             }
             else
             {
-                oPersonal.RegistrarPersonal(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
-                MessageBox.Show("Empleado registrado");
-                this.Close();
+                if (oPersonal.validarUnicoUsuario((int)cmbUsuarios.SelectedValue).Rows.Count != 0)
+                {
+                    MessageBox.Show("El usuario elegido ya se encuentra en uso", "Error eleccion usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    oPersonal.RegistrarPersonal(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, barrio, localidad, usuario);
+                    MessageBox.Show("Empleado registrado");
+                    this.Close();
+                }
+
             }
         }
 

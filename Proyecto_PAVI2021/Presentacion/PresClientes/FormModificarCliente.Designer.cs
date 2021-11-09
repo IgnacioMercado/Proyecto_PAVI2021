@@ -54,6 +54,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             this.btnModificar1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbLocalidades = new System.Windows.Forms.ComboBox();
+            this.cmbBarrios = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -75,13 +79,17 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.cmbLocalidades);
+            this.panel3.Controls.Add(this.cmbBarrios);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.txtAltura);
             this.panel3.Controls.Add(this.txtCalle);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(13, 179);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(269, 58);
+            this.panel3.Size = new System.Drawing.Size(574, 58);
             this.panel3.TabIndex = 33;
             // 
             // label13
@@ -300,6 +308,43 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(278, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "Localidad";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(421, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 16);
+            this.label7.TabIndex = 68;
+            this.label7.Text = "Barrio";
+            // 
+            // cmbLocalidades
+            // 
+            this.cmbLocalidades.FormattingEnabled = true;
+            this.cmbLocalidades.Location = new System.Drawing.Point(279, 27);
+            this.cmbLocalidades.Name = "cmbLocalidades";
+            this.cmbLocalidades.Size = new System.Drawing.Size(121, 21);
+            this.cmbLocalidades.TabIndex = 67;
+            this.cmbLocalidades.SelectionChangeCommitted += new System.EventHandler(this.cmbLocalidades_SelectionChangeCommitted);
+            // 
+            // cmbBarrios
+            // 
+            this.cmbBarrios.FormattingEnabled = true;
+            this.cmbBarrios.Location = new System.Drawing.Point(424, 27);
+            this.cmbBarrios.Name = "cmbBarrios";
+            this.cmbBarrios.Size = new System.Drawing.Size(121, 21);
+            this.cmbBarrios.TabIndex = 66;
+            // 
             // FormModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,5 +397,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
         private System.Windows.Forms.Button btnModificar1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbLocalidades;
+        private System.Windows.Forms.ComboBox cmbBarrios;
     }
 }

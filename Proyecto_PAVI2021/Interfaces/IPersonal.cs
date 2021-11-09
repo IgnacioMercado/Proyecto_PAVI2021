@@ -15,5 +15,6 @@ namespace Proyecto_PAVI2021.Interfaces
         void ModificarPersonalPorLegajo(int legajo, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string barrio, string localidad, string usuario);
         void BorrarPersonal(int Legajo);
         DataTable RecuperarPersonalPorLegajo(int legajo);
+        DataTable validarUnicoUsuario(int id_usuario);
     }
 }

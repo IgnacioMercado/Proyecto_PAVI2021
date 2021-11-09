@@ -18,7 +18,7 @@ namespace Proyecto_PAVI2021.Interfaces
         void RegistrarCliente(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string fecha_alta, string barrio);
 
 
-        void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura);
+        void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string id_barrio);
 
 
         void BorrarCliente(int idCliente);

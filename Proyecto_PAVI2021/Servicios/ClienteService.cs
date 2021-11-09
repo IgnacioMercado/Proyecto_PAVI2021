@@ -33,9 +33,9 @@ namespace Proyecto_PAVI2021.Servicios
             dao.RegistrarCliente(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, fecha_alta, barrio);
         }
 
-        public void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura)
+        public void ModificarClientePorId(int id_cliente, string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string id_barrio)
         {
-            dao.ModificarClientePorId(id_cliente, nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura);
+            dao.ModificarClientePorId(id_cliente, nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, id_barrio);
         }
 
         public void BorrarCliente(int idCliente)

@@ -47,5 +47,10 @@ namespace Proyecto_PAVI2021.Servicios
         {
             return dao.RecuperarPersonalPorLegajo(legajo);
         }
+
+        public DataTable validarUnicoUsuario (int id_usuario)
+        {
+            return dao.validarUnicoUsuario(id_usuario);
+        }
     }
 }

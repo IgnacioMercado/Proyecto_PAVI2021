@@ -120,6 +120,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(899, 278);
             this.panel4.TabIndex = 69;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel5
             // 
