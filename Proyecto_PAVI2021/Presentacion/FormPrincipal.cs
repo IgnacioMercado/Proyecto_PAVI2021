@@ -25,8 +25,7 @@ namespace Proyecto_PAVI2021
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
-        {
-            /*
+        {            
             frmLogin fl;
             fl = new frmLogin();
             fl.ShowDialog();
@@ -36,8 +35,7 @@ namespace Proyecto_PAVI2021
             else
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
 
-            fl.Dispose();
-            */
+            fl.Dispose();            
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,20 +85,16 @@ namespace Proyecto_PAVI2021
             faf.ShowDialog();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCompras fcompras = new FormCompras();
             fcompras.ShowDialog();
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormReporteVentas frv = new FormReporteVentas();
+            frv.ShowDialog();
         }
 
         private void comprasPorProveedorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,7 +103,7 @@ namespace Proyecto_PAVI2021
             frcxp.ShowDialog();
         }
 
-        private void informesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ventasPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormReporteVentasXCliente frvxc = new FormReporteVentasXCliente();
             frvxc.ShowDialog();
@@ -119,6 +113,6 @@ namespace Proyecto_PAVI2021
         {
             FormReporteVentasXE frvxe = new FormReporteVentasXE();
             frvxe.ShowDialog();
-        }
+        }        
     }
 }

@@ -36,6 +36,11 @@ namespace Proyecto_PAVI2021.Servicios
             return true;
         }
 
+        internal DataTable RecuperarVentas(string desde, string hasta, string nombreC, string apellidoC, string nombreE, string apellidoE)
+        {
+            return oFacturaDao.RecuperarVentas(desde, hasta, nombreC, apellidoC, nombreE, apellidoE);
+        }
+
         internal DataTable RecuperarVentasXCliente(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
         {
             return oFacturaDao.RecuperarVentasXCliente(desde, hasta, nombre, apellido, alta_desde, alta_hasta);
@@ -48,7 +53,7 @@ namespace Proyecto_PAVI2021.Servicios
         internal DataTable RecuperarArtMasVendido(string desde, string hasta, string nombre, string marca)
         {
             return oFacturaDao.RecuperarArtMasVendido(desde, hasta, nombre, marca);
-        }
+        }        
 
         //------------------------------FACTURA COMPRA ------------------------//
         internal bool Crear(FacturaCompra factura)

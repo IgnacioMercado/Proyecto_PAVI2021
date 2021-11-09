@@ -21,7 +21,7 @@ namespace Proyecto_PAVI2021
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormPrincipal());
-            //Application.Run(new FormReporteVentasXE());
+            //Application.Run(new FormReporteVentas());
         }
     }
 }

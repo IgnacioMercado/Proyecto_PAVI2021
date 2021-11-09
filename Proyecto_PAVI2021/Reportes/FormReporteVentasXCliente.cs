@@ -22,15 +22,15 @@ namespace Proyecto_PAVI2021.Reportes
         private void FormReporteVentasXCliente_Load(object sender, EventArgs e)
         {
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-2);
-            this.dtpFechaHasta.Value = DateTime.Today.AddDays(1);
+            this.dtpFechaHasta.Value = DateTime.Today;
             this.dtpFechaAltaDesde.Value = DateTime.Today.AddYears(-2);
-            this.dtpFechaAltaHasta.Value = DateTime.Today.AddDays(1);
+            this.dtpFechaAltaHasta.Value = DateTime.Today;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             string desde, hasta, nombre, apellido, alta_desde, alta_hasta;
-            desde = hasta = nombre = apellido = alta_desde = alta_hasta = string.Empty;
+            nombre = apellido = alta_desde = alta_hasta = string.Empty;
 
             if (dtpFechaDesde.Value > dtpFechaHasta.Value)
             {
@@ -71,16 +71,6 @@ namespace Proyecto_PAVI2021.Reportes
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

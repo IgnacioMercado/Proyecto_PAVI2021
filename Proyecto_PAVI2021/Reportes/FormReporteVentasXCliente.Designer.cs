@@ -99,7 +99,6 @@ namespace Proyecto_PAVI2021.Reportes
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label6
             // 
@@ -259,7 +258,6 @@ namespace Proyecto_PAVI2021.Reportes
             this.label7.Size = new System.Drawing.Size(70, 15);
             this.label7.TabIndex = 57;
             this.label7.Text = "Volver Atrás";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // btnAtras
             // 

@@ -120,6 +120,31 @@ namespace Proyecto_PAVI2021.Datos.Daos
             return true;
         }
 
+        public DataTable RecuperarVentas(string desde, string hasta, string nombreC, string apellidoC, string nombreE, string apellidoE)
+        {
+            string consulta = "SELECT FV.Id_Factura, FV.Tipo_Factura, CONCAT(C.Nombre, ' ', C.Apellido) as Cliente, FV.Fecha_Factura, " +
+                              "CONCAT(P.Nombre, ' ', P.Apellido) Empleado, SUM(DFV.Cantidad_Vendida*DFV.Precio_Venta) Monto " +
+                              "FROM FACTURA_VENTA FV " +
+                              "JOIN CLIENTES C ON(FV.Id_Cliente = C.Id_Cliente) " +
+                              "JOIN PERSONAL P ON(FV.Legajo_Empleado= P.Legajo) " +
+                              "JOIN DETALLE_FACTURA_VENTAS DFV ON(FV.Id_Factura= DFV.Id_Factura) " +
+                              "WHERE C.Borrado = 0 AND FV.Borrado = 0 AND DFV.Borrado = 0 " +
+                              "AND FV.Fecha_Factura BETWEEN CONVERT(DateTime, '" + desde + "', 103)  AND CONVERT(DateTime, '" + hasta + "', 103)";
+
+            if (!string.IsNullOrEmpty(nombreC))
+                consulta += " AND C.Nombre LIKE '%" + nombreC + "%'";
+            if (!string.IsNullOrEmpty(apellidoC))
+                consulta += " AND C.Apellido LIKE '%" + apellidoC + "%'";
+            if (!string.IsNullOrEmpty(nombreE))
+                consulta += " AND P.Nombre LIKE '%" + nombreE + "%'";
+            if (!string.IsNullOrEmpty(apellidoE))
+                consulta += " AND P.Apellido LIKE '%" + apellidoE + "%'";
+
+            consulta += " GROUP BY FV.Id_Factura, FV.Tipo_Factura, C.Nombre, C.Apellido, FV.Fecha_Factura, P.Nombre, P.Apellido" +
+                        " ORDER BY FV.Fecha_Factura DESC";
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+
         public DataTable RecuperarVentasXCliente(string desde, string hasta, string nombre, string apellido, string alta_desde, string alta_hasta)
         {
             string consulta = "SELECT C.Id_Cliente, C.Apellido, C.Nombre, C.Fecha_Alta, COUNT(DISTINCT FV.Id_Factura) as Total_Ventas, SUM(DFV.Cantidad_Vendida*DFV.Precio_Venta) as Total_Vendido " +
@@ -172,7 +197,6 @@ namespace Proyecto_PAVI2021.Datos.Daos
                 consulta += " AND ms.Descripcion LIKE '" + marca + "'";
             consulta += " GROUP BY m.Id_Material, m.Nombre, ms.Descripcion ";
             return BDHelper.obtenerInstancia().consultar(consulta);
-
         }
     }
 }
