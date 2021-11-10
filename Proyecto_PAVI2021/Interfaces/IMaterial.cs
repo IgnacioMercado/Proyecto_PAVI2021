@@ -13,5 +13,7 @@ namespace Proyecto_PAVI2021.Interfaces
         IList<Material> GetAll();
         DataTable RecuperarMaterialYMarcaPorId(int id_material);
         IList<Material> GetAllByMarcaId(int id_marca);
+        DataTable ObtenerFiltrados(string nombre, string id_marca);
+        void RegistrarMaterial(string nombre, string id_marca, string precio);
     }
 }

@@ -44,6 +44,28 @@ namespace Proyecto_PAVI2021.Datos.Daos
             return listadoMateriales;
         }
 
+        public DataTable ObtenerFiltrados(string nombre, string id_marca)
+        {
+            string consulta = "SELECT m.Id_Material, m.Nombre, ms.Descripcion, m.Id_Lote, m.Stock, m.Precio FROM MATERIALES m JOIN MARCAS ms on m.Id_Marca = ms.Id_Marca WHERE m.Borrado = 0 ";
+
+            if (!string.IsNullOrEmpty(nombre))
+                consulta += " AND m.Nombre LIKE '%" + nombre + "%'";
+            if (!string.IsNullOrEmpty(id_marca))
+                consulta += " AND m.Id_Marca = " + id_marca;
+
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+
+        }
+
+        public void RegistrarMaterial(string nombre, string id_marca, string precio)
+        {
+            string consulta = "INSERT INTO MATERIALES (Nombre, Stock, Id_Marca, Precio, Borrado) " +
+                "VALUES ('" + nombre + "', 0, " + id_marca + ", " + precio + ", 0)";
+
+            BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
+        }
+
 
 
         public DataTable RecuperarMaterialYMarcaPorId(int id_material)
