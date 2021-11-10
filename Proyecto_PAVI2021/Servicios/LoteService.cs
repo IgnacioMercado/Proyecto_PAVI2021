@@ -19,11 +19,6 @@ namespace Proyecto_PAVI2021.Servicios
             dao = new LoteDao();
         }
 
-        public IList<Lote> GetConfirmed()
-        {
-            return dao.GetConfirmed();
-        }
-
         public IList<Lote> GetConfirmedFilteredByMaterial(int id_material)
         {
             return dao.GetConfirmedFilteredByMaterial(id_material);
@@ -37,6 +32,16 @@ namespace Proyecto_PAVI2021.Servicios
         public void RegistrarLote(string articulo, string cantidad, string legajo, string fecha)
         {
             dao.RegistrarLote(articulo, cantidad, legajo, fecha);
+        }
+
+        public void confirmarLote(string id, string cantidad)
+        {
+            dao.confirmarLote(id, cantidad);
+        }
+
+        internal DataTable ObtenerTodos()
+        {
+            return dao.ObtenerTodos();
         }
     }
 }

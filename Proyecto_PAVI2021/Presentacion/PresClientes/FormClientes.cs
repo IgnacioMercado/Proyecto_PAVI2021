@@ -31,8 +31,7 @@ namespace Proyecto_PAVI2021.Presentacion
         private void FormClientes_Load(object sender, EventArgs e)
         {
             this.CargarGrilla(dgvClientes, oCliente.RecuperarTodos());
-            this.LlenarComboConLista(cmbLocalidades, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");
-            
+            this.LlenarComboConLista(cmbLocalidades, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");            
 
             if (this.modo == "seleccionar")
             {

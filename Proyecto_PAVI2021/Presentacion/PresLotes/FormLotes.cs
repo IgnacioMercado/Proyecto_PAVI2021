@@ -17,8 +17,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
         MarcaService oMarca = new MarcaService();
         PersonalService oPersonal = new PersonalService();
         LoteService oLote = new LoteService();
-
-
+        private List<string> listaConfirmacion = new List<string> { "Sin Confirmar", "Confirmado" };
+        
         public FormLotes()
         {
             InitializeComponent();
@@ -30,9 +30,11 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.LlenarComboConLista(cmbEmpleado, oPersonal.RecuperarTodosConcat(), "NombreCompleto", "Legajo");
             this.dtpDesde.Value = DateTime.Today.AddYears(-1);
             this.dtpHasta.Value = DateTime.Today;
-            cmbConfirmado.SelectedIndex = 0;
-
-
+            this.cmbConfirmado.DataSource = listaConfirmacion;
+            this.cmbConfirmado.SelectedIndex = -1;
+            this.btnConfirmar.Enabled = false;
+            
+            this.CargarGrilla(dgvLotes, oLote.ObtenerTodos());
         }
 
         private void LlenarComboConLista(ComboBox cbo, Object source, string display, String value)
@@ -54,28 +56,23 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             grilla.Rows.Clear();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
-                grilla.Rows.Add(tabla.Rows[i]["Id_Lote"],
-                    tabla.Rows[i]["NombreCompleto"],
-                    tabla.Rows[i]["Nombre"],
-                    tabla.Rows[i]["Descripcion"],
-                    tabla.Rows[i]["Stock_Lote"],
-                    Convert.ToDateTime(tabla.Rows[i]["Fecha_Lote"]).ToShortDateString()
-                    ); 
-            }
-        }
+                string confirmacion;
+                if (tabla.Rows[i]["Confirmacion_Lote"].ToString() == "True")
+                {
+                    confirmacion = "Confirmado";
+                }
+                else
+                {
+                    confirmacion = "Sin Confirmar";
+                }
 
-        private void CargarGrillaNC(DataGridView grilla, DataTable tabla)
-        {
-            grilla.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
                 grilla.Rows.Add(tabla.Rows[i]["Id_Lote"],
-                    tabla.Rows[i]["NombreCompleto"],
-                    tabla.Rows[i]["Nombre"],
-                    tabla.Rows[i]["Descripcion"],
-                    tabla.Rows[i]["Cantidad_Fabricada"],
-                    Convert.ToDateTime(tabla.Rows[i]["Fecha_Lote"]).ToShortDateString()
-                    );
+                                tabla.Rows[i]["NombreCompleto"],
+                                tabla.Rows[i]["Nombre"],
+                                tabla.Rows[i]["Descripcion"],
+                                tabla.Rows[i]["Cantidad_Fabricada"],
+                                Convert.ToDateTime(tabla.Rows[i]["Fecha_Lote"]).ToShortDateString(),
+                                confirmacion);
             }
         }
 
@@ -91,36 +88,46 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
                 legajo = cmbEmpleado.SelectedValue.ToString();
             if (cmbArticulo.SelectedIndex != -1)
                 articulo = cmbArticulo.SelectedValue.ToString();
-            if (cmbConfirmado.Text == "Confirmado")
-            {
-                confirmacion = "1";
-            }
-            else
-            {
-                confirmacion = "0";
-            }
+            if (cmbConfirmado.SelectedIndex != -1)
+                confirmacion = cmbConfirmado.SelectedIndex.ToString();
 
-            if(confirmacion == "1")
-            {
-                this.CargarGrilla(dgvLotes, oLote.ObtenerFiltrados(articulo, legajo, confirmacion, desde, hasta));
-            }
-            else
-            {
-                this.CargarGrillaNC(dgvLotes, oLote.ObtenerFiltrados(articulo, legajo, confirmacion, desde, hasta));
-            }
-            
-
+            this.CargarGrilla(dgvLotes, oLote.ObtenerFiltrados(articulo, legajo, confirmacion, desde, hasta));
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormRegistrarLote frl = new FormRegistrarLote();
             frl.ShowDialog();
+
+            this.CargarGrilla(dgvLotes, oLote.ObtenerTodos());
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvLotes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvLotes.CurrentRow.Cells[colConfirmacion.Index].Value.ToString() == "Sin Confirmar")
+            {
+                this.btnConfirmar.Enabled = true;
+            }
+            else
+            {
+                this.btnConfirmar.Enabled = false;
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string id, cantidad;
+            id = dgvLotes.CurrentRow.Cells[colId.Index].Value.ToString();
+            cantidad = dgvLotes.CurrentRow.Cells[colCantidad.Index].Value.ToString();
+            oLote.confirmarLote(id, cantidad);
+
+            MessageBox.Show("Lote confirmado");
+            this.CargarGrilla(dgvLotes, oLote.ObtenerTodos());
         }
     }
 }

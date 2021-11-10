@@ -22,7 +22,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
         public double Total;
         ClienteService oClienteSeleccionado = new ClienteService();
         private BindingList<PagoPorFactura> listaPagosPorFactura;
-        private List<string> TiposFactura = new List<string> { "A", "B", "C" };        
+        private List<string> TiposFactura = new List<string> { "A", "B", "C" };
         private readonly MaterialService materialService;
         private readonly ClienteService clienteService;
         private readonly BindingList<DetalleFactura> listaDetalleFactura;
