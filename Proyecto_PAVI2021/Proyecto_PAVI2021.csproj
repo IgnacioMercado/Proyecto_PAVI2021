@@ -208,6 +208,12 @@
     <Compile Include="Presentacion\PresMarcas\FormModificarMarcas.Designer.cs">
       <DependentUpon>FormModificarMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresMateriales\AltaMaterial2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresMateriales\AltaMaterial2.designer.cs">
+      <DependentUpon>AltaMaterial2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresMateriales\FormMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -386,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresMarcas\FormModificarMarcas.resx">
       <DependentUpon>FormModificarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresMateriales\AltaMaterial2.resx">
+      <DependentUpon>AltaMaterial2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresMateriales\FormMateriales.resx">
       <DependentUpon>FormMateriales.cs</DependentUpon>

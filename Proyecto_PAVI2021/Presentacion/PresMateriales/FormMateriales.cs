@@ -65,5 +65,11 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
                     );
             }
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AltaMaterial2 fam = new AltaMaterial2();
+            fam.ShowDialog();
+        }
     }
 }

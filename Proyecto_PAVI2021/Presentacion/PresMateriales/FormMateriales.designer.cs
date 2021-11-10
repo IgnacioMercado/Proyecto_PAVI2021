@@ -43,10 +43,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateriales)).BeginInit();
             this.SuspendLayout();
@@ -190,16 +190,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
             this.label9.TabIndex = 77;
             this.label9.Text = "Volver Atrás";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
-            this.label3.Location = new System.Drawing.Point(52, 430);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 12);
-            this.label3.TabIndex = 81;
-            this.label3.Text = "Consultar";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -214,22 +204,34 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
-            this.label4.Location = new System.Drawing.Point(178, 433);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(145, 433);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 12);
-            this.label4.TabIndex = 83;
-            this.label4.Text = "Limpiar:";
+            this.label4.Size = new System.Drawing.Size(105, 15);
+            this.label4.TabIndex = 95;
+            this.label4.Text = "Registrar material";
             // 
-            // btnLimpiar
+            // btnAgregar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnLimpiar.Image = global::Proyecto_PAVI2021.Properties.Resources.icons8_borrar_50;
-            this.btnLimpiar.Location = new System.Drawing.Point(162, 371);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(66, 59);
-            this.btnLimpiar.TabIndex = 82;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.DarkKhaki;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
+            this.btnAgregar.Location = new System.Drawing.Point(162, 371);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(66, 59);
+            this.btnAgregar.TabIndex = 94;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 433);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.TabIndex = 96;
+            this.label3.Text = "Consultar";
             // 
             // FormMateriales
             // 
@@ -237,9 +239,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(606, 451);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnAtras);
@@ -272,9 +274,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label3;
     }
 }
