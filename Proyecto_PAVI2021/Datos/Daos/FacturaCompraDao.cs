@@ -75,7 +75,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
                     bd.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
 
                     string sqlLote = "INSERT INTO LOTE ([Fecha_Lote], [Legajo_Empleado], [Confirmacion_Lote], [Stock_Lote], [Id_Material], [Borrado]) " +
-                        "VALUES (" + factura.Fecha + ", " + factura.Legajo_Empleado + ", true, " + itemFactura.Cantidad + ", " + itemFactura.Material.Id_material + ", false)";
+                        "VALUES (" + factura.Fecha + ", " + factura.Legajo_Empleado + ", true, " + itemFactura.Cantidad + ", " + itemFactura.Material.Id_material + ", 0)";
                     
                     
                     bd.EjecutarSQL(sqlLote);

@@ -21,6 +21,18 @@ namespace Proyecto_PAVI2021.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
+        public DataTable RecuperarTodosConcat()
+        {
+            string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, CONCAT_WS(', ', p.Nombre, p.Apellido) NombreCompleto,u.Nombre_Usuario as Usuario, pf.Nombre as Rol, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad " +
+                "FROM PERSONAL p JOIN USUARIOS u on p.Id_Usuario = u.Id_Usuario JOIN BARRIOS b on p.Id_Barrio = b.Id_Barrio JOIN LOCALIDADES l on b.Id_Localidad = l.Id_Localidad " +
+                "JOIN PERFILES pf on u.Id_Perfil = pf.Id_Perfil " +
+                "WHERE p.Borrado = 0";
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+
+
+
         public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string usuario, string barrio, string localidad)
         {
             string consulta = "SELECT p.Legajo, p.Nombre, p.Apellido, u.Nombre_Usuario as Usuario, pf.Nombre as Rol, p.Telefono, p.Tipo_Doc, p.Nro_Doc, p.Calle, p.Nro_Calle, b.Descripcion as Barrio, l.Descripcion as Localidad " +

@@ -172,11 +172,23 @@
     <Compile Include="Presentacion\PresLocalidad\FormLocalidad.designer.cs">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresLotes\FormLotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresLotes\FormLotes.Designer.cs">
+      <DependentUpon>FormLotes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresLotes\FormLotesInfoStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\PresLotes\FormLotesInfoStock.Designer.cs">
       <DependentUpon>FormLotesInfoStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresLotes\FormRegistrarLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresLotes\FormRegistrarLote.Designer.cs">
+      <DependentUpon>FormRegistrarLote.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PresMarcas\FormAltaMarcas.cs">
       <SubType>Form</SubType>
@@ -351,8 +363,14 @@
     <EmbeddedResource Include="Presentacion\PresLocalidad\FormLocalidad.resx">
       <DependentUpon>FormLocalidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresLotes\FormLotes.resx">
+      <DependentUpon>FormLotes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresLotes\FormLotesInfoStock.resx">
       <DependentUpon>FormLotesInfoStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresLotes\FormRegistrarLote.resx">
+      <DependentUpon>FormRegistrarLote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresMarcas\FormAltaMarcas.resx">
       <DependentUpon>FormAltaMarcas.cs</DependentUpon>

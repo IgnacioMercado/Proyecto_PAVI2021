@@ -23,6 +23,11 @@ namespace Proyecto_PAVI2021.Servicios
             return dao.RecuperarTodos();
         }
 
+        public DataTable RecuperarTodosConcat()
+        {
+            return dao.RecuperarTodosConcat();
+        }
+
         public DataTable RecuperarFiltrados(string nombre, string apellido, string telefono, string tipo_doc, string nro_doc, string calle, string altura, string usuario, string barrio, string localidad)
         {
             return dao.RecuperarFiltrados(nombre, apellido, telefono, tipo_doc, nro_doc, calle, altura, usuario, barrio, localidad);
