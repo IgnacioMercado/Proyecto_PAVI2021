@@ -46,7 +46,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public DataTable ObtenerFiltrados(string nombre, string id_marca)
         {
-            string consulta = "SELECT m.Id_Material, m.Nombre, ms.Descripcion, m.Id_Lote, m.Stock, m.Precio FROM MATERIALES m JOIN MARCAS ms on m.Id_Marca = ms.Id_Marca WHERE m.Borrado = 0 ";
+            string consulta = "SELECT m.Id_Material, m.Nombre, ms.Descripcion, m.Stock, m.Precio FROM MATERIALES m JOIN MARCAS ms on m.Id_Marca = ms.Id_Marca WHERE m.Borrado = 0 ";
 
             if (!string.IsNullOrEmpty(nombre))
                 consulta += " AND m.Nombre LIKE '%" + nombre + "%'";

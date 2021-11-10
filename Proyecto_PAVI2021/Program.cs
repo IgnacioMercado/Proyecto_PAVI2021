@@ -4,6 +4,7 @@ using Proyecto_PAVI2021.Presentacion.PresCompras;
 using Proyecto_PAVI2021.Presentacion.PresFactura;
 using Proyecto_PAVI2021.Presentacion.PresLotes;
 using Proyecto_PAVI2021.Presentacion.PresMarcas;
+using Proyecto_PAVI2021.Presentacion.PresMateriales;
 using Proyecto_PAVI2021.Reportes;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace Proyecto_PAVI2021
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormMateriales());
         }
     }
 }
