@@ -31,10 +31,15 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbLocalidad = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvBarrios = new System.Windows.Forms.DataGridView();
+            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -45,11 +50,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLocalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbLocalidad = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarrios)).BeginInit();
@@ -77,6 +77,24 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(574, 54);
             this.panel2.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(165, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "Localidad";
+            // 
+            // cmbLocalidad
+            // 
+            this.cmbLocalidad.FormattingEnabled = true;
+            this.cmbLocalidad.Location = new System.Drawing.Point(168, 26);
+            this.cmbLocalidad.Name = "cmbLocalidad";
+            this.cmbLocalidad.Size = new System.Drawing.Size(121, 21);
+            this.cmbLocalidad.TabIndex = 70;
             // 
             // label3
             // 
@@ -126,6 +144,29 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.dgvBarrios.TabIndex = 0;
             this.dgvBarrios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarrios_CellContentClick);
             // 
+            // colIdUsuario
+            // 
+            this.colIdUsuario.HeaderText = "#";
+            this.colIdUsuario.MinimumWidth = 6;
+            this.colIdUsuario.Name = "colIdUsuario";
+            this.colIdUsuario.ReadOnly = true;
+            this.colIdUsuario.Width = 40;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 240;
+            // 
+            // colLocalidad
+            // 
+            this.colLocalidad.HeaderText = "Localidad";
+            this.colLocalidad.Name = "colLocalidad";
+            this.colLocalidad.ReadOnly = true;
+            this.colLocalidad.Width = 240;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -153,7 +194,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.btnAgregar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 362);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 359);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(63, 59);
             this.btnAgregar.TabIndex = 59;
@@ -232,47 +273,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.label11.Size = new System.Drawing.Size(87, 12);
             this.label11.TabIndex = 67;
             this.label11.Text = "Eliminar barrio";
-            // 
-            // colIdUsuario
-            // 
-            this.colIdUsuario.HeaderText = "#";
-            this.colIdUsuario.MinimumWidth = 6;
-            this.colIdUsuario.Name = "colIdUsuario";
-            this.colIdUsuario.ReadOnly = true;
-            this.colIdUsuario.Width = 40;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.MinimumWidth = 6;
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 240;
-            // 
-            // colLocalidad
-            // 
-            this.colLocalidad.HeaderText = "Localidad";
-            this.colLocalidad.Name = "colLocalidad";
-            this.colLocalidad.ReadOnly = true;
-            this.colLocalidad.Width = 240;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(165, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
-            this.label5.TabIndex = 71;
-            this.label5.Text = "Localidad";
-            // 
-            // cmbLocalidad
-            // 
-            this.cmbLocalidad.FormattingEnabled = true;
-            this.cmbLocalidad.Location = new System.Drawing.Point(168, 26);
-            this.cmbLocalidad.Name = "cmbLocalidad";
-            this.cmbLocalidad.Size = new System.Drawing.Size(121, 21);
-            this.cmbLocalidad.TabIndex = 70;
             // 
             // FormBarrios
             // 

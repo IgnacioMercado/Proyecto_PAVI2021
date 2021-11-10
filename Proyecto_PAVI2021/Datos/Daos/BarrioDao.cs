@@ -39,7 +39,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public void RegistrarBarrio(string descripcion, string id_localidad)
         {
-            string consulta = "INSERT INTO BARRIOS (Descripcion, Id_Localidad) " + "VALUES ('" + descripcion + "', " + id_localidad + ")";
+            string consulta = "INSERT INTO BARRIOS (Descripcion, Id_Localidad, BORRADO) " + "VALUES ('" + descripcion + "', " + id_localidad + ", 0)";
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }

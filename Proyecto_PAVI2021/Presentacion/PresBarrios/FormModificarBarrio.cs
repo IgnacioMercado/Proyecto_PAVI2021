@@ -65,6 +65,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
         {
             DataTable tabla = oBarrio.RecuperarBarrioPorId(id_barrio);
             cmbLocalidad.SelectedValue = tabla.Rows[0]["Id_Localidad"].ToString();
+            txtNombre.Text = tabla.Rows[0]["Descripcion"].ToString();
         }
 
         private void FormModificarBarrio_Load(object sender, EventArgs e)

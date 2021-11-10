@@ -178,6 +178,24 @@
     <Compile Include="Presentacion\PresLotes\FormLotesInfoStock.Designer.cs">
       <DependentUpon>FormLotesInfoStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresMarcas\FormAltaMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresMarcas\FormAltaMarcas.Designer.cs">
+      <DependentUpon>FormAltaMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresMarcas\FormMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresMarcas\FormMarcas.Designer.cs">
+      <DependentUpon>FormMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresMarcas\FormModificarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresMarcas\FormModificarMarcas.Designer.cs">
+      <DependentUpon>FormModificarMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresPagosFactura\FormPagosFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +353,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresLotes\FormLotesInfoStock.resx">
       <DependentUpon>FormLotesInfoStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresMarcas\FormAltaMarcas.resx">
+      <DependentUpon>FormAltaMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresMarcas\FormMarcas.resx">
+      <DependentUpon>FormMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresMarcas\FormModificarMarcas.resx">
+      <DependentUpon>FormModificarMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPagosFactura\FormPagosFactura.resx">
       <DependentUpon>FormPagosFactura.cs</DependentUpon>

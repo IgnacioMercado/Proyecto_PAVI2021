@@ -1,6 +1,8 @@
 ﻿using Proyecto_PAVI2021.Presentacion;
+using Proyecto_PAVI2021.Presentacion.PresBarrios;
 using Proyecto_PAVI2021.Presentacion.PresCompras;
 using Proyecto_PAVI2021.Presentacion.PresFactura;
+using Proyecto_PAVI2021.Presentacion.PresMarcas;
 using Proyecto_PAVI2021.Reportes;
 using System;
 using System.Collections.Generic;
@@ -20,7 +22,7 @@ namespace Proyecto_PAVI2021
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormMarcas());
             //Application.Run(new FormReporteVentas());
         }
     }

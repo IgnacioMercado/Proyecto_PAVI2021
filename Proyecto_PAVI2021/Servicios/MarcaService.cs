@@ -22,5 +22,26 @@ namespace Proyecto_PAVI2021.Servicios
         {
             return dao.RecuperarTodos();
         }
+
+        public DataTable RecuperarFiltrados(string descripcion)
+        {
+            return dao.RecuperarFiltrados(descripcion);
+        }
+        public void RegistrarMarca(string descripcion)
+        {
+            dao.RegistrarMarca(descripcion);
+        }
+        public void ModificarMarcaPorId(int id_marca, string descripcion)
+        {
+            dao.ModificarMarcaPorId(id_marca, descripcion);
+        }
+        public void EliminarMarca(int id_marca)
+        {
+            dao.EliminarMarca(id_marca);
+        }
+        public DataTable RecuperarMarcaPorId(int id_marca)
+        {
+            return dao.RecuperarMarcaPorId(id_marca);
+        }
     }
 }
