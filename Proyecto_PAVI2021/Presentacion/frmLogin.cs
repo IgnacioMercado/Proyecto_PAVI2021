@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_PAVI2021.Negocio;
+using Proyecto_PAVI2021.Presentacion.PresPrincipal;
 using Proyecto_PAVI2021.Servicios;
 
 namespace Proyecto_PAVI2021
@@ -54,10 +55,33 @@ namespace Proyecto_PAVI2021
 
             this.miUsuario.Id_usuario = this.oUsuario.validarUsuario(miUsuario.Nombre, miUsuario.Contraseña);
 
+            int id_usuario = miUsuario.Id_usuario;
+            DataTable tablaUsuario = this.oUsuario.RecuperarPorIdUsuario(id_usuario);
+            // = this.oUsuario.RecuperarPorIdUsuario(id_usuario);
+
+            int id_perfil = int.Parse(tablaUsuario.Rows[0][4].ToString());
+
             if (miUsuario.Id_usuario != 0)
             {
                 //MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                this.Hide();
+
+                if (id_perfil == 1)
+                {
+                    //FormPrincipal2_Adm fp2A = new FormPrincipal2_Adm("Igna");
+                    FormPrincipal2_Adm fp2A = new FormPrincipal2_Adm(miUsuario.Nombre);
+                    fp2A.ShowDialog();
+                }
+                if (id_perfil == 2)
+                {
+                    FormPrincipal2_Emp fp2E = new FormPrincipal2_Emp(miUsuario.Nombre);
+                    fp2E.ShowDialog();
+                }
+                if (id_perfil == 3)
+                {
+                    FormPrincipal2_AtC fp2AtC = new FormPrincipal2_AtC(miUsuario.Nombre);
+                    fp2AtC.ShowDialog();
+                }
             }
             else
             {

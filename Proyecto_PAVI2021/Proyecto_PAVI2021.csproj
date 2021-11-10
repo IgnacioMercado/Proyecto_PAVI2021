@@ -220,6 +220,24 @@
     <Compile Include="Presentacion\PresMateriales\FormMateriales.designer.cs">
       <DependentUpon>FormMateriales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\PresMenuPrincipal\FormPrincipal2_Adm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresMenuPrincipal\FormPrincipal2_Adm.designer.cs">
+      <DependentUpon>FormPrincipal2_Adm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresMenuPrincipal\FormPrincipal2_AtC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresMenuPrincipal\FormPrincipal2_AtC.designer.cs">
+      <DependentUpon>FormPrincipal2_AtC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PresMenuPrincipal\FormPrincipal2_Emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PresMenuPrincipal\FormPrincipal2_Emp.designer.cs">
+      <DependentUpon>FormPrincipal2_Emp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PresPagosFactura\FormPagosFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +416,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresMateriales\FormMateriales.resx">
       <DependentUpon>FormMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresMenuPrincipal\FormPrincipal2_Adm.resx">
+      <DependentUpon>FormPrincipal2_Adm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresMenuPrincipal\FormPrincipal2_AtC.resx">
+      <DependentUpon>FormPrincipal2_AtC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PresMenuPrincipal\FormPrincipal2_Emp.resx">
+      <DependentUpon>FormPrincipal2_Emp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PresPagosFactura\FormPagosFactura.resx">
       <DependentUpon>FormPagosFactura.cs</DependentUpon>

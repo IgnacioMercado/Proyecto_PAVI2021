@@ -412,7 +412,7 @@
             <Top>0.48482cm</Top>
             <Left>1.17946cm</Left>
             <Height>1.43812cm</Height>
-            <Width>17.05083cm</Width>
+            <Width>17.05085cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -428,7 +428,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Porcentaje de compras a cada proveedor sobre el monto total comprado</Value>
+                        <Value>Porcentaje de ventas entre los 5 productos mas vendidos</Value>
                         <Style>
                           <FontStyle>Normal</FontStyle>
                           <FontSize>12pt</FontSize>
@@ -444,7 +444,6 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Left>0cm</Left>
                 <Height>0.6cm</Height>
                 <Width>15.13238cm</Width>
                 <Style>
