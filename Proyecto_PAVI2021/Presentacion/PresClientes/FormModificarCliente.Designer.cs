@@ -68,7 +68,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.cboTipoDoc);
+            this.panel1.Controls.Add(this.txtTipoDoc);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 12);
@@ -168,8 +168,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             this.panel2.BackColor = System.Drawing.Color.PeachPuff;
             this.panel2.Controls.Add(this.txtNroDoc);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtTipoDoc);
             this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.cboTipoDoc);
             this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
@@ -200,10 +200,11 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             // 
             // txtTipoDoc
             // 
-            this.txtTipoDoc.Location = new System.Drawing.Point(428, 26);
+            this.txtTipoDoc.Location = new System.Drawing.Point(437, 115);
             this.txtTipoDoc.Name = "txtTipoDoc";
             this.txtTipoDoc.Size = new System.Drawing.Size(114, 20);
             this.txtTipoDoc.TabIndex = 4;
+            this.txtTipoDoc.Visible = false;
             // 
             // label9
             // 
@@ -274,7 +275,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             "DNI",
             "Pasaporte",
             "Libreta Universitaria"});
-            this.cboTipoDoc.Location = new System.Drawing.Point(444, 132);
+            this.cboTipoDoc.Location = new System.Drawing.Point(424, 26);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(114, 21);
             this.cboTipoDoc.TabIndex = 31;

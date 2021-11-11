@@ -52,7 +52,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             txtNombre.Text = tabla.Rows[0]["Nombre"].ToString();
             txtApellido.Text = tabla.Rows[0]["Apellido"].ToString();
             txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
-            txtTipoDoc.Text = tabla.Rows[0]["Tipo_Doc"].ToString();
+            cboTipoDoc.Text = tabla.Rows[0]["Tipo_Doc"].ToString();
             txtNroDoc.Text = tabla.Rows[0]["Nro_Doc"].ToString();
             txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
             txtAltura.Text = tabla.Rows[0]["Nro_Calle"].ToString();
@@ -69,7 +69,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             nombre = txtNombre.Text;
             apellido = txtApellido.Text;
             telefono = txtTelefono.Text;
-            tipo_doc = txtTipoDoc.Text;
+            if (cboTipoDoc.SelectedIndex != -1)
+                tipo_doc = cboTipoDoc.Text;
             nro_doc = txtNroDoc.Text;
             calle = txtCalle.Text;
             altura = txtAltura.Text;

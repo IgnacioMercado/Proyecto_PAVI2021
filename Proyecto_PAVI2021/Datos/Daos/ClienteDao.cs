@@ -67,7 +67,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public DataTable RecuperarClientePorId(int id_cliente)
         {
-            string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle FROM CLIENTES c WHERE c.Borrado = 0 AND c.Id_Cliente = " + id_cliente;
+            string consulta = "SELECT c.Id_Cliente, c.Nombre, c.Apellido, c.Telefono, c.Tipo_Doc, c.Nro_Doc, c.Calle, c.Nro_Calle, c.Id_Barrio, b.Id_Localidad FROM CLIENTES c JOIN BARRIOS b on b.Id_Barrio = c.Id_Barrio WHERE c.Borrado = 0 AND c.Id_Cliente = " + id_cliente;
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
