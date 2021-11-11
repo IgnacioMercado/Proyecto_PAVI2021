@@ -161,10 +161,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             // labelNombreUsuario
             // 
             this.labelNombreUsuario.AutoSize = true;
-            this.labelNombreUsuario.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreUsuario.Location = new System.Drawing.Point(12, 21);
             this.labelNombreUsuario.Name = "labelNombreUsuario";
-            this.labelNombreUsuario.Size = new System.Drawing.Size(152, 19);
+            this.labelNombreUsuario.Size = new System.Drawing.Size(138, 20);
             this.labelNombreUsuario.TabIndex = 0;
             this.labelNombreUsuario.Text = "Nombre Usuario";
             // 
@@ -206,7 +206,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Menú Principal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal2_Load);
             this.panelMenú.ResumeLayout(false);
             this.panelProduccion.ResumeLayout(false);
