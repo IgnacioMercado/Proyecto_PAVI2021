@@ -169,6 +169,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(546, 426);
@@ -179,6 +180,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
@@ -191,6 +193,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
@@ -203,6 +206,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnModificar.BackColor = System.Drawing.Color.Khaki;
             this.btnModificar.Image = global::Proyecto_PAVI2021.Properties.Resources.modificar_imagen;
             this.btnModificar.Location = new System.Drawing.Point(137, 362);
@@ -214,6 +218,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminar.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnEliminar.Image = global::Proyecto_PAVI2021.Properties.Resources.eliminar_usuario;
             this.btnEliminar.Location = new System.Drawing.Point(255, 362);
@@ -225,6 +230,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnConsultar.BackColor = System.Drawing.Color.SandyBrown;
             this.btnConsultar.Image = global::Proyecto_PAVI2021.Properties.Resources.buscar;
             this.btnConsultar.Location = new System.Drawing.Point(389, 362);
@@ -236,6 +242,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
             this.label1.Location = new System.Drawing.Point(7, 344);
@@ -246,6 +253,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
             this.label9.Location = new System.Drawing.Point(396, 344);
@@ -256,6 +264,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
             this.label10.Location = new System.Drawing.Point(126, 344);
@@ -266,6 +275,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(253, 344);

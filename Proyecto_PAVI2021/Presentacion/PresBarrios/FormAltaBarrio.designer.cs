@@ -31,6 +31,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbLocalidad = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,8 +40,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.label1 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbLocalidad = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,24 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(306, 54);
             this.panel2.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(153, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Localidad";
+            // 
+            // cmbLocalidad
+            // 
+            this.cmbLocalidad.FormattingEnabled = true;
+            this.cmbLocalidad.Location = new System.Drawing.Point(156, 25);
+            this.cmbLocalidad.Name = "cmbLocalidad";
+            this.cmbLocalidad.Size = new System.Drawing.Size(121, 21);
+            this.cmbLocalidad.TabIndex = 24;
             // 
             // label3
             // 
@@ -96,6 +114,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnRegistrar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = global::Proyecto_PAVI2021.Properties.Resources.nuevo_usuario;
@@ -108,6 +127,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
             this.label1.Location = new System.Drawing.Point(19, 173);
@@ -118,6 +138,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // btnAtras
             // 
+            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
             this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
@@ -130,6 +151,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Underline);
             this.label2.Location = new System.Drawing.Point(266, 173);
@@ -137,24 +159,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresBarrios
             this.label2.Size = new System.Drawing.Size(73, 12);
             this.label2.TabIndex = 69;
             this.label2.Text = "Volver atras";
-            // 
-            // cmbLocalidad
-            // 
-            this.cmbLocalidad.FormattingEnabled = true;
-            this.cmbLocalidad.Location = new System.Drawing.Point(156, 25);
-            this.cmbLocalidad.Name = "cmbLocalidad";
-            this.cmbLocalidad.Size = new System.Drawing.Size(121, 21);
-            this.cmbLocalidad.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(153, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Localidad";
             // 
             // FormAltaBarrio
             // 

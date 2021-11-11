@@ -39,6 +39,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             this.label7 = new System.Windows.Forms.Label();
             this.txtNuevaLocalidad = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             this.colIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -119,7 +119,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(388, 11);
             this.label10.Name = "label10";
@@ -143,9 +143,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(81, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 15);
+            this.label7.Size = new System.Drawing.Size(80, 15);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Localidad:";
+            this.label7.Text = "Localidad *";
             // 
             // txtNuevaLocalidad
             // 
@@ -156,7 +156,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel2.Controls.Add(this.label5);
@@ -170,6 +170,17 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(382, 167);
             this.panel2.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 2);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Modificación";
             // 
             // label2
             // 
@@ -225,14 +236,14 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(33, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 15);
+            this.label4.Size = new System.Drawing.Size(124, 15);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Localidad Nueva:";
+            this.label4.Text = "Localidad Nueva *";
             // 
             // Localidad
             // 
             this.Localidad.AutoSize = true;
-            this.Localidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
+            this.Localidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Localidad.Location = new System.Drawing.Point(12, 11);
             this.Localidad.Name = "Localidad";
@@ -354,17 +365,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresLocalidad
             this.btnConsultar.TabIndex = 7;
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 25);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Modificación";
             // 
             // FormLocalidad
             // 

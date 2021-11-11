@@ -112,9 +112,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresMarcas
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Nombre";
+            this.label3.Text = "Nombre *";
             // 
             // txtNombre
             // 

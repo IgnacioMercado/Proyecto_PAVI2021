@@ -64,14 +64,13 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.colIdFormaPago,
             this.colDescripcion});
             this.dgvFormasPago.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvFormasPago.Location = new System.Drawing.Point(17, 62);
-            this.dgvFormasPago.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvFormasPago.Location = new System.Drawing.Point(13, 50);
             this.dgvFormasPago.Name = "dgvFormasPago";
             this.dgvFormasPago.ReadOnly = true;
             this.dgvFormasPago.RowHeadersVisible = false;
             this.dgvFormasPago.RowHeadersWidth = 51;
             this.dgvFormasPago.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFormasPago.Size = new System.Drawing.Size(353, 262);
+            this.dgvFormasPago.Size = new System.Drawing.Size(265, 213);
             this.dgvFormasPago.TabIndex = 0;
             this.dgvFormasPago.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormasPago_CellClick);
             this.dgvFormasPago.SelectionChanged += new System.EventHandler(this.dgvFormasPago_SelectionChanged);
@@ -97,10 +96,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(11, 15);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(8, 12);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(227, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(184, 25);
             this.lblTitulo.TabIndex = 11;
             this.lblTitulo.Text = "Formas de Pago";
             // 
@@ -108,10 +106,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(195, 527);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(146, 428);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 18);
+            this.label5.Size = new System.Drawing.Size(53, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Eliminar";
             // 
@@ -119,10 +116,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(107, 527);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(80, 428);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 18);
+            this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 13;
             this.label6.Text = "Modificar";
             // 
@@ -130,10 +126,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 527);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(22, 428);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 18);
+            this.label7.Size = new System.Drawing.Size(50, 15);
             this.label7.TabIndex = 14;
             this.label7.Text = "Agregar";
             // 
@@ -143,10 +138,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.panel1.Controls.Add(this.gbDescripcion);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.dgvFormasPago);
-            this.panel1.Location = new System.Drawing.Point(19, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(14, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 430);
+            this.panel1.Size = new System.Drawing.Size(291, 349);
             this.panel1.TabIndex = 31;
             // 
             // gbDescripcion
@@ -155,22 +149,23 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.gbDescripcion.Controls.Add(this.txtFormaPago);
             this.gbDescripcion.Controls.Add(this.btnConfirmar);
             this.gbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDescripcion.Location = new System.Drawing.Point(17, 331);
+            this.gbDescripcion.Location = new System.Drawing.Point(13, 269);
+            this.gbDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbDescripcion.Name = "gbDescripcion";
-            this.gbDescripcion.Size = new System.Drawing.Size(353, 81);
+            this.gbDescripcion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDescripcion.Size = new System.Drawing.Size(265, 66);
             this.gbDescripcion.TabIndex = 56;
             this.gbDescripcion.TabStop = false;
-            this.gbDescripcion.Text = "Descripcion";
+            this.gbDescripcion.Text = "Descripcion *";
             // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Khaki;
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = global::Proyecto_PAVI2021.Properties.Resources.equis_3;
-            this.btnCancelar.Location = new System.Drawing.Point(261, 27);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(196, 22);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(39, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(29, 31);
             this.btnCancelar.TabIndex = 57;
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -180,9 +175,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.txtFormaPago.BackColor = System.Drawing.SystemColors.Control;
             this.txtFormaPago.CausesValidation = false;
             this.txtFormaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFormaPago.Location = new System.Drawing.Point(14, 33);
+            this.txtFormaPago.Location = new System.Drawing.Point(10, 27);
+            this.txtFormaPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFormaPago.Name = "txtFormaPago";
-            this.txtFormaPago.Size = new System.Drawing.Size(240, 27);
+            this.txtFormaPago.Size = new System.Drawing.Size(181, 23);
             this.txtFormaPago.TabIndex = 56;
             // 
             // btnConfirmar
@@ -190,10 +186,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.btnConfirmar.BackColor = System.Drawing.Color.Khaki;
             this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
             this.btnConfirmar.Image = global::Proyecto_PAVI2021.Properties.Resources.tick;
-            this.btnConfirmar.Location = new System.Drawing.Point(307, 27);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmar.Location = new System.Drawing.Point(230, 22);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(39, 38);
+            this.btnConfirmar.Size = new System.Drawing.Size(29, 31);
             this.btnConfirmar.TabIndex = 10;
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -202,10 +197,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.btnModificar.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnModificar.Image = global::Proyecto_PAVI2021.Properties.Resources._2561427_edit_icon__1_;
-            this.btnModificar.Location = new System.Drawing.Point(103, 453);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificar.Location = new System.Drawing.Point(77, 368);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(77, 70);
+            this.btnModificar.Size = new System.Drawing.Size(58, 57);
             this.btnModificar.TabIndex = 9;
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -214,10 +208,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnEliminar.Image = global::Proyecto_PAVI2021.Properties.Resources.equis_2;
-            this.btnEliminar.Location = new System.Drawing.Point(187, 453);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(140, 368);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(77, 70);
+            this.btnEliminar.Size = new System.Drawing.Size(58, 57);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -226,10 +219,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(329, 527);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(247, 428);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 18);
+            this.label2.Size = new System.Drawing.Size(70, 15);
             this.label2.TabIndex = 55;
             this.label2.Text = "Volver Atrás";
             // 
@@ -238,10 +230,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.btnAtras.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
             this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
-            this.btnAtras.Location = new System.Drawing.Point(338, 453);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Location = new System.Drawing.Point(254, 368);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(69, 70);
+            this.btnAtras.Size = new System.Drawing.Size(52, 57);
             this.btnAtras.TabIndex = 0;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -251,20 +242,19 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.btnAgregar.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Image = global::Proyecto_PAVI2021.Properties.Resources._326501_add_circle_icon__2_;
-            this.btnAgregar.Location = new System.Drawing.Point(19, 453);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(14, 368);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(77, 70);
+            this.btnAgregar.Size = new System.Drawing.Size(58, 57);
             this.btnAgregar.TabIndex = 57;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // FormFormasPago
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(425, 552);
+            this.ClientSize = new System.Drawing.Size(319, 448);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAtras);
@@ -275,7 +265,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresFormasPago
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormFormasPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formas de Pago";

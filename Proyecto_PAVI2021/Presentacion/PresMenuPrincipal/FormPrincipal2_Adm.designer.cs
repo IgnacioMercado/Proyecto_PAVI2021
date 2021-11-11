@@ -32,6 +32,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal2_Adm));
             this.panelMenú = new System.Windows.Forms.Panel();
             this.panelReportes = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnComprasporProveedor = new System.Windows.Forms.Button();
             this.btnReporteVentasporEmpleado = new System.Windows.Forms.Button();
             this.btnReporteVentasporClientesRe = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelMenú.SuspendLayout();
             this.panelReportes.SuspendLayout();
             this.panelGestion.SuspendLayout();
@@ -103,6 +103,21 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             this.panelReportes.Name = "panelReportes";
             this.panelReportes.Size = new System.Drawing.Size(200, 178);
             this.panelReportes.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.BurlyWood;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Crimson;
+            this.button1.Location = new System.Drawing.Point(0, 132);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 33);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Articulo mas vendido";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnComprasporProveedor
             // 
@@ -485,21 +500,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.BurlyWood;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Crimson;
-            this.button1.Location = new System.Drawing.Point(0, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Articulo mas vendido";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormPrincipal2_Adm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,6 +514,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Menú Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal2_Adm_Load);
             this.panelMenú.ResumeLayout(false);
             this.panelReportes.ResumeLayout(false);

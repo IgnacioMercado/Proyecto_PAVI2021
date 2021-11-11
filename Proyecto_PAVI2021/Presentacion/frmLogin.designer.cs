@@ -50,9 +50,9 @@
             this.lblUsuario.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(96, 30);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(73, 19);
+            this.lblUsuario.Size = new System.Drawing.Size(79, 19);
             this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario:";
+            this.lblUsuario.Text = "Usuario *";
             // 
             // lblClave
             // 
@@ -60,9 +60,9 @@
             this.lblClave.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.Location = new System.Drawing.Point(64, 75);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(105, 19);
+            this.lblClave.Size = new System.Drawing.Size(111, 19);
             this.lblClave.TabIndex = 1;
-            this.lblClave.Text = "Contraseña:";
+            this.lblClave.Text = "Contraseña *";
             // 
             // txtUsuario
             // 

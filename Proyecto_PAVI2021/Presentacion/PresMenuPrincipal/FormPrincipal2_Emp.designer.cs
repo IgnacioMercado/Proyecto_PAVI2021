@@ -206,6 +206,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresPrincipal
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Menú Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal2_Load);
             this.panelMenú.ResumeLayout(false);
             this.panelProduccion.ResumeLayout(false);

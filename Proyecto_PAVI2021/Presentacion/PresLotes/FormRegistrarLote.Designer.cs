@@ -51,62 +51,56 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             // 
             this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(95, 28);
-            this.cmbMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbMarca.Location = new System.Drawing.Point(71, 23);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(160, 24);
+            this.cmbMarca.Size = new System.Drawing.Size(121, 21);
             this.cmbMarca.TabIndex = 87;
             this.cmbMarca.SelectionChangeCommitted += new System.EventHandler(this.cmbMarca_SelectionChangeCommitted);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(23, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 86;
-            this.label1.Text = "Marca";
+            this.label1.Text = "Marca *";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 82);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(11, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Empleado";
+            this.label3.Text = "Empleado *";
             // 
             // cmbEmpleado
             // 
             this.cmbEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(95, 79);
-            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEmpleado.Location = new System.Drawing.Point(71, 64);
             this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(160, 24);
+            this.cmbEmpleado.Size = new System.Drawing.Size(121, 21);
             this.cmbEmpleado.TabIndex = 7;
             // 
             // cmbArticulo
             // 
             this.cmbArticulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbArticulo.FormattingEnabled = true;
-            this.cmbArticulo.Location = new System.Drawing.Point(338, 28);
-            this.cmbArticulo.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbArticulo.Location = new System.Drawing.Point(254, 23);
             this.cmbArticulo.Name = "cmbArticulo";
-            this.cmbArticulo.Size = new System.Drawing.Size(160, 24);
+            this.cmbArticulo.Size = new System.Drawing.Size(121, 21);
             this.cmbArticulo.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(274, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(206, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Articulo";
+            this.label2.Text = "Articulo *";
             // 
             // panel1
             // 
@@ -123,20 +117,18 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.panel1.Controls.Add(this.cmbEmpleado);
             this.panel1.Controls.Add(this.cmbArticulo);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(16, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(12, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(838, 139);
+            this.panel1.Size = new System.Drawing.Size(628, 113);
             this.panel1.TabIndex = 80;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(612, 91);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(459, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 18);
+            this.label5.Size = new System.Drawing.Size(80, 15);
             this.label5.TabIndex = 95;
             this.label5.Text = "Registrar lote";
             // 
@@ -145,10 +137,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.btnRegistrar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
             this.btnRegistrar.Image = global::Proyecto_PAVI2021.Properties.Resources.tick_2;
-            this.btnRegistrar.Location = new System.Drawing.Point(616, 15);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegistrar.Location = new System.Drawing.Point(462, 12);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(84, 73);
+            this.btnRegistrar.Size = new System.Drawing.Size(63, 59);
             this.btnRegistrar.TabIndex = 94;
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -156,29 +147,26 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(273, 82);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(205, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 17);
+            this.label4.Size = new System.Drawing.Size(103, 13);
             this.label4.TabIndex = 93;
-            this.label4.Text = "Cantidad a fabricar";
+            this.label4.Text = "Cantidad a fabricar *";
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(419, 79);
-            this.nudCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.nudCantidad.Location = new System.Drawing.Point(314, 64);
             this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(80, 22);
+            this.nudCantidad.Size = new System.Drawing.Size(60, 20);
             this.nudCantidad.TabIndex = 92;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(740, 91);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(555, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 18);
+            this.label7.Size = new System.Drawing.Size(70, 15);
             this.label7.TabIndex = 91;
             this.label7.Text = "Volver Atrás";
             // 
@@ -187,10 +175,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.btnAtras.BackColor = System.Drawing.Color.LightBlue;
             this.btnAtras.ForeColor = System.Drawing.Color.Black;
             this.btnAtras.Image = global::Proyecto_PAVI2021.Properties.Resources.volver_atras;
-            this.btnAtras.Location = new System.Drawing.Point(741, 15);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Location = new System.Drawing.Point(556, 12);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(84, 73);
+            this.btnAtras.Size = new System.Drawing.Size(63, 59);
             this.btnAtras.TabIndex = 90;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -199,22 +186,20 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(16, 11);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(139, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(118, 20);
             this.lblTitulo.TabIndex = 81;
             this.lblTitulo.Text = "Registrar lote";
             // 
             // FormRegistrarLote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(868, 196);
+            this.ClientSize = new System.Drawing.Size(651, 159);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormRegistrarLote";
             this.Text = "FormRegistrarLote";
             this.Load += new System.EventHandler(this.FormRegistrarLote_Load);

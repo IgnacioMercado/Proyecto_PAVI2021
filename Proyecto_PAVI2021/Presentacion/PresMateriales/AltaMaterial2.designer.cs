@@ -99,9 +99,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(59, 88);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
+            this.label7.Size = new System.Drawing.Size(95, 13);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Precio Unitario:  $";
+            this.label7.Text = "Precio Unitario *  $";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtPrecioUnitario
             // 
@@ -123,18 +124,18 @@ namespace Proyecto_PAVI2021.Presentacion.PresMateriales
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(222, 35);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
+            this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Marca:";
+            this.label8.Text = "Marca *";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(12, 38);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 13);
+            this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 3;
-            this.label10.Text = "Nombre";
+            this.label10.Text = "Nombre *";
             // 
             // txtNombre
             // 
