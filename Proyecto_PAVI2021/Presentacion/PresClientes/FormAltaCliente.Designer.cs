@@ -50,13 +50,13 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbLocalidades = new System.Windows.Forms.ComboBox();
             this.cmbBarrios = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,9 +79,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(154, 12);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 16);
+            this.label14.Size = new System.Drawing.Size(58, 16);
             this.label14.TabIndex = 45;
-            this.label14.Text = "Altura";
+            this.label14.Text = "Altura *";
             // 
             // label13
             // 
@@ -89,23 +89,23 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(8, 13);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 16);
+            this.label13.Size = new System.Drawing.Size(54, 16);
             this.label13.TabIndex = 44;
-            this.label13.Text = "Calle";
+            this.label13.Text = "Calle *";
             // 
             // txtNroDoc
             // 
             this.txtNroDoc.Location = new System.Drawing.Point(579, 40);
             this.txtNroDoc.Name = "txtNroDoc";
             this.txtNroDoc.Size = new System.Drawing.Size(126, 20);
-            this.txtNroDoc.TabIndex = 37;
+            this.txtNroDoc.TabIndex = 5;
             // 
             // txtAltura
             // 
             this.txtAltura.Location = new System.Drawing.Point(152, 32);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(112, 20);
-            this.txtAltura.TabIndex = 36;
+            this.txtAltura.TabIndex = 7;
             // 
             // txtTelefono
             // 
@@ -119,7 +119,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.txtCalle.Location = new System.Drawing.Point(8, 32);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(112, 20);
-            this.txtCalle.TabIndex = 34;
+            this.txtCalle.TabIndex = 6;
             // 
             // txtApellido
             // 
@@ -175,7 +175,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.cboTipoDoc.Location = new System.Drawing.Point(437, 40);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(114, 21);
-            this.cboTipoDoc.TabIndex = 54;
+            this.cboTipoDoc.TabIndex = 4;
             // 
             // label2
             // 
@@ -183,9 +183,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Nombre *";
             // 
             // label5
             // 
@@ -193,9 +193,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(152, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 16);
+            this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 24;
-            this.label5.Text = "Apellido";
+            this.label5.Text = "Apellido *";
             // 
             // label6
             // 
@@ -203,9 +203,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(289, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.Size = new System.Drawing.Size(80, 16);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Telefono";
+            this.label6.Text = "Telefono *";
             // 
             // label7
             // 
@@ -213,9 +213,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(576, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 16);
+            this.label7.Size = new System.Drawing.Size(145, 16);
             this.label7.TabIndex = 26;
-            this.label7.Text = "Nro de documento";
+            this.label7.Text = "Nro de documento *";
             // 
             // label8
             // 
@@ -223,9 +223,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(434, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 16);
+            this.label8.Size = new System.Drawing.Size(102, 16);
             this.label8.TabIndex = 27;
-            this.label8.Text = "Tipo de doc";
+            this.label8.Text = "Tipo de doc *";
             // 
             // label3
             // 
@@ -265,6 +265,43 @@ namespace Proyecto_PAVI2021.Presentacion
             this.panel3.Size = new System.Drawing.Size(583, 73);
             this.panel3.TabIndex = 49;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(290, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 16);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "Localidad *";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(433, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 16);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "Barrio *";
+            // 
+            // cmbLocalidades
+            // 
+            this.cmbLocalidades.FormattingEnabled = true;
+            this.cmbLocalidades.Location = new System.Drawing.Point(291, 31);
+            this.cmbLocalidades.Name = "cmbLocalidades";
+            this.cmbLocalidades.Size = new System.Drawing.Size(121, 21);
+            this.cmbLocalidades.TabIndex = 8;
+            this.cmbLocalidades.SelectionChangeCommitted += new System.EventHandler(this.cmbLocalidades_SelectionChangeCommitted);
+            // 
+            // cmbBarrios
+            // 
+            this.cmbBarrios.FormattingEnabled = true;
+            this.cmbBarrios.Location = new System.Drawing.Point(436, 31);
+            this.cmbBarrios.Name = "cmbBarrios";
+            this.cmbBarrios.Size = new System.Drawing.Size(121, 21);
+            this.cmbBarrios.TabIndex = 9;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -283,7 +320,7 @@ namespace Proyecto_PAVI2021.Presentacion
             this.btnAtras.Location = new System.Drawing.Point(764, 325);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(63, 59);
-            this.btnAtras.TabIndex = 52;
+            this.btnAtras.TabIndex = 11;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
@@ -295,46 +332,9 @@ namespace Proyecto_PAVI2021.Presentacion
             this.btnRegistrar.Location = new System.Drawing.Point(12, 325);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(63, 59);
-            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(290, 15);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 16);
-            this.label10.TabIndex = 65;
-            this.label10.Text = "Localidad";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(433, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 16);
-            this.label11.TabIndex = 64;
-            this.label11.Text = "Barrio";
-            // 
-            // cmbLocalidades
-            // 
-            this.cmbLocalidades.FormattingEnabled = true;
-            this.cmbLocalidades.Location = new System.Drawing.Point(291, 31);
-            this.cmbLocalidades.Name = "cmbLocalidades";
-            this.cmbLocalidades.Size = new System.Drawing.Size(121, 21);
-            this.cmbLocalidades.TabIndex = 63;
-            this.cmbLocalidades.SelectionChangeCommitted += new System.EventHandler(this.cmbLocalidades_SelectionChangeCommitted);
-            // 
-            // cmbBarrios
-            // 
-            this.cmbBarrios.FormattingEnabled = true;
-            this.cmbBarrios.Location = new System.Drawing.Point(436, 31);
-            this.cmbBarrios.Name = "cmbBarrios";
-            this.cmbBarrios.Size = new System.Drawing.Size(121, 21);
-            this.cmbBarrios.TabIndex = 62;
             // 
             // FormAltaCliente
             // 

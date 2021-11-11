@@ -144,9 +144,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(267, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.Size = new System.Drawing.Size(87, 16);
             this.label4.TabIndex = 57;
-            this.label4.Text = "Localidad";
+            this.label4.Text = "Localidad *";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
@@ -155,9 +155,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(406, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
+            this.label3.Size = new System.Drawing.Size(60, 16);
             this.label3.TabIndex = 56;
-            this.label3.Text = "Barrio";
+            this.label3.Text = "Barrio *";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cmbLocalidades
@@ -175,9 +175,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(133, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 45;
-            this.label5.Text = "Altura";
+            this.label5.Text = "Altura *";
             // 
             // cmbBarrios
             // 
@@ -194,9 +194,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.Size = new System.Drawing.Size(54, 16);
             this.label7.TabIndex = 44;
-            this.label7.Text = "Calle";
+            this.label7.Text = "Calle *";
             // 
             // txtCalle
             // 
@@ -249,9 +249,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(731, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 51;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "Usuario *";
             // 
             // cboTipoDoc
             // 
@@ -280,9 +280,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(9, 7);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 16);
+            this.label15.Size = new System.Drawing.Size(73, 16);
             this.label15.TabIndex = 23;
-            this.label15.Text = "Nombre";
+            this.label15.Text = "Nombre *";
             // 
             // label16
             // 
@@ -290,9 +290,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(152, 7);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 16);
+            this.label16.Size = new System.Drawing.Size(76, 16);
             this.label16.TabIndex = 24;
-            this.label16.Text = "Apellido";
+            this.label16.Text = "Apellido *";
             // 
             // label17
             // 
@@ -300,9 +300,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(289, 7);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 16);
+            this.label17.Size = new System.Drawing.Size(80, 16);
             this.label17.TabIndex = 25;
-            this.label17.Text = "Telefono";
+            this.label17.Text = "Telefono *";
             // 
             // label18
             // 
@@ -310,9 +310,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(576, 7);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(135, 16);
+            this.label18.Size = new System.Drawing.Size(145, 16);
             this.label18.TabIndex = 26;
-            this.label18.Text = "Nro de documento";
+            this.label18.Text = "Nro de documento *";
             // 
             // label19
             // 
@@ -320,9 +320,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresPersonal
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(434, 7);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(92, 16);
+            this.label19.Size = new System.Drawing.Size(102, 16);
             this.label19.TabIndex = 27;
-            this.label19.Text = "Tipo de doc";
+            this.label19.Text = "Tipo de doc *";
             // 
             // txtNombre
             // 
