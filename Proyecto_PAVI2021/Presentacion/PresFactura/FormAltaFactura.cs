@@ -207,10 +207,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
 
         private void cmbArticulo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbArticulo.SelectedItem != null )
-            {
-                this.LlenarComboConLista(cmbLote, loteService.GetConfirmedFilteredByMaterial(Convert.ToInt32(cmbArticulo.SelectedValue.ToString())), "Id_lote", "Id_lote");
-            }            
+         
         }
 
         private void btnSeleccionarEmpleado_Click(object sender, EventArgs e)
@@ -314,6 +311,14 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
         {
             cmbArticulo.SelectedIndex = -1;
             this.LlenarComboConLista(cmbArticulo, materialService.GetAllByMarcaId((int)cmbMarca.SelectedValue), "Nombre", "Id_material");
+        }
+
+        private void cmbArticulo_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cmbArticulo.SelectedItem != null)
+            {
+                this.LlenarComboConLista(cmbLote, loteService.GetConfirmedFilteredByMaterial(Convert.ToInt32(cmbArticulo.SelectedValue.ToString())), "Id_lote", "Id_lote");
+            }
         }
     }
 }

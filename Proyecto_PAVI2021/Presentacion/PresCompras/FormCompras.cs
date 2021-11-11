@@ -232,10 +232,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
 
         private void cmbArticulo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbArticulo.SelectedItem != null )
-            {
-                this.LlenarComboConLista(cmbLote, loteService.GetConfirmedFilteredByMaterial(Convert.ToInt32(cmbArticulo.SelectedValue.ToString())), "Id_lote", "Id_lote");
-            }
             
         }
 
@@ -278,6 +274,9 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.txtLegajoEmpleado.Text = "";
             this.txtApellidoEmpleado.Text = "";
             cboTipoFactura.SelectedIndex = -1;
+            this.dgvDetalle.Rows.Clear();
+            cboLocalidad.SelectedIndex = -1;
+            cboBarrio.SelectedIndex = -1;
             InicializarDetalle();
 
         }
@@ -285,7 +284,8 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         private void InicializarDetalle()
         {
             cmbArticulo.SelectedIndex = -1;
-            cmbLote.SelectedIndex = -1;
+
+            
             txtCantidad.Text = "";
         }
 
@@ -306,6 +306,11 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             fpv.ShowDialog();
             this.Id_Proveedor_Seleccionado = fpv.Id_Proveedor_Seleccionado;
             CargarProveedor();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

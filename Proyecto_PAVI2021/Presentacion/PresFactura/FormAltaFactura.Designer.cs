@@ -453,6 +453,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresFactura
             this.cmbArticulo.Size = new System.Drawing.Size(121, 21);
             this.cmbArticulo.TabIndex = 3;
             this.cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);
+            this.cmbArticulo.SelectionChangeCommitted += new System.EventHandler(this.cmbArticulo_SelectionChangeCommitted);
             // 
             // btnEliminar
             // 

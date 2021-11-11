@@ -23,7 +23,7 @@ namespace Proyecto_PAVI2021.Reportes
         private void FormReporteComprasXProveedor_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-2);
             this.dtpFechaHasta.Value = DateTime.Today.AddDays(1);
             LlenarComboConLista(cmbLocalidad, oLocalidad.RecuperarTodos(), "Descripcion", "Id_Localidad");

@@ -31,15 +31,15 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
         {
             this.btnAtras = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtMaterial = new System.Windows.Forms.TextBox();
             this.dgvInfoStock = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.colIdFormaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoStock)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +54,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.btnAtras.Size = new System.Drawing.Size(45, 49);
             this.btnAtras.TabIndex = 76;
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // panel1
             // 
@@ -67,6 +68,24 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(413, 214);
             this.panel1.TabIndex = 74;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(179, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Articulo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Marca";
             // 
             // txtMarca
             // 
@@ -105,6 +124,24 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.dgvInfoStock.Size = new System.Drawing.Size(380, 152);
             this.dgvInfoStock.TabIndex = 0;
             // 
+            // colIdFormaPago
+            // 
+            this.colIdFormaPago.DataPropertyName = "Id_lote";
+            this.colIdFormaPago.HeaderText = "Lote";
+            this.colIdFormaPago.MinimumWidth = 6;
+            this.colIdFormaPago.Name = "colIdFormaPago";
+            this.colIdFormaPago.ReadOnly = true;
+            this.colIdFormaPago.Width = 192;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.DataPropertyName = "Stock_lote";
+            this.colDescripcion.HeaderText = "Cantidad";
+            this.colDescripcion.MinimumWidth = 6;
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
+            this.colDescripcion.Width = 185;
+            // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
@@ -124,42 +161,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.label9.Size = new System.Drawing.Size(70, 15);
             this.label9.TabIndex = 77;
             this.label9.Text = "Volver Atrás";
-            // 
-            // colIdFormaPago
-            // 
-            this.colIdFormaPago.DataPropertyName = "Id_lote";
-            this.colIdFormaPago.HeaderText = "Lote";
-            this.colIdFormaPago.MinimumWidth = 6;
-            this.colIdFormaPago.Name = "colIdFormaPago";
-            this.colIdFormaPago.ReadOnly = true;
-            this.colIdFormaPago.Width = 192;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.DataPropertyName = "Stock_lote";
-            this.colDescripcion.HeaderText = "Cantidad";
-            this.colDescripcion.MinimumWidth = 6;
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.ReadOnly = true;
-            this.colDescripcion.Width = 185;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Marca";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(179, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Articulo";
             // 
             // FormLotesInfoStock
             // 

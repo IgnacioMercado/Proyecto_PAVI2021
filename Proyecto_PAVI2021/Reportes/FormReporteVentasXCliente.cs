@@ -22,7 +22,7 @@ namespace Proyecto_PAVI2021.Reportes
         private void FormReporteVentasXCliente_Load(object sender, EventArgs e)
         {
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-2);
-            this.dtpFechaHasta.Value = DateTime.Today;
+            this.dtpFechaHasta.Value = DateTime.Today.AddDays(1);
             this.dtpFechaAltaDesde.Value = DateTime.Today.AddYears(-2);
             this.dtpFechaAltaHasta.Value = DateTime.Today;
         }
@@ -71,6 +71,11 @@ namespace Proyecto_PAVI2021.Reportes
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

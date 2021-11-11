@@ -56,13 +56,14 @@ namespace Proyecto_PAVI2021
             this.miUsuario.Id_usuario = this.oUsuario.validarUsuario(miUsuario.Nombre, miUsuario.Contraseña);
 
             int id_usuario = miUsuario.Id_usuario;
-            DataTable tablaUsuario = this.oUsuario.RecuperarPorIdUsuario(id_usuario);
-            // = this.oUsuario.RecuperarPorIdUsuario(id_usuario);
-
-            int id_perfil = int.Parse(tablaUsuario.Rows[0][4].ToString());
+            
 
             if (miUsuario.Id_usuario != 0)
             {
+                DataTable tablaUsuario = this.oUsuario.RecuperarPorIdUsuario(id_usuario);
+                // = this.oUsuario.RecuperarPorIdUsuario(id_usuario);
+
+                int id_perfil = int.Parse(tablaUsuario.Rows[0][4].ToString());
                 //MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
 

@@ -44,5 +44,10 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.txtMarca.Text = tabla.Rows[0]["Descripcion"].ToString();
             this.txtMaterial.Text = tabla.Rows[0]["Nombre"].ToString();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

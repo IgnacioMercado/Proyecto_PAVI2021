@@ -31,11 +31,16 @@ namespace Proyecto_PAVI2021.Datos.Daos
             var strSql = "SELECT Id_Lote, Fecha_Lote, Cantidad_Fabricada, Legajo_Empleado, Stock_Lote, Id_Material, Confirmacion_Lote  FROM LOTE WHERE Borrado = 0 AND Confirmacion_Lote = 1 AND Id_Material = " + id_material ;
 
             var resultadoConsulta = BDHelper.obtenerInstancia().ConsultaSQL(strSql);
-
-            foreach (DataRow row in resultadoConsulta.Rows)
+            if(resultadoConsulta.Rows.Count != 0)
             {
-                listadoLotes.Add(MappingLote(row));
+                foreach (DataRow row in resultadoConsulta.Rows)
+                {
+
+                    listadoLotes.Add(MappingLote(row));
+                }
             }
+            
+            
 
             return listadoLotes;
         }

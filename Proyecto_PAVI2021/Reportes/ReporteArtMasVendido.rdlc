@@ -365,7 +365,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TotalVentas.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>'$'0.00;('$'0.00)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -381,6 +383,7 @@
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -470,6 +473,21 @@
                           <Value>=Fields!Nombre.Value</Value>
                         </SortExpression>
                       </SortExpressions>
+                      <ChartMembers>
+                        <ChartMember>
+                          <Group Name="Chart2_CategoryGroup1">
+                            <GroupExpressions>
+                              <GroupExpression>=Fields!Marca.Value</GroupExpression>
+                            </GroupExpressions>
+                          </Group>
+                          <SortExpressions>
+                            <SortExpression>
+                              <Value>=Fields!Marca.Value</Value>
+                            </SortExpression>
+                          </SortExpressions>
+                          <Label>=Fields!Marca.Value</Label>
+                        </ChartMember>
+                      </ChartMembers>
                       <Label>=Fields!Nombre.Value</Label>
                     </ChartMember>
                   </ChartMembers>

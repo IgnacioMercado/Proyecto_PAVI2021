@@ -87,7 +87,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.label17 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.cmbLote = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.txtNroFactura.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -668,6 +667,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.btnAtras.Size = new System.Drawing.Size(45, 49);
             this.btnAtras.TabIndex = 68;
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // lblGrabar
             // 
@@ -721,22 +721,12 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.label18.TabIndex = 72;
             this.label18.Text = "Limpiar Campos";
             // 
-            // cmbLote
-            // 
-            this.cmbLote.FormattingEnabled = true;
-            this.cmbLote.Location = new System.Drawing.Point(344, 608);
-            this.cmbLote.Name = "cmbLote";
-            this.cmbLote.Size = new System.Drawing.Size(121, 21);
-            this.cmbLote.TabIndex = 11;
-            this.cmbLote.Visible = false;
-            // 
             // FormCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(884, 680);
-            this.Controls.Add(this.cmbLote);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label17);
@@ -820,7 +810,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtNroFactura2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbLote;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
