@@ -739,7 +739,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresCompras
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alta Compra";
+            this.Text = "Registro de compra";
             this.Load += new System.EventHandler(this.FormCompras_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -315,7 +315,6 @@ namespace Proyecto_PAVI2021.Presentacion.PresClientes
             // btnModificar1
             // 
             this.btnModificar1.BackColor = System.Drawing.Color.Khaki;
-            this.btnModificar1.Enabled = false;
             this.btnModificar1.Image = global::Proyecto_PAVI2021.Properties.Resources.modificar_imagen;
             this.btnModificar1.Location = new System.Drawing.Point(34, 306);
             this.btnModificar1.Name = "btnModificar1";

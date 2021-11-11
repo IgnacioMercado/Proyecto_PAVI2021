@@ -396,7 +396,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "FormLotes";
-            this.Text = "FormLotes";
+            this.Text = "Lotes";
             this.Load += new System.EventHandler(this.FormLotes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

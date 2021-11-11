@@ -260,7 +260,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresMarcas
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Name = "FormMarcas";
-            this.Text = "FormMarcas";
+            this.Text = "Marcas";
             this.Load += new System.EventHandler(this.FormMarcas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

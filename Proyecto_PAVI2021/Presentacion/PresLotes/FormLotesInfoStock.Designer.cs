@@ -173,7 +173,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "FormLotesInfoStock";
-            this.Text = "FormLotesInfoStock";
+            this.Text = "Stock de lotes";
             this.Load += new System.EventHandler(this.FormLotesInfoStock_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

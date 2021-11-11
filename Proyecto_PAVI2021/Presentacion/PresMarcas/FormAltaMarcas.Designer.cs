@@ -146,7 +146,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresMarcas
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.panel1);
             this.Name = "FormAltaMarcas";
-            this.Text = "FormAltaMarcas";
+            this.Text = "Alta de marca";
             this.Load += new System.EventHandler(this.FormAltaMarcas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

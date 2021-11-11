@@ -201,7 +201,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
             this.Name = "FormRegistrarLote";
-            this.Text = "FormRegistrarLote";
+            this.Text = "Registro de lote";
             this.Load += new System.EventHandler(this.FormRegistrarLote_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

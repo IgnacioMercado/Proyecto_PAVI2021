@@ -145,7 +145,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresMarcas
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnModificar1);
             this.Name = "FormModificarMarcas";
-            this.Text = "FormModificarMarcas";
+            this.Text = "Modificar marcas";
             this.Load += new System.EventHandler(this.FormModificarMarcas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
