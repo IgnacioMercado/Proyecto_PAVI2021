@@ -75,7 +75,7 @@ namespace Proyecto_PAVI2021.Datos.Daos
 
         public void confirmarLote(string id, string cantidad)
         {
-            string consulta = "UPDATE LOTE SET Confirmacion_Lote = 1 WHERE Id_Lote = " + id + " UPDATE MATERIALES SET Stock = Stock + " + cantidad;
+            string consulta = "UPDATE LOTE SET Stock_Lote = " + cantidad + ", Confirmacion_Lote = 1 WHERE Id_Lote = " + id + " UPDATE MATERIALES SET Stock = Stock + " + cantidad;
 
             BDHelper.obtenerInstancia().EjecutarConsulta(consulta);
         }

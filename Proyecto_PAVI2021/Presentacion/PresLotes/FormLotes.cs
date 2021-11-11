@@ -29,7 +29,7 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
             this.LlenarComboConLista(cmbMarca, oMarca.RecuperarTodos(), "Descripcion", "Id_Marca");
             this.LlenarComboConLista(cmbEmpleado, oPersonal.RecuperarTodosConcat(), "NombreCompleto", "Legajo");
             this.dtpDesde.Value = DateTime.Today.AddYears(-1);
-            this.dtpHasta.Value = DateTime.Today;
+            this.dtpHasta.Value = DateTime.Today.AddDays(1);
             this.cmbConfirmado.DataSource = listaConfirmacion;
             this.cmbConfirmado.SelectedIndex = -1;
             this.btnConfirmar.Enabled = false;
@@ -66,13 +66,28 @@ namespace Proyecto_PAVI2021.Presentacion.PresLotes
                     confirmacion = "Sin Confirmar";
                 }
 
-                grilla.Rows.Add(tabla.Rows[i]["Id_Lote"],
+                if(confirmacion == "Sin Confirmar")
+                {
+                    grilla.Rows.Add(tabla.Rows[i]["Id_Lote"],
                                 tabla.Rows[i]["NombreCompleto"],
                                 tabla.Rows[i]["Nombre"],
                                 tabla.Rows[i]["Descripcion"],
                                 tabla.Rows[i]["Cantidad_Fabricada"],
                                 Convert.ToDateTime(tabla.Rows[i]["Fecha_Lote"]).ToShortDateString(),
                                 confirmacion);
+                }
+                else
+                {
+                    grilla.Rows.Add(tabla.Rows[i]["Id_Lote"],
+                                tabla.Rows[i]["NombreCompleto"],
+                                tabla.Rows[i]["Nombre"],
+                                tabla.Rows[i]["Descripcion"],
+                                tabla.Rows[i]["Stock_Lote"],
+                                Convert.ToDateTime(tabla.Rows[i]["Fecha_Lote"]).ToShortDateString(),
+                                confirmacion);
+
+                }
+                
             }
         }
 
