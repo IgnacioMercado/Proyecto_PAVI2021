@@ -472,7 +472,7 @@
                                 <TextRun>
                                   <Value>=Fields!Total_Vendido.Value</Value>
                                   <Style>
-                                    <Format>'$'0.00;('$'0.00)</Format>
+                                    <Format>'$'#,0.00;('$'#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -588,7 +588,7 @@
                                   <Value>=Sum(Fields!Total_Vendido.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>'$'0.00;('$'0.00)</Format>
+                                    <Format>'$'#,0.00;('$'#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>

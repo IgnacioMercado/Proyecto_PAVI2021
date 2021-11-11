@@ -408,7 +408,7 @@
                             <TextRun>
                               <Value>=Fields!Monto.Value</Value>
                               <Style>
-                                <Format>'$'0.00;('$'0.00)</Format>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -430,6 +430,7 @@
                         <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -489,7 +490,7 @@
                               <Value>=Sum(Fields!Monto.Value)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>'$'0.00;('$'0.00)</Format>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
